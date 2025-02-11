@@ -8,11 +8,11 @@
     <body>
         <?php include 'header.html'; ?>
         <nav style="text-align: center; background-color: #b0c4de; height: 50px; padding-top: 15px;">
-            <a href="" style="color: inherit; text-decoration: none;">PRIMA SQUADRA MASCHILE</a> | 
-            <a href="" style="color: inherit; text-decoration: none;"> U19 SILVER</a> | 
-            <a href="" style="color: inherit; text-decoration: none;"> U17 LIBERTAS</a> |
-            <a href="" style="color: inherit; text-decoration: none;"> U13 LIBERTAS</a> |
-            <a href="" style="color: inherit; text-decoration: none;"> MINIBASKET</a>
+            <a href="teams.php" style="color: inherit; text-decoration: none;">PRIMA SQUADRA MASCHILE</a> | 
+            <a href="u19silver.php" style="color: inherit; text-decoration: none;"> U19 SILVER</a> | 
+            <a href="u17libertas.php" style="color: inherit; text-decoration: none;"> U17 LIBERTAS</a> |
+            <a href="u13libertas.php" style="color: inherit; text-decoration: none;"> U13 LIBERTAS</a> |
+            <a href="minibasket.php" style="color: inherit; text-decoration: none;"> MINIBASKET</a>
         </nav>
         <div style="padding-top: 15px"> <Strong>PRIMA SQUADRA MASCHILE</Strong></div> <br>
         <nav>
