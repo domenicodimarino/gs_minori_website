@@ -1,0 +1,59 @@
+footer {
+    background-color: #0A1F44; /* Blu scuro */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Sezione superiore con sponsor */
+.footer-top {
+    position: relative;
+    background-color: #0A2239;
+    padding: 20px;
+}
+
+.footer-top h2 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Logo sponsor */
+.mino img{
+    width: 100px;
+    height: auto;
+    object-fit: contain; /* L'immagine non sarà tagliata né distorta */
+    padding-right: 7px;
+    vertical-align: middle;
+}
+
+/* Sezione inferiore */
+.footer-bottom {
+    background-color: #D3D3D3; /* Grigio */
+    padding: 20px;
+}
+
+.hashtag {
+    font-size: 18px;
+    font-style: italic;
+    color: black;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: yellow;
+}
+
+/* Copyright */
+.copyright {
+    font-size: 14px;
+    margin-top: 15px;
+    color: black;
+}
