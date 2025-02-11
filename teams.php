@@ -23,8 +23,9 @@
             <a href="#centro" style="color: inherit; text-decoration: none;"> CENTRO</a> |
             <a href="#allenatore" style="color: inherit; text-decoration: none;"> ALLENATORE</a>
         </nav>
+        <br>
         PLAYMAKER
-            <div id="playmaker"; style="padding-top: 15px">
+            <div id="playmaker"; style="padding-top: 15px" class="geppetto">
                     <div class="image-container">
                     <img style="padding-top: 15px" src="mino.png" alt="immagine" class="image">
                     <div class="text"> hola </div>
@@ -46,26 +47,47 @@
                 </div>
             </div>
         ALA PICCOLA
-            <div id="alapiccola" style="padding-top: 15px">
+            <div id="alapiccola" style="padding-top: 15px" class="geppetto">
                 <div class="image-container">
                     <img src="mino.png" alt="immagine" class="image">
                     <div class="text"> hola</div>
                 </div>
             </div>
         ALA GRANDE
-            <div id="alagrande"; style="padding-top: 15px">
+            <div id="alagrande"; style="padding-top: 15px" class="geppetto">
                 <div class="image-container">
                     <img src="mino.png" alt="immagine" class="image">
                     <div class="text"> hola</div>
                 </div>
             </div>
         CENTRO
-            <div id="centro"; style="padding-top: 15px">
+            <div id="centro"; style="padding-top: 15px" class="geppetto">
                 <div class="image-container">
                     <img src="mino.png" alt="immagine" class="image">
                     <div class="text"> hola</div>
                 </div>
             </div>
-        <?php include 'footer.html'; ?>
+        ALLENATORE
+        <div id="allenatore"; style="padding-top: 15px" class="geppetto">
+                <div class="image-container">
+                    <img src="mino.png" alt="immagine" class="image">
+                </div>
+            <div class="text-container">
+            <div class="text-block">
+                <p><strong>JACOPO PORPORA</strong></p>
+                <p><strong>DATA DI NASCITA:</strong> NON LO SO</p>
+                <p><strong>LUOGO DI NASCITA:</strong> PENSO MINORI</p>
+                <p><strong>NAZIONALITÀ:</strong> MINORESE</p>
+                <p><strong>ALLENATORE DAL:</strong> 1945</p>
+                <p><strong>AL GSMINORI DAL:</strong> 2003</p>
+            </div>
+            <div class="text-block">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima sequi cupiditate repudiandae, 
+                    vero tenetur dolorum architecto provident deserunt quos dolore maiores illum a dolorem impedit 
+                    temporibus sit dolor consectetur distinctio?</p>
+            </div>
+        </div>
+        </div>
+           <?php include 'footer.html'; ?>
     </body>
 </html>

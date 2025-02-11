@@ -23,6 +23,7 @@ footer {
 
 /* Logo sponsor */
 .mino img{
+    padding-top: 20px;
     width: 100px;
     height: auto;
     object-fit: contain; /* L'immagine non sarà tagliata né distorta */
@@ -65,12 +66,13 @@ li{
 }
 
 .nike-photo img{
-    width: 20px;
-    height: 15px;
+    width: 50px;
+    height: auto;
     object-fit: contain; /* L'immagine non sarà tagliata né distorta */
     padding-right: 7px;
     vertical-align: middle;
 }
+
 .jordan-photo img{
     width: 20px;
     height: 20px;
