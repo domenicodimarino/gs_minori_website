@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>GS Minori - Login</title>
-        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="login.css" type="text/css"/>
     </head>
     <body style="align-items: center; display: flex; flex-direction: column;">
         <main>
