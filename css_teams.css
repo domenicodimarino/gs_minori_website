@@ -1,0 +1,28 @@
+.geppetto {
+    display: flex;
+
+    gap: 20px;
+    width: auto;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.image {
+    width: 75%;
+    height: 100%;
+}
+
+.text {
+    position: absolute;
+    top: 60%; /* Centra verticalmente */
+    left: 10%; /* Centra orizzontalmente */
+    transform: translate(-10%, -10%); /* Centra esattamente */
+    color: black; /* Colore del testo */
+    font-size: 24px; /* Dimensione del testo */
+    font-weight: bold; /* Opzionale: Grassetto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per il testo, opzionale */
+}
