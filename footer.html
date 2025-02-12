@@ -14,10 +14,10 @@
     }
     
     footer {
-        background-color: #0D1459; /* Fix del colore */
+        background-color: #2271B3; /* Fix del colore */
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 50px 0;
     position: relative; /* Necessario per un miglior posizionamento del logo */
     }
     
@@ -37,10 +37,10 @@
     
     .logo-container {
         display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -140px; /* Solleva il logo, ma evita che voli troppo in alto */
-}
+        justify-content: center;
+        align-items: center;
+        margin-top: -140px; /* Solleva il logo, ma evita che voli troppo in alto */
+    }
     
     .logo-container img {
         height: 125px; /* Riduci la dimensione se necessario */
@@ -73,6 +73,22 @@
     .icons a:hover {
         transform: scale(1.2);
     }
+
+
+    /* Copyright e Sponsor */
+    .bottom-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 900px;
+        margin: 10px;
+        font-size: 0.9rem;
+    }
+
+    .sponsors img {
+        height: 40px;
+        margin-left: 10px;
+    }
     
     /* Responsive */
     @media (max-width: 768px) {
@@ -93,32 +109,39 @@
 </head>
 <body>
 <footer>
-    <footer>
-        <div class="footer-container">
-            <div class="hashtags">
-                <span>#GSMINORIGOO</span>
-            </div>
-            <div class="logo-container">
-                <img src="mino.png" alt="GS MINORI Logo">
-            </div>
-            <div class="hashtags">
-                <span>#SEMPREGSMINORI</span>
-            </div>
+    <div class="footer-container">
+        <div class="hashtags">
+            <span>#GSMINORIGOO</span>
         </div>
-        <div class="social-media">
-            <p>GS MINORI SUI SOCIAL MEDIA</p>
-            <div class="icons">
-                <a href="#"><i class="fab fa-twitch"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-x-twitter"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fas fa-music"></i></a>
-            </div>
+        <div class="logo-container">
+            <img src="mino.png" alt="GS MINORI Logo">
         </div>
-  </footer>
+        <div class="hashtags">
+            <span>#SEMPREGSMINORI</span>
+        </div>
+    </div>
+    <div class="social-media">
+        <p>GS MINORI SUI SOCIAL MEDIA</p>
+        <div class="icons">
+            <a href="#"><i class="fab fa-twitch"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fas fa-music"></i></a>
+        </div>
+    </div>
+        <div class="copyright" style="float: left; padding-top: 20px; padding-left: 10px;">
+            ©2025 G.S. Minori - Tutti i diritti riservati.
+        </div>
+        <div class="sponsors" style="float: right;">
+            <strong>SPONSOR</strong>
+            <a href="https://nike.com/" class="nike-photo" target="_blank"><img style="height: 20px;" src="sponsors_logo/nike.png" alt="nike"></a>
+            <a href="https://jordan.com/" class="jordan-photo" target="_blank"><img style="height: 35px;" src="sponsors_logo/jordan.png" alt="jordan"></a>
+        </div>
+</footer>
 </body>
 </html>
