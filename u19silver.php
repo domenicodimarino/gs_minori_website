@@ -183,7 +183,7 @@
         </a>
     </div>
     <p style="margin-left: 5px; padding-top: 10px;">ALLENATORE</p>
-        <div class="geppetto"; style="padding-top: 15px; padding-left: 20px;">
+        <div ; style="padding-top: 15px; padding-left: 20px;">
             <img style="width:225px; height: 225px;"src="jacopo.png" alt="immagine" class="image">
             <div class="text-container">
             <div class="text-block">
