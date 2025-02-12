@@ -14,6 +14,11 @@
         #immagine_u13{
             align-items: center;
         }
+        .image-container{
+            width: 10%;
+            padding-left: 10px;
+        }
+    
         table {
             width: 80%;
             border-collapse: collapse;
@@ -28,8 +33,14 @@
             background-color: #4CAF50; /* Colore diverso per la prima riga */
             color: white;
         }
+
         tr:nth-child(even) {
             background-color: #f2f2f2; /* Alternanza di colori per le righe */
+        }
+        .text-block {
+            width: 75%;
+            margin: 0 auto;
+            border-radius: 5px;
         }
         .share-container {
             display: flex;
@@ -101,24 +112,30 @@
         </a>
     </div>
         <br>
-        ALLENATORE
-        <div style="padding-top: 15px" class="geppetto">
-                <div class="image-container">
-                    <img src="mino.png" alt="immagine" class="image">
-                </div>
+        <p style="margin-left: 5px;">ALLENATORE</p>
+        <div class="geppetto"; style="padding-top: 15px; padding-left: 20px;">
+            <img style="width:225px; height: 225px;"src="jacopo.png" alt="immagine" class="image">
             <div class="text-container">
             <div class="text-block">
                 <p><strong>JACOPO PORPORA</strong></p>
-                <p><strong>DATA DI NASCITA:</strong> NON LO SO</p>
-                <p><strong>LUOGO DI NASCITA:</strong> PENSO MINORI</p>
-                <p><strong>NAZIONALITÀ:</strong> MINORESE</p>
-                <p><strong>ALLENATORE DAL:</strong> 1945</p>
-                <p><strong>AL GSMINORI DAL:</strong> 2003</p>
+                <p><strong>DATA DI NASCITA:</strong> 23 Novembre 1994</p>
+                <p><strong>LUOGO DI NASCITA:</strong> Salerno</p>
+                <p><strong>NAZIONALITÀ:</strong> Italia</p>
+                <p><strong>ALLENATORE DAL:</strong> 2024</p>
+                <p><strong>AL GSMINORI DAL:</strong> 2024</p>
             </div>
             <div class="text-block">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima sequi cupiditate repudiandae, 
-                    vero tenetur dolorum architecto provident deserunt quos dolore maiores illum a dolorem impedit 
-                    temporibus sit dolor consectetur distinctio?</p>
+                <p>Jacopo Porpora, nato il 23 novembre 1994 a Salerno, è l'allenatore della squadra di basket 
+                    GSMinori. Con una forte connessione con la sua città d'origine, ha dedicato gran parte 
+                    della sua carriera a guidare i giovani atleti locali, cercando di trasmettere loro non solo 
+                    le abilità tecniche del gioco, ma anche il valore del lavoro di squadra e della disciplina. 
+                    La sua passione per il basket e il desiderio di far crescere la squadra lo hanno reso un punto di 
+                    riferimento per i ragazzi della comunità. Sempre attento a creare un ambiente di allenamento positivo 
+                    e motivante, Jacopo è conosciuto per la sua capacità di adattarsi alle esigenze dei suoi giocatori, 
+                    supportandoli nel loro sviluppo sia sul piano tecnico che personale. Con il suo approccio empatico 
+                    e il suo impegno costante, Jacopo è riuscito a far crescere la squadra GSMinori, portando avanti la 
+                    tradizione di eccellenza sportiva del suo paese.
+                </p>
             </div>
         </div>
         </div>

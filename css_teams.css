@@ -1,29 +1,41 @@
 .geppetto {
     display: flex;
-    gap: 20px;
-    width: auto;
-    margin-bottom: 20px; 
-}
-
-.image-container {
-    position: relative;
-    width: 300px;
-    height: 200px;
-}
-
-.image {
-    width: 75%;
-    height: 100%;
+    gap: 30px;
+    width: 200px;
+    margin-bottom: 10px;
+    align-items: flex-start; /* Allinea gli elementi in alto */
+    gap: 20px; /* Spazio tra immagine e testo */
 }
 
 .text-container {
-    display: flex;
-    gap: 50px; /* Distanza tra i blocchi di testo */
+        display: flex;
+        flex-direction: row; /* Allinea i due blocchi di testo orizzontalmente */
+        gap: 25px; /* Spazio tra i blocchi */
 }
 
 .text-block {
-    width: 50%; /* Ogni blocco di testo prende metà della larghezza disponibile */
+        width: 25%; /* Imposta metà larghezza per ciascun blocco */
 }
+
+.image {
+        width: 100x;
+        height: 100px;
+}
+
+@media (max-width: 768px) {
+.allenatore {
+            flex-direction: column; /* Per schermi piccoli, elementi in colonna */
+        }
+
+        .text-container {
+            flex-direction: column; /* I testi andranno in colonna */
+            gap: 10px;
+        }
+
+        .text-block {
+            width: 100%; /* Testo a tutta larghezza */
+        }
+    }
 
 .text {
     position: absolute;

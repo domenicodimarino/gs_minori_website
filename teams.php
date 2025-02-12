@@ -14,8 +14,8 @@
             <a href="u13libertas.php" style="color: inherit; text-decoration: none;"> U13 LIBERTAS</a> |
             <a href="minibasket.php" style="color: inherit; text-decoration: none;"> MINIBASKET</a>
         </nav>
-        <div style="padding-top: 15px"> <Strong>PRIMA SQUADRA MASCHILE</Strong></div> <br>
-        <nav>
+        <div style="padding-top: 15px; margin-left: 5px;"> <Strong>PRIMA SQUADRA MASCHILE</Strong></div> <br>
+        <nav style="margin-left: 10px;">
             <a href="#playmaker" style="color: inherit; text-decoration: none;"> PLAYMAKER</a> | 
             <a href="#guardia" style="color: inherit; text-decoration: none;"> GUARDIA</a> | 
             <a href="#alapiccola" style="color: inherit; text-decoration: none;"> ALA PICCOLA</a> |
@@ -24,14 +24,14 @@
             <a href="#allenatore" style="color: inherit; text-decoration: none;"> ALLENATORE</a>
         </nav>
         <br>
-        PLAYMAKER
+        <p style="margin-left: 5px;">PLAYMAKER</p>
             <div id="playmaker"; style="padding-top: 15px" class="geppetto">
                     <div class="image-container">
                     <img style="padding-top: 15px" src="mino.png" alt="immagine" class="image">
                     <div class="text"> hola </div>
                     </div>
             </div>
-        GUARDIA
+        <p style="margin-left: 5px;">GUARDIA</p>
             <div id="guardia" style="padding-top: 15px" class="geppetto">
             
                 <div class="image-container">
@@ -46,45 +46,51 @@
                     </div>
                 </div>
             </div>
-        ALA PICCOLA
+        <p style="margin-left: 5px;">ALA PICCOLA</p>
             <div id="alapiccola" style="padding-top: 15px" class="geppetto">
                 <div class="image-container">
                     <img src="mino.png" alt="immagine" class="image">
                     <div class="text"> hola</div>
                 </div>
             </div>
-        ALA GRANDE
+        <p style="margin-left: 5px;">ALA GRANDE</p>
             <div id="alagrande"; style="padding-top: 15px" class="geppetto">
                 <div class="image-container">
                     <img src="mino.png" alt="immagine" class="image">
                     <div class="text"> hola</div>
                 </div>
             </div>
-        CENTRO
+        <p style="margin-left: 5px;">CENTRO</p>
             <div id="centro"; style="padding-top: 15px" class="geppetto">
                 <div class="image-container">
                     <img src="mino.png" alt="immagine" class="image">
                     <div class="text"> hola</div>
                 </div>
             </div>
-        ALLENATORE
-        <div id="allenatore"; style="padding-top: 15px" class="geppetto">
-                <div class="image-container">
-                    <img src="jacopo.png" alt="immagine" class="image">
-                </div>
+        <p style="margin-left: 5px;">ALLENATORE</p>
+        <div class="geppetto"; style="padding-top: 15px; padding-left: 20px;">
+            <img style="width:225px; height: 225px;"src="jacopo.png" alt="immagine" class="image">
             <div class="text-container">
             <div class="text-block">
                 <p><strong>JACOPO PORPORA</strong></p>
-                <p><strong>DATA DI NASCITA:</strong> NON LO SO</p>
-                <p><strong>LUOGO DI NASCITA:</strong> PENSO MINORI</p>
-                <p><strong>NAZIONALITÀ:</strong> MINORESE</p>
-                <p><strong>ALLENATORE DAL:</strong> 1945</p>
-                <p><strong>AL GSMINORI DAL:</strong> 2003</p>
+                <p><strong>DATA DI NASCITA:</strong> 23 Novembre 1994</p>
+                <p><strong>LUOGO DI NASCITA:</strong> Salerno</p>
+                <p><strong>NAZIONALITÀ:</strong> Italia</p>
+                <p><strong>ALLENATORE DAL:</strong> 2024</p>
+                <p><strong>AL GSMINORI DAL:</strong> 2024</p>
             </div>
             <div class="text-block">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima sequi cupiditate repudiandae, 
-                    vero tenetur dolorum architecto provident deserunt quos dolore maiores illum a dolorem impedit 
-                    temporibus sit dolor consectetur distinctio?</p>
+                <p>Jacopo Porpora, nato il 23 novembre 1994 a Salerno, è l'allenatore della squadra di basket 
+                    GSMinori. Con una forte connessione con la sua città d'origine, ha dedicato gran parte 
+                    della sua carriera a guidare i giovani atleti locali, cercando di trasmettere loro non solo 
+                    le abilità tecniche del gioco, ma anche il valore del lavoro di squadra e della disciplina. 
+                    La sua passione per il basket e il desiderio di far crescere la squadra lo hanno reso un punto di 
+                    riferimento per i ragazzi della comunità. Sempre attento a creare un ambiente di allenamento positivo 
+                    e motivante, Jacopo è conosciuto per la sua capacità di adattarsi alle esigenze dei suoi giocatori, 
+                    supportandoli nel loro sviluppo sia sul piano tecnico che personale. Con il suo approccio empatico 
+                    e il suo impegno costante, Jacopo è riuscito a far crescere la squadra GSMinori, portando avanti la 
+                    tradizione di eccellenza sportiva del suo paese.
+                </p>
             </div>
         </div>
         </div>
