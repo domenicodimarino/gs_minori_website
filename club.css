@@ -1,6 +1,34 @@
 h1{
     font-style: italic;
-    align-items: center;
     text-align: center;
-    size: 10cap;
+    font-size: 40px;
+    color: #7e1710;
 }
+h2{
+    font-style: italic;
+    text-align: center;
+    font-size: 30px;
+    color: #0d1459;
+}
+p{
+    font-style: normal;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    color: #090808;
+}
+img.mino {
+    float: left; /* Fa fluttuare l'immagine a sinistra del testo */
+    margin-right: 20px; /* Aggiunge uno spazio tra l'immagine e il testo */
+    width: 150px; /* Imposta la larghezza dell'immagine */
+    height: auto; /* Mantiene il rapporto di aspetto dell'immagine */
+    object-fit: contain;
+}
+img.chi{
+    float: right; /* Fa fluttuare l'immagine a destra del testo */
+    margin-right: 20px; /* Aggiunge uno spazio tra l'immagine e il testo */
+    width: 150px; /* Imposta la larghezza dell'immagine */
+    height: auto; /* Mantiene il rapporto di aspetto dell'immagine */
+    object-fit: contain;
+}
+
