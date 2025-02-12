@@ -100,7 +100,7 @@
         </p>
         <p>
         <label for="password" style="display: flex; align-items: center;">
-            <input type="password" name="password" id="password" placeholder="Password" value="<?php echo $pass?>" style="margin-right: 5px";/>
+            <input type="password" name="password" id="password" placeholder="Password" value="<?php echo $pass?>" style="margin-right: 5px;margin-left: 22px;"/>
             <img id="pass_photo" src="eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
         </label>
         </p>
@@ -137,13 +137,13 @@
         </p>
         <p>
         <label for="password" style="display: flex; align-items: center;">
-            <input type="password" name="pwd1" id="pwd1" placeholder="Password" value="<?php echo $pass?>"/>
+            <input type="password" name="pwd1" id="pwd1" placeholder="Password" value="<?php echo $pass?>" style="margin-right: 5px;margin-left: 22px;"/>
             <img id="pass_photo2" src="eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
         </label>
         </p>
         <p>
         <label for="confirm_password" style="display: flex; align-items: center;">
-            <input type="password" name="confirm_password" id="confirm_password" placeholder="Conferma password" value="<?php echo $repassword?>"/>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Conferma password" value="<?php echo $repassword?>" style="margin-right: 5px;margin-left: 22px;"/>
             <img id="pass_photo3" src="eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
         </label>
         </p>
