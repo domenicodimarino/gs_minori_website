@@ -8,7 +8,7 @@
         #gep{
             display: block;
             margin: auto;
-            height: 38vw;
+            height: 42vw;
             width: 45vw;
         }
         #immagine_u19{

@@ -70,7 +70,7 @@
         ALLENATORE
         <div id="allenatore"; style="padding-top: 15px" class="geppetto">
                 <div class="image-container">
-                    <img src="mino.png" alt="immagine" class="image">
+                    <img src="jacopo.png" alt="immagine" class="image">
                 </div>
             <div class="text-container">
             <div class="text-block">
