@@ -30,7 +30,7 @@
                         <p class="match">
                         <img src="gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
                             <?php echo $match1["match"] ?>
-                            <img src="portici2000.png" alt="logo Portici 2000" class="team_logo">
+                            <img src="opponents_logo/portici2000.png" alt="logo Portici 2000" class="team_logo">
                         </p>
                         <button class = "ticket_button">>></button>
                     </section>
@@ -41,7 +41,7 @@
                         <p class="match">
                         <img src="gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
                             <?php echo $match2["match"] ?>
-                        <img src="sammaritana.jpeg" alt="logo Sammaritana" class="team_logo">
+                        <img src="opponents_logo/sammaritana.jpeg" alt="logo Sammaritana" class="team_logo">
                         </p>
                         <button class = "ticket_button">>></button>
                     </section>
@@ -52,7 +52,7 @@
                         <p class="match">
                         <img src="gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
                             <?php echo $match3["match"] ?>
-                        <img src="consilina.png" alt="logo Sala Consilina" class="team_logo">
+                        <img src="opponents_logo/consilina.png" alt="logo Sala Consilina" class="team_logo">
                         </p>
                         <button class = "ticket_button">>></button>
                     </section>
@@ -63,7 +63,7 @@
                         <p class="match">
                         <img src="gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
                             <?php echo $match4["match"] ?>
-                        <img src="cusnapoli.png" alt="logo CUS Napoli" class="team_logo">
+                        <img src="opponents_logo/cusnapoli.png" alt="logo CUS Napoli" class="team_logo">
                         </p>
                         <button class = "ticket_button">>></button>
                     </section>
