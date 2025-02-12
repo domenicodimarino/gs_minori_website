@@ -65,8 +65,8 @@
 		$repassword = "";
 
 ?>
-        <main>
-            <img src="logo.png" alt="Logo GS Minori" style="width: 40vw;" height="auto">
+        <main style="align-items: center; display: flex; flex-direction: column;">
+            <a href="homepage.php"><img src="logo.png" alt="Logo GS Minori" style="width: 40vw;" height="auto"></a>
             <div id="login_form" style="display:block;">
             <form method="post" action=<?php echo $_SERVER['PHP_SELF']?> style="align-items: center; display: flex; flex-direction: column;">
                 <p>
@@ -126,6 +126,7 @@
                 <p><input type="button" name="go_to_login" class="submit_button" value="Effettua il login!" onclick="login()"/></p>
             </form>
             </div>
+            <a href="homepage.php"><button>Torna alla homepage</button></a>
     </main>
     </body>
 </html>

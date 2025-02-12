@@ -18,3 +18,11 @@ input{
     height: auto;
     cursor: pointer;
 }
+button{
+    background-color: darkred;
+    color: white;
+    border-radius: 10px;
+    width: auto;
+    height: 5vh;
+    cursor: pointer;
+}
