@@ -1,0 +1,64 @@
+figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.ticket_section{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* serve per avere la stessa altezza dei paragrafi*/
+    margin: 10px;
+    justify-content: space-between; /* Aggiungi questa riga */
+}
+.data_match{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 20%;
+    border: 5px solid #718084;
+    border-radius: 5px;
+    text-align: center; /* Centra il testo orizzontalmente */
+    display: flex;
+    align-items: center; /* Centra il contenuto verticalmente */
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+}
+.match{
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 60%;
+    border: 5px solid #718084;
+    border-radius: 5px;
+    text-align: center; /* Centra il testo orizzontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ticket_button{
+    margin-left:auto;
+    border-radius: 10px;
+    border-style: solid;
+    width:10%;
+    height:auto;
+    border-color: black;
+    background-color: #69140E;
+    color:white;
+    cursor: pointer;
+}
+.all_tickets{
+    width:90%
+}
+.team_logo{
+    width: 100px;
+    height: 100px;
+    margin-left:10px;
+    margin-right:10px;
+    border-radius: 5px;
+    border: 3px solid #718084;
+}
