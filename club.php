@@ -5,8 +5,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="club.css" type="text/css"/>
     </head>
-    <body>
+        <!-- Header -->
         <?php include 'header.html'?>
+    <body>
+       
+
             <h1 id="Chi siamo">Chi siamo?</h1>
             <p>Il Gruppo Sportivo Minori Pallacanestro (GS Minori) è una storica società sportiva della Costiera Amalfitana, attiva da oltre quarant'anni nel panorama cestistico campano. Fondata con l'obiettivo di promuovere la pallacanestro e i valori sportivi nella comunità locale, la società ha sempre posto l'accento sulla formazione dei giovani e sull'inclusione sociale.</p>
             attiva da oltre quarant'anni nel panorama cestistico campano. Fondata con l'obiettivo di promuovere la pallacanestro 
@@ -29,7 +32,8 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, dicta ab earum ea sapiente harum ut quod ex accusamus ullam obcaecati quasi quia dolorum iure adipisci vitae est cum rerum?
             </p>
 
-        </body>
+    </body>
+        <!-- Footer -->
         <?php include 'footer.html'?>
 
 </html>
