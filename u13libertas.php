@@ -5,8 +5,17 @@
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
+        #gep2{
+            display: block;
+            margin: auto;
+            height: 35vw;
+            width: 40vw;
+        }
+        #immagine_u13{
+            align-items: center;
+        }
         table {
-            width: 50%;
+            width: 80%;
             border-collapse: collapse;
             margin: 20px auto;
             text-align: center;
@@ -22,6 +31,25 @@
         tr:nth-child(even) {
             background-color: #f2f2f2; /* Alternanza di colori per le righe */
         }
+        .share-container {
+            display: flex;
+            align-items: center;
+            background-color: #d3d6db;
+            padding: 10px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        .share-text {
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .share-icon {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
         </style>
     </head>
     <body>
@@ -35,35 +63,44 @@
         </nav>
         <div style="padding-top: 15px"> <Strong>UNDER 13 LIBERTAS</Strong></div> <br>
         <br>
-        <div style="align: center"> <img src="logo.png" alt="Foto Squadra"></div>
+        <div id="immagine_13"> <img id="gep2" src="u13libertas.png" alt="Foto Squadra"></div>
         <br>
         <div style="text-align: center"> <strong>U13 LIBERTAS</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
         <tr>
-            <th>Colonna 1</th>
-            <th>Colonna 2</th>
-            <th>Colonna 3</th>
-            <th>Colonna 4</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Anno di Nascita</th>
+            <th>Ruolo</th>
+            <th>Numero di Maglia</th>
         </tr>
-        <tr>
-            <td>Dato 1</td>
-            <td>Dato 2</td>
-            <td>Dato 3</td>
-            <td>Dato 4</td>
-        </tr>
-        <tr>
-            <td>Dato 5</td>
-            <td>Dato 6</td>
-            <td>Dato 7</td>
-            <td>Dato 8</td>
-        </tr>
-        <tr>
-            <td>Dato 9</td>
-            <td>Dato 10</td>
-            <td>Dato 11</td>
-            <td>Dato 12</td>
+        <tr><td>Alessandro</td><td>Rossi</td><td>2012</td><td>Playmaker</td><td>7</td></tr>
+            <tr><td>Gabriele</td><td>Bianchi</td><td>2011</td><td>Guardia</td><td>10</td></tr>
+            <tr><td>Lorenzo</td><td>Esposito</td><td>2013</td><td>Centro</td><td>15</td></tr>
+            <tr><td>Matteo</td><td>Romano</td><td>2012</td><td>Centro</td><td>22</td></tr>
+            <tr><td>Davide</td><td>Ferrari</td><td>2013</td><td>Playmaker</td><td>8</td></tr>
+            <tr><td>Andrea</td><td>Ricci</td><td>2011</td><td>Ala piccola</td><td>11</td></tr>
+            <tr><td>Federico</td><td>Marini</td><td>2012</td><td>Ala grande</td><td>23</td></tr>
+            <tr><td>Tommaso</td><td>Gallo</td><td>2013</td><td>Ala piccola</td><td>5</td></tr>
+            <tr><td>Simone</td><td>Barbieri</td><td>2011</td><td>Ala piccola</td><td>17</td></tr>
+            <tr><td>Nicola</td><td>Moretti</td><td>2012</td><td>Guardia</td><td>9</td></tr>
+            <tr><td>Leonardo</td><td>De Luca</td><td>2013</td><td>Ala grande</td><td>6</td></tr>
+            <tr><td>Marco</td><td>Conti</td><td>2011</td><td>Ala piccola</td><td>12</td></tr>
+            <tr><td>Domenico</td><td>Di Marino</td><td>2013</td><td>Guardia</td><td>9</td></tr>
+            <tr><td>Giovanni</td><td>Adinolfi</td><td>2012</td><td>Ala piccola</td><td>6</td></tr>
+            <tr><td>Francesco</td><td>Di Crescenzo</td><td>2011</td><td>Playmaker</td><td>12</td></tr>
         </tr>
     </table>
+    <div class="share-container">
+        <span class="share-text">CONDIVIDI SU:</span>
+        <a href="https://www.instagram.com/gs.minori/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="share-icon">
+        </a>
+        <a href="https://www.facebook.com/p/GS-Minori-Pallacanestro-100076256921027/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="share-icon">
+        </a>
+    </div>
+        <br>
         ALLENATORE
         <div style="padding-top: 15px" class="geppetto">
                 <div class="image-container">

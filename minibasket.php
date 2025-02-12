@@ -5,8 +5,17 @@
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
+        #gep3{
+            display: block;
+            margin: auto;
+            height: 35vw;
+            width: 40vw;
+        }
+        #immagine_minibasket{
+            align-items: center;
+        }
         table {
-            width: 50%;
+            width: 80%;
             border-collapse: collapse;
             margin: 20px auto;
             text-align: center;
@@ -22,6 +31,25 @@
         tr:nth-child(even) {
             background-color: #f2f2f2; /* Alternanza di colori per le righe */
         }
+        .share-container {
+            display: flex;
+            align-items: center;
+            background-color: #d3d6db;
+            padding: 10px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        .share-text {
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .share-icon {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
         </style>
     </head>
     <body>
@@ -35,35 +63,48 @@
         </nav>
         <div style="padding-top: 15px"> <Strong>MINIBASKET</Strong></div> <br>
         <br>
-        <div style="align: center"> <img src="logo.png" alt="Foto Squadra"></div>
+        <div id="immagine_minibasket"> <img id="gep3" src="minibasket.png" alt="Foto Squadra"></div>
         <br>
         <div style="text-align: center"> <strong>MINIBASKET</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
         <tr>
-            <th>Colonna 1</th>
-            <th>Colonna 2</th>
-            <th>Colonna 3</th>
-            <th>Colonna 4</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Anno di Nacita</th>
+            <th>Ruolo</th>
+            <th>Numero di Maglia</th>
         </tr>
-        <tr>
-            <td>Dato 1</td>
-            <td>Dato 2</td>
-            <td>Dato 3</td>
-            <td>Dato 4</td>
-        </tr>
-        <tr>
-            <td>Dato 5</td>
-            <td>Dato 6</td>
-            <td>Dato 7</td>
-            <td>Dato 8</td>
-        </tr>
-        <tr>
-            <td>Dato 9</td>
-            <td>Dato 10</td>
-            <td>Dato 11</td>
-            <td>Dato 12</td>
-        </tr>
+        <tr><td>Marco</td><td>Rossi</td><td>2015</td><td>Playmaker</td><td>5</td></tr>
+        <tr><td>Giulia</td><td>Bianchi</td><td>2016</td><td>Guardia</td><td>8</td></tr>
+        <tr><td>Andrea</td><td>Verdi</td><td>2014</td><td>Centro</td><td>12</td></tr>
+        <tr><td>Sara</td><td>Moretti</td><td>2017</td><td>Ala piccola</td><td>9</td></tr>
+        <tr><td>Matteo</td><td>Ferrari</td><td>2018</td><td>Ala grande</td><td>15</td></tr>
+        <tr><td>Elena</td><td>Russo</td><td>2015</td><td>Guardia</td><td>6</td></tr>
+        <tr><td>Davide</td><td>Colombo</td><td>2016</td><td>Centro</td><td>13</td></tr>
+        <tr><td>Francesca</td><td>Conti</td><td>2017</td><td>Playmaker</td><td>4</td></tr>
+        <tr><td>Luca</td><td>De Luca</td><td>2018</td><td>Ala piccola</td><td>10</td></tr>
+        <tr><td>Alessandro</td><td>Mancini</td><td>2014</td><td>Ala grande</td><td>18</td></tr>
+        <tr><td>Martina</td><td>Rinaldi</td><td>2015</td><td>Playmaker</td><td>3</td></tr>
+        <tr><td>Riccardo</td><td>Galli</td><td>2016</td><td>Guardia</td><td>7</td></tr>
+        <tr><td>Valentina</td><td>Serra</td><td>2017</td><td>Centro</td><td>11</td></tr>
+        <tr><td>Tommaso</td><td>Leone</td><td>2018</td><td>Ala piccola</td><td>14</td></tr>
+        <tr><td>Alice</td><td>Pellegrini</td><td>2014</td><td>Ala grande</td><td>16</td></tr>
+        <tr><td>Filippo</td><td>Marini</td><td>2015</td><td>Playmaker</td><td>2</td></tr>
+        <tr><td>Chiara</td><td>Benedetti</td><td>2016</td><td>Guardia</td><td>9</td></tr>
+        <tr><td>Leonardo</td><td>Gatti</td><td>2017</td><td>Centro</td><td>17</td></tr>
+        <tr><td>Emma</td><td>Villa</td><td>2018</td><td>Ala piccola</td><td>20</td></tr>
+        <tr><td>Gabriele</td><td>Fabbri</td><td>2014</td><td>Ala grande</td><td>1</td></tr>
     </table>
+    <div class="share-container">
+        <span class="share-text">CONDIVIDI SU:</span>
+        <a href="https://www.instagram.com/gs.minori/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="share-icon">
+        </a>
+        <a href="https://www.facebook.com/p/GS-Minori-Pallacanestro-100076256921027/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="share-icon">
+        </a>
+    </div>
+        <br>
         ALLENATORE
         <div style="padding-top: 15px" class="geppetto">
                 <div class="image-container">

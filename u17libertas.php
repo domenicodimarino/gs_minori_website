@@ -5,8 +5,17 @@
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
+        #gep1{
+            display: block;
+            margin: auto;
+            height: 38vw;
+            width: 55vw;
+        }
+        #immagine_u17{
+            align-items: center;
+        }
         table {
-            width: 50%;
+            width: 80%;
             border-collapse: collapse;
             margin: 20px auto;
             text-align: center;
@@ -22,6 +31,25 @@
         tr:nth-child(even) {
             background-color: #f2f2f2; /* Alternanza di colori per le righe */
         }
+        .share-container {
+            display: flex;
+            align-items: center;
+            background-color: #d3d6db;
+            padding: 10px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        .share-text {
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .share-icon {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
         </style>
     </head>
     <body>
@@ -35,35 +63,154 @@
         </nav>
         <div style="padding-top: 15px"> <Strong>UNDER 17 LIBERTAS</Strong></div> <br>
         <br>
-        <div style="align: center"> <img src="logo.png" alt="Foto Squadra"></div>
+        <div > <img id="gep1" src="u17libertas.png" alt="Foto Squadra"></div>
         <br>
-        <div style="text-align: center"> <strong>U17 LIBERTAS</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
+        <div id="immagine_u17" style="text-align: center"> <strong>U17 LIBERTAS</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
         <tr>
-            <th>Colonna 1</th>
-            <th>Colonna 2</th>
-            <th>Colonna 3</th>
-            <th>Colonna 4</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Anno di Nascita</th>
+            <th>Ruolo</th>
+            <th>Numero di Maglia</th>
         </tr>
         <tr>
-            <td>Dato 1</td>
-            <td>Dato 2</td>
-            <td>Dato 3</td>
-            <td>Dato 4</td>
+            <td>Umberto</td>
+            <td>Aceto</td>
+            <td>2009</td>
+            <td>Playmaker</td>
+            <td>21</td>
         </tr>
         <tr>
-            <td>Dato 5</td>
-            <td>Dato 6</td>
-            <td>Dato 7</td>
-            <td>Dato 8</td>
+            <td>Antonio</td>
+            <td>Carfora</td>
+            <td>2008</td>
+            <td>Ala piccola</td>
+            <td>18</td>
         </tr>
         <tr>
-            <td>Dato 9</td>
-            <td>Dato 10</td>
-            <td>Dato 11</td>
-            <td>Dato 12</td>
+            <td>Ferdinando</td>
+            <td>Gambardella</td>
+            <td>2008</td>
+            <td>Ala piccola</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Luca</td>
+            <td>Zuppardo</td>
+            <td>2008</td>
+            <td>Centro</td>
+            <td>69</td>
+        </tr>
+        <tr>
+            <td>Matteo</td>
+            <td>Manzi</td>
+            <td>2008</td>
+            <td>Ala piccola</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Giuseppe</td>
+            <td>De Maio</td>
+            <td>2008</td>
+            <td>Centro</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>Gianni</td>
+            <td>Di Capua</td>
+            <td>2009</td>
+            <td>Guardia</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Vittorio</td>
+            <td>Esposito</td>
+            <td>2010</td>
+            <td>Ala piccola</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Andrea</td>
+            <td>Ferrazzano</td>
+            <td>2008</td>
+            <td>Ala grande</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Cristian</td>
+            <td>Floro</td>
+            <td>2009</td>
+            <td>Centro</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Thomas</td>
+            <td>Galibardi</td>
+            <td>2008</td>
+            <td>Ala piccola</td>
+            <td>17</td>
+        </tr>
+        <tr>
+            <td>Antonio</td>
+            <td>Gambardella</td>
+            <td>2009</td>
+            <td>Playmaker</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Mattia</td>
+            <td>Proto</td>
+            <td>2009</td>
+            <td>Playmaker</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Thomas</td>
+            <td>Proto</td>
+            <td>2009</td>
+            <td>Guardia</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>Ferdinando</td>
+            <td>Gambardella</td>
+            <td>2010</td>
+            <td>Centro</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Gabriele</td>
+            <td>Rabesco</td>
+            <td>2010</td>
+            <td>Ala piccola</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>Diego</td>
+            <td>Sorrentino</td>
+            <td>2009</td>
+            <td>Ala grande</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Simone</td>
+            <td>Trezza</td>
+            <td>2011</td>
+            <td>Centro</td>
+            <td>7</td>
         </tr>
     </table>
+    <div class="share-container">
+        <span class="share-text">CONDIVIDI SU:</span>
+        <a href="https://www.instagram.com/gs.minori/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="share-icon">
+        </a>
+        <a href="https://www.facebook.com/p/GS-Minori-Pallacanestro-100076256921027/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="share-icon">
+        </a>
+    </div>
+        <br>
         ALLENATORE
         <div style="padding-top: 15px" class="geppetto">
                 <div class="image-container">

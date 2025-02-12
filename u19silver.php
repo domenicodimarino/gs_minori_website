@@ -5,8 +5,17 @@
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
+        #gep{
+            display: block;
+            margin: auto;
+            height: 38vw;
+            width: 45vw;
+        }
+        #immagine_u19{
+            align-items: center;
+        }
         table {
-            width: 50%;
+            width: 80%;
             border-collapse: collapse;
             margin: 20px auto;
             text-align: center;
@@ -22,6 +31,25 @@
         tr:nth-child(even) {
             background-color: #f2f2f2; /* Alternanza di colori per le righe */
         }
+        .share-container {
+            display: flex;
+            align-items: center;
+            background-color: #d3d6db;
+            padding: 10px;
+            border-radius: 5px;
+            width: fit-content;
+        }
+        .share-text {
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .share-icon {
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
         </style>
     </head>
     <body>
@@ -35,35 +63,126 @@
         </nav>
         <div style="padding-top: 15px"> <Strong>UNDER 19 SILVER</Strong></div> <br>
         <br>
-        <div style="align: center"> <img src="logo.png" alt="Foto Squadra"></div>
+        <div id="immagine_u19"> <img id="gep" src="u19photo.png" alt="Foto Squadra"> </div>
         <br>
         <div style="text-align: center"> <strong>U19 SILVER</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
         <tr>
-            <th>Colonna 1</th>
-            <th>Colonna 2</th>
-            <th>Colonna 3</th>
-            <th>Colonna 4</th>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Anno di Nascita</th>
+            <th>Ruolo</th>
+            <th>Numero di Maglia</th>
         </tr>
         <tr>
-            <td>Dato 1</td>
-            <td>Dato 2</td>
-            <td>Dato 3</td>
-            <td>Dato 4</td>
+            <td>Francesco</td>
+            <td>Di Lieto</td>
+            <td>2005</td>
+            <td>Playmaker</td>
+            <td>21</td>
         </tr>
         <tr>
-            <td>Dato 5</td>
-            <td>Dato 6</td>
-            <td>Dato 7</td>
-            <td>Dato 8</td>
+            <td>Gianpaolo</td>
+            <td>Di Palma</td>
+            <td>2005</td>
+            <td>Guardia</td>
+            <td>24</td>
         </tr>
         <tr>
-            <td>Dato 9</td>
-            <td>Dato 10</td>
-            <td>Dato 11</td>
-            <td>Dato 12</td>
+            <td>Matteo</td>
+            <td>Fusco</td>
+            <td>2005</td>
+            <td>Ala piccola</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Gabriel</td>
+            <td>Proto</td>
+            <td>2005</td>
+            <td>Ala piccola</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <td>Raffaele</td>
+            <td>Vanacore</td>
+            <td>2005</td>
+            <td>Ala grande</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td>Carlo</td>
+            <td>D'Alfonso</td>
+            <td>2006</td>
+            <td>Centro</td>
+            <td>11</td>
+        </tr>
+        <tr>
+            <td>Pierpaolo</td>
+            <td>Lagrotta</td>
+            <td>2006</td>
+            <td>Ala piccola</td>
+            <td>77</td>
+        </tr>
+        <tr>
+            <td>Pietro</td>
+            <td>Trezza</td>
+            <td>2006</td>
+            <td>Ala grande</td>
+            <td>55</td>
+        </tr>
+        <tr>
+            <td>Alessandro</td>
+            <td>Aceto</td>
+            <td>2007</td>
+            <td>Ala piccola</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td>Gabriele</td>
+            <td>D'Uva</td>
+            <td>2007</td>
+            <td>Centro</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>Emanuele</td>
+            <td>Fusco</td>
+            <td>2007</td>
+            <td>Ala grande</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Francesco</td>
+            <td>Landi</td>
+            <td>2007</td>
+            <td>Playmaker</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>F.Nicholas</td>
+            <td>Mammato</td>
+            <td>2007</td>
+            <td>Centro</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>Umberto</td>
+            <td>Aceto</td>
+            <td>2009</td>
+            <td>Ala piccola</td>
+            <td>34</td>
         </tr>
     </table>
+    <div class="share-container">
+        <span class="share-text">CONDIVIDI SU:</span>
+        <a href="https://www.instagram.com/gs.minori/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="share-icon">
+        </a>
+        <a href="https://www.facebook.com/p/GS-Minori-Pallacanestro-100076256921027/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="share-icon">
+        </a>
+    </div>
+        <br>
         ALLENATORE
         <div style="padding-top: 15px" class="geppetto">
                 <div class="image-container">
