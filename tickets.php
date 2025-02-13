@@ -8,20 +8,14 @@
     <body>
         <?php include 'header.html'?>
 
-        <!-- Gestione match in array associativo per pagina dinamica -->
+        <!-- Gestione match in array associativo -->
          <?php 
             $match1 = array ("data"=>"05 Marzo 2025 21:15", "match"=>"GS Minori - Farmacia Greco Portici 2000");
             $match2 = array ("data"=>"09 Marzo 2025 19:00", "match"=>"GS Minori - Sammaritana Basket e Sport");
             $match3 = array ("data"=>"12 Marzo 2025 21:00", "match"=>"GS Minori - DIESEL TECNICA SALA CONSILINA");
             $match4 = array ("data"=>"16 Marzo 2025 19:00", "match"=>"GS Minori - CUS NAPOLI");
          ?>
-
-        <!-- Script per passare da schermata generale a schermata di scelta del settore -->
-        <script language="javascript" type="text/javascript">
-            function choose_ticket_window(){
-                // da implementare
-            }
-        </script>
+        
         <main>
             <h1>Biglietti</h1>
                 <figure>
@@ -38,7 +32,7 @@
                             <?php echo $match1["match"] ?>
                             <img src="opponents_logo/portici2000.png" alt="logo Portici 2000" class="team_logo">
                         </p>
-                        <button class = "ticket_button" id="btn1" onclick="choose_ticket_window()">>></button>
+                        <a href="choose_ticket.php?matchID=1" class="ticket_button">>></a>
                     </section>
                     <section class="ticket_section">
                         <p class="data_match">
@@ -49,7 +43,7 @@
                             <?php echo $match2["match"] ?>
                         <img src="opponents_logo/sammaritana.jpeg" alt="logo Sammaritana" class="team_logo">
                         </p>
-                        <button class = "ticket_button" id="btn2" onclick="choose_ticket_window()">>></button>
+                        <a href="choose_ticket.php?matchID=2" class="ticket_button">>></a>
                     </section>
                     <section class="ticket_section">
                         <p class="data_match">
@@ -60,7 +54,7 @@
                             <?php echo $match3["match"] ?>
                         <img src="opponents_logo/consilina.png" alt="logo Sala Consilina" class="team_logo">
                         </p>
-                        <button class = "ticket_button" id="btn3" onclick="choose_ticket_window()">>></button>
+                        <a href="choose_ticket.php?matchID=3" class="ticket_button">>></a>
                     </section>
                     <section class="ticket_section">
                         <p class="data_match">
@@ -71,7 +65,7 @@
                             <?php echo $match4["match"] ?>
                         <img src="opponents_logo/cusnapoli.png" alt="logo CUS Napoli" class="team_logo">
                         </p>
-                        <button class = "ticket_button" id="btn4" onclick="choose_ticket_window()">>></button>
+                        <a href="choose_ticket.php?matchID=4" class="ticket_button">>></a>
                     </section>
                 </section>
         </main>

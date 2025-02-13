@@ -44,12 +44,17 @@ main{
     margin-left:auto;
     border-radius: 10px;
     border-style: solid;
-    width:10%;
-    height:auto;
+    width: 10%;
+    height: auto;
     border-color: black;
     background-color: #69140E;
-    color:white;
+    color: white;
     cursor: pointer;
+text-decoration: none; /* Rimuove la sottolineatura del link */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; /* Aggiungi padding per migliorare l'aspetto */
 }
 .all_tickets{
     width:90%
