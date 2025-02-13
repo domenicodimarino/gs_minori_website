@@ -1,0 +1,140 @@
+/* Contenitore della barra di ricerca */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    overflow: hidden;
+    background: white;
+    position: relative;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;;
+}
+
+/* Input di ricerca */
+.search-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    flex: 1;
+    font-size: 16px;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+/* Contenitore per la "X" e la lente */
+.icon-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Pulsante con la lente */
+.search-button {
+    background: #007BFF;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-button i {
+    font-size: 16px;
+}
+
+/* Effetto hover sul pulsante di ricerca */
+.search-button:hover {
+    background: #0056b3;
+}
+
+/* Pulsante per cancellare (X) */
+.clear-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #888;
+    font-size: 16px;
+    padding: 10px;
+    display: none; /* Inizialmente nascosta */
+}
+
+/* Effetto hover sulla X */
+.clear-button:hover {
+    color: red;
+}
+
+/* Pulsante del carrello */
+.cart-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #444;
+    padding: 10px;
+    font-size: 18px;
+    margin-left: auto; /* Sposta il carrello tutto a destra */
+}
+
+/* Effetto hover sul carrello */
+.cart-button:hover {
+    color: #007BFF;
+}
+
+/* Lista dei risultati */
+#resultsList {
+    list-style: none;
+    padding: 0;
+    max-width: 350px;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: none; /* Inizialmente nascosta */
+    background: white;
+}
+
+#resultsList li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+#resultsList li:last-child {
+    border-bottom: none;
+}
+
+/* Evidenziazione durante la ricerca */
+#resultsList li.highlight {
+    background: whitesmoke;
+    font-weight: bold;
+}
+
+/* Effetto hover sui risultati */
+#resultsList li:hover {
+    background: #f0f0f0;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-item {
+    flex: 1 1 calc(50% - 40px); /* Due elementi per riga con spazio tra loro */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.image-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-item p {
+    margin-top: 10px;
+    font-size: 16px;
+}

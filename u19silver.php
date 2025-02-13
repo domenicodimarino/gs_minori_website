@@ -84,7 +84,7 @@
             <a href="u13libertas.php" style="color: inherit; text-decoration: none;"> U13 LIBERTAS</a> |
             <a href="minibasket.php" style="color: inherit; text-decoration: none;"> MINIBASKET</a>
         </nav>
-        <div style="padding-top: 15px"> <Strong>UNDER 19 SILVER</Strong></div> <br>
+        <div style="padding-top: 15px; margin-left: 5px;"> <Strong>UNDER 19 SILVER</Strong></div> <br>
         <br>
         <div id="immagine_u19"> <img id="gep" src="u19photo.png" alt="Foto Squadra"> </div>
         <br>

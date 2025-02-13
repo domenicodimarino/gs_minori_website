@@ -20,8 +20,9 @@
             }
 
             .image {
-            width: 95%;
+            width: 100%;
             height: 150%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
 
             .text-container {
@@ -32,6 +33,11 @@
             .text-block {
             width: 50%; /* Ogni blocco di testo prende metà della larghezza disponibile */
             }
+            .image-container:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+}
 
             .text {
             position: absolute;
@@ -43,6 +49,12 @@
             font-weight: bold; /* Opzionale: Grassetto */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per il testo, opzionale */
             }
+    
+
+        .container:hover .image {
+            transform: scale(1.1); /* Effetto zoom quando si passa sopra */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombra per l'immagine */
+        }
            
 .image1 {
     flex-shrink: 0;
