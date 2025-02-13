@@ -130,7 +130,7 @@
         <a href="https://www.instagram.com/gs.minori/" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="share-icon">
         </a>
-        <a href="https://www.facebook.com/p/GS-Minori-Pallacanestro-100076256921027/" target="_blank">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/g.s.minori.costadamalfi.1" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="share-icon">
         </a>
     </div>
