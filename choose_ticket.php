@@ -89,7 +89,6 @@
                     for($i = 1; $i <= 12; $i++){
                         $total_price += $sector_price[$i] * $_POST['numero_biglietti'][$i];
                     }
-                    echo "Il prezzo totale è di: ".$total_price."€";
                 }
                 
             }
@@ -100,7 +99,7 @@
         if(isset($_POST['form_submitted']) && $_POST['form_submitted'] == '1'){
             echo '<script type="text/javascript">',
                  'document.addEventListener("DOMContentLoaded", function() {',
-                 'document.getElementById("buyer_data").style.display = "block";',
+                 'document.getElementById("payment_data").style.display = "block";',
                  'document.getElementById("initial_view").style.display = "none";',
                  '});',
                  '</script>';
@@ -344,59 +343,94 @@
                 </section>
 
         <!-- Schermata di acquisizione dati dell'acquirente -->
-        <form method="post" style="display: none;" id="buyer_data">
-            <h1> Dati dell'acquirente </h1>
-            <p>
-            <label for="nome">
-                Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Nome">
-            </label>
-            <label for="cognome">
-                Cognome: <input type="text" id="cognome" name="cognome" required value="<?php echo isset($_SESSION["surname"]) ? $_SESSION['surname'] : ''; ?>" placeholder="Cognome">
-            </label>
-            </p>
-            <p>
-                <label for="sesso">Sesso: 
-                    <input type="radio" id="sesso" name="sesso" value="M" required>Uomo
-                    <input type="radio" id="sesso" name="sesso" value="F" required>Donna
-                    <input type="radio" id="sesso" name="sesso" value="Altro" required>Altro
+        <form method="post" style="display: none;" id="payment_data">
+        <h2> Il totale da pagare è di <?php echo $total_price; ?> € </h2>
+            <section id="order_summary" class="buyer_form">
+                <h1> Riepilogo ordine </h1>
+                <p>
+                    <ul>
+                        <?php for ($i = 1; $i <= 12; $i++): ?>
+                            <?php if($_POST['numero_biglietti'][$i] > 0): ?>
+                                <li>
+                                    <?php echo $sector[$i]; ?>: <?php echo $_POST['numero_biglietti'][$i]; ?> bigliett<?php echo $_POST['numero_biglietti'][$i] > 1 ? 'i' : 'o'; ?> = <?php echo $sector_price[$i] * $_POST['numero_biglietti'][$i]; ?> €
+                                </li>
+                            <?php endif; ?>
+                        <?php endfor; ?>
+                    </ul>
+                </p>
+            </section>
+            <section id="buyer_data" class="buyer_form">
+                <h1> Dati dell'acquirente </h1>
+                <p>
+                <label for="nome">
+                    Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Nome">
                 </label>
-            </p>
-            <p>
-                <label for="email">
-                    <input type="email" id="email" name="email" required value="<?php echo isset($_SESSION["email"]) ? $_SESSION['email'] : ''; ?>" placeholder="Indirizzo email">
+                </p>
+                <p>
+                <label for="cognome">
+                    Cognome: <input type="text" id="cognome" name="cognome" required value="<?php echo isset($_SESSION["surname"]) ? $_SESSION['surname'] : ''; ?>" placeholder="Cognome">
                 </label>
-                <label for="telefono">
-                    <input type="tel" id="telefono" name="telefono" required value="<?php echo isset($_SESSION["phone"]) ? $_SESSION['phone'] : ''; ?>" placeholder="Numero di telefono">            
-                </label>
-            </p>
-            <p>
-                <label for="residenza">
-                    <input type="text" id="residenza" name="residenza" required value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Indirizzo di residenza">
-                </label>
-                <label for="data">
-                    <input type="date" id="data" name="data" required>
-                </label>
-            </p>
-            <h1> Dati di pagamento </h1>
-            <p>
-                <label for="card_number">
-                    <input type="text" id="card_number" name="card_number" required placeholder="Numero carta di credito">
-                </label>
-                <label for="intestatario">
-                    <input type="text" id="intestatario" name="intestatario" required placeholder="Intestatario carta di credito">
-                </label>
-            </p>
-            <p>
-                <label for="cvv">
-                    <input type="number" id="cvv" name="cvv" required placeholder="CVV">
-                </label>
-                <label for="expire_date">
-                    <input type="date" id="expire_date" name="expire_date" required>
-                </label>
-            </p>
+                </p>
+                <p id="sex_choice">
+                    <label for="sesso">Sesso:</label>
+                    <label> 
+                        <input type="radio" name="sesso" value="M" required> Uomo
+                    </label>
+                    <label>
+                        <input type="radio" name="sesso" value="F" required> Donna
+                    </label>
+                    <label>
+                        <input type="radio" name="sesso" value="Altro" required> Altro
+                    </label>
+                </p>
+                <p>
+                    <label for="email">
+                        Indirizzo email: <input type="email" id="email" name="email" required value="<?php echo isset($_SESSION["email"]) ? $_SESSION['email'] : ''; ?>" placeholder="Indirizzo email">
+                    </label>
+                </p>
+                <p>
+                    <label for="telefono">
+                        Telefono: <input type="tel" id="telefono" name="telefono" required value="<?php echo isset($_SESSION["phone"]) ? $_SESSION['phone'] : ''; ?>" placeholder="Numero di telefono">            
+                    </label>
+                </p>
+                <p>
+                    <label for="residenza">
+                        Indirizzo di residenza: <input type="text" id="residenza" name="residenza" required value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Indirizzo di residenza">
+                    </label>
+                </p>
+                <p>
+                    <label for="data">
+                        Data di nascita: <input type="date" id="data" name="data" required>
+                    </label>
+                </p>
+            </section>
+            <section id="card_data" class="buyer_form">
+                <h1> Dati di pagamento </h1>
+                <p>
+                    <label for="card_number">
+                        Numero della carta di credito: <input type="text" id="card_number" name="card_number" required placeholder="Numero carta di credito">
+                    </label>
+                </p>
+                <p>
+                    <label for="intestatario">
+                        Nome sulla carta: <input type="text" id="intestatario" name="intestatario" required placeholder="Intestatario carta di credito">
+                    </label>
+                </p>
+                <p>
+                    <label for="cvv">
+                        CVV: <input type="number" id="cvv" name="cvv" required placeholder="CVV" max="999" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);">
+                    </label>
+                </p>
+                <p>
+                    <label for="expire_date">
+                        Data di scadenza: <input type="month" id="expire_date" name="expire_date" required>
+                    </label>
+                </p>
+            </section>
+            <p id="submit_button">
                 <input type="submit" value="CONFERMA">
+            </p>       
         </form>
-
         </main>
         <?php include 'footer.html'?>
     </body>
