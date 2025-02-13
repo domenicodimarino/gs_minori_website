@@ -14,12 +14,12 @@
     <?php include 'header.html'?>
 
     <main>
-        <h1>Ultime News</h1>
+        <h1 id="ultime_news">Ultime News</h1>
         <section class="news-articles">
             <!-- Le news saranno caricate dinamicamente qui -->
         </section>
 
-        <h1>Foto Gallery</h1>
+        <h1 id="foto_gallery">Foto Gallery</h1>
         <section class="photo-gallery">
             <div class="gallery-wrapper">
                 <div class="gallery">
@@ -40,7 +40,7 @@
             </div>
         </section>
 
-        <h1>Video Gallery</h1>
+        <h1 id="video">Video Gallery</h1>
         <section class="video-gallery">
             <div class="video-wrapper">
                 <div class="videos">
