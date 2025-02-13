@@ -1,7 +1,6 @@
 <html>
     <head>
         <title>U19 Silver</title>
-        <link rel="stylesheet" href="css_teams.css" type="text/css"/>
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <style>
@@ -50,6 +49,30 @@
             margin-right: 10px;
             cursor: pointer;
         }
+        .image1 {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    float: left;
+}
+
+.text2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.description {
+    max-width: 600px;
+    text-align: justify;;
+}
         </style>
     </head>
     <body>
@@ -183,32 +206,32 @@
         </a>
     </div>
     <p style="margin-left: 5px; padding-top: 10px;">ALLENATORE</p>
-        <div ; style="padding-top: 15px; padding-left: 20px;">
-            <img style="width:225px; height: 225px;"src="jacopo.png" alt="immagine" class="image">
-            <div class="text-container">
-            <div class="text-block">
-                <p><strong>JACOPO PORPORA</strong></p>
-                <p><strong>DATA DI NASCITA:</strong> 23 Novembre 1994</p>
-                <p><strong>LUOGO DI NASCITA:</strong> Salerno</p>
-                <p><strong>NAZIONALITÀ:</strong> Italia</p>
-                <p><strong>ALLENATORE DAL:</strong> 2024</p>
-                <p><strong>AL GSMINORI DAL:</strong> 2024</p>
-            </div>
-            <div class="text-block">
-                <p>Jacopo Porpora, nato il 23 novembre 1994 a Salerno, è l'allenatore della squadra di basket 
-                    GSMinori. Con una forte connessione con la sua città d'origine, ha dedicato gran parte 
-                    della sua carriera a guidare i giovani atleti locali, cercando di trasmettere loro non solo 
-                    le abilità tecniche del gioco, ma anche il valore del lavoro di squadra e della disciplina. 
-                    La sua passione per il basket e il desiderio di far crescere la squadra lo hanno reso un punto di 
-                    riferimento per i ragazzi della comunità. Sempre attento a creare un ambiente di allenamento positivo 
-                    e motivante, Jacopo è conosciuto per la sua capacità di adattarsi alle esigenze dei suoi giocatori, 
-                    supportandoli nel loro sviluppo sia sul piano tecnico che personale. Con il suo approccio empatico 
-                    e il suo impegno costante, Jacopo è riuscito a far crescere la squadra GSMinori, portando avanti la 
-                    tradizione di eccellenza sportiva del suo paese.
-                </p>
-            </div>
+    <div class="image1" style="padding-top: 5px; margin-left: 20px;">
+        <img src="jacopo.png" alt="Sérgio Conceição" style="width: 100%; height: 150%;">
+    </div>
+    <div class="text2">
+        <div class="info">
+            <p class="title">Jacopo Porpora</p>
+            <p><span class="bold">Data di nascita:</span> 23 novembre 1994</p>
+            <p><span class="bold">Luogo di nascita:</span> Salerno</p>
+            <p><span class="bold">Nazionalità:</span> Italia</p>
+            <p><span class="bold">Allenatore dal:</span> 2024</p>
+            <p><span class="bold">Al Milan dal:</span> 2024</p>
         </div>
+        <div class="description">
+            <p class="bold">Biografia di Jacopo Porpora</p>
+            <p>Jacopo Porpora, nato il 23 novembre 1994 a Salerno, è l'allenatore della squadra di 
+                basket GSMinori. Con una forte connessione con la sua città d'origine, ha dedicato gran parte 
+                della sua carriera a guidare i giovani atleti locali, cercando di trasmettere loro non solo le 
+                abilità tecniche del gioco, ma anche il valore del lavoro di squadra e della disciplina. La sua 
+                passione per il basket e il desiderio di far crescere la squadra lo hanno reso un punto di 
+                riferimento per i ragazzi della comunità. Sempre attento a creare un ambiente di allenamento 
+                positivo e motivante, Jacopo è conosciuto per la sua capacità di adattarsi alle esigenze dei suoi giocatori, 
+                supportandoli nel loro sviluppo sia sul piano tecnico che personale. Con il suo approccio empatico e il suo 
+                impegno costante, Jacopo è riuscito a far crescere la squadra GSMinori, portando avanti la tradizione di 
+                eccellenza sportiva del suo paese.</p>
         </div>
+</div>
            <?php include 'footer.html'; ?>
     </body>
 </html>
