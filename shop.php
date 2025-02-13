@@ -23,6 +23,14 @@
             <i class="fas fa-shopping-cart"></i> <!-- Carrello -->
         </button>
     </div>
+    <ul id="resultsList">
+        <li>Canotta da gara HOME</li>
+        <li>Canotta da gara AWAY</li>
+        <li>Pantaloncini da gara HOME</li>
+        <li>Pantaloncini da gara AWAY</li>
+        <li>Felpa GS Minori</li>
+        <li>Giubbino GS Minori</li>
+    </ul>
     <div class="image-container">
         <div class="image-item">
             <img src="mino.png" alt="Image 1">
@@ -49,14 +57,6 @@
             <p>Giubbino GS Minori <br>39,99€</p>
         </div>
     </div>
-    <ul id="resultsList">
-        <li>Canotta da gara HOME</li>
-        <li>Canotta da gara AWAY</li>
-        <li>Pantaloncini da gara HOME</li>
-        <li>Pantaloncini da gara AWAY</li>
-        <li>Felpa GS Minori</li>
-        <li>Giubbino GS Minori</li>
-    </ul>
 
     <script src="shop.js"></script>
     <?php include 'footer.html'; ?>

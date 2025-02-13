@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         searchInput.value = "";
         updateClearButton();
         searchInput.focus();
+        resultsList.style.display = "none"; // Nasconde i risultati quando si cancella il testo
     });
 
     // Funzione per filtrare i risultati
@@ -53,4 +54,21 @@ document.addEventListener("DOMContentLoaded", function () {
             resultsList.style.display = "none";
         });
     });
+
+    // Filtra le immagini in tempo reale
+    searchInput.addEventListener('input', function() {
+        var filter = this.value.toLowerCase();
+        var imageItems = document.querySelectorAll('.image-item');
+        imageItems.forEach(function(item) {
+            var text = item.textContent.toLowerCase();
+            if (text.includes(filter)) {
+                item.style.display = '';
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+
+    // Ensure the results list is displayed initially
+    updateClearButton();
 });
