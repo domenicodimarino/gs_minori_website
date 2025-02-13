@@ -7,7 +7,7 @@
             .geppetto {
             display: flex;
             gap: 40px;
-            width: auto;
+                width: auto;
             margin-bottom: 20px; 
             padding-left: 10px;
             padding-top: 10px;
@@ -17,18 +17,13 @@
             position: relative;
             width: 300px;
             height: 200px;
-            overflow: hidden; /* Assicura che il testo rimanga all'interno della foto */
             }
 
             .image {
             width: 100%;
-            height: 100%;
-            transition: opacity 0.3s ease; /* Aggiungi una transizione per l'effetto */
+            height: 150%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
-
-            .image-container:hover .image {
-    opacity: 0.7; /* Quando si passa sopra l'immagine, diventa semi-trasparente */
-}
 
             .text-container {
             display: flex;
@@ -38,19 +33,28 @@
             .text-block {
             width: 50%; /* Ogni blocco di testo prende metà della larghezza disponibile */
             }
+            .image-container:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+}
 
             .text {
-    position: absolute;
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra orizzontalmente */
-    transform: translate(-50%, -50%); /* Centra esattamente */
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per il testo */
-    text-align: center; /* Centra il testo */
-    width: 100%; /* Assicura che il testo sia centrato all'interno dell'immagine */
-}
+            position: absolute;
+            top: 100%; /* Centra verticalmente */
+            left: 10%; /* Centra orizzontalmente */
+            transform: translate(-10%, -10%); /* Centra esattamente */
+            color: white; /* Colore del testo */
+            font-size: 24px; /* Dimensione del testo */
+            font-weight: bold; /* Opzionale: Grassetto */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per il testo, opzionale */
+            }
+    
+
+        .container:hover .image {
+            transform: scale(1.1); /* Effetto zoom quando si passa sopra */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombra per l'immagine */
+        }
            
 .image1 {
     flex-shrink: 0;
