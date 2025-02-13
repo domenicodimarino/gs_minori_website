@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Chat</title>
+    <link rel="stylesheet" href="news.css">
+</head>
+<body>
+    <h1>Gestione News</h1>
+
+    <!-- Form per inserire una nuova news -->
+    <form id="newsForm">
+        <input type="text" name="titolo" placeholder="Titolo" required>
+        <textarea name="descrizione" placeholder="Descrizione" required></textarea>
+        <textarea name="contenuto" placeholder="Contenuto" required></textarea>
+        <input type="text" name="immagine" placeholder="URL immagine">
+        <button type="submit">Inserisci News</button>
+    </form>
+
+    <h2>Lista News</h2>
+    <div id="newsContainer"></div>
+
+    <script>
+        // **1️⃣ Inserire una news via AJAX**
+        document.getElementById("newsForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let formData = new FormData(this);
+
+            fetch("news.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                loadNews(); // Aggiorna la lista delle news
+            })
+            .catch(error => console.error("Errore:", error));
+        });
+
+        // **2️⃣ Caricare le news all'avvio**
+        function loadNews() {
+            fetch("news.php")
+            .then(response => response.json())
+            .then(data => {
+                let container = document.getElementById("newsContainer");
+                container.innerHTML = "";
+                data.forEach(news => {
+                    container.innerHTML += `
+                        <div class="news-item">
+                            <h3>${news.titolo}</h3>
+                            <p>${news.descrizione}</p>
+                            <img src="${news.immagine}" alt="Immagine">
+                            <p><small>Pubblicato il: ${new Date(news.data_pubblicazione).toLocaleDateString()}</small></p>
+                        </div>
+                    `;
+                });
+            })
+            .catch(error => console.error("Errore nel caricamento delle news:", error));
+        }
+
+        // Caricamento iniziale
+        loadNews();
+    </script>
+</body>
+</html>
