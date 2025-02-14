@@ -2,10 +2,16 @@
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
+
 // Imposta l'intestazione per JSON
 header('Content-Type: application/json');
 require 'config.php';
 
+if (!isset($_POST["importo"])) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Missing importo parameter']);
+    exit();
+}
 
 $importo = $_POST["importo"];
 

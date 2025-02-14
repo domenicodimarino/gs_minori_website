@@ -100,7 +100,7 @@
         if(isset($_POST['form_submitted']) && $_POST['form_submitted'] == '1'){
             echo '<script type="text/javascript">',
                  'document.addEventListener("DOMContentLoaded", function() {',
-                 'document.getElementById("payment_data").style.display = "block";',
+                 'document.getElementById("payment-form").style.display = "block";',
                  'document.getElementById("initial_view").style.display = "none";',
                  '});',
                  '</script>';
@@ -339,12 +339,13 @@
                                 </p>
                             </section>
                         <?php endfor; ?>  
+                        <input type="number" name="importo" value="<?php echo $total_price; ?>" id="importo" style="display: none;">
                         <input type="submit" value="CONFERMA" onclick="return check_ticket_data(this.form)">
                     </form>
                 </section>
 
         <!-- Schermata di acquisizione dati dell'acquirente -->
-        <form method="post" style="display: none;" id="payment_data">
+        <form method="post" style="display: none;" id="payment-form">
         <h2> Il totale da pagare è di <?php echo $total_price; ?> € </h2>
             <section id="order_summary" class="buyer_form">
                 <h1> Riepilogo ordine </h1>
@@ -362,7 +363,7 @@
             </section>
             <section id="buyer_data" class="buyer_form">
                 <h1> Dati dell'acquirente </h1>
-                <input type="hidden" name="importo" value="<?php echo $total_price; ?>">
+                <input type="hidden" name="importo" value="<?php echo $total_price; ?>" id="importo">
                 <p>
                 <label for="nome">
                     Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Nome">
@@ -376,61 +377,38 @@
                 <p id="sex_choice">
                     <label for="sesso">Sesso:</label>
                     <label> 
-                        <input type="radio" name="sesso" value="M" required> Uomo
+                        <input type="radio" name="sesso" value="M" > Uomo
                     </label>
                     <label>
-                        <input type="radio" name="sesso" value="F" required> Donna
+                        <input type="radio" name="sesso" value="F" > Donna
                     </label>
                     <label>
-                        <input type="radio" name="sesso" value="Altro" required> Altro
+                        <input type="radio" name="sesso" value="Altro" > Altro
                     </label>
                 </p>
                 <p>
                     <label for="email">
-                        Indirizzo email: <input type="email" id="email" name="email" required value="<?php echo isset($_SESSION["email"]) ? $_SESSION['email'] : ''; ?>" placeholder="Indirizzo email">
+                        Indirizzo email: <input type="email" id="email" name="email"  value="<?php echo isset($_SESSION["email"]) ? $_SESSION['email'] : ''; ?>" placeholder="Indirizzo email">
                     </label>
                 </p>
                 <p>
                     <label for="telefono">
-                        Telefono: <input type="tel" id="telefono" name="telefono" required value="<?php echo isset($_SESSION["phone"]) ? $_SESSION['phone'] : ''; ?>" placeholder="Numero di telefono">            
+                        Telefono: <input type="tel" id="telefono" name="telefono"  value="<?php echo isset($_SESSION["phone"]) ? $_SESSION['phone'] : ''; ?>" placeholder="Numero di telefono">            
                     </label>
                 </p>
                 <p>
                     <label for="residenza">
-                        Indirizzo di residenza: <input type="text" id="residenza" name="residenza" required value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Indirizzo di residenza">
+                        Indirizzo di residenza: <input type="text" id="residenza" name="residenza"  value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Indirizzo di residenza">
                     </label>
                 </p>
                 <p>
                     <label for="data">
-                        Data di nascita: <input type="date" id="data" name="data" required>
+                        Data di nascita: <input type="date" id="data" name="data" >
                     </label>
                 </p>
             </section>
             <section id="card_data" class="buyer_form">
                 <h1> Dati di pagamento </h1>
-                
-
-                    <!-- <p>
-                        <label for="card_number">
-                            Numero della carta di credito: <input type="text" id="card_number" name="card_number" required placeholder="Numero carta di credito">
-                        </label>
-                    </p>
-                    <p>
-                        <label for="intestatario">
-                            Nome sulla carta: <input type="text" id="intestatario" name="intestatario" required placeholder="Intestatario carta di credito">
-                        </label>
-                    </p>
-                    <p>
-                        <label for="cvv">
-                            CVV: <input type="number" id="cvv" name="cvv" required placeholder="CVV" max="999" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);">
-                        </label>
-                    </p>
-                    <p>
-                        <label for="expire_date">
-                            Data di scadenza: <input type="month" id="expire_date" name="expire_date" required>
-                        </label>
-                    </p> -->
-
             </section>
             <div id="card-element">
                     <!--Stripe.js injects the Payment Element-->
@@ -440,7 +418,7 @@
                 
             
             <p id="submit_button">
-                <button id="submit-btn">CONFERMA</button>
+                <button id="submit-button">CONFERMA</button>
             </p>       
         </form>
         <script src="checkout.js">
