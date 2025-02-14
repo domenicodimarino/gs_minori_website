@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 payment_method: {
                     card: cardElement,
                     billing_details: {
-                        name: form.nome.value + form.cognome.value // Nome del proprietario della carta
+                        name: form.nome.value + ' ' + form.cognome.value // Nome del proprietario della carta
                     },
                 },
             });

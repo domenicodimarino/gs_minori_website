@@ -29,6 +29,12 @@
     ?>*/
     ?>
 
+    <?php
+    // Hidden input fields to pass data to checkout.php
+    $totalPrice = $_POST['importo'];
+    
+    ?>
+
     <h1>Pagamento</h1>
     <form method="POST" id="payment-form">
             <div id="card-element">
@@ -37,7 +43,13 @@
             
             <!-- Used to display Element errors. -->
             <div id="card-errors" role="alert"></div>
-        <input type="submit" class="confirm-order-button" id="submit-btn" value="Conferma pagamento"></input>
+
+            <!-- NOME E COGNOME DI TEST PER CHECKOUT, DA MODIFICAREEEEE -->
+             <input type="text" name="nome" id="nome" value="Default name" hidden>
+             <input type="text" name="cognome" id="cognome" value="Default surname" hidden>
+
+            <input type="number" name="importo" value="<?php echo $totalPrice; ?>" hidden>
+        <input type="submit" class="confirm-order-button" id="submit-button" value="Conferma pagamento"></input>
     </form>
     <script src="checkout.js"></script>
     <?php include 'footer.html'?>

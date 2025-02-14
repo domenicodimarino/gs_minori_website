@@ -115,7 +115,7 @@
             <section id="buyer_data" class="buyer_form">
                 <h1> Dati dell'acquirente </h1>
                 <p>
-                    TOTALE: <input type="number" id="importo" name="importo" value="<?php echo $total_price; ?>" readonly>
+                    <input type="number" id="importo" name="importo" value="<?php echo $total_price; ?>" readonly hidden>
                 </p>
                 <p>
                 <label for="nome">
