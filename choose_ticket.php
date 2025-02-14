@@ -321,7 +321,7 @@
                             <strong>PREZZO</strong>
                         </p>
                     </section>
-                    <form action="<?php echo $_SERVER['PHP_SELF']?>?matchID=<?php echo $matchID?>" method="post">
+                    <form action="checkout_ticket.php?matchID=<?php echo $matchID?>" method="post">
                         <input type="hidden" name="form_submitted" value="1">
                         <?php for ($i = 1; $i <= 12; $i++): ?>
                             <section class="sector_choice">
@@ -343,23 +343,6 @@
                     </form>
                 </section>
 
-        <!-- Schermata di acquisizione dati dell'acquirente -->
-        <form method="post" style="display: none;" id="payment-form">
-        <h2> Il totale da pagare è di <?php echo $total_price; ?> € </h2>
-            <section id="order_summary" class="buyer_form">
-                <h1> Riepilogo ordine </h1>
-                <p>
-                    <ul id="resultsList">
-                        <?php for ($i = 1; $i <= 12; $i++): ?>
-                            <?php if($_POST['numero_biglietti'][$i] > 0): ?>
-                                <li>
-                                    <?php echo $sector[$i]; ?>: <?php echo $_POST['numero_biglietti'][$i]; ?> bigliett<?php echo $_POST['numero_biglietti'][$i] > 1 ? 'i' : 'o'; ?> = <?php echo $sector_price[$i] * $_POST['numero_biglietti'][$i]; ?> €
-                                </li>
-                            <?php endif; ?>
-                        <?php endfor; ?>
-                    </ul>
-                </p>
-            </section>
         </main>
         <?php include 'footer.html'?>
     </body>

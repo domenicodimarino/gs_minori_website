@@ -114,7 +114,9 @@
             </section>
             <section id="buyer_data" class="buyer_form">
                 <h1> Dati dell'acquirente </h1>
-                <input type="hidden" name="importo" value="<?php echo $total_price; ?>" id="importo">
+                <p>
+                    TOTALE: <input type="number" id="importo" name="importo" value="<?php echo $total_price; ?>" readonly>
+                </p>
                 <p>
                 <label for="nome">
                     Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Nome">
@@ -167,7 +169,6 @@
             <!-- Used to display Element errors. -->
             <div id="card-errors" role="alert"></div>
             </div>
-            </section>
             <p id="submit_button">
                 <button id="submit-button">CONFERMA</button>
             </p>       
