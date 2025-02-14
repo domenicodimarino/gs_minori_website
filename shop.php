@@ -34,6 +34,30 @@
     <form id="cartForm" action="cart.php" method="POST">
         <div class="image-container">
             <div class="image-item">
+                <img src="mino.png" alt="Image 1">
+                <p>Canotta da gara HOME<br> 29,99€</p>
+                <input type="hidden" name="product_image[]" value="mino.png">
+                <input type="hidden" name="product_name[]" value="Pantaloncini da gara HOME">
+                <input type="hidden" name="product_price[]" value="19.99">
+                <div class="quantity-controls">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" class="quantity" name="quantity[]" value="0" min="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="image-item">
+                <img src="mino.png" alt="Image 2">
+                <p>Canotta da gara AWAY<br> 29,99€</p>
+                <input type="hidden" name="product_image[]" value="mino.png">
+                <input type="hidden" name="product_name[]" value="Pantaloncini da gara HOME">
+                <input type="hidden" name="product_price[]" value="19.99">
+                <div class="quantity-controls">
+                    <button type="button" class="decrement">-</button>
+                    <input type="number" class="quantity" name="quantity[]" value="0" min="0">
+                    <button type="button" class="increment">+</button>
+                </div>
+            </div>
+            <div class="image-item">
                 <img src="mino.png" alt="Image 3">
                 <p>Pantaloncini da gara HOME<br> 19,99€</p>
                 <input type="hidden" name="product_image[]" value="mino.png">
