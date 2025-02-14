@@ -40,29 +40,8 @@
             .catch(error => console.error("Errore:", error));
         });
 
-        // **2️⃣ Caricare le news all'avvio**
-        function loadNews() {
-            fetch("news.php")
-            .then(response => response.json())
-            .then(data => {
-                let container = document.getElementById("newsContainer");
-                container.innerHTML = "";
-                data.forEach(news => {
-                    container.innerHTML += `
-                        <div class="news-item">
-                            <h3>${news.titolo}</h3>
-                            <p>${news.descrizione}</p>
-                            <img src="${news.immagine}" alt="Immagine">
-                            <p><small>Pubblicato il: ${new Date(news.data_pubblicazione).toLocaleDateString()}</small></p>
-                        </div>
-                    `;
-                });
-            })
-            .catch(error => console.error("Errore nel caricamento delle news:", error));
-        }
-
-        // Caricamento iniziale
-        loadNews();
+     
+      
     </script>
 </body>
 </html>

@@ -19,6 +19,17 @@
             <!-- Le news saranno caricate dinamicamente qui -->
         </section>
 
+        <h1 id="aggiungi_news">Aggiungi News</h1>
+        <section class="add-news">
+            <form id="newsForm">
+                <input type="text" name="titolo" placeholder="Titolo" required>
+                <textarea name="descrizione" placeholder="Descrizione" required></textarea>
+                <textarea name="contenuto" placeholder="Contenuto" required></textarea>
+                <input type="text" name="immagine" placeholder="URL immagine" required>
+                <button type="submit">Inserisci News</button>
+            </form>
+        </section>  
+
         <h1 id="foto_gallery">Foto Gallery</h1>
         <section class="photo-gallery">
             <div class="gallery-wrapper">
@@ -61,6 +72,9 @@
     <!-- Footer -->
     <?php include 'footer.html'?>
 
+
+
+    <!--Caricare le news all'avvio-->
     <script>
         function caricaNews() {
             $.getJSON("news.php", function(data) {
@@ -68,19 +82,72 @@
                 data.forEach(function(news) {
                     newsHtml += `
                         <article>
+                            <img src="${news.immagine}" alt="${news.titolo}">
                             <h2>${news.titolo}</h2>
                             <p>${news.descrizione}</p>
-                            <img src="${news.immagine}" alt="${news.titolo}">
-                            <p>${news.contenuto}</p>
+                            <p><small>Pubblicato il: ${new Date(news.data_pubblicazione).toLocaleDateString()}</small></p>
+                            <a href="#" class="read-more" data-id="${news.id}" data-title="${news.titolo}" data-image="${news.immagine}" data-content="${news.contenuto}">Leggi di più...</a>
+
                         </article>
                     `;
                 });
-                $(".news-articles").html(newsHtml);
+                $(".news-articles").html(newsHtml); // Inserisce le news nella pagina
+                
+                // Aggiungi evento click per i link "Leggi di più..."
+                 document.querySelectorAll(".read-more").forEach(function(element) {
+                    element.addEventListener("click", function(event) {
+                        event.preventDefault();
+                        var title = this.getAttribute("data-title");
+                        var image = this.getAttribute("data-image");
+                        var content = this.getAttribute("data-content");
+
+                        document.getElementById("modalTitle").textContent = title;
+                        document.getElementById("modalImage").src = image;
+                        document.getElementById("modalContent").textContent = content;
+
+                        document.getElementById("newsModal").style.display = "block";
+                    });
+                });
             });
         }
 
         $(document).ready(function() {
             caricaNews();
+        });
+
+        // Gestione dell'invio del form per l'inserimento delle news
+        document.getElementById("newsForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let formData = new FormData(this);
+
+            fetch("news.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data);
+                caricaNews(); // Aggiorna la lista delle news
+            })
+            .catch(error => console.error("Errore:", error));
+        });
+
+
+// Gestione della navigazione tra le immagini, video e news all'interno dei modal
+       
+        // Chiudi il modal quando si clicca sulla X
+        document.querySelectorAll(".close").forEach(function(element) {
+            element.addEventListener("click", function() {
+                element.closest(".modal").style.display = "none";
+            });
+        });
+
+        // Chiudi il modal quando si clicca fuori dal modal
+        window.addEventListener("click", function(event) {
+            if (event.target.classList.contains("modal")) {
+                event.target.style.display = "none";
+            }
         });
 
         // JavaScript per l'ingrandimento delle immagini
@@ -94,11 +161,6 @@
                 modalImg.src = this.src;
             }
         });
-
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
 
         // JavaScript per l'ingrandimento dei video
         var modalVideo = document.getElementById("myModalVideo");
@@ -120,6 +182,8 @@
         }
     </script>
 
+
+            <!-- Gestione Modal -->
     <!-- Modal per l'ingrandimento delle immagini -->
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
@@ -137,5 +201,17 @@
             </video>
         </div>
     </div>
+
+    <!-- Modal per l'ingrandimento delle news -->
+    <div id="newsModal" class="modal">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <h2 id="modalTitle"></h2>
+            <img id="modalImage" src="" alt="">
+            <p id="modalContent"></p>
+        </div>
+    </div>
+
+
 </body>
 </html>
