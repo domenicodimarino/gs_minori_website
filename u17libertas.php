@@ -30,6 +30,26 @@
         tr:nth-child(even) {
             background-color: #f2f2f2; /* Alternanza di colori per le righe */
         }
+        th {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px; /* Spazio per la freccia */
+        }
+        th::after {
+            content: "▲▼";
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #ccc; /* Colore grigio per le frecce inattive */
+        }
+        th.asc::after {
+            content: "▲";
+            color: #000; /* Colore nero per la freccia attiva */
+        }
+        th.desc::after {
+            content: "▼";
+            color: #000; /* Colore nero per la freccia attiva */
+        }
         .share-container {
             display: flex;
             align-items: center;
@@ -50,29 +70,29 @@
             cursor: pointer;
         }
         .image1 {
-    flex-shrink: 0;
-    width: 250px;
-    height: 250px;
-    float: left;
-}
+            flex-shrink: 0;
+            width: 250px;
+            height: 250px;
+            float: left;
+        }
 
-.text2 {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 20px;
-}
+        .text2 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-left: 20px;
+        }
 
-.info {
-    display: flex;
-    flex-direction: column;
+        .info {
+            display: flex;
+            flex-direction: column;
     
-}
+        }
 
-.description {
-    max-width: 600px;
-    text-align: justify;;
-}
+        .description {
+            max-width: 600px;
+            text-align: justify;;
+        }
         </style>
     </head>
     <body>
@@ -91,11 +111,11 @@
         <div id="immagine_u17" style="text-align: center"> <strong>U17 LIBERTAS</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
         <tr>
-            <th>Nome</th>
-            <th>Cognome</th>
-            <th>Anno di Nascita</th>
-            <th>Ruolo</th>
-            <th>Numero di Maglia</th>
+            <th data-type="text">Nome</th>
+            <th data-type="text">Cognome</th>
+            <th data-type="number">Anno di Nascita</th>
+            <th data-type="text">Ruolo</th>
+            <th data-type="number">Numero di Maglia</th>
         </tr>
         <tr>
             <td>Umberto</td>
@@ -186,14 +206,14 @@
             <td>Proto</td>
             <td>2009</td>
             <td>Playmaker</td>
-            <td>2</td>
+            <td>47</td>
         </tr>
         <tr>
             <td>Thomas</td>
             <td>Proto</td>
             <td>2009</td>
             <td>Guardia</td>
-            <td>2</td>
+            <td>72</td>
         </tr>
         <tr>
             <td>Ferdinando</td>
@@ -214,7 +234,7 @@
             <td>Sorrentino</td>
             <td>2009</td>
             <td>Ala grande</td>
-            <td>21</td>
+            <td>55</td>
         </tr>
         <tr>
             <td>Simone</td>
@@ -260,6 +280,7 @@
                 eccellenza sportiva del suo paese.</p>
         </div>
 </div>
+            <script src="table.js"></script>
            <?php include 'footer.html'; ?>
     </body>
 </html>
