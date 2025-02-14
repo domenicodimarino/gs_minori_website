@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="choose_ticket.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="https://js.stripe.com/v3/"></script>
     </head>
     <body>
         <?php include 'header.html'?>
@@ -348,7 +349,7 @@
             <section id="order_summary" class="buyer_form">
                 <h1> Riepilogo ordine </h1>
                 <p>
-                    <ul>
+                    <ul id="resultsList">
                         <?php for ($i = 1; $i <= 12; $i++): ?>
                             <?php if($_POST['numero_biglietti'][$i] > 0): ?>
                                 <li>
@@ -406,31 +407,44 @@
             </section>
             <section id="card_data" class="buyer_form">
                 <h1> Dati di pagamento </h1>
-                <p>
-                    <label for="card_number">
-                        Numero della carta di credito: <input type="text" id="card_number" name="card_number" required placeholder="Numero carta di credito">
-                    </label>
-                </p>
-                <p>
-                    <label for="intestatario">
-                        Nome sulla carta: <input type="text" id="intestatario" name="intestatario" required placeholder="Intestatario carta di credito">
-                    </label>
-                </p>
-                <p>
-                    <label for="cvv">
-                        CVV: <input type="number" id="cvv" name="cvv" required placeholder="CVV" max="999" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);">
-                    </label>
-                </p>
-                <p>
-                    <label for="expire_date">
-                        Data di scadenza: <input type="month" id="expire_date" name="expire_date" required>
-                    </label>
-                </p>
+                
+
+                    <!-- <p>
+                        <label for="card_number">
+                            Numero della carta di credito: <input type="text" id="card_number" name="card_number" required placeholder="Numero carta di credito">
+                        </label>
+                    </p>
+                    <p>
+                        <label for="intestatario">
+                            Nome sulla carta: <input type="text" id="intestatario" name="intestatario" required placeholder="Intestatario carta di credito">
+                        </label>
+                    </p>
+                    <p>
+                        <label for="cvv">
+                            CVV: <input type="number" id="cvv" name="cvv" required placeholder="CVV" max="999" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);">
+                        </label>
+                    </p>
+                    <p>
+                        <label for="expire_date">
+                            Data di scadenza: <input type="month" id="expire_date" name="expire_date" required>
+                        </label>
+                    </p> -->
+
             </section>
+            <div id="card-element">
+                    <!--Stripe.js injects the Payment Element-->
+                </div>
+            
+            <!-- Used to display Element errors. -->
+            <div id="card-errors" role="alert"></div>
+            
             <p id="submit_button">
-                <input type="submit" value="CONFERMA">
+                <input type="submit" value="CONFERMA" id="submit-btn">
             </p>       
         </form>
+        <script src="checkout.js">
+
+        </script>
         </main>
         <?php include 'footer.html'?>
     </body>
