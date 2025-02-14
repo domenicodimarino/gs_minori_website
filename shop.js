@@ -3,72 +3,113 @@ document.addEventListener("DOMContentLoaded", function () {
     const clearButton = document.getElementById("clearButton");
     const resultsList = document.getElementById("resultsList");
     const items = resultsList.querySelectorAll("li");
+    const imageItems = document.querySelectorAll('.image-item');
+    const confirmButton = document.getElementById("confirmButton");
 
-    // Funzione per aggiornare lo stato della "X"
     function updateClearButton() {
         if (searchInput.value.length > 0) {
             clearButton.style.display = "block";
         } else {
             clearButton.style.display = "none";
             resultsList.style.display = "none"; // Nasconde i risultati se l'input è vuoto
+            showAllImages(); // Mostra tutte le immagini quando l'input è vuoto
         }
     }
 
-    // Mostra/nasconde la "X" e filtra i risultati
+    // Filtra i risultati e le immagini
     searchInput.addEventListener("input", function () {
         updateClearButton();
         filterResults(this.value);
     });
 
-    // Cancella il testo e nasconde la lista
+    // Cancella il testo e ripristina tutto
     clearButton.addEventListener("click", function () {
         searchInput.value = "";
         updateClearButton();
-        searchInput.focus();
-        resultsList.style.display = "none"; // Nasconde i risultati quando si cancella il testo
+        resultsList.style.display = "none";
+        showAllImages();
     });
 
-    // Funzione per filtrare i risultati
     function filterResults(query) {
         let visible = false;
-        query = query.toLowerCase().trim(); // Normalizza il testo
+        query = query.toLowerCase().trim();
+
         items.forEach(item => {
             const text = item.textContent.toLowerCase();
             if (text.includes(query) && query.length > 0) {
                 item.style.display = "block";
-                item.classList.add("highlight");
                 visible = true;
             } else {
                 item.style.display = "none";
-                item.classList.remove("highlight");
             }
         });
+
+        imageItems.forEach(item => {
+            const textElement = item.querySelector("p");
+            const text = textElement ? textElement.textContent.toLowerCase() : "";
+            if (text.includes(query)) {
+                item.style.display = "";
+                visible = true;
+            } else {
+                item.style.display = "none";
+            }
+        });
+
         resultsList.style.display = visible ? "block" : "none";
     }
 
-    // Selezione di un elemento
+    function showAllImages() {
+        imageItems.forEach(item => {
+            item.style.display = "";
+        });
+    }
+
+    // Selezione di un suggerimento dalla lista
     items.forEach(item => {
         item.addEventListener("click", function () {
-            searchInput.value = item.textContent;
+            const selectedText = item.textContent;
+            searchInput.value = selectedText;
             updateClearButton();
             resultsList.style.display = "none";
+
+            // Mostra solo il prodotto selezionato e nasconde gli altri
+            filterResults(selectedText);
         });
     });
 
-    // Filtra le immagini in tempo reale
-    searchInput.addEventListener('input', function() {
-        var filter = this.value.toLowerCase();
-        var imageItems = document.querySelectorAll('.image-item');
-        imageItems.forEach(function(item) {
-            var text = item.textContent.toLowerCase();
-            if (text.includes(filter)) {
-                item.style.display = '';
-            } else {
-                item.style.display = 'none';
+    // Incrementa e decrementa la quantità
+    document.querySelectorAll('.increment').forEach(button => {
+        button.addEventListener('click', function () {
+            const quantityInput = this.previousElementSibling;
+            quantityInput.value = parseInt(quantityInput.value) + 1;
+        });
+    });
+
+    document.querySelectorAll('.decrement').forEach(button => {
+        button.addEventListener('click', function () {
+            const quantityInput = this.nextElementSibling;
+            if (quantityInput.value > 0) {
+                quantityInput.value = parseInt(quantityInput.value) - 1;
             }
         });
     });
 
-    // Ensure the results list is displayed initially
+    // Gestisci il bottone "Conferma"
+    confirmButton.addEventListener('click', function () {
+        const cartItems = [];
+        document.querySelectorAll('.image-item').forEach(item => {
+            const quantityInput = item.querySelector('.quantity');
+            const quantity = parseInt(quantityInput.value);
+            if (quantity > 0) {
+                const productName = item.querySelector('p').textContent;
+                cartItems.push({ productName, quantity });
+            }
+        });
+
+        // Simula l'invio al carrello (puoi sostituire questo con una chiamata AJAX o altro)
+        console.log('Carrello:', cartItems);
+        alert('Prodotti aggiunti al carrello!');
+    });
+
     updateClearButton();
 });

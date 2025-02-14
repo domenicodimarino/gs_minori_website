@@ -24,39 +24,47 @@
         </button>
     </div>
     <ul id="resultsList">
-        <li>Canotta da gara HOME</li>
-        <li>Canotta da gara AWAY</li>
-        <li>Pantaloncini da gara HOME</li>
-        <li>Pantaloncini da gara AWAY</li>
-        <li>Felpa GS Minori</li>
-        <li>Giubbino GS Minori</li>
     </ul>
     <div class="image-container">
         <div class="image-item">
-            <img src="mino.png" alt="Image 1">
-            <p>Canotta da gara HOME <br> 29,99€</p>
-        </div>
-        <div class="image-item">
-            <img src="mino.png" alt="Image 2">
-            <p>Canotta da gara AWAY <br> 29,99€</p>
-        </div>
-        <div class="image-item">
             <img src="mino.png" alt="Image 3">
             <p>Pantaloncini da gara HOME<br> 19,99€</p>
+            <div class="quantity-controls">
+                <button class="decrement">-</button>
+                <input type="number" class="quantity" value="0" min="0">
+                <button class="increment">+</button>
+            </div>
         </div>
         <div class="image-item">
             <img src="mino.png" alt="Image 4">
             <p>Pantaloncini da gara AWAY<br> 29,99€</p>
+            <div class="quantity-controls">
+                <button class="decrement">-</button>
+                <input type="number" class="quantity" value="0" min="0">
+                <button class="increment">+</button>
+            </div>
         </div>
         <div class="image-item">
             <img src="mino.png" alt="Image 5">
             <p>Felpa GS Minori <br>29,99€</p>
+            <div class="quantity-controls">
+                <button class="decrement">-</button>
+                <input type="number" class="quantity" value="0" min="0">
+                <button class="increment">+</button>
+            </div>
         </div>
         <div class="image-item">
             <img src="mino.png" alt="Image 6">
             <p>Giubbino GS Minori <br>39,99€</p>
+            <div class="quantity-controls">
+                <button class="decrement">-</button>
+                <input type="number" class="quantity" value="0" min="0">
+                <button class="increment">+</button>
+            </div>
         </div>
     </div>
+
+    <button id="confirmButton">Conferma</button>
 
     <script src="shop.js"></script>
     <?php include 'footer.html'; ?>
