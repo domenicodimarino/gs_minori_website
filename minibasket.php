@@ -30,6 +30,26 @@
         tr:nth-child(even) {
             background-color: #f2f2f2; /* Alternanza di colori per le righe */
         }
+        th {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px; /* Spazio per la freccia */
+        }
+        th::after {
+            content: "▲▼";
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #ccc; /* Colore grigio per le frecce inattive */
+        }
+        th.asc::after {
+            content: "▲";
+            color: #000; /* Colore nero per la freccia attiva */
+        }
+        th.desc::after {
+            content: "▼";
+            color: #000; /* Colore nero per la freccia attiva */
+        }
         .share-container {
             display: flex;
             align-items: center;
@@ -91,32 +111,32 @@
         <div style="text-align: center"> <strong>MINIBASKET</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
         <tr>
-            <th>Nome</th>
-            <th>Cognome</th>
-            <th>Anno di Nacita</th>
-            <th>Ruolo</th>
-            <th>Numero di Maglia</th>
+            <th data-type="text">Nome</th>
+            <th data-type="text">Cognome</th>
+            <th data-type="number">Anno di Nascita</th>
+            <th data-type="text">Ruolo</th>
+            <th data-type="number">Numero di Maglia</th>
         </tr>
-        <tr><td>Marco</td><td>Rossi</td><td>2015</td><td>Playmaker</td><td>5</td></tr>
-        <tr><td>Giulia</td><td>Bianchi</td><td>2016</td><td>Guardia</td><td>8</td></tr>
-        <tr><td>Andrea</td><td>Verdi</td><td>2014</td><td>Centro</td><td>12</td></tr>
+        <tr><td>Marco</td><td>Rossi</td><td>2015</td><td>Playmaker</td><td>33</td></tr>
+        <tr><td>Giulia</td><td>Bianchi</td><td>2016</td><td>Guardia</td><td>88</td></tr>
+        <tr><td>Andrea</td><td>Verdi</td><td>2014</td><td>Centro</td><td>45</td></tr>
         <tr><td>Sara</td><td>Moretti</td><td>2017</td><td>Ala piccola</td><td>9</td></tr>
-        <tr><td>Matteo</td><td>Ferrari</td><td>2018</td><td>Ala grande</td><td>15</td></tr>
-        <tr><td>Elena</td><td>Russo</td><td>2015</td><td>Guardia</td><td>6</td></tr>
+        <tr><td>Matteo</td><td>Ferrari</td><td>2018</td><td>Ala grande</td><td>55</td></tr>
+        <tr><td>Elena</td><td>Russo</td><td>2015</td><td>Guardia</td><td>26</td></tr>
         <tr><td>Davide</td><td>Colombo</td><td>2016</td><td>Centro</td><td>13</td></tr>
-        <tr><td>Francesca</td><td>Conti</td><td>2017</td><td>Playmaker</td><td>4</td></tr>
+        <tr><td>Francesca</td><td>Conti</td><td>2017</td><td>Playmaker</td><td>77</td></tr>
         <tr><td>Luca</td><td>De Luca</td><td>2018</td><td>Ala piccola</td><td>10</td></tr>
         <tr><td>Alessandro</td><td>Mancini</td><td>2014</td><td>Ala grande</td><td>18</td></tr>
-        <tr><td>Martina</td><td>Rinaldi</td><td>2015</td><td>Playmaker</td><td>3</td></tr>
+        <tr><td>Martina</td><td>Rinaldi</td><td>2015</td><td>Playmaker</td><td>0</td></tr>
         <tr><td>Riccardo</td><td>Galli</td><td>2016</td><td>Guardia</td><td>7</td></tr>
-        <tr><td>Valentina</td><td>Serra</td><td>2017</td><td>Centro</td><td>11</td></tr>
+        <tr><td>Valentina</td><td>Serra</td><td>2017</td><td>Centro</td><td>42</td></tr>
         <tr><td>Tommaso</td><td>Leone</td><td>2018</td><td>Ala piccola</td><td>14</td></tr>
-        <tr><td>Alice</td><td>Pellegrini</td><td>2014</td><td>Ala grande</td><td>16</td></tr>
-        <tr><td>Filippo</td><td>Marini</td><td>2015</td><td>Playmaker</td><td>2</td></tr>
-        <tr><td>Chiara</td><td>Benedetti</td><td>2016</td><td>Guardia</td><td>9</td></tr>
+        <tr><td>Alice</td><td>Pellegrini</td><td>2014</td><td>Ala grande</td><td>44</td></tr>
+        <tr><td>Filippo</td><td>Marini</td><td>2015</td><td>Playmaker</td><td>22</td></tr>
+        <tr><td>Chiara</td><td>Benedetti</td><td>2016</td><td>Guardia</td><td>19</td></tr>
         <tr><td>Leonardo</td><td>Gatti</td><td>2017</td><td>Centro</td><td>17</td></tr>
-        <tr><td>Emma</td><td>Villa</td><td>2018</td><td>Ala piccola</td><td>20</td></tr>
-        <tr><td>Gabriele</td><td>Fabbri</td><td>2014</td><td>Ala grande</td><td>1</td></tr>
+        <tr><td>Emma</td><td>Villa</td><td>2018</td><td>Ala piccola</td><td>29</td></tr>
+        <tr><td>Gabriele</td><td>Fabbri</td><td>2014</td><td>Ala grande</td><td>11</td></tr>
     </table>
     <div class="share-container">
         <span class="share-text">CONDIVIDI SU:</span>
@@ -154,6 +174,7 @@
                 eccellenza sportiva del suo paese.</p>
         </div>
 </div>
+        <script src="table.js"></script>
            <?php include 'footer.html'; ?>
     </body>
 </html>

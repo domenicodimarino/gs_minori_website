@@ -35,8 +35,7 @@
             }
             .image-container:hover {
     transform: scale(1.1);
-    filter: brightness(1.2);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
             .text {
@@ -106,8 +105,8 @@
         <p style="margin-left: 5px;">PLAYMAKER</p>
             <div id="playmaker"; style="padding-top: 15px" class="geppetto">
                     <div class="image-container">
-                    <img style="padding-top: 15px" src="mino.png" alt="immagine" class="image">
-                    <div class="text"> hola </div>
+                    <img src="alemammato.png" alt="immagine" class="image">
+                    <div class="text"> 34 <br> Alessandro  <br>Mammato</div>
                     </div>
             </div>
         <p style="margin-left: 5px; padding-top:100px">GUARDIA</p>
@@ -126,10 +125,6 @@
         <p style="margin-left: 5px; padding-top: 100px">ALA PICCOLA</p>
             <div id="alapiccola" style="padding-top: 15px" class="geppetto">
                 <div class="image-container">
-                    <img src="photo_teams/alessio.jpg" alt="immagine" class="image">
-                    <div class="text"> 7 <br>Alessio <br>Proto</div>
-                </div>
-                <div class="image-container">
                     <img src="photo_teams/alfonso_fusco.jpg" alt="immagine" class="image">
                     <div class="text"> 15 <br>Alfonso <br>Fusco</div>
                 </div>
@@ -141,9 +136,7 @@
                     <img src="photo_teams/gabriele.jpg" alt="immagine" class="image">
                     <div class="text"> 10 <br>Gabriele <br>Di Lieto</div>
                 </div>
-            </div>
-            <div id="alapiccola" style="padding-top: 100px" class="geppetto">
-            <div class="image-container">
+                <div class="image-container">
                     <img src="photo_teams/manuel.jpg" alt="immagine" class="image">
                     <div class="text"> 77 <br>Manuel <br>Proto</div>
                 </div>
@@ -162,8 +155,8 @@
         <p style="margin-left: 5px; padding-top: 100px">CENTRO</p>
             <div id="centro"; style="padding-top: 15px" class="geppetto">
                 <div class="image-container">
-                    <img src="mino.png" alt="immagine" class="image">
-                    <div class="text"> hola</div>
+                    <img src="photo_teams/alessio.jpg" alt="immagine" class="image">
+                    <div class="text"> 7 <br>Alessio <br>Proto</div>
                 </div>
             </div>
         <p style="margin-left: 5px; padding-top: 100px">ALLENATORE</p>
@@ -173,7 +166,7 @@
         <img src="jacopo.png" alt="Sérgio Conceição" style="width: 100%; height: 150%;">
     </div>
     <div class="text2">
-        <div class="info">
+        <div class="info" id="allenatore">
             <p class="title">Jacopo Porpora</p>
             <p><span class="bold">Data di nascita:</span> 23 novembre 1994</p>
             <p><span class="bold">Luogo di nascita:</span> Salerno</p>

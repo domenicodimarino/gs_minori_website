@@ -30,6 +30,26 @@
         tr:nth-child(even) {
             background-color: #f2f2f2; /* Alternanza di colori per le righe */
         }
+        th {
+            cursor: pointer;
+            position: relative;
+            padding-right: 20px; /* Spazio per la freccia */
+        }
+        th::after {
+            content: "▲▼";
+            position: absolute;
+            right: 5px;
+            font-size: 12px;
+            color: #ccc; /* Colore grigio per le frecce inattive */
+        }
+        th.asc::after {
+            content: "▲";
+            color: #000; /* Colore nero per la freccia attiva */
+        }
+        th.desc::after {
+            content: "▼";
+            color: #000; /* Colore nero per la freccia attiva */
+        }
         .share-container {
             display: flex;
             align-items: center;
@@ -91,11 +111,11 @@
         <div style="text-align: center"> <strong>U19 SILVER</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
         <tr>
-            <th>Nome</th>
-            <th>Cognome</th>
-            <th>Anno di Nascita</th>
-            <th>Ruolo</th>
-            <th>Numero di Maglia</th>
+            <th data-type="text">Nome</th>
+            <th data-type="text">Cognome</th>
+            <th data-type="number">Anno di Nascita</th>
+            <th data-type="text">Ruolo</th>
+            <th data-type="number">Numero di Maglia</th>
         </tr>
         <tr>
             <td>Francesco</td>
@@ -232,6 +252,7 @@
                 eccellenza sportiva del suo paese.</p>
         </div>
 </div>
+        <script src="table.js"></script>
            <?php include 'footer.html'; ?>
     </body>
 </html>
