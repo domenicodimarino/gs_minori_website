@@ -1,0 +1,204 @@
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stile generale per il corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Titolo principale */
+h1 {
+    text-align: center;
+    color: #0d1459;
+    padding: 20px 0;
+}
+#intro p {
+    text-align: center;
+    color: #333;
+    padding: 20px 0;
+}
+
+/* Sezione Community */
+#community {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+#community p {
+    margin-bottom: 20px;
+}
+
+/* Form per inserire un nuovo post */
+#community form {
+    margin: 0 auto 30px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+#community label {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#community textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+#community input[type='submit'] {
+    background-color: #0044cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#community input[type='submit']:hover {
+    background-color: #0033aa;
+}
+
+/* Contenuti postati in griglia */
+.posted-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    text-align: left;
+    justify-items: center;
+}
+
+.posted-content div {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.2s;
+}
+
+.posted-content div:hover {
+    transform: scale(1.03);
+}
+
+.posted-content p {
+    margin-bottom: 10px;
+}
+
+/* Sezione Concorsi */
+#concorsi {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contenitore per le card dei concorsi */
+.contests {
+    display: flex;
+    overflow-x: scroll;
+    gap: 20px;
+    padding: 20px 0;
+    -ms-overflow-style: none;  /* Nasconde la barra di scorrimento in Internet Explorer e Edge */
+    scrollbar-width: none;  /* Nasconde la barra di scorrimento in Firefox */
+}
+
+.contests::-webkit-scrollbar {
+    display: none;  /* Nasconde la barra di scorrimento in Chrome, Safari e Opera */
+}
+
+/* Card singola del concorso */
+.contest {
+    min-width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    cursor: pointer;
+    text-align: left;
+}
+
+.contest:hover {
+    transform: scale(1.03);
+}
+
+/* Immagine del concorso */
+.contest img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Testo del concorso (titolo e descrizione) */
+.contest-content {
+    padding: 15px;
+}
+
+.contest-content h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #0d1459;
+}
+
+.contest-content p {
+    margin-bottom: 10px;
+}
+
+/* Modal per visualizzare maggiori informazioni sui concorsi */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #fff;
+    width: 80%;
+    max-width: 700px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 15px; 
+    right: 15px;
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #666;
+    text-decoration: none;
+    cursor: pointer;
+}
