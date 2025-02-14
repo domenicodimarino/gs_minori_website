@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="checkout_cart.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://js.stripe.com/v3/"></script> <!-- caricamento di Stripe.js -->
 </head>
 <body>
     <?php include 'header.html'?>
@@ -29,26 +30,16 @@
     ?>
 
     <h1>Pagamento</h1>
-    <form action="process_payment.php" method="POST">
-        <div class="form-group">
-            <label for="cardNumber">Numero di Carta:</label>
-            <input type="text" id="cardNumber" name="cardNumber" required>
-        </div>
-        <div class="form-group">
-            <label for="cardName">Nome sulla Carta:</label>
-            <input type="text" id="cardName" name="cardName" required>
-        </div>
-        <div class="form-group">
-            <label for="expiryDate">Data di Scadenza:</label>
-            <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
-        </div>
-        <div class="form-group">
-            <label for="cvv">CVV:</label>
-            <input type="text" id="cvv" name="cvv" required>
-        </div>
-        <button type="submit" class="confirm-order-button">Conferma Pagamento</button>
+    <form method="POST" id="payment-form">
+            <div id="card-element">
+                    <!--Stripe.js injects the Payment Element-->
+            </div>
+            
+            <!-- Used to display Element errors. -->
+            <div id="card-errors" role="alert"></div>
+        <input type="submit" class="confirm-order-button" id="submit-btn" value="Conferma pagamento"></input>
     </form>
-
+    <script src="checkout.js"></script>
     <?php include 'footer.html'?>
 </body>
 </html>

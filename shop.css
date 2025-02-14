@@ -11,7 +11,7 @@
     justify-content: space-between;
     padding: 10px;
     width: 100%;
-    margin-top: 10px;;
+    margin-top: 10px;
 }
 
 /* Input di ricerca */
@@ -122,9 +122,10 @@
 .image-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 20px;
     padding: 20px;
+    margin-top: -60px;
 }
 
 .image-item {
@@ -132,10 +133,12 @@
     box-sizing: border-box;
     text-align: center;
     padding-top: 5%;
+    max-width: 50%;
+    width: 200px;
 }
 
 .image-item img {
-    width: 30%;
+    width: 25%;
     height: auto;
 }
 
