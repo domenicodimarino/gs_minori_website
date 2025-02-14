@@ -52,7 +52,7 @@
 			}
         ?>
 
-<?php 
+        <?php 
             $sector["1"]="Tribuna ovest alta esterna";
             $sector["2"]="Tribuna ovest alta interna";
             $sector["3"]="Parterre ovest esterno";
@@ -158,24 +158,22 @@
                     </label>
                 </p>
             </section>
-            <section id="card_data" class="buyer_form">    
-                <h1> Dati di pagamento </h1>
+            <section id="card_data" class="buyer_form">
+                    <h1> Dati di pagamento </h1>
             </section>
-            
             <div id="card-element">
-                    <!--Stripe.js injects the Payment Element-->
-            </div>
+            <!--Stripe.js injects the Payment Element-->
+            </div>    
             <!-- Used to display Element errors. -->
             <div id="card-errors" role="alert"></div>
+            </div>
             </section>
             <p id="submit_button">
                 <button id="submit-button">CONFERMA</button>
             </p>       
         </form>
-        <script src="checkout.js">
-        </script>
+        <script src="checkout.js"></script>   
         </main>
-        
         <?php include 'footer.html'?>
             
 </html>
