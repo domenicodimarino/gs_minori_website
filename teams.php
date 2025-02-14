@@ -105,7 +105,7 @@
         <p style="margin-left: 5px;">PLAYMAKER</p>
             <div id="playmaker"; style="padding-top: 15px" class="geppetto">
                     <div class="image-container">
-                    <img src="alemammato.png" alt="immagine" class="image">
+                    <img src="photo_teams/alemammato.png" alt="immagine" class="image">
                     <div class="text"> 34 <br> Alessandro  <br>Mammato</div>
                     </div>
             </div>
