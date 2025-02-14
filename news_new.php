@@ -19,17 +19,6 @@
             <!-- Le news saranno caricate dinamicamente qui -->
         </section>
 
-        <h1 id="aggiungi_news">Aggiungi News</h1>
-        <section class="add-news">
-            <form id="newsForm">
-                <input type="text" name="titolo" placeholder="Titolo" required>
-                <textarea name="descrizione" placeholder="Descrizione" required></textarea>
-                <textarea name="contenuto" placeholder="Contenuto" required></textarea>
-                <input type="text" name="immagine" placeholder="URL immagine" required>
-                <button type="submit">Inserisci News</button>
-            </form>
-        </section>  
-
         <h1 id="foto_gallery">Foto Gallery</h1>
         <section class="photo-gallery">
             <div class="gallery-wrapper">
@@ -113,24 +102,6 @@
 
         $(document).ready(function() {
             caricaNews();
-        });
-
-        // Gestione dell'invio del form per l'inserimento delle news
-        document.getElementById("newsForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            
-            let formData = new FormData(this);
-
-            fetch("news.php", {
-                method: "POST",
-                body: formData
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert(data);
-                caricaNews(); // Aggiorna la lista delle news
-            })
-            .catch(error => console.error("Errore:", error));
         });
 
 
