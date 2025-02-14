@@ -5,7 +5,7 @@ const stripe = Stripe('pk_test_51QsLXEJjFWyMfqIBNb2US95HPBqThW5DTUBKGR3sknQucLK5
         cardElement.mount('#card-element');
         const cardErrors = document.getElementById("card-errors");
 
-        const form = document.getElementById('payment-form');
+        const form = document.getElementById('payment_data');
 
 
         cardElement.on('change', (event) => {
@@ -45,7 +45,7 @@ const stripe = Stripe('pk_test_51QsLXEJjFWyMfqIBNb2US95HPBqThW5DTUBKGR3sknQucLK5
                     payment_method: {
                         card: cardElement,
                         billing_details: {
-                            name: form.fullname.value, // Nome del proprietario della carta
+                            name: form.name.value + form.surname.value // Nome del proprietario della carta
                         },
                     },
                 });
@@ -60,6 +60,7 @@ const stripe = Stripe('pk_test_51QsLXEJjFWyMfqIBNb2US95HPBqThW5DTUBKGR3sknQucLK5
                     alert('Pagamento completato con successo!');
                 } else {
                     // Unexpected error
+                    alert("Errore sconosciuto durante la conferma del pagamento.");
                     console.error('Unexpected error during payment confirmation.');
                     cardErrors.textContent = 'Errore sconosciuto, riprova.';
                     document.getElementById('submit-btn').disabled = false;

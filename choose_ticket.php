@@ -304,7 +304,7 @@
 
         <main>
             Match selezionato: <?php echo $match[$matchID] ?>
-            
+
             <!-- Schermata di scelta dei biglietti -->
             
             <section class = "initial_view" id="initial_view">
@@ -362,6 +362,7 @@
             </section>
             <section id="buyer_data" class="buyer_form">
                 <h1> Dati dell'acquirente </h1>
+                <input type="hidden" name="importo" value="<?php echo $total_price; ?>">
                 <p>
                 <label for="nome">
                     Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Nome">
@@ -434,17 +435,20 @@
             <div id="card-element">
                     <!--Stripe.js injects the Payment Element-->
                 </div>
-            
             <!-- Used to display Element errors. -->
             <div id="card-errors" role="alert"></div>
+                
             
             <p id="submit_button">
-                <input type="submit" value="CONFERMA" id="submit-btn">
+                <button id="submit-btn">CONFERMA</button>
             </p>       
         </form>
         <script src="checkout.js">
 
         </script>
+
+            
+
         </main>
         <?php include 'footer.html'?>
     </body>

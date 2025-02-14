@@ -173,11 +173,14 @@ form .sector_choice{
     align-items: center;
     display: flex;
 }
-#payment_data input[type="submit"]{
+#submit-btn{
     width: 80%;
     border: 3px solid black;
     border-radius: 10px;
     background-color: #69140E;
     color: white;
     cursor: pointer;
+    margin-top: 20px;
+    height: 40px;
+    margin-bottom: 20px;
 }
