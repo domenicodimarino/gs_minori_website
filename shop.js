@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const items = resultsList.querySelectorAll("li");
     const imageItems = document.querySelectorAll('.image-item');
     const confirmButton = document.getElementById("confirmButton");
+    const cartForm = document.getElementById("cartForm");
 
     function updateClearButton() {
         if (searchInput.value.length > 0) {
@@ -95,20 +96,51 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Gestisci il bottone "Conferma"
-    confirmButton.addEventListener('click', function () {
+    confirmButton.addEventListener('click', function (event) {
         const cartItems = [];
+        let totalPrice = 0;
         document.querySelectorAll('.image-item').forEach(item => {
             const quantityInput = item.querySelector('.quantity');
             const quantity = parseInt(quantityInput.value);
             if (quantity > 0) {
                 const productName = item.querySelector('p').textContent;
-                cartItems.push({ productName, quantity });
+                const price = parseFloat(productName.match(/(\d+,\d+)/)[0].replace(',', '.'));
+                totalPrice += price * quantity;
+                cartItems.push({ productName, quantity, price });
             }
         });
 
-        // Simula l'invio al carrello (puoi sostituire questo con una chiamata AJAX o altro)
-        console.log('Carrello:', cartItems);
-        alert('Prodotti aggiunti al carrello!');
+        if (cartItems.length === 0) {
+            alert('Non sono stati inseriti prodotti nel carrello!');
+            event.preventDefault(); // Previene l'invio del modulo
+        } else {
+            // Aggiungi i dati al modulo
+            const totalPriceInput = document.createElement('input');
+            totalPriceInput.type = 'hidden';
+            totalPriceInput.name = 'totalPrice';
+            totalPriceInput.value = totalPrice.toFixed(2);
+            cartForm.appendChild(totalPriceInput);
+
+            cartItems.forEach((item, index) => {
+                const productNameInput = document.createElement('input');
+                productNameInput.type = 'hidden';
+                productNameInput.name = `cartItems[${index}][productName]`;
+                productNameInput.value = item.productName;
+                cartForm.appendChild(productNameInput);
+
+                const quantityInput = document.createElement('input');
+                quantityInput.type = 'hidden';
+                quantityInput.name = `cartItems[${index}][quantity]`;
+                quantityInput.value = item.quantity;
+                cartForm.appendChild(quantityInput);
+
+                const priceInput = document.createElement('input');
+                priceInput.type = 'hidden';
+                priceInput.name = `cartItems[${index}][price]`;
+                priceInput.value = item.price.toFixed(2);
+                cartForm.appendChild(priceInput);
+            });
+        }
     });
 
     updateClearButton();

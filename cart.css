@@ -1,0 +1,26 @@
+.cart-image {
+    width: 100px; /* Imposta la larghezza desiderata */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.confirm-order-container {
+    position: sticky;
+    float: right;
+    bottom: 20px;
+    right: 20px;
+
+}
+
+.confirm-order-button {
+    background: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: sticky;
+    bottom: 20px; /* Posiziona il bottone 20px sopra il bordo inferiore della finestra */
+    left: 20px; /* Posiziona il bottone 20px a sinistra */
+    z-index: 1000; /* Assicurati che il bottone appaia sopra altri elementi */
+}

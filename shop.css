@@ -171,9 +171,10 @@
     color: white;
     padding: 10px 20px;
     cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
+    position: sticky;
+    bottom: 20px; /* Posiziona il bottone 20px sopra il bordo inferiore della finestra */
+    left: 20px; /* Posiziona il bottone 20px a sinistra */
+    z-index: 1000; /* Assicurati che il bottone appaia sopra altri elementi */
 }
 
 #confirmButton:hover {

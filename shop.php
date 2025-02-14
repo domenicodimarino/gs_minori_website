@@ -20,51 +20,64 @@
             </button>
         </div>
         <button class="cart-button">
-            <i class="fas fa-shopping-cart"></i> <!-- Carrello -->
+            <a href="cart.php"><i class="fas fa-shopping-cart"></i></a> <!-- Carrello -->
         </button>
     </div>
     <ul id="resultsList">
     </ul>
+<form id="cartForm" action="cart.php" method="POST">
     <div class="image-container">
         <div class="image-item">
             <img src="mino.png" alt="Image 3">
             <p>Pantaloncini da gara HOME<br> 19,99€</p>
+            <input type="hidden" name="product_image[]" value="mino.png">
+            <input type="hidden" name="product_name[]" value="Pantaloncini da gara HOME">
+            <input type="hidden" name="product_price[]" value="19.99">
             <div class="quantity-controls">
-                <button class="decrement">-</button>
-                <input type="number" class="quantity" value="0" min="0">
-                <button class="increment">+</button>
+                <button type="button" class="decrement">-</button>
+                <input type="number" class="quantity" name="quantity[]" value="0" min="0">
+                <button type="button" class="increment">+</button>
             </div>
         </div>
         <div class="image-item">
             <img src="mino.png" alt="Image 4">
             <p>Pantaloncini da gara AWAY<br> 29,99€</p>
+            <input type="hidden" name="product_image[]" value="mino.png">
+            <input type="hidden" name="product_name[]" value="Pantaloncini da gara AWAY">
+            <input type="hidden" name="product_price[]" value="29.99">
             <div class="quantity-controls">
-                <button class="decrement">-</button>
-                <input type="number" class="quantity" value="0" min="0">
-                <button class="increment">+</button>
+                <button type="button" class="decrement">-</button>
+                <input type="number" class="quantity" name="quantity[]" value="0" min="0">
+                <button type="button" class="increment">+</button>
             </div>
         </div>
         <div class="image-item">
             <img src="mino.png" alt="Image 5">
             <p>Felpa GS Minori <br>29,99€</p>
+            <input type="hidden" name="product_image[]" value="mino.png">
+            <input type="hidden" name="product_name[]" value="Felpa GS Minori">
+            <input type="hidden" name="product_price[]" value="29.99">
             <div class="quantity-controls">
-                <button class="decrement">-</button>
-                <input type="number" class="quantity" value="0" min="0">
-                <button class="increment">+</button>
+                <button type="button" class="decrement">-</button>
+                <input type="number" class="quantity" name="quantity[]" value="0" min="0">
+                <button type="button" class="increment">+</button>
             </div>
         </div>
         <div class="image-item">
             <img src="mino.png" alt="Image 6">
             <p>Giubbino GS Minori <br>39,99€</p>
+            <input type="hidden" name="product_image[]" value="mino.png">
+            <input type="hidden" name="product_name[]" value="Giubbino GS Minori">
+            <input type="hidden" name="product_price[]" value="39.99">
             <div class="quantity-controls">
-                <button class="decrement">-</button>
-                <input type="number" class="quantity" value="0" min="0">
-                <button class="increment">+</button>
+                <button type="button" class="decrement">-</button>
+                <input type="number" class="quantity" name="quantity[]" value="0" min="0">
+                <button type="button" class="increment">+</button>
             </div>
         </div>
     </div>
-
-    <button id="confirmButton">Conferma</button>
+    <button type="submit" id="confirmButton">Conferma</button>
+</form>
 
     <script src="shop.js"></script>
     <?php include 'footer.html'; ?>
