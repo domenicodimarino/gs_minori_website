@@ -48,6 +48,12 @@ h1 {
     background-color: #7e1710;
 }
 
+.partita button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
 .classifica table {
     width: 100%;
     border-collapse: collapse;

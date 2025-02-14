@@ -17,9 +17,10 @@
         <section class="calendario">
             <div class="partita">
                 <h2>Prossima Partita</h2>
-                <p><strong>Data:</strong> 15 Febbraio 2025</p>
-                <p><strong>Squadre:</strong> GS Minori vs Virtus Siano</p>
-                <p><strong>Luogo:</strong> Tendostruttura Gabriele Di Lieto</p>
+                <div id="prossima-partita">
+                    <!-- I dati della prossima partita verranno caricati qui -->
+                </div>
+                <button id="prevMatch" disabled>Precedente Partita</button>
                 <button id="nextMatch">Prossima Partita</button>
             </div>
         </section>
@@ -32,52 +33,17 @@
                         <th>Posizione</th>
                         <th>Squadra</th>
                         <th>Punti</th>
-                        <th><i class="fas fa-info-circle"></i></th>
+                        <th><a href="https://fip.it/risultati/?group=campionati-regionali&regione_codice=CM&comitato_codice=RCM&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=66493"><i class="fas fa-info-circle"></a></i></th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>GS Minori</td>
-                        <td>30</td>
-                        <td class="more-info"><i class="fas fa-chevron-down"></i></td>
-                    </tr>
-                    <tr class="details">
-                        <td colspan="4">
-                            <p><strong>Partite Giocate:</strong> 15</p>
-                            <p><strong>Vittorie:</strong> 10</p>
-                            <p><strong>Sconfitte:</strong> 5</p>
-                        </td>
-                    </tr>
-                    <!-- Aggiungi altre squadre qui -->
+                <tbody id="classifica-body">
+                    <!-- I dati della classifica verranno caricati qui -->
                 </tbody>
             </table>
         </section>
     </main>
-
+    <script src="stagione.js"></script>
     <!-- Footer -->
     <?php include 'footer.html'?>
-
-    <script>
-        // JavaScript per il cambio della partita
-        document.getElementById('nextMatch').addEventListener('click', function() {
-            // Logica per cambiare la partita visualizzata
-            alert('Prossima partita non disponibile.');
-        });
-
-        // JavaScript per mostrare/nascondere i dettagli della classifica
-        document.querySelectorAll('.more-info').forEach(function(element) {
-            element.addEventListener('click', function() {
-                var details = this.closest('tr').nextElementSibling;
-                if (details.style.display === 'table-row') {
-                    details.style.display = 'none';
-                    this.innerHTML = '<i class="fas fa-chevron-down"></i>';
-                } else {
-                    details.style.display = 'table-row';
-                    this.innerHTML = '<i class="fas fa-chevron-up"></i>';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
