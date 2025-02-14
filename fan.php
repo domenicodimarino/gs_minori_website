@@ -32,9 +32,9 @@
                 <?php
                 // Connessione al database
                 $host = "localhost";
-                $dbname = "postgres";
+                $dbname = "gruppo01";
                 $user = "www";
-                $password = "llel3";
+                $password = "tw2024";
 
                 try {
                     $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password, [
