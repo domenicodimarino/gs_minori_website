@@ -78,7 +78,7 @@
 
 .description {
     max-width: 600px;
-    text-align: justify;;
+    text-align: justify;
 }
     </style>
     </head>
@@ -101,6 +101,8 @@
             <a href="#allenatore" style="color: inherit; text-decoration: none;"> ALLENATORE</a>
         </nav>
         <br>
+        <img src="primasquadra.png" alt="immagine" style="width: 45vw; height: 35vw; display: block; margin: auto; align-items: center;">
+        <div style="text-align: center; margin-top: 10px;"> <strong>Roster DR2</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <p style="margin-left: 5px;">PLAYMAKER</p>
             <div id="playmaker"; style="padding-top: 15px" class="geppetto">
                     <div class="image-container">
