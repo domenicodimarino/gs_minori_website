@@ -41,6 +41,37 @@
                 </tbody>
             </table>
         </section>
+
+        <h1>Classifica da playbasket</h1>
+        
+        <div id="table-container">Caricamento in corso...</div>
+
+        <script>
+            const proxy = "https://api.allorigins.win/raw?url=";
+            const url = "https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&lg=2&mod=st&season=2025";
+
+            fetch(proxy + encodeURIComponent(url))
+            .then(response => response.text())
+            .then(data => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(data, "text/html");
+
+            const tables = doc.querySelectorAll("table");
+            if (tables.length >= 2) {
+            document.getElementById("table-container").innerHTML = tables[1].outerHTML;
+            document.getElementById("table-container").querySelector("table").classList.add("playbasket-table");
+            } else {
+            document.getElementById("table-container").innerText = "Tabella non trovata.";
+            }
+        })
+        .catch(error => {
+            console.error("Errore:", error);
+            document.getElementById("table-container").innerText = "Errore durante l'importazione.";
+        });
+
+
+        </script>
+
     </main>
     <script src="stagione.js"></script>
     <!-- Footer -->
