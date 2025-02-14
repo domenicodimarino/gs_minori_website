@@ -4,7 +4,6 @@
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="choose_ticket.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <script src="https://js.stripe.com/v3/"></script>
     </head>
     <body>
         <?php include 'header.html'?>
@@ -361,72 +360,6 @@
                     </ul>
                 </p>
             </section>
-            <section id="buyer_data" class="buyer_form">
-                <h1> Dati dell'acquirente </h1>
-                <input type="hidden" name="importo" value="<?php echo $total_price; ?>" id="importo">
-                <p>
-                <label for="nome">
-                    Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Nome">
-                </label>
-                </p>
-                <p>
-                <label for="cognome">
-                    Cognome: <input type="text" id="cognome" name="cognome" required value="<?php echo isset($_SESSION["surname"]) ? $_SESSION['surname'] : ''; ?>" placeholder="Cognome">
-                </label>
-                </p>
-                <p id="sex_choice">
-                    <label for="sesso">Sesso:</label>
-                    <label> 
-                        <input type="radio" name="sesso" value="M" > Uomo
-                    </label>
-                    <label>
-                        <input type="radio" name="sesso" value="F" > Donna
-                    </label>
-                    <label>
-                        <input type="radio" name="sesso" value="Altro" > Altro
-                    </label>
-                </p>
-                <p>
-                    <label for="email">
-                        Indirizzo email: <input type="email" id="email" name="email"  value="<?php echo isset($_SESSION["email"]) ? $_SESSION['email'] : ''; ?>" placeholder="Indirizzo email">
-                    </label>
-                </p>
-                <p>
-                    <label for="telefono">
-                        Telefono: <input type="tel" id="telefono" name="telefono"  value="<?php echo isset($_SESSION["phone"]) ? $_SESSION['phone'] : ''; ?>" placeholder="Numero di telefono">            
-                    </label>
-                </p>
-                <p>
-                    <label for="residenza">
-                        Indirizzo di residenza: <input type="text" id="residenza" name="residenza"  value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Indirizzo di residenza">
-                    </label>
-                </p>
-                <p>
-                    <label for="data">
-                        Data di nascita: <input type="date" id="data" name="data" >
-                    </label>
-                </p>
-            </section>
-            <section id="card_data" class="buyer_form">
-                <h1> Dati di pagamento </h1>
-            </section>
-            <div id="card-element">
-                    <!--Stripe.js injects the Payment Element-->
-                </div>
-            <!-- Used to display Element errors. -->
-            <div id="card-errors" role="alert"></div>
-                
-            
-            <p id="submit_button">
-                <button id="submit-button">CONFERMA</button>
-            </p>       
-        </form>
-        <script src="checkout.js">
-
-        </script>
-
-            
-
         </main>
         <?php include 'footer.html'?>
     </body>

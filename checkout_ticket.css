@@ -147,6 +147,7 @@ form .sector_choice{
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+    /* justify-content: center; Centra verticalmente il contenuto */
     align-items: center; /* Centra orizzontalmente il contenuto */
 }
 #payment-form input{
@@ -182,4 +183,12 @@ form .sector_choice{
     margin-top: 20px;
     height: 40px;
     margin-bottom: 20px;
+}
+#card-element{
+    width: device-width;
+    display: block;
+}
+#card-error{
+    width: device-width;
+    color: red;
 }
