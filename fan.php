@@ -23,7 +23,7 @@
             <!-- Aggiungi qui ulteriori dettagli sulla community -->
             <form action="post_content.php" method="post" id="postForm" enctype="multipart/form-data">
             <label for="username">Nome utente:</label><br>
-            <input type="text" id="username" name="username" required><br>
+            <input type="text" id="username" name="nome_utente" required>
             <label for="content">Posta un contenuto:</label><br>
             <textarea id="content" name="content" rows="4" cols="50" required></textarea><br>
             <label for="image">Carica un'immagine:</label><br>
@@ -78,37 +78,41 @@
 
             <h3>Contenuti postati:</h3>
             <div class="posted-content">
-                <?php
-                // Connessione al database
-                $host = "localhost";
-                $dbname = "gruppo01";
-                $user = "www";
-                $password = "tw2024";
+            <?php
+            // Connessione al database
+            $host = "localhost";
+            $dbname = "gruppo01";
+            $user = "www";
+            $password = "tw2024";
 
-                try {
-                    $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password, [
-                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-                    ]);
-                } catch (PDOException $e) {
-                    die("Errore di connessione al database: " . $e->getMessage());
+            try {
+                $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password, [
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+                ]);
+            } catch (PDOException $e) {
+                die("Errore di connessione al database: " . $e->getMessage());
+            }
+
+            // Recupero dei contenuti postati
+            $sql = "SELECT * FROM community_posts ORDER BY data_pubblicazione DESC";
+            $stmt = $pdo->query($sql);
+            $contentsArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            if (!empty($contentsArray)) {
+                foreach ($contentsArray as $content) {
+                echo '<div>';
+                echo '<p><strong>' . htmlspecialchars($content['nome_utente']) . ':</strong></p>';
+                echo '<p>' . htmlspecialchars($content['contenuto']) . '</p>';
+                if (!empty($content['immagine'])) {
+                    echo '<img src="' . htmlspecialchars($content['immagine']) . '" alt="Immagine postata" style="max-width: 100%;">';
                 }
-
-                // Recupero dei contenuti postati
-                $sql = "SELECT * FROM community_posts ORDER BY data_pubblicazione DESC";
-                $stmt = $pdo->query($sql);
-                $contentsArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                if (!empty($contentsArray)) {
-                    foreach ($contentsArray as $content) {
-                        echo '<div>';
-                        echo '<p>' . htmlspecialchars($content['contenuto']) . '</p>';
-                        echo '<p><small>Pubblicato il: ' . htmlspecialchars($content['data_pubblicazione']) . '</small></p>';
-                        echo '</div>';
-                    }
-                } else {
-                    echo '<p>Nessun contenuto postato.</p>';
+                echo '<p><small>Pubblicato il: ' . htmlspecialchars($content['data_pubblicazione']) . '</small></p>';
+                echo '</div>';
                 }
-                ?>
+            } else {
+                echo '<p>Nessun contenuto postato.</p>';
+            }
+            ?>
             </div>
         </section>
 
