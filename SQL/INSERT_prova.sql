@@ -17,7 +17,9 @@ INSERT INTO public.concorsi (titolo, descrizione, immagine) VALUES
 ('Concorso 3', 'Descrizione del concorso 3', 'https://media.gettyimages.com/id/200430632-001/it/foto/basketball-on-basketball-court-elevated-view.jpg?s=1024x1024&w=gi&k=20&c=Xz_eMY5GT-Hmt772Pzy2nps7Onk86unbymy9myeZymk=');
 
 -- Inserimenti di prova per la tabella community_posts
-INSERT INTO public.community_posts (contenuto, data_pubblicazione) VALUES
-('Post della community numero 1', '2025-02-15 12:00:00'),
-('Post della community numero 2', '2025-02-14 11:30:00'),
-('Post della community numero 3', '2025-02-13 10:15:00');
+INSERT INTO public.community_posts (contenuto, data_pubblicazione, nome_utente, immagine) 
+VALUES 
+('Questo è il mio primo post nella community!', CURRENT_TIMESTAMP, 'MarioRossi', 'https://media.gettyimages.com/id/1354175053/it/foto/due-amici-stanno-saltando-per-prendere-una-palla-da-basket-sul-campo-centrale.jpg?s=2048x2048&w=gi&k=20&c=YdYgs8-VMMNfwzOCGgmpU2GwzeK3-qyGZjbrNbhTZ9A='),
+('Oggi grande partita! Forza squadra!', CURRENT_TIMESTAMP, 'LucaBianchi', NULL),
+('Chi viene alla prossima partita?', CURRENT_TIMESTAMP, 'SaraVerdi', 'https://media.gettyimages.com/id/1354175053/it/foto/due-amici-stanno-saltando-per-prendere-una-palla-da-basket-sul-campo-centrale.jpg?s=2048x2048&w=gi&k=20&c=YdYgs8-VMMNfwzOCGgmpU2GwzeK3-qyGZjbrNbhTZ9A=');
+
