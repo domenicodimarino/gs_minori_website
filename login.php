@@ -33,13 +33,14 @@
                     
             }
             function check_signup_data(elementoModulo) {
-                if (elementoModulo.name.value == "") {
-                    alert("Devi inserire un nome");
-                    elementoModulo.name.focus();
+                if (elementoModulo.email.value != elementoModulo.confirm_email.value) {
+                    alert("Le due email non corrispondono");
+                    elementoModulo.email.focus();
+                    elementoModulo.email.select();
                     return false;
                 }
-                if (elementoModulo.pwd1.value == "") {
-                    alert("Devi inserire una password");
+                if (elementoModulo.pwd1.value.length < 8) {
+                    alert("La password deve essere di almeno 8 caratteri");
                     elementoModulo.pwd1.focus();
                     return false;
                 }
@@ -75,14 +76,7 @@
 	else
 		$email = "";
 
-    if(isset($_POST['password']))
-		$pass = $_POST['password'];
-	else
-		$pass = "";
-	if(isset($_POST['confirm_password']))
-		$repassword = $_POST['confirm_password'];
-	else
-		$repassword = "";
+    
 
 ?>
 <video src="spalti.mp4" autoplay loop muted style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; opacity: 0.5; z-index: -1;">
@@ -133,6 +127,11 @@
         <p>
         <label for="email">
             <input type="email" name="email" id="email" placeholder="Email" value="<?php echo $email?>" required/>
+        </label>
+        </p>
+        <p>
+        <label for="confirm_email">
+            <input type="email" name="confirm_email" id="confirm_email" placeholder="Conferma email" required/>
         </label>
         </p>
         <p>
