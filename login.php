@@ -57,14 +57,14 @@
     <body style="align-items: center; display: flex; flex-direction: column;">
     <?php
 	if(isset($_POST['name']))
-		$nome = $_POST['name'];
+		$name = $_POST['name'];
 	else
-		$nome = "";
+		$name = "";
     
     if(isset($_POST['surname']))
-		$cognome = $_POST['surname'];
+		$surname = $_POST['surname'];
 	else
-		$cognome = "";
+		$surname = "";
 
 	if(isset($_POST['username']))
 		$user = $_POST['username'];
@@ -94,7 +94,7 @@
         </p>
         <p>
         <label for="password" style="display: flex; align-items: center;">
-            <input type="password" name="password" id="password" placeholder="Password" style="margin-right: 5px;margin-left: 22px;"/>
+            <input type="password" name="password" id="password" placeholder="Password" value="<?php echo $pass?>" style="margin-right: 5px;margin-left: 22px;"/>
             <img id="pass_photo" src="eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
         </label>
         </p>
@@ -121,7 +121,7 @@
         </p>
         <p>
         <label for="username">
-            <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username?>" required/>
+            <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $user?>" required/>
         </label>
         </p>
         <p>
