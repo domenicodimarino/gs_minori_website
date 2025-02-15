@@ -12,6 +12,8 @@ main {
 h1 {
     text-align: center;
     color: #0d1459;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .calendario, .classifica {
@@ -79,9 +81,54 @@ h1 {
     display: none;
     background-color: #f9f9f9;
 }
-.playbasket-table > tbody > tr > td {
-    padding: 10px;
+#table-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .playbasket-table{
-    margin-top: 10px;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.playbasket-table > tbody > tr > td {
+    padding: 10px;
+    margin-left: 5px;
+}
+.playbasket-table > thead > tr > th {
+    padding: 10px;
+    background-color: #0d1459;
+    color: white;
+}
+.playbasket-table > tbody{
+    background-color: white;
+}
+.playbasket-table > tbody > tr:nth-child(odd){
+    background-color: #f9f9f9;
+}
+.playbasket-table > tbody > tr:nth-child(even){
+    background-color: #c0c0c0;
+}
+#evidenziata{
+    background-color: #03bb85;
+    font-weight: bold;
+    color: white;
+}
+#legenda-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+#legenda{
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+#legenda > li {
+    margin-left: 20px;
+    margin-right: 20px;
 }
