@@ -94,18 +94,6 @@
             }
         ?>
 
-        <!-- Per mostrare il form di registrazione solo dopo la scelta dei biglietti -->
-        <?php 
-        if(isset($_POST['form_submitted']) && $_POST['form_submitted'] == '1'){
-            echo '<script type="text/javascript">',
-                 'document.addEventListener("DOMContentLoaded", function() {',
-                 'document.getElementById("payment-form").style.display = "block";',
-                 'document.getElementById("initial_view").style.display = "none";',
-                 '});',
-                 '</script>';
-        }
-        ?>
-
         <script language="javascript" type="text/javascript">
             function increase_number(id){
                 switch(id){
@@ -308,7 +296,7 @@
             
             <section class = "initial_view" id="initial_view">
                     <figure>
-                        <img src="piantina.jpeg" alt="Piantina palazzetto con settori">
+                        <img src="photo_ticket/piantina.jpeg" alt="Piantina palazzetto con settori">
                     </figure>
                     <section class = "sector_choice">
                         <p class = "sector_type">
