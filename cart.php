@@ -42,6 +42,8 @@
     ?>
     <div class="confirm-order-container">
         <form action="checkout_cart.php" method="POST">
+            <!-- Hidden input fields to pass data to checkout_cart.php -->
+            <input type="number" name="importo" value="<?php echo $totalPrice; ?>" hidden>
             <button type="submit" class="confirm-order-button">Conferma Ordine</button>
         </form>
     </div>

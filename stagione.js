@@ -7,9 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let partite = [];
 
     function loadClassifica() {
-        fetch('classifica.php')
-            .then(response => response.json())
-            .then(data => {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'classifica.php', true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var data = JSON.parse(xhr.responseText);
                 classificaBody.innerHTML = '';
                 data.forEach(team => {
                     const row = document.createElement('tr');
@@ -44,18 +46,21 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                     });
                 });
-            })
-            .catch(error => console.error('Errore nel caricamento della classifica:', error));
+            }
+        };
+        xhr.send();
     }
 
     function loadProssimaPartita() {
-        fetch('prossima_partita.php')
-            .then(response => response.json())
-            .then(data => {
-                partite = data;
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'prossima_partita.php', true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                partite = JSON.parse(xhr.responseText);
                 updateProssimaPartita();
-            })
-            .catch(error => console.error('Errore nel caricamento della prossima partita:', error));
+            }
+        };
+        xhr.send();
     }
 
     function updateProssimaPartita() {
