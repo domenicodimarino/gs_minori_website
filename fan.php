@@ -11,7 +11,7 @@
     <?php include 'header.html'; ?>
 
     <main>
-        
+    
         <h1>Benvenuto nella fan page</h1>
         <section id="intro">        
             <p>Questa è la pagina dedicata ai fan di GS Minori. </p>
@@ -21,11 +21,60 @@
             <h2>Community</h2>
             <p>Unisciti alla nostra community di fan e partecipa alle discussioni.</p>
             <!-- Aggiungi qui ulteriori dettagli sulla community -->
-            <form action="post_content.php" method="post">
-                <label for="content">Posta un contenuto:</label><br>
-                <textarea id="content" name="content" rows="4" cols="50"></textarea><br>
-                <input type="submit" value="Posta">
+            <form action="post_content.php" method="post" id="postForm" enctype="multipart/form-data">
+            <label for="username">Nome utente:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="content">Posta un contenuto:</label><br>
+            <textarea id="content" name="content" rows="4" cols="50" required></textarea><br>
+            <label for="image">Carica un'immagine:</label><br>
+            <input type="file" id="image" name="image" accept="image/*"><br>
+            <div id="dropZone">Trascina qui l'immagine</div>
+            <input type="submit" value="Posta" id="submitBtn" disabled>
+            <p id="errorMessage" style="color: red; display: none;">Inserire nome utente</p>
             </form>
+
+            <script>
+            document.getElementById('username').addEventListener('input', function() {
+                var username = this.value;
+                var submitBtn = document.getElementById('submitBtn');
+                if (username.length >= 3) {
+                submitBtn.disabled = false;
+                } else {
+                submitBtn.disabled = true;
+                }
+            });
+
+            document.getElementById('postForm').addEventListener('submit', function(event) {
+                var username = document.getElementById('username').value;
+                if (username.length < 3) {
+                event.preventDefault();
+                alert('Inserire nome utente');
+                }
+            });
+
+            var dropZone = document.getElementById('dropZone');
+            var imageInput = document.getElementById('image');
+
+            dropZone.addEventListener('dragover', function(event) {
+                event.preventDefault();
+                dropZone.style.backgroundColor = '#e0e0e0';
+            });
+
+            dropZone.addEventListener('dragleave', function(event) {
+                event.preventDefault();
+                dropZone.style.backgroundColor = '#ffffff';
+            });
+
+            dropZone.addEventListener('drop', function(event) {
+                event.preventDefault();
+                dropZone.style.backgroundColor = '#ffffff';
+                var files = event.dataTransfer.files;
+                if (files.length > 0) {
+                imageInput.files = files;
+                }
+            });
+            </script>
+        </section>
 
             <h3>Contenuti postati:</h3>
             <div class="posted-content">
