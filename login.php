@@ -38,15 +38,15 @@
                     elementoModulo.name.focus();
                     return false;
                 }
-                if (elementoModulo.password.value == "") {
+                if (elementoModulo.pwd1.value == "") {
                     alert("Devi inserire una password");
-                    elementoModulo.password.focus();
+                    elementoModulo.pwd1.focus();
                     return false;
                 }
-                if (elementoModulo.password.value != elementoModulo.confirm_password.value) {
+                if (elementoModulo.pwd1.value != elementoModulo.confirm_password.value) {
                     alert("Le due password non corrispondono");
-                    elementoModulo.password.focus();
-                    elementoModulo.password.select();
+                    elementoModulo.pwd1.focus();
+                    elementoModulo.pwd1.select();
                     return false;
                 }
                 return true;
@@ -117,33 +117,33 @@
         <form method="post" action=<?php echo $_SERVER['PHP_SELF'] ?> onsubmit="return check_signup_data(this)">
         <p>
         <label for="name">
-            <input type="text" name="name" id="name" placeholder="Nome" value="<?php echo $name?>"/>
+            <input type="text" name="name" id="name" placeholder="Nome" value="<?php echo $name?>" required/>
         </label>
         </p>
         <p>
         <label for="surname">
-            <input type="text" name="surname" id="surname" placeholder="Cognome" value="<?php echo $surname?>"/>
+            <input type="text" name="surname" id="surname" placeholder="Cognome" value="<?php echo $surname?>" required/>
         </label>
         </p>
         <p>
         <label for="username">
-            <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username?>"/>
+            <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username?>" required/>
         </label>
         </p>
         <p>
         <label for="email">
-            <input type="text" name="email" id="email" placeholder="Email" value="<?php echo $email?>"/>
+            <input type="email" name="email" id="email" placeholder="Email" value="<?php echo $email?>" required/>
         </label>
         </p>
         <p>
         <label for="password" style="display: flex; align-items: center;">
-            <input type="password" name="pwd1" id="pwd1" placeholder="Password" value="<?php echo $pass?>" style="margin-right: 5px;margin-left: 22px;"/>
+            <input type="password" name="pwd1" id="pwd1" placeholder="Password" style="margin-right: 5px;margin-left: 22px;" required/>
             <img id="pass_photo2" src="eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
         </label>
         </p>
         <p>
         <label for="confirm_password" style="display: flex; align-items: center;">
-            <input type="password" name="confirm_password" id="confirm_password" placeholder="Conferma password" value="<?php echo $repassword?>" style="margin-right: 5px;margin-left: 22px;"/>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Conferma password" style="margin-right: 5px;margin-left: 22px;" required/>
             <img id="pass_photo3" src="eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
         </label>
         </p>
