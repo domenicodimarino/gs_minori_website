@@ -42,10 +42,26 @@
             </table>
         </section>
 
-        <h1>Classifica da playbasket</h1>
+        <h1>Classifica da PlayBasket</h1>
         
         <div id="table-container">Caricamento in corso...</div>
-
+        <h1>Legenda</h1>
+        <section id="legenda-container">
+        <ul id="legenda"> 
+            <li><strong>P.ti :</strong> punti</li>
+            <li><strong>P.ti/P :</strong> Rapporto punti / partite giocate</li>
+            <li><strong>G:</strong> Partite giocate</li>
+            <li><strong>V:</strong> Partite vinte</li>
+            <li><strong>P:</strong> Partite perse</li>
+            <li><strong>%:</strong> Percentuale vittorie</li>
+            <li><strong>S:</strong> Striscia vittorie/sconfitte</li>
+            <li><strong>PF:</strong> Punti fatti</li>
+            <li><strong>PS:</strong> Punti subiti</li>
+            <li><strong>Q:</strong> Rapporto punti fatti / punti subiti</li>
+            <li><strong>PF/P:</strong> Rapporto punti fatti / partite giocate</li>
+            <li><strong>PS/P:</strong> Rapporto punti subiti / partite giocate</li>
+        </ul>
+        </section>
         <script src="dynamic_leaderboard.js">
         </script>
 
