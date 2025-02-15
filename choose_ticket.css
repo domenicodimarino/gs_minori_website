@@ -165,21 +165,15 @@ form .sector_choice{
     margin-bottom:10px;
     margin-top: 10px;
 }
-#submit_button{
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
 #submit-button{
-    width: 80%;
+    width: fit-content;
+    padding: 30px;
+    justify-content: center;
     border: 3px solid black;
     border-radius: 10px;
-    background-color: #69140E;
+    background-color: #03bb85;
     color: white;
     cursor: pointer;
-    margin-top: 20px;
-    height: 40px;
-    margin-bottom: 20px;
+    float: right;
+    margin-top: 50px;
 }

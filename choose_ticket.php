@@ -327,7 +327,7 @@
                             </section>
                         <?php endfor; ?>  
                         <input type="number" name="importo" value="<?php echo $total_price; ?>" id="importo" style="display: none;">
-                        <input type="submit" value="CONFERMA" onclick="return check_ticket_data(this.form)">
+                        <input type="submit" value="CONFERMA" onclick="return check_ticket_data(this.form)" id="submit-button">
                     </form>
                 </section>
 
