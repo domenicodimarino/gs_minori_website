@@ -1,9 +1,9 @@
 <?php
 // Configurazione della connessione al database
 $host = "localhost";  // Cambia se necessario
-$dbname = "postgres";  // Sostituisci con il nome corretto
+$dbname = "gruppo01";  // Sostituisci con il nome corretto
 $user = "www";  // Utente PostgreSQL
-$password = "llel3";  // Inserisci la password corretta
+$password = "tw2024";  // Inserisci la password corretta
 
 // Connessione al database
 try {

@@ -13,7 +13,7 @@
     <?php include 'header.html'?>
 
     <main>
-        <h1>Calendario delle Partite</h1>
+        <h1 id="calendario">Calendario delle Partite</h1>
         <section class="calendario">
             <div class="partita">
                 <h2>Prossima Partita</h2>
@@ -25,7 +25,7 @@
             </div>
         </section>
 
-        <h1>Classifica del Campionato</h1>
+        <h1 id="classifica">Classifica del Campionato</h1>
         <section class="classifica">
             <table>
                 <thead>
@@ -82,6 +82,7 @@
 
     </main>
     <script src="stagione.js"></script>
+
     <!-- Footer -->
     <?php include 'footer.html'?>
 </body>
