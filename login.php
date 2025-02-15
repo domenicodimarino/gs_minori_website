@@ -33,20 +33,21 @@
                     
             }
             function check_signup_data(elementoModulo) {
-                if (elementoModulo.name.value == "") {
-                    alert("Devi inserire un nome");
-                    elementoModulo.name.focus();
+                if (elementoModulo.email.value != elementoModulo.confirm_email.value) {
+                    alert("Le due email non corrispondono");
+                    elementoModulo.email.focus();
+                    elementoModulo.email.select();
                     return false;
                 }
-                if (elementoModulo.password.value == "") {
-                    alert("Devi inserire una password");
-                    elementoModulo.password.focus();
+                if (elementoModulo.pwd1.value.length < 8) {
+                    alert("La password deve essere di almeno 8 caratteri");
+                    elementoModulo.pwd1.focus();
                     return false;
                 }
-                if (elementoModulo.password.value != elementoModulo.confirm_password.value) {
+                if (elementoModulo.pwd1.value != elementoModulo.confirm_password.value) {
                     alert("Le due password non corrispondono");
-                    elementoModulo.password.focus();
-                    elementoModulo.password.select();
+                    elementoModulo.pwd1.focus();
+                    elementoModulo.pwd1.select();
                     return false;
                 }
                 return true;
@@ -75,14 +76,7 @@
 	else
 		$email = "";
 
-    if(isset($_POST['password']))
-		$pass = $_POST['password'];
-	else
-		$pass = "";
-	if(isset($_POST['confirm_password']))
-		$repassword = $_POST['confirm_password'];
-	else
-		$repassword = "";
+    
 
 ?>
 <video src="spalti.mp4" autoplay loop muted style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; opacity: 0.5; z-index: -1;">
@@ -117,33 +111,38 @@
         <form method="post" action=<?php echo $_SERVER['PHP_SELF'] ?> onsubmit="return check_signup_data(this)">
         <p>
         <label for="name">
-            <input type="text" name="name" id="name" placeholder="Nome" value="<?php echo $name?>"/>
+            <input type="text" name="name" id="name" placeholder="Nome" value="<?php echo $name?>" required/>
         </label>
         </p>
         <p>
         <label for="surname">
-            <input type="text" name="surname" id="surname" placeholder="Cognome" value="<?php echo $surname?>"/>
+            <input type="text" name="surname" id="surname" placeholder="Cognome" value="<?php echo $surname?>" required/>
         </label>
         </p>
         <p>
         <label for="username">
-            <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username?>"/>
+            <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $username?>" required/>
         </label>
         </p>
         <p>
         <label for="email">
-            <input type="text" name="email" id="email" placeholder="Email" value="<?php echo $email?>"/>
+            <input type="email" name="email" id="email" placeholder="Email" value="<?php echo $email?>" required/>
+        </label>
+        </p>
+        <p>
+        <label for="confirm_email">
+            <input type="email" name="confirm_email" id="confirm_email" placeholder="Conferma email" required/>
         </label>
         </p>
         <p>
         <label for="password" style="display: flex; align-items: center;">
-            <input type="password" name="pwd1" id="pwd1" placeholder="Password" value="<?php echo $pass?>" style="margin-right: 5px;margin-left: 22px;"/>
+            <input type="password" name="pwd1" id="pwd1" placeholder="Password" style="margin-right: 5px;margin-left: 22px;" required/>
             <img id="pass_photo2" src="eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
         </label>
         </p>
         <p>
         <label for="confirm_password" style="display: flex; align-items: center;">
-            <input type="password" name="confirm_password" id="confirm_password" placeholder="Conferma password" value="<?php echo $repassword?>" style="margin-right: 5px;margin-left: 22px;"/>
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Conferma password" style="margin-right: 5px;margin-left: 22px;" required/>
             <img id="pass_photo3" src="eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
         </label>
         </p>
