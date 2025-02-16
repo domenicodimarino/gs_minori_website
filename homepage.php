@@ -6,6 +6,7 @@
     </head>
     <body>
         <?php include 'header.html'?>
+        <?php require 'login_check.php' ?>
         <?php include 'footer.html'?>
     </body>
     
