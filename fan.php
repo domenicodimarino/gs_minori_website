@@ -106,7 +106,8 @@
                 if (!empty($content['immagine'])) {
                     echo '<img src="' . htmlspecialchars($content['immagine']) . '" alt="Immagine postata" style="max-width: 100%;">';
                 }
-                echo '<p><small>Pubblicato il: ' . htmlspecialchars($content['data_pubblicazione']) . '</small></p>';
+                $formattedDate = date('Y-m-d H:i:s', strtotime($content['data_pubblicazione']));
+                echo '<p><small>Pubblicato il: ' . htmlspecialchars($formattedDate) . '</small></p>';
                 echo '</div>';
                 }
             } else {
