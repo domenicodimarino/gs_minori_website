@@ -86,10 +86,10 @@
         <a href="homepage.php"><img src="logo.png" alt="Logo GS Minori" style="width: 40vw;" height="auto"></a>
         <!-- Form di login MODIFICARE ACTION -->
         <div id="login_form" style="display:flex;">
-        <form method="post" action=<?php echo $_SERVER['PHP_SELF']?>>
+        <form method="post" action="login-manager.php">
         <p>
-        <label for="email">
-            <input type="text" name="email" id="email" placeholder="Email" value="<?php echo $email?>"/>
+        <label for="username">
+            <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $user?>"/>
         </label>
         </p>
         <p>
@@ -108,7 +108,7 @@
         
         <div id="registration_form" style="display:none;">
         <!-- Form di registrazione DA MODIFICARE ACTION -->
-        <form method="post" action=<?php echo $_SERVER['PHP_SELF'] ?> onsubmit="return check_signup_data(this)">
+        <form method="post" action="login-manager.php" onsubmit="return check_signup_data(this)">
         <p>
         <label for="name">
             <input type="text" name="name" id="name" placeholder="Nome" value="<?php echo $name?>" required/>
@@ -147,7 +147,7 @@
         </label>
         </p>
         <p>
-        <input type="submit" name="sign_in" class="submit_button" value="Effettua la registrazione"/>
+        <input type="submit" name="sign_up" class="submit_button" value="Effettua la registrazione" id="sign_up"/>
         </p>
         <p> Sei già registrato?</p>
         <p><input type="button" name="go_to_login" class="submit_button" value="Effettua il login!" onclick="login()"/></p>
@@ -156,4 +156,5 @@
         <a href="homepage.php"><button>Torna alla homepage</button></a>
     </main>
     </body>
+    <?php require "registrazione.php" ?>
 </html>
