@@ -5,16 +5,19 @@
 <body>
 	<?php
 
+require './db.php';
 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-		if($_POST['username'] && $_POST['password']){
+		if(isset($_POST['username']) && isset($_POST['password'])){
 			$user =  $_POST['username'];
 			$pass =  $_POST['password'];
 			//chiama la funzione get_pwd che controlla
 			//se username esiste nel DB. Se esiste, restituisce la password (hash), altrimenti restituisce false.
 			$hash = get_pwd($user,$db);
 			if(!$hash){
-				echo "<p> L'utente $user non esiste. <a href=\"login.php\">Riprova</a></p>";
+				echo  "<script>alert('Utente non presente nel database');
+					window.location.href = 'login.php';
+					</script>";
 			}
 			else{
 				if(password_verify($pass, $hash)){
@@ -22,10 +25,14 @@
 					//Se il login è corretto, inizializziamo la sessione
 					session_start();
 					$_SESSION['username']=$user;
-					echo "<p><a href=\"homepage.php\">Accedi</a> al contenuto riservato solo agli utenti registrati<p>";
+					echo "<script>alert('Login effettuato con successo');
+					window.location.href = 'homepage.php';
+					</script>";
 				}
 				else{
-					echo 'Username o password errati. <a href="login.php">Riprova</a>';
+					echo "<script>alert('Username o password errati.')
+						window.location.href = 'login.php';
+					</script>";
 				}
 			}
 		}
@@ -38,15 +45,14 @@
 			insert_utente($nome, $cognome, $user, $mail, $pass);
 		}
 		else{
-			echo "<p>ERRORE: username o password non inseriti <a href=\"login.php\">Riprova</a></p>";
-			exit();
+			echo "<script>alert('ERRORE: username o password non inseriti.');	
+				window.location.href = 'login.php';
+				</script>";
+				exit();
 		}
 	}
 	?>
-</body>
-</html>
-
-<?php
+	<?php
 function get_pwd($user, $db){
 		require './db.php';
 		$sql = "SELECT password FROM account WHERE username=$1;";
@@ -102,11 +108,15 @@ function insert_utente($nome, $cognome, $user, $mail, $pass){
 	//CONNESSIONE AL DB
 
 	if(username_exist($user)){
-		echo "<script><alert>User già presente nel sistema</alert></script>";
+		echo "<script>alert('User già presente nel sistema');
+			window.location.href = 'login.php';
+			</script>";
 		return;
 	}
 	if(mail_exists($mail,$db)){
-		echo "<script><alert>Email già presente nel sistema</alert></script>";
+		echo "<script>alert('Email già presente nel sistema');
+			window.location.href = 'login.php';
+			</script>";
 		return;
 	}
 
@@ -119,7 +129,9 @@ function insert_utente($nome, $cognome, $user, $mail, $pass){
 		return false;
 	}
 	else{
-		echo "<script><alert> Utente registrato con successo! Effettua il login.";
+		echo "<script>alert('Utente registrato con successo! Effettua il login.');
+				window.location.href = 'login.php';
+				</script>";
 		return true;
 	}
 	pg_close($db);
@@ -145,3 +157,7 @@ function mail_exists($mail, $db){
 	pg_close($db);
 }
 ?>
+</body>
+</html>
+
+
