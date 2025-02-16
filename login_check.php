@@ -13,6 +13,8 @@
 		echo "<p> Benvenuto $user!</p>";
         echo "<script>const login_button = document.getElementsByClassName('login-btn')[0];
             login_button.id = 'logged';
+			login_button.innerHTML = '<img src=\"user.png\" alt=\"userphoto\"> $user';
+			login_button.removeAttribute('href');
 			const dropdownMenus = document.querySelectorAll('.dropdown');
             const lastDropdownMenu = dropdownMenus[dropdownMenus.length - 1];
 			lastDropdownMenu.id = 'logged';
