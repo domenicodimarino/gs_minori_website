@@ -1,0 +1,28 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+#buyer_data{
+    width: max-content;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: yellowgreen;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi effetto ombrato */
+    padding: 20px; /* Aggiungi padding per migliorare l'aspetto */
+    border-radius: 10px; /* Aggiungi bordi arrotondati */
+}
+#order_summary{
+    width: max-content;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: cyan;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi effetto ombrato */
+    padding: 20px; /* Aggiungi padding per migliorare l'aspetto */
+    border-radius: 10px; /* Aggiungi bordi arrotondati */
+}
