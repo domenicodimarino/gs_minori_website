@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 // Handle server-side error during PaymentIntent creation
                 console.error('Error creating PaymentIntent:', response.error);
                 cardErrors.textContent = 'Errore durante la creazione del pagamento.';
-                document.getElementById('submit-btn').disabled = false;
+                document.getElementById('submit-button').disabled = false;
                 return;
             }
 
@@ -57,11 +57,22 @@ document.addEventListener('DOMContentLoaded', (event) => {
             } else if (paymentIntent && paymentIntent.status === 'succeeded') {
                 // Payment succeeded
                 alert('Pagamento completato con successo!');
+
+                // Creiamo un oggetto con i dati del form
+                const formData = new FormData(form);
+                const data = {};
+                formData.forEach((value, key) => {
+                    data[key] = value;
+                });
+
+                // Reindirizza alla pagina ticket_completed.php con i dati del form
+                const queryString = new URLSearchParams(data).toString();
+                window.location.href = 'ticket_completed.php?' + queryString;
             } else {
                 // Unexpected error
                 console.error('Unexpected error during payment confirmation.');
                 cardErrors.textContent = 'Errore sconosciuto, riprova.';
-                document.getElementById('submit-buttton').disabled = false;
+                document.getElementById('submit-button').disabled = false;
             }
         });
     });

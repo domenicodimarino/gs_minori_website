@@ -80,20 +80,6 @@
             $sector_price["12"]=5;
         ?>
 
-        <!-- Gestione pagina dopo conferma -->
-        <?php 
-            if(isset($_POST['numero_biglietti'])){
-                $numero_biglietti = $_POST['numero_biglietti'];
-                if($numero_biglietti > 0){
-                    $total_price = 0;
-                    for($i = 1; $i <= 12; $i++){
-                        $total_price += $sector_price[$i] * $_POST['numero_biglietti'][$i];
-                    }
-                }
-                
-            }
-        ?>
-
         <script language="javascript" type="text/javascript">
             function increase_number(id){
                 switch(id){
@@ -310,7 +296,6 @@
                         </p>
                     </section>
                     <form action="checkout_ticket.php?matchID=<?php echo $matchID?>" method="post">
-                        <input type="hidden" name="form_submitted" value="1">
                         <?php for ($i = 1; $i <= 12; $i++): ?>
                             <section class="sector_choice">
                                 <p class="sector_type">

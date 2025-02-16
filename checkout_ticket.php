@@ -96,7 +96,7 @@
 
 
         <!-- Schermata di acquisizione dati dell'acquirente -->
-        <form method="post" style="display: flex;" id="payment-form">
+        <form method="post" style="display: flex;" id="payment-form" action="ticket_completed.php">
         <h2> Il totale da pagare è di <?php echo $total_price; ?> € </h2>
             <section id="order_summary" class="buyer_form">
                 <h1> Riepilogo ordine </h1>
@@ -114,9 +114,15 @@
             </section>
             <section id="buyer_data" class="buyer_form">
                 <h1> Dati dell'acquirente </h1>
-                <p>
-                    <input type="number" id="importo" name="importo" value="<?php echo $total_price; ?>" readonly hidden>
-                </p>
+                <input type="number" id="matchID" name="matchID" value="<?php echo $matchID; ?>" readonly hidden>
+                <input type="number" id="importo" name="importo" value="<?php echo $total_price; ?>" readonly hidden>
+
+                <?php for ($i = 1; $i <= 12; $i++): ?>
+                    <?php if($_POST['numero_biglietti'][$i] > 0): ?>
+                        <input type="text" id="settore_<?php echo $i; ?>" name="settore[<?php echo $i; ?>]" value="<?php echo $sector[$i]; ?>" readonly hidden>
+                        <input type="number" id="numero_biglietti_<?php echo $i; ?>" name="numero_biglietti[<?php echo $i; ?>]" value="<?php echo $_POST['numero_biglietti'][$i]; ?>" readonly hidden>
+                    <?php endif; ?>
+                <?php endfor; ?>
                 <p>
                 <label for="nome">
                     Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Nome">
