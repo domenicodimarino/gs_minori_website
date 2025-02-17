@@ -7,7 +7,7 @@
     <script src="https://js.stripe.com/v3/"></script> <!-- caricamento di Stripe.js -->
 </head>
 <body>
-    <?php include 'header.html'?>
+    <?php include 'header.php'?>
 
     <!-- Controllo utente loggato -->
     <?php //DISATTIVATO PER TESTING

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="cart.css" type="text/css"/>
 </head>
 <body>
-    <?php include 'header.html'; ?>
+    <?php include 'header.php'; ?>
     <h1>Carrello</h1>
     <h2>Riepilogo ordine: </h2>
     <?php

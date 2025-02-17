@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Header -->
-    <?php include 'header.html'?>
+    <?php include 'header.php'?>
 
     <main>
         <h1 id="ultime_news">Ultime News</h1>

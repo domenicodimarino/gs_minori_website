@@ -7,7 +7,7 @@
         <script src="https://js.stripe.com/v3/"></script>
     </head>
     <body>
-        <?php include 'header.html'?>
+        <?php include 'header.php'?>
         
         <main>
         
