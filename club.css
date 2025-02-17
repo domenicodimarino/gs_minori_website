@@ -1,34 +1,101 @@
-h1{
+/* Stili di base */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #090808;
+    background-image: url('photo_club/background_club1.webp'); /* Percorso dell'immagine di sfondo */
+    background-size: cover; /* Assicura che l'immagine copra l'intera area */
+    background-position: center; /* Centra l'immagine di sfondo */
+    background-repeat: no-repeat; /* Evita che l'immagine si ripeta */
+  }
+  
+  /* Contenitore principale */
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  /* Titoli */
+  h1 {
     font-style: italic;
     text-align: center;
     font-size: 40px;
     color: #7e1710;
-}
-h2{
+    margin-top: 20px;
+  }
+  
+  h2 {
     font-style: italic;
     text-align: center;
     font-size: 30px;
     color: #0d1459;
-}
-p{
+    margin-top: 20px;
+  }
+  
+  /* Paragrafi */
+  p {
     font-style: normal;
     text-align: center;
     font-size: 16px;
     font-weight: normal;
-    color: #090808;
-}
-img.mino {
-    float: left; /* Fa fluttuare l'immagine a sinistra del testo */
-    margin-right: 20px; /* Aggiunge uno spazio tra l'immagine e il testo */
-    width: 150px; /* Imposta la larghezza dell'immagine */
-    height: auto; /* Mantiene il rapporto di aspetto dell'immagine */
-    object-fit: contain;
-}
-img.chi{
-    float: right; /* Fa fluttuare l'immagine a destra del testo */
-    margin-right: 20px; /* Aggiunge uno spazio tra l'immagine e il testo */
-    width: 150px; /* Imposta la larghezza dell'immagine */
-    height: auto; /* Mantiene il rapporto di aspetto dell'immagine */
-    object-fit: contain;
+    line-height: 1.6;
+    margin: 20px 0;
+  }
+
+  .description {
+    font-style: italic;
+    text-align: right;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6;
+    margin: 20px 0;
 }
 
+  /* Immagini */
+  img.mino {
+    float: left;
+    margin-right: 20px;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  img.chi {
+    float: right;
+    margin-left: 20px;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Chiarezza nelle sezioni (pulizia dei float) */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Spaziatura tra le sezioni */
+  section {
+    margin-bottom: 40px;
+  }
+
+  .timeline {
+    border-left: 3px solid #333;
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+  .timeline-item {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+  }
+  .timeline-date {
+    font-weight: bold;
+    color: #555;
+  }
+  
