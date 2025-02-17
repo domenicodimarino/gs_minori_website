@@ -5,9 +5,7 @@
 		con l'username dell'utente solo se l'autenticazione è avvenuta con successo
 	*/
 
-	if(!isset($_SESSION["username"])){
-	}
-	else{
+	if(isset($_SESSION["username"])){
 		$user = $_SESSION["username"];
         echo "<script>const login_button = document.getElementsByClassName('login-btn')[0];
             login_button.id = 'logged';
