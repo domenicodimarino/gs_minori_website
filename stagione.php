@@ -26,6 +26,7 @@
         </section>
 
         <h1 id="classifica">Classifica Divisione Regionale 2</h1>
+        <h2> <a href="https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&season=2025&subj=1&mod=st&lg=2">Fonte: PlayBasket</a></h2>
         
         <div id="table-container">Caricamento in corso...</div>
         <h1>Legenda</h1>
