@@ -1,3 +1,4 @@
+<?php include 'header.php'; ?>
 <html>
     <head>
         <title>GS Minori - Sito ufficiale</title>
@@ -74,7 +75,7 @@
     </head>
     <body>
       
-        <?php include 'header.php'; ?>
+        
 
 
 <main>
