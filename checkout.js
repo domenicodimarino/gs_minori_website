@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     form.addEventListener('submit', async (event) => {
+        if (event.submitter.id !== 'submit-button') return;
         event.preventDefault();
 
         // Disabilitiamo il bottone di invio per evitare sottomissioni multiple
