@@ -4,121 +4,20 @@
         <title>U13 Libertas</title>
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <style>
-        #gep2{
-            display: block;
-            margin: auto;
-            height: 35vw;
-            width: 40vw;
-        }
-        #immagine_u13{
-            align-items: center;
-        }
-        .image-container{
-            width: 10%;
-            padding-left: 10px;
-        }
-    
-        table {
-            width: 80%;
-            border-collapse: collapse;
-            margin: 20px auto;
-            text-align: center;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 10px;
-        }
-        th {
-            background-color: #4CAF50; /* Colore diverso per la prima riga */
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2; /* Alternanza di colori per le righe */
-        }
-        th {
-            cursor: pointer;
-            position: relative;
-            padding-right: 20px; /* Spazio per la freccia */
-        }
-        th::after {
-            content: "▲▼";
-            position: absolute;
-            right: 5px;
-            font-size: 12px;
-            color: #ccc; /* Colore grigio per le frecce inattive */
-        }
-        th.asc::after {
-            content: "▲";
-            color: #000; /* Colore nero per la freccia attiva */
-        }
-        th.desc::after {
-            content: "▼";
-            color: #000; /* Colore nero per la freccia attiva */
-        }
-        .text-block {
-            width: 75%;
-            margin: 0 auto;
-            border-radius: 5px;
-        }
-        .share-container {
-            display: flex;
-            align-items: center;
-            background-color: #d3d6db;
-            padding: 10px;
-            border-radius: 5px;
-            width: fit-content;
-        }
-        .share-text {
-            font-size: 16px;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        .share-icon {
-            width: 35px;
-            height: 35px;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-        .image1 {
-    flex-shrink: 0;
-    width: 250px;
-    height: 250px;
-    float: left;
-}
-
-.text2 {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-left: 20px;
-}
-
-.info {
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.description {
-    max-width: 600px;
-    text-align: justify;;
-}
-        </style>
+        <link rel="stylesheet" href="u13libertas.css" type="text/css"/>
     </head>
     <body>
         
-        <nav style="text-align: center; background-color: #b0c4de; height: 50px; padding-top: 15px;">
-            <a href="teams.php" style="color: inherit; text-decoration: none;">PRIMA SQUADRA MASCHILE</a> | 
-            <a href="u19silver.php" style="color: inherit; text-decoration: none;"> U19 SILVER</a> | 
-            <a href="u17libertas.php" style="color: inherit; text-decoration: none;"> U17 LIBERTAS</a> |
-            <a href="u13libertas.php" style="color: inherit; text-decoration: none;"> U13 LIBERTAS</a> |
-            <a href="minibasket.php" style="color: inherit; text-decoration: none;"> MINIBASKET</a>
+    <nav class="main-nav">
+            <a href="teams.php" class="nav-link">PRIMA SQUADRA MASCHILE</a>
+            <a href="u19silver.php" class="nav-link"> U19 SILVER</a> 
+            <a href="u17libertas.php" class="nav-link"> U17 LIBERTAS</a> 
+            <a href="u13libertas.php" class="nav-link"> U13 LIBERTAS</a> 
+            <a href="minibasket.php" class="nav-link"> MINIBASKET</a>
         </nav>
         <div style="padding-top: 15px; margin-left: 5px;"> <Strong>UNDER 13 LIBERTAS</Strong></div> <br>
         <br>
-        <div id="immagine_13"> <img id="gep2" src="u13libertas.png" alt="Foto Squadra"></div>
+        <div> <img src="u13libertas.png" alt="Foto Squadra" class="img_sec"></div>
         <br>
         <div style="text-align: center"> <strong>U13 LIBERTAS</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
@@ -155,34 +54,36 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="share-icon">
         </a>
     </div>
-        <br>
-        <p style="margin-left: 5px;">ALLENATORE</p>
-        <div class="image1" style="padding-top: 5px; margin-left: 20px;">
-        <img src="jacopo.png" alt="Sérgio Conceição" style="width: 100%; height: 150%;">
-    </div>
-    <div class="text2">
-        <div class="info">
-            <p class="title">Jacopo Porpora</p>
-            <p><span class="bold">Data di nascita:</span> 23 novembre 1994</p>
-            <p><span class="bold">Luogo di nascita:</span> Salerno</p>
-            <p><span class="bold">Nazionalità:</span> Italia</p>
-            <p><span class="bold">Allenatore dal:</span> 2024</p>
-            <p><span class="bold">Al Milan dal:</span> 2024</p>
-        </div>
-        <div class="description">
-            <p class="bold">Biografia di Jacopo Porpora</p>
-            <p>Jacopo Porpora, nato il 23 novembre 1994 a Salerno, è l'allenatore della squadra di 
-                basket GSMinori. Con una forte connessione con la sua città d'origine, ha dedicato gran parte 
-                della sua carriera a guidare i giovani atleti locali, cercando di trasmettere loro non solo le 
-                abilità tecniche del gioco, ma anche il valore del lavoro di squadra e della disciplina. La sua 
-                passione per il basket e il desiderio di far crescere la squadra lo hanno reso un punto di 
-                riferimento per i ragazzi della comunità. Sempre attento a creare un ambiente di allenamento 
-                positivo e motivante, Jacopo è conosciuto per la sua capacità di adattarsi alle esigenze dei suoi giocatori, 
-                supportandoli nel loro sviluppo sia sul piano tecnico che personale. Con il suo approccio empatico e il suo 
-                impegno costante, Jacopo è riuscito a far crescere la squadra GSMinori, portando avanti la tradizione di 
-                eccellenza sportiva del suo paese.</p>
-        </div>
-</div>
+            <div class="position-title"><h2>ALLENATORE</h2>
+                <div class="coach_container"> 
+                    <div class="text2">
+                        <div class="image1">
+                            <img src="photo_teams/jacopo.png" alt="Jacopo Porpora" class="coach-image">
+                        </div>
+                        <div class="info" id="allenatore">
+                            <h1>Jacopo Porpora</h1><br>
+                            <p><span class="bold">Data di nascita:</span> 23 novembre 1994</p> <br>
+                            <p><span class="bold">Luogo di nascita:</span> Salerno</p> <br>
+                            <p><span class="bold">Nazionalità:</span> Italia</p><br>
+                            <p><span class="bold">Allenatore dal:</span> 2024</p><br>
+                            <p><span class="bold">Al GSMinori dal:</span> 2024</p>
+                        </div>
+                        <div class="description">
+                            <p> <span class="bold1">BIOGRAFIA DI JACOPO PORPORA</span> </p><br>
+                            <p>Jacopo Porpora, nato il 23 novembre 1994 a Salerno, è l'allenatore della squadra di 
+                                basket GSMinori. Con una forte connessione con la sua città d'origine, ha dedicato gran parte 
+                                della sua carriera a guidare i giovani atleti locali, cercando di trasmettere loro non solo le 
+                                abilità tecniche del gioco, ma anche il valore del lavoro di squadra e della disciplina. La sua 
+                                passione per il basket e il desiderio di far crescere la squadra lo hanno reso un punto di 
+                                riferimento per i ragazzi della comunità. Sempre attento a creare un ambiente di allenamento 
+                                positivo e motivante, Jacopo è conosciuto per la sua capacità di adattarsi alle esigenze dei suoi giocatori, 
+                                supportandoli nel loro sviluppo sia sul piano tecnico che personale. Con il suo approccio empatico e il suo 
+                                impegno costante, Jacopo è riuscito a far crescere la squadra GSMinori, portando avanti la tradizione di 
+                                eccellenza sportiva del suo paese.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <script src="table.js"></script>
            <?php include 'footer.html'; ?>
     </body>

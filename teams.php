@@ -104,7 +104,7 @@
             </div>
         </div>
         
-        <div id="allenatore-section" class="section" style="display: none;">
+        <div id="allenatore-section" class="section">
             <div class="position-title"><h2>ALLENATORE</h2>
                 <div class="coach_container"> 
                     <div class="text2">
