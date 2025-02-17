@@ -1,0 +1,221 @@
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('photo_fan/background_fan.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Opacità dell'immagine di sfondo */
+    z-index: -1; /* Assicurati che l'immagine di sfondo sia dietro il contenuto */
+}
+
+.geppetto {
+    display: flex;
+    gap: 40px;
+    width: auto;
+    margin-bottom: 20px; 
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.image-container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.image {
+    width: 100%;
+    height: 150%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.text-container {
+    display: flex;
+    gap: 25px; /* Distanza tra i blocchi di testo */
+}
+
+.text-block {
+    width: 50%; /* Ogni blocco di testo prende metà della larghezza disponibile */
+}
+
+.image-container:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.text {
+    position: absolute;
+    top: 100%; /* Centra verticalmente */
+    left: 10%; /* Centra orizzontalmente */
+    transform: translate(-10%, -10%); /* Centra esattamente */
+    color: white; /* Colore del testo */
+    font-size: 24px; /* Dimensione del testo */
+    font-weight: bold; /* Opzionale: Grassetto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per il testo, opzionale */
+}
+
+.container:hover .image {
+    transform: scale(1.1); /* Effetto zoom quando si passa sopra */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Ombra per l'immagine */
+}
+
+.image1 {
+    flex-shrink: 0;
+    width: 250px;
+    height: 250px;
+    float: left;
+}
+
+.text2 {
+    display: flex;
+    flex-direction: row; /* Imposta il layout in riga */
+    gap: 20px; /* Spazio tra i blocchi */
+    padding-left: 20px;
+    
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Permette all'elemento di crescere */
+}
+
+.description {
+    max-width: 600px;
+    text-align: justify;
+    flex: 2; /* Permette all'elemento di crescere di più rispetto a .info */
+}
+
+.main-nav {
+    text-align: center;
+    background-color: #b0c4de;
+    height: 50px;
+    padding-top: 15px;
+}
+
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.team-title {
+    padding-top: 15px;
+    margin-left: 5px;
+}
+
+.sub-nav {
+    margin-left: 5px;
+}
+
+.team-image {
+    width: 45vw;
+    height: 35vw;
+    display: block;
+    margin: auto;
+    align-items: center;
+}
+
+.roster-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.position-title {
+    margin-left: 5px;
+    padding-top: 100px;
+    clear: both; /* Aggiunto per evitare che le immagini si sovrappongano ai titoli */
+}
+
+.geppetto {
+    padding-top: 15px;
+}
+
+.image-container {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    /* Rimosso border-radius per rendere le immagini normali */
+}
+
+.text {
+    margin-top: 10px;
+}
+
+.image1 {
+    padding-top: 5px;
+    margin-left: 20px;
+    flex: 1;
+}
+
+.coach-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.text2 {
+    display: flex;
+    flex-wrap: wrap; /* Permette al contenuto di andare a capo se necessario */
+    width: 450%; /* Assicura che il contenitore prenda tutta la larghezza disponibile */
+    background: white;
+    height: 125%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+.info {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.description {
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: justify;
+}
+.coach-section {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.coach-image {
+    flex-shrink: 0;
+    width: 225px;
+    height: 225px;
+    border-radius: 8px;
+    margin-right: 20px; /* Space between image and text */
+    max-width: 300px;
+}
+
+.coach-description {
+    flex: 1;
+    font-size: 16px;
+    text-align: justify;
+    max-width: 600px; /* Limita la larghezza massima della descrizione */
+}

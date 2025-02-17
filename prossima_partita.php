@@ -4,11 +4,6 @@ header('Content-Type: application/json');
 // Dati delle prossime partite (questi dati dovrebbero provenire dal database)
 $prossime_partite = [
     [
-        "data" => "16 Febbraio 2025",
-        "squadre" => "C. VITOLO BASKET CAPACCIO PAES vs G.S. MINORI PALLACANESTRO",
-        "luogo" => "Palazzetto Comunale - VIALE DELLA REPUBBLICA CAPACCIO PAESTUM (SA)"
-    ],
-    [
         "data" => "23 Febbraio 2025",
         "squadre" => "G.S. MINORI PALLACANESTRO vs ATHLETIC SYSTEM S.GIORGIO",
         "luogo" => "TENDOSTRUTTURA COMUNALE - Via Dietro La Chiesa MINORI (SA)"
