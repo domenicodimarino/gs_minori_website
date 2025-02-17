@@ -67,7 +67,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
                 // Reindirizza alla pagina ticket_completed.php con i dati del form
                 const queryString = new URLSearchParams(data).toString();
-                window.location.href = 'ticket_completed.php?' + queryString;
+                const currentPath = window.location.pathname;
+
+                if (currentPath.includes('checkout_cart')) {
+                    //window.location.href = 'order_completed.php?' + queryString; NON ANCORA IMPLEMENTATA LA PAGINA
+                } else if (currentPath.includes('checkout_ticket')) {
+                    window.location.href = 'ticket_completed.php?' + queryString;
+                }
             } else {
                 // Unexpected error
                 console.error('Unexpected error during payment confirmation.');

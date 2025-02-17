@@ -6,34 +6,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <script src="https://js.stripe.com/v3/"></script>
     </head>
-    <body>
-        <?php include 'header.php'?>
-        
+    <body>  
+    <?php include 'header.php'?>
         <main>
-        
-        <!-- Controllo utente loggato -->
-        
-        
-        <?php 
-        //DISATTIVATO PER TESTING
-
-            /*
-            session_start();
-
-                L'elemento $_SESSION["username"] è popolato
-                con l'username dell'utente solo se l'autenticazione è avvenuta con successo
-
-            if(!isset($_SESSION["username"])){
-                $current_url = urlencode($_SERVER['REQUEST_URI']);
-                header("Location: login.php?redirect=$current_url");
-                exit();
-            }
-            else{
-                $user = $_SESSION["username"];
-            }
-                
-            ?>*/
-        ?>
 
         <!-- Gestione match in array associativo -->
         <?php 
@@ -125,12 +100,12 @@
                 <?php endfor; ?>
                 <p>
                 <label for="nome">
-                    Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Nome">
+                    Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["nome"]) ? $_SESSION['nome'] : ''; ?>" placeholder="Nome">
                 </label>
                 </p>
                 <p>
                 <label for="cognome">
-                    Cognome: <input type="text" id="cognome" name="cognome" required value="<?php echo isset($_SESSION["surname"]) ? $_SESSION['surname'] : ''; ?>" placeholder="Cognome">
+                    Cognome: <input type="text" id="cognome" name="cognome" required value="<?php echo isset($_SESSION["cognome"]) ? $_SESSION['cognome'] : ''; ?>" placeholder="Cognome">
                 </label>
                 </p>
                 <p id="sex_choice">
@@ -147,17 +122,17 @@
                 </p>
                 <p>
                     <label for="email">
-                        Indirizzo email: <input type="email" id="email" name="email"  value="<?php echo isset($_SESSION["email"]) ? $_SESSION['email'] : ''; ?>" placeholder="Indirizzo email">
+                        Indirizzo email: <input type="email" id="email" name="email"  value="<?php echo isset($_SESSION["mail"]) ? $_SESSION['mail'] : ''; ?>" placeholder="Indirizzo email">
                     </label>
                 </p>
                 <p>
                     <label for="telefono">
-                        Telefono: <input type="tel" id="telefono" name="telefono"  value="<?php echo isset($_SESSION["phone"]) ? $_SESSION['phone'] : ''; ?>" placeholder="Numero di telefono">            
+                        Telefono: <input type="tel" id="telefono" name="telefono" placeholder="Numero di telefono">            
                     </label>
                 </p>
                 <p>
                     <label for="residenza">
-                        Indirizzo di residenza: <input type="text" id="residenza" name="residenza"  value="<?php echo isset($_SESSION["name"]) ? $_SESSION['name'] : ''; ?>" placeholder="Indirizzo di residenza">
+                        Indirizzo di residenza: <input type="text" id="residenza" name="residenza" placeholder="Indirizzo di residenza">
                     </label>
                 </p>
                 <p>
