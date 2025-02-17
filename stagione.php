@@ -25,24 +25,8 @@
             </div>
         </section>
 
-        <h1 id="classifica">Classifica del Campionato</h1>
-        <section class="classifica">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Posizione</th>
-                        <th>Squadra</th>
-                        <th>Punti</th>
-                        <th><a href="https://fip.it/risultati/?group=campionati-regionali&regione_codice=CM&comitato_codice=RCM&sesso=M&codice_campionato=PM&codice_fase=1&codice_girone=66493"><i class="fas fa-info-circle"></a></i></th>
-                    </tr>
-                </thead>
-                <tbody id="classifica-body">
-                    <!-- I dati della classifica verranno caricati qui -->
-                </tbody>
-            </table>
-        </section>
-
-        <h1>Classifica da PlayBasket</h1>
+        <h1 id="classifica">Classifica Divisione Regionale 2</h1>
+        <h2> <a href="https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&season=2025&subj=1&mod=st&lg=2">Fonte: PlayBasket</a></h2>
         
         <div id="table-container">Caricamento in corso...</div>
         <h1>Legenda</h1>

@@ -44,6 +44,13 @@
         <form action="checkout_cart.php" method="POST">
             <!-- Hidden input fields to pass data to checkout_cart.php -->
             <input type="number" name="importo" value="<?php echo $totalPrice; ?>" hidden>
+            <?php
+            foreach ($cartItems as $index => $item) {
+                echo '<input type="hidden" name="cartItems[' . $index . '][productName]" value="' . htmlspecialchars($item['productName']) . '">';
+                echo '<input type="hidden" name="cartItems[' . $index . '][quantity]" value="' . htmlspecialchars($item['quantity']) . '">';
+                echo '<input type="hidden" name="cartItems[' . $index . '][price]" value="' . htmlspecialchars($item['price']) . '">';
+            }
+            ?>
             <button type="submit" class="confirm-order-button">Conferma Ordine</button>
         </form>
     </div>
