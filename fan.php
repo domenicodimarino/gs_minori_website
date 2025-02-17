@@ -10,6 +10,17 @@
 <body>
     <?php include 'header.php'; ?>
 
+<?php
+    if(!isset($_SESSION["username"])){
+        $current_url = urlencode($_SERVER['REQUEST_URI']);
+        header("Location: login.php?redirect=" . urlencode('fan.php'));
+        exit();
+    }
+    else{
+        $user = $_SESSION["username"];
+    }
+?>
+
     <main>
     
         <h1>Benvenuto nella fan page</h1>
