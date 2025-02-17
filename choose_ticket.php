@@ -8,28 +8,7 @@
     <body>
         <?php include 'header.php'?>
         
-        <!-- Controllo utente loggato -->
-        
-        
-            <?php //DISATTIVATO PER TESTING
-
-            /*
-            session_start();
-            
-                L'elemento $_SESSION["username"] è popolato
-                con l'username dell'utente solo se l'autenticazione è avvenuta con successo
-            
-            if(!isset($_SESSION["username"])){
-                $current_url = urlencode($_SERVER['REQUEST_URI']);
-                header("Location: login.php?redirect=$current_url");
-                exit();
-            }
-            else{
-                $user = $_SESSION["username"];
-            }
-                
-            ?>*/
-        ?>
+        <?php require 'required_login.php'?>
         
         
         

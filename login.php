@@ -84,9 +84,10 @@
     </video>
     <main style="align-items: center; display: flex; flex-direction: column; ">
         <a href="homepage.php"><img src="logo.png" alt="Logo GS Minori" style="width: 40vw;" height="auto"></a>
-        <!-- Form di login MODIFICARE ACTION -->
+        
+        <!-- Form di login -->
         <div id="login_form" style="display:flex;">
-        <form method="post" action="login-manager.php">
+        <form method="post" action="login-manager.php<?php echo isset($_GET['redirect']) ? '?redirect=' . urlencode($_GET['redirect']) : ''; ?>">
         <p>
         <label for="username">
             <input type="text" name="username" id="username" placeholder="Username" value="<?php echo $user?>"/>
@@ -107,7 +108,7 @@
         </div>
         
         <div id="registration_form" style="display:none;">
-        <!-- Form di registrazione DA MODIFICARE ACTION -->
+        <!-- Form di registrazione -->
         <form method="post" action="login-manager.php" onsubmit="return check_signup_data(this)">
         <p>
         <label for="name">

@@ -1,3 +1,4 @@
+<?php include 'header.php'; ?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -8,8 +9,16 @@
     <title>Fan Page</title>
 </head>
 <body>
-    <?php include 'header.php'; ?>
-
+    <?php require 'required_login.php';?>
+    <?php
+        if(!isset($_SESSION['username'])){
+            $nome = '';
+        }    
+        else{
+            $nome = $_SESSION["username"];
+        }
+            
+        ?>
     <main>
     
         <h1>Benvenuto nella fan page</h1>
@@ -23,7 +32,7 @@
             <!-- Aggiungi qui ulteriori dettagli sulla community -->
             <form action="post_content.php" method="post" id="postForm" enctype="multipart/form-data">
             <label for="username">Nome utente:</label><br>
-            <input type="text" id="username" name="nome_utente" required>
+            <input type="text" id="username" name="nome_utente" required value="<?php echo $nome ?>">
             <label for="content">Posta un contenuto:</label><br>
             <textarea id="content" name="content" rows="4" cols="50" required></textarea><br>
             <label for="image">Carica un'immagine:</label><br>
@@ -34,44 +43,56 @@
             </form>
 
             <script>
-            document.getElementById('username').addEventListener('input', function() {
-                var username = this.value;
+            document.addEventListener('DOMContentLoaded', function() {
+                var usernameInput = document.getElementById('username');
                 var submitBtn = document.getElementById('submitBtn');
-                if (username.length >= 3) {
-                submitBtn.disabled = false;
+
+                // Controllo iniziale per abilitare/disabilitare il pulsante di invio
+                if (usernameInput.value.length >= 3) {
+                    submitBtn.disabled = false;
                 } else {
-                submitBtn.disabled = true;
+                    submitBtn.disabled = true;
                 }
-            });
 
-            document.getElementById('postForm').addEventListener('submit', function(event) {
-                var username = document.getElementById('username').value;
-                if (username.length < 3) {
-                event.preventDefault();
-                alert('Inserire nome utente');
-                }
-            });
+                // Listener per l'input del campo username
+                usernameInput.addEventListener('input', function() {
+                    var username = this.value;
+                    if (username.length >= 3) {
+                        submitBtn.disabled = false;
+                    } else {
+                        submitBtn.disabled = true;
+                    }
+                });
 
-            var dropZone = document.getElementById('dropZone');
-            var imageInput = document.getElementById('image');
+                document.getElementById('postForm').addEventListener('submit', function(event) {
+                    var username = document.getElementById('username').value;
+                    if (username.length < 3) {
+                        event.preventDefault();
+                        alert('Inserire nome utente');
+                    }
+                });
 
-            dropZone.addEventListener('dragover', function(event) {
-                event.preventDefault();
-                dropZone.style.backgroundColor = '#e0e0e0';
-            });
+                var dropZone = document.getElementById('dropZone');
+                var imageInput = document.getElementById('image');
 
-            dropZone.addEventListener('dragleave', function(event) {
-                event.preventDefault();
-                dropZone.style.backgroundColor = '#ffffff';
-            });
+                dropZone.addEventListener('dragover', function(event) {
+                    event.preventDefault();
+                    dropZone.style.backgroundColor = '#e0e0e0';
+                });
 
-            dropZone.addEventListener('drop', function(event) {
-                event.preventDefault();
-                dropZone.style.backgroundColor = '#ffffff';
-                var files = event.dataTransfer.files;
-                if (files.length > 0) {
-                imageInput.files = files;
-                }
+                dropZone.addEventListener('dragleave', function(event) {
+                    event.preventDefault();
+                    dropZone.style.backgroundColor = '#ffffff';
+                });
+
+                dropZone.addEventListener('drop', function(event) {
+                    event.preventDefault();
+                    dropZone.style.backgroundColor = '#ffffff';
+                    var files = event.dataTransfer.files;
+                    if (files.length > 0) {
+                        imageInput.files = files;
+                    }
+                });
             });
             </script>
         </section>

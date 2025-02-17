@@ -24,9 +24,22 @@ require './db.php';
 					echo "<p>Login Eseguito con successo</p>";
 					//Se il login è corretto, inizializziamo la sessione
 					session_start();
-					$_SESSION['username']=$user;
+					$_SESSION['username'] = $user;
+					$_SESSION['nome'] = get_name($user, $db);
+					$_SESSION['cognome'] = get_surname($user, $db);
+					$_SESSION['mail'] = get_email($user, $db);
+
+					// Check if redirect parameter exists and decode it
+					if (isset($_GET['redirect'])) {
+						$redirect_url = urldecode($_GET['redirect']);
+						$redirect_url = str_replace('redirect=', '', $redirect_url);
+					} else {
+						$redirect_url = 'homepage.php';
+						$redirect_url = str_replace('redirect=', '', $redirect_url);
+					}
+
 					echo "<script>alert('Login effettuato con successo');
-					window.location.href = 'homepage.php';
+					window.location.href = '$redirect_url';
 					</script>";
 				}
 				else{
@@ -154,6 +167,67 @@ function mail_exists($mail, $db){
 			return false;
 		}
 	}
+	pg_close($db);
+}
+
+function get_name($user, $db){
+	require './db.php';
+	$sql = "SELECT nome FROM account WHERE username=$1;";
+	$prep = pg_prepare($db, "sqlNome", $sql);
+	$ret = pg_execute($db, "sqlNome", array($user));
+	if(!$ret) {
+		echo "ERRORE QUERY: " . pg_last_error($db);
+		return false;
+	}
+	else{
+		if ($row = pg_fetch_assoc($ret)){
+			$nome = $row['nome'];
+			return $nome;
+		}
+		else{
+			return false;
+		}
+   }
+	pg_close($db);
+}
+function get_surname($user, $db){
+	require './db.php';
+	$sql = "SELECT cognome FROM account WHERE username=$1;";
+	$prep = pg_prepare($db, "sqlCognome", $sql);
+	$ret = pg_execute($db, "sqlCognome", array($user));
+	if(!$ret) {
+		echo "ERRORE QUERY: " . pg_last_error($db);
+		return false;
+	}
+	else{
+		if ($row = pg_fetch_assoc($ret)){
+			$cognome = $row['cognome'];
+			return $cognome;
+		}
+		else{
+			return false;
+		}
+   }
+	pg_close($db);
+}
+function get_email($user, $db){
+	require './db.php';
+	$sql = "SELECT email FROM account WHERE username=$1;";
+	$prep = pg_prepare($db, "sqlGetMail", $sql);
+	$ret = pg_execute($db, "sqlGetMail", array($user));
+	if(!$ret) {
+		echo "ERRORE QUERY: " . pg_last_error($db);
+		return false;
+	}
+	else{
+		if ($row = pg_fetch_assoc($ret)){
+			$mail = $row['email'];
+			return $mail;
+		}
+		else{
+			return false;
+		}
+   }
 	pg_close($db);
 }
 ?>
