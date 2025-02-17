@@ -60,7 +60,7 @@
       ),
       array(
         "date" => "12 Dicembre 1970",
-        "title" => "Elezine del Primo Direttivo",
+        "title" => "Elezione del Primo Direttivo",
         "content" => "Il 12 dicembre alle ore 22:00, sempre del 1970, fu eletto il primo direttivo che successivamente elesse le cariche societarie. Gabriele Di Lieto fu eletto presidente, Alfonso Pepe vice presidente, Gaspare Apicella segretario e Antonio Mansi cassiere. Gabriele Di Lieto sarà l’unico ad essere sempre presente nell’associazione fino alla sua scomparsa, ricoprendo per numerosi anni la carica di presidente."
       ),
       array(
@@ -107,7 +107,10 @@
   <div class="timeline">
     <?php foreach ($timelineEvents as $event): ?>
       <div class="timeline-event">
-        <div class="timeline-date"><?php echo $event['date']; ?></div>
+        <!-- Questo if è fatto perché ci sono casi in cui non ci sono le date -->
+        <?php if (isset($event['date'])): ?>
+          <div class="timeline-date"><?php echo $event['date']; ?></div>
+        <?php endif; ?>
         <div class="timeline-content">
           <h2><?php echo $event['title']; ?></h2>
           <p><?php echo $event['content']; ?></p>
