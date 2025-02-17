@@ -13,18 +13,18 @@
         <!-- Gestione match in array associativo -->
         <?php 
             $match["1"]="GS Minori - Farmacia Greco Portici 2000, 05 Marzo 2025 21:15";
-			$match["2"]="GS Minori - Sammaritana Basket e Sport, 09 Marzo 2025 19:00";
-			$match["3"]="GS Minori - DIESEL TECNICA SALA CONSILINA, 12 Marzo 2025 21:00";
+            $match["2"]="GS Minori - Sammaritana Basket e Sport, 09 Marzo 2025 19:00";
+            $match["3"]="GS Minori - DIESEL TECNICA SALA CONSILINA, 12 Marzo 2025 21:00";
             $match["4"]="GS Minori - CUS NAPOLI, 16 Marzo 2025 20:30";
             if(!isset($_GET['matchID'])){
-				echo "Non hai selezionato nessun match.";
-			}
-			elseif(!array_key_exists($_GET['matchID'], $match)){
-				echo "Il match selezionato non esiste.";
-			}
-			else {
-				$matchID = $_GET['matchID'];
-			}
+                echo "Non hai selezionato nessun match.";
+            }
+            elseif(!array_key_exists($_GET['matchID'], $match)){
+                echo "Il match selezionato non esiste.";
+            }
+            else {
+                $matchID = $_GET['matchID'];
+            }
         ?>
 
         <?php 
@@ -133,6 +133,7 @@
                 <p>
                     <label for="residenza">
                         Indirizzo di residenza: <input type="text" id="residenza" name="residenza" placeholder="Indirizzo di residenza">
+                        <img src="gps.png" onclick="getLocation()" style="cursor: pointer;">
                     </label>
                 </p>
                 <p>
@@ -157,5 +158,6 @@
         <script src="checkout.js"></script>   
         </main>
         <?php include 'footer.html'?>
-            
+        <script src="geolocalizzazione.js"></script>
+    </body>
 </html>

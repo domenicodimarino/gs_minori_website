@@ -37,8 +37,8 @@
                 <img src="mino.png" alt="Image 1">
                 <p>Canotta da gara HOME<br> 29,99€</p>
                 <input type="hidden" name="product_image[]" value="mino.png">
-                <input type="hidden" name="product_name[]" value="Pantaloncini da gara HOME">
-                <input type="hidden" name="product_price[]" value="19.99">
+                <input type="hidden" name="product_name[]" value="Canotta da gara HOME">
+                <input type="hidden" name="product_price[]" value="29.99">
                 <div class="quantity-controls">
                     <button type="button" class="decrement">-</button>
                     <input type="number" class="quantity" name="quantity[]" value="0" min="0">
@@ -49,8 +49,8 @@
                 <img src="mino.png" alt="Image 2">
                 <p>Canotta da gara AWAY<br> 29,99€</p>
                 <input type="hidden" name="product_image[]" value="mino.png">
-                <input type="hidden" name="product_name[]" value="Pantaloncini da gara HOME">
-                <input type="hidden" name="product_price[]" value="19.99">
+                <input type="hidden" name="product_name[]" value="Canotta da gara AWAY">
+                <input type="hidden" name="product_price[]" value="29.99">
                 <div class="quantity-controls">
                     <button type="button" class="decrement">-</button>
                     <input type="number" class="quantity" name="quantity[]" value="0" min="0">
@@ -71,10 +71,10 @@
             </div>
             <div class="image-item">
                 <img src="mino.png" alt="Image 4">
-                <p>Pantaloncini da gara AWAY<br> 29,99€</p>
+                <p>Pantaloncini da gara AWAY<br> 19,99€</p>
                 <input type="hidden" name="product_image[]" value="mino.png">
                 <input type="hidden" name="product_name[]" value="Pantaloncini da gara AWAY">
-                <input type="hidden" name="product_price[]" value="29.99">
+                <input type="hidden" name="product_price[]" value="19.99">
                 <div class="quantity-controls">
                     <button type="button" class="decrement">-</button>
                     <input type="number" class="quantity" name="quantity[]" value="0" min="0">
@@ -109,7 +109,7 @@
         <button type="submit" id="confirmButton">Conferma</button>
     </form>
 
-    <script src="shop.js"></script>
+    <script src="shop.js" defer></script>
     <?php include 'footer.html'; ?>
 </body>
 </html>
