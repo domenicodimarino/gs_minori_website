@@ -6,11 +6,9 @@
 	*/
 
 	if(!isset($_SESSION["username"])){
-		echo "echo prova per utenti non loggati";
 	}
 	else{
 		$user = $_SESSION["username"];
-		echo "<p> Benvenuto $user!</p>";
         echo "<script>const login_button = document.getElementsByClassName('login-btn')[0];
             login_button.id = 'logged';
 			login_button.innerHTML = '<img src=\"user.png\" alt=\"userphoto\"> $user';

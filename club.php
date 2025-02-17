@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="club.css" type="text/css"/>
     </head>
         <!-- Header -->
-        <?php include 'header.html'?>
+        <?php include 'header.php'?>
     <body>
        
 

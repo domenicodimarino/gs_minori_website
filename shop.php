@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <?php include 'header.html'; ?>
+    <?php include 'header.php'; ?>
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Cerca..." class="search-input">
         
