@@ -82,9 +82,9 @@
                     <div class="text"> 7 <br>Alessio <br>Proto</div>
                 </div>
             </div>
-        <p class="position-title">ALLENATORE</p>
-        <div class="image1">
-            
+        <p class="position-title" style="margin-top: 75px;">ALLENATORE</p>
+        <div class="coach_container"> 
+        
         <div class="text2">
             <div class="image1">
                 <img src="photo_teams/jacopo.png" alt="Jacopo Porpora" class="coach-image">
@@ -112,8 +112,7 @@
                     eccellenza sportiva del suo paese.</p>
             </div>
         </div>
-        
+        </div>  
+        <?php include 'footer.html'; ?>
     </body>
-    
 </html>
-<?php include 'footer.html'; ?>

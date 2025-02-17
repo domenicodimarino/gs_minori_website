@@ -127,7 +127,7 @@ body::before {
 
 .position-title {
     margin-left: 5px;
-    padding-top: 100px;
+    padding-top:50px;
     clear: both; /* Aggiunto per evitare che le immagini si sovrappongano ai titoli */
 }
 
@@ -161,16 +161,23 @@ body::before {
     width: 100%;
     border-radius: 8px;
 }
-
+.coach_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 100%
+}
 .text2 {
     display: flex;
     flex-wrap: wrap; /* Permette al contenuto di andare a capo se necessario */
-    width: 450%; /* Assicura che il contenitore prenda tutta la larghezza disponibile */
+    width: 60%; /* Assicura che il contenitore prenda tutta la larghezza disponibile */
     background: white;
-    height: 125%;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 50%;
 }
 
 h1 {
@@ -206,7 +213,7 @@ h1 {
 
 .coach-image {
     flex-shrink: 0;
-    width: 225px;
+    width: 200px;
     height: 225px;
     border-radius: 8px;
     margin-right: 20px; /* Space between image and text */
