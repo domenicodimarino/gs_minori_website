@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 const currentPath = window.location.pathname;
 
                 if (currentPath.includes('checkout_cart')) {
-                    //window.location.href = 'order_completed.php?' + queryString; NON ANCORA IMPLEMENTATA LA PAGINA
+                    window.location.href = 'order_completed.php?' + queryString;
                 } else if (currentPath.includes('checkout_ticket')) {
                     window.location.href = 'ticket_completed.php?' + queryString;
                 }

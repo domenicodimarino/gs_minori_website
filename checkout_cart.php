@@ -17,7 +17,7 @@
     <main>
     <h1>Pagamento</h1>
     <!-- Schermata di acquisizione dati dell'acquirente -->
-    <form method="post" style="display: flex;" id="payment-form" action="ticket_completed.php">
+    <form method="post" style="display: flex;" id="payment-form" action="order_completed.php">
         <h2> Il totale da pagare è di <?php echo $totalPrice; ?> € </h2>
             <section id="order_summary" class="buyer_form">
                 <h1> Riepilogo ordine </h1>
@@ -34,7 +34,13 @@
             <section id="buyer_data" class="buyer_form">
                 <h1> Dati dell'acquirente </h1>
                 <input type="number" id="importo" name="importo" value="<?php echo $totalPrice; ?>" readonly hidden>
-
+                <?php
+                foreach ($cartItems as $index => $item) {
+                    echo '<input type="hidden" name="cartItems[' . $index . '][productName]" value="' . htmlspecialchars($item['productName']) . '">';
+                    echo '<input type="hidden" name="cartItems[' . $index . '][quantity]" value="' . htmlspecialchars($item['quantity']) . '">';
+                    echo '<input type="hidden" name="cartItems[' . $index . '][price]" value="' . htmlspecialchars($item['price']) . '">';
+                }
+                ?>
                 <p>
                 <label for="nome">
                     Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["nome"]) ? $_SESSION['nome'] : ''; ?>" placeholder="Nome">
