@@ -1,3 +1,4 @@
+<?php include 'header.php'; ?>
 <html>
     <head>
         <title>GS Minori - Sito ufficiale</title>
@@ -74,7 +75,7 @@
     </head>
     <body>
       
-        <?php include 'header.php'; ?>
+        
 
 
 <main>
@@ -133,7 +134,7 @@
                 <a href="shop.php" class="card-link">Vai allo Shop</a>
             </div>
             <!-- Fan Card -->
-            <div class="home-card">
+            <div class="home-card" style="display:none">
                 <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
                 <div class="card-title">Fan</div>
                 <div class="card-preview">
@@ -143,10 +144,23 @@
                 <a href="fan.php" class="card-link">Vai ai Fan</a>
             </div>
         </div>
+                <h1 style="margin-top:30px; margin-bottom:30px;" id="guest_paragraph"> Per accedere a queste altre sezioni, devi essere autenticato. </h1>
+                <div class="home-links" id="solo_ospiti">
+                <div class="home-card">
+                    <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+                    <div class="card-title">Fan</div>
+                    <div class="card-preview">
+                        Community<br>
+                        e concorsi.
+                    </div>
+                <a href="fan.php" class="card-link">Effettua il login e vai a fan</a>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 
         <?php include 'footer.html'?>
     </body>
-    
+    <script src="homepage.js"></script>
 </html>
