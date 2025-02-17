@@ -1,3 +1,4 @@
+<?php include 'header.php'; ?>
 <html>
     <head>
         <title>U17 Libertas</title>
@@ -96,7 +97,7 @@
         </style>
     </head>
     <body>
-        <?php include 'header.php'; ?>
+        
         <nav style="text-align: center; background-color: #b0c4de; height: 50px; padding-top: 15px;">
             <a href="teams.php" style="color: inherit; text-decoration: none;">PRIMA SQUADRA MASCHILE</a> | 
             <a href="u19silver.php" style="color: inherit; text-decoration: none;"> U19 SILVER</a> | 
