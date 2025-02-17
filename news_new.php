@@ -60,99 +60,6 @@
     <!-- Footer -->
     <?php include 'footer.html'?>
 
-    <!--Caricare le news all'avvio-->
-    <script>
-        function caricaNews() {
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'news.php', true);
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    var data = JSON.parse(xhr.responseText);
-                    var newsHtml = '';
-                    data.forEach(function(news) {
-                        newsHtml += `
-                            <article>
-                                <img src="${news.immagine}" alt="${news.titolo}">
-                                <h2>${news.titolo}</h2>
-                                <p>${news.descrizione}</p>
-                                <p><small>Pubblicato il: ${new Date(news.data_pubblicazione).toLocaleDateString()}</small></p>
-                                <a href="#" class="read-more" data-id="${news.id}" data-title="${news.titolo}" data-image="${news.immagine}" data-content="${news.contenuto}">Leggi di più...</a>
-                            </article>
-                        `;
-                    });
-                    document.querySelector('.news-articles').innerHTML = newsHtml;
-
-                    // Aggiungi evento click per i link "Leggi di più..."
-                    document.querySelectorAll('.read-more').forEach(function(element) {
-                        element.addEventListener('click', function(event) {
-                            event.preventDefault();
-                            var title = this.getAttribute('data-title');
-                            var image = this.getAttribute('data-image');
-                            var content = this.getAttribute('data-content');
-
-                            document.getElementById('modalTitle').textContent = title;
-                            document.getElementById('modalImage').src = image;
-                            document.getElementById('modalContent').textContent = content;
-
-                            document.getElementById('newsModal').style.display = 'block';
-                        });
-                    });
-                }
-            };
-            xhr.send();
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            caricaNews();
-        });
-
-        // Chiudi il modal quando si clicca sulla X
-        document.querySelectorAll('.close').forEach(function(element) {
-            element.addEventListener('click', function() {
-                element.closest('.modal').style.display = 'none';
-            });
-        });
-
-        // Chiudi il modal quando si clicca fuori dal modal
-        window.addEventListener('click', function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-            }
-        });
-
-        // JavaScript per l'ingrandimento delle immagini
-        var modal = document.getElementById('myModal');
-        var modalImg = document.getElementById('img01');
-        var images = document.querySelectorAll('.gallery img');
-
-        images.forEach(function(image) {
-            image.onclick = function() {
-                modal.style.display = 'block';
-                modalImg.src = this.src;
-            };
-        });
-
-        // JavaScript per l'ingrandimento dei video
-        var modalVideo = document.getElementById('myModalVideo');
-        var modalVideoContent = document.getElementById('video01');
-        var videos = document.querySelectorAll('.videos video');
-
-        videos.forEach(function(video) {
-            video.onclick = function() {
-                modalVideo.style.display = 'block';
-                modalVideoContent.src = this.querySelector('source').src;
-            };
-        });
-
-        var spanVideo = document.getElementsByClassName('close-video')[0];
-        spanVideo.onclick = function() {
-            modalVideo.style.display = 'none';
-            modalVideoContent.pause(); // Pausa il video quando il modal viene chiuso
-            modalVideoContent.src = ''; // Resetta la sorgente del video
-        };
-    </script>
-
-    <!-- Gestione Modal -->
     <!-- Modal per l'ingrandimento delle immagini -->
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
@@ -180,5 +87,111 @@
             <p id="modalContent"></p>
         </div>
     </div>
+
+    <!-- Script per la gestione delle news e dei modali -->
+    <script>
+        // Carica le news dinamicamente
+        function caricaNews() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'news.php', true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    var newsHtml = '';
+                    data.forEach(function(news) {
+                        newsHtml += `
+                            <article>
+                                <img src="${news.immagine}" alt="${news.titolo}">
+                                <h2>${news.titolo}</h2>
+                                <p>${news.descrizione}</p>
+                                <p><small>Pubblicato il: ${new Date(news.data_pubblicazione).toLocaleDateString()}</small></p>
+                                <a href="#" class="read-more" data-id="${news.id}" data-title="${news.titolo}" data-image="${news.immagine}" data-content="${news.contenuto}">Leggi di più...</a>
+                            </article>
+                        `;
+                    });
+                    document.querySelector('.news-articles').innerHTML = newsHtml;
+    
+                    // Aggiungi evento click per i link "Leggi di più..."
+                    document.querySelectorAll('.read-more').forEach(function(element) {
+                        element.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            var title = this.getAttribute('data-title');
+                            var image = this.getAttribute('data-image');
+                            var content = this.getAttribute('data-content');
+    
+                            document.getElementById('modalTitle').textContent = title;
+                            document.getElementById('modalImage').src = image;
+                            document.getElementById('modalContent').textContent = content;
+    
+                            document.getElementById('newsModal').style.display = 'block';
+                        });
+                    });
+                }
+            };
+            xhr.send();
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            caricaNews();
+        });
+    
+        // Funzione per chiudere un modal
+        function chiudiModal(modal) {
+            if (modal) {
+                var video = modal.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+                modal.style.display = 'none';
+            }
+        }
+    
+        // Aggiungi event listener per tutti i pulsanti di chiusura (per .close e .close-video)
+        document.querySelectorAll('.close, .close-video').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var modal = this.closest('.modal') || this.closest('.modal-video');
+                chiudiModal(modal);
+            });
+        });
+    
+        // Chiudi il modal cliccando fuori dal contenuto
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal') || event.target.classList.contains('modal-video')) {
+                chiudiModal(event.target);
+            }
+        });
+    
+        // Ingrandimento delle immagini con doppio click
+        var modalImgModal = document.getElementById('myModal');
+        var modalImgElement = document.getElementById('img01');
+        var galleryImages = document.querySelectorAll('.gallery img');
+    
+        galleryImages.forEach(function(img) {
+            img.addEventListener('click', function() {
+                modalImgElement.src = this.src;
+                modalImgModal.style.display = 'block';
+            });
+        });
+    
+        // Ingrandimento dei video (evento click)
+        var modalVideo = document.getElementById('myModalVideo');
+        var modalVideoContent = document.getElementById('video01');
+        var videos = document.querySelectorAll('.videos video');
+    
+        videos.forEach(function(video) {
+            video.addEventListener('click', function() {
+            modalVideo.style.display = 'none';
+            modalVideoContent.src = this.querySelector('source').src;
+            });
+        });
+        // Chiudi il modal dei video tramite il pulsante di chiusura
+        var spanVideo = document.getElementsByClassName('close-video')[0];
+        spanVideo.addEventListener('click', function() {
+            chiudiModal(modalVideo);
+            modalVideoContent.pause();
+            modalVideoContent.src = '';
+        });
+    </script>
 </body>
 </html>

@@ -140,6 +140,7 @@ h1 {
     text-decoration: none;
     cursor: pointer;
 }
+
 /* Stile per l'ingrandimento dell'articolo */
 .modal-article {
     display: none; /* Nasconde il modal di default */
