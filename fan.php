@@ -1,4 +1,3 @@
-<?php include 'header.php'; ?>
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,7 +8,7 @@
     <title>Fan Page</title>
 </head>
 <body>
-
+    <?php include 'header.php'; ?>
     <?php require 'required_login.php';?>
     <?php
         if(!isset($_SESSION['username'])){
