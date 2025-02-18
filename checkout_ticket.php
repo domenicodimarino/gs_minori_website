@@ -111,7 +111,7 @@
                 <p id="sex_choice">
                     <label for="sesso">Sesso:</label>
                     <label> 
-                        <input type="radio" name="sesso" value="M" > Uomo
+                        <input type="radio" name="sesso" value="M" required> Uomo
                     </label>
                     <label>
                         <input type="radio" name="sesso" value="F" > Donna
@@ -122,23 +122,23 @@
                 </p>
                 <p>
                     <label for="email">
-                        Indirizzo email: <input type="email" id="email" name="email"  value="<?php echo isset($_SESSION["mail"]) ? $_SESSION['mail'] : ''; ?>" placeholder="Indirizzo email">
+                        Indirizzo email: <input type="email" id="email" name="email"  value="<?php echo isset($_SESSION["mail"]) ? $_SESSION['mail'] : ''; ?>" placeholder="Indirizzo email" required>
                     </label>
                 </p>
                 <p>
                     <label for="telefono">
-                        Telefono: <input type="tel" id="telefono" name="telefono" placeholder="Numero di telefono">            
+                        Telefono: <input type="tel" id="telefono" name="telefono" placeholder="Numero di telefono" required>            
                     </label>
                 </p>
                 <p>
                     <label for="residenza">
-                        Indirizzo di residenza: <input type="text" id="residenza" name="residenza" placeholder="Indirizzo di residenza">
+                        Indirizzo di residenza: <input type="text" id="residenza" name="residenza" placeholder="Indirizzo di residenza" required>
                         <img src="gps.png" onclick="getLocation()" style="cursor: pointer;">
                     </label>
                 </p>
                 <p>
                     <label for="data">
-                        Data di nascita: <input type="date" id="data" name="data" >
+                        Data di nascita: <input type="date" id="data" name="data" required>
                     </label>
                 </p>
             </section>
