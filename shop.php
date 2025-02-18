@@ -5,6 +5,7 @@
 
 ?>
 <html>
+
 <head>
     <title>GS Minori - Shop</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>

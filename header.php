@@ -1,8 +1,6 @@
 <header>
         <nav class="navbar">
             <div class="logo"><a href="homepage.php"><img src="logo.png" alt="G.S. MINORI"></a></div>
-          
-
             <ul class="nav-links">
                 <li class="dropdown">
                     <a href="news_new.php">News</a>
@@ -15,9 +13,9 @@
                 <li class="dropdown">
                     <a href="club.php">Club</a>
                     <ul class="dropdown-menu">
-                        <li><a href="club.php#Chi Siamo">Chi Siamo</a></li>
-                        <li><a href="club.php#Staff">Staff</a></li>
-                        <li><a href="club.php#Storia">Storia</a></li>
+                        <li><a href="club.php#chi-siamo">Chi Siamo</a></li>
+                        <li><a href="club.php#staff">Staff</a></li>
+                        <li><a href="club.php#storia">Storia</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
