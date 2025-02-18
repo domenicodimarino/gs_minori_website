@@ -67,6 +67,15 @@ body {
     height: auto;
     object-fit: contain;
     width: 100%;
+    margin-bottom: 10px;
+  }
+
+  img.mini{
+    float: right;
+    margin-left: 20px;
+    width: 200px;
+    height: auto;
+    object-fit: contain;
   }
   
   /* Chiarezza nelle sezioni (pulizia dei float) */
@@ -96,6 +105,17 @@ body {
     color: #555;
     margin: 10px;
   }
+/*Gestione float*/
+  .timeline-event::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .timeline-event {
+    overflow: auto;
+  }
+  
 img
 {
   width: 100%;
@@ -104,6 +124,23 @@ img
   float: left;
 }
 
-.timeline-content {
-  float: right;
-  }
+/* Stile per la foto di autore-foto*/
+img.autore-foto{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10%;
+  margin-right: 20px;
+  float: left;
+}
+
+p.firma{
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  
+  text-align: center;
+
+}
+  
+
+
