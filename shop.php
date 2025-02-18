@@ -1,3 +1,9 @@
+<?php include 'header.php'; ?>
+<?php 
+    $_SESSION['cart_updated'] = false;
+    
+
+?>
 <html>
 <head>
     <title>GS Minori - Shop</title>
@@ -7,7 +13,6 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <?php include 'header.php'; ?>
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Cerca..." class="search-input">
         
