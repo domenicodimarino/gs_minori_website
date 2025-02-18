@@ -1,8 +1,6 @@
 <header>
         <nav class="navbar">
             <div class="logo"><a href="homepage.php"><img src="logo.png" alt="G.S. MINORI"></a></div>
-          
-
             <ul class="nav-links">
                 <li class="dropdown">
                     <a href="news_new.php">News</a>
