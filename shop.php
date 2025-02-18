@@ -1,4 +1,11 @@
 <?php include 'header.php'; ?>
+<?php 
+    $_SESSION['cart_updated'] = false;
+    
+
+?>
+<html>
+
 <head>
     <title>GS Minori - Shop</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
