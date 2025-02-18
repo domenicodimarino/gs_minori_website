@@ -15,9 +15,9 @@
                 <li class="dropdown">
                     <a href="club.php">Club</a>
                     <ul class="dropdown-menu">
-                        <li><a href="club.php#Chi Siamo">Chi Siamo</a></li>
-                        <li><a href="club.php#Staff">Staff</a></li>
-                        <li><a href="club.php#Storia">Storia</a></li>
+                        <li><a href="club.php#chi-siamo">Chi Siamo</a></li>
+                        <li><a href="club.php#staff">Staff</a></li>
+                        <li><a href="club.php#storia">Storia</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
