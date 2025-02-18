@@ -9,9 +9,16 @@
 </head>
 <body>
     <?php include 'header.php'; ?>
-    <h1>Carrello</h1>
-    <h2>Riepilogo ordine: </h2>
-    <?php
+
+    <!-- Cookie del carrello -->
+    <?php 
+    if(!isset($_COOKIE['cart'])){
+        $cart = [];
+        setcookie('cart', serialize($cart), time() + (30 * 24 * 60 * 60));
+    } else {
+        $cart = unserialize($_COOKIE['cart']);
+    }
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $totalPrice = $_POST['totalPrice'];
         $cartItems = $_POST['cartItems'];
@@ -24,7 +31,8 @@
     } else {
         echo "<p>Il carrello è vuoto.</p>";
     }
-    //collegamento immagini con shop.php
+
+    // Collegamento immagini con shop.php
     $product_images = $_POST['product_image'];
     $product_names = $_POST['product_name'];
     $product_prices = $_POST['product_price'];
@@ -32,6 +40,12 @@
 
     for ($i = 0; $i < count($product_images); $i++) {
         if ($quantities[$i] > 0) {
+            $cart[] = [
+                'product_image' => $product_images[$i],
+                'product_name' => $product_names[$i],
+                'quantity' => $quantities[$i],
+                'price' => $product_prices[$i]
+            ];
             echo '<div class="cart-item">';
             echo '<img src="' . htmlspecialchars($product_images[$i]) . '" alt="' . htmlspecialchars($product_names[$i]) . '" class="cart-image">';
             echo '<p>' . htmlspecialchars($product_names[$i]) . '<br>' . htmlspecialchars($product_prices[$i]) . '€</p>';
@@ -39,6 +53,7 @@
             echo '</div>';
         }
     }
+    setcookie('cart', serialize($cart), time() + (30 * 24 * 60 * 60));
     ?>
     <div class="confirm-order-container">
         <form action="checkout_cart.php" method="POST">
@@ -52,6 +67,9 @@
             }
             ?>
             <button type="submit" class="confirm-order-button">Conferma Ordine</button>
+        </form>
+        <form action="clear_cart.php" method="POST">
+            <button type="submit">Svuota il carrello</button>
         </form>
     </div>
     <?php include 'footer.html'; ?>
