@@ -4,7 +4,7 @@
         <title>U13 Libertas</title>
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="u13libertas.css" type="text/css"/>
+        <link rel="stylesheet" href="teams.css" type="text/css"/>
     </head>
     <body>
         
@@ -15,11 +15,11 @@
             <a href="u13libertas.php" class="nav-link"> U13 LIBERTAS</a> 
             <a href="minibasket.php" class="nav-link"> MINIBASKET</a>
         </nav>
-        <div style="padding-top: 15px; margin-left: 5px;"> <Strong>UNDER 13 LIBERTAS</Strong></div> <br>
+        <div class="roster"> <Strong>UNDER 13 LIBERTAS</Strong></div> <br>
         <br>
         <div> <img src="u13libertas.png" alt="Foto Squadra" class="img_sec"></div>
         <br>
-        <div style="text-align: center"> <strong>U13 LIBERTAS</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
+        <div class="roster-title"> <strong>U13 LIBERTAS</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
         <tr>
             <th data-type="text">Nome</th>
@@ -45,16 +45,8 @@
             <tr><td>Francesco</td><td>Di Crescenzo</td><td>2011</td><td>Playmaker</td><td>51</td></tr>
         </tr>
     </table>
-    <div class="share-container">
-        <span class="share-text">CONDIVIDI SU:</span>
-        <a href="https://www.instagram.com/gs.minori/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="share-icon">
-        </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/g.s.minori.costadamalfi.1" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="share-icon">
-        </a>
-    </div>
-            <div class="position-title"><h2>ALLENATORE</h2>
+   
+            <div class="position-title"><h2 class="roster">ALLENATORE</h2>
                 <div class="coach_container"> 
                     <div class="text2">
                         <div class="image1">

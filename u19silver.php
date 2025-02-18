@@ -1,11 +1,13 @@
-<?php include 'header.php'; ?>
 <html>
     <head>
         <title>U19 Silver</title>
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <link rel="stylesheet" href="u19silver.css" type="text/css"/>
+        <link rel="stylesheet" href="teams.css" type="text/css"/>
     </head>
+
+    <?php include 'header.php'; ?>
+
     <body>
     <nav class="main-nav">
             <a href="teams.php" class="nav-link">PRIMA SQUADRA MASCHILE</a>
@@ -14,11 +16,11 @@
             <a href="u13libertas.php" class="nav-link"> U13 LIBERTAS</a> 
             <a href="minibasket.php" class="nav-link"> MINIBASKET</a>
         </nav>
-        <div style="padding-top: 15px; margin-left: 5px;"> <Strong>UNDER 19 SILVER</Strong></div> <br>
+        <div class="roster"> <Strong>UNDER 19 SILVER</Strong></div> <br>
         <br>
         <div> <img src="u19photo.png" alt="Foto Squadra" class="img_sec"> </div>
         <br>
-        <div style="text-align: center"> <strong>U19 SILVER</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
+        <div class="roster-title"> <strong>U19 SILVER</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
         <tr>
             <th data-type="text">Nome</th>
@@ -126,16 +128,8 @@
             <td>34</td>
         </tr>
     </table>
-    <div class="share-container">
-        <span class="share-text">CONDIVIDI SU:</span>
-        <a href="https://www.instagram.com/gs.minori/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="share-icon">
-        </a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/g.s.minori.costadamalfi.1" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="share-icon">
-        </a>
-    </div>
-            <div class="position-title"><h2>ALLENATORE</h2>
+   
+            <div class="position-title"><h2 class="roster">ALLENATORE</h2>
                 <div class="coach_container"> 
                     <div class="text2">
                         <div class="image1">

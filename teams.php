@@ -1,4 +1,3 @@
-<?php include 'header.php'; ?>
 <html>
     <head>
         <title>Teams</title>
@@ -6,6 +5,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="teams.css" type="text/css"/>
     </head>
+
+    <?php include 'header.php'; ?>
+    
     <body>
         
         <nav class="main-nav">
@@ -15,7 +17,7 @@
             <a href="u13libertas.php" class="nav-link"> U13 LIBERTAS</a> 
             <a href="minibasket.php" class="nav-link"> MINIBASKET</a>
         </nav>
-        <div class="team-title"><h2>PRIMA SQUADRA MASCHILE</h2></div> <br>
+        <div class="roster"><h2>PRIMA SQUADRA MASCHILE</h2></div> <br>
         <nav class="sub-nav">
             <a href="#" class="nav-link1" data-target="all-section"> TUTTI</a>
             <a href="#playmaker" class="nav-link1" data-target="playmaker-section"> PLAYMAKER</a> 
@@ -27,7 +29,7 @@
         </nav>
         <br>
         <img src="primasquadra.png" alt="immagine" class="team-image">
-        <div class="roster-title"> <strong>Roster DR2</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
+        <div class="roster-title"> <strong>Roster DR2</strong><br> Rosa ufficiale della stagione 2024/25</div>
         
         <div id="playmaker-section" class="section">
             <div class="position-title1"> <h2>PLAYMAKER</h2>
