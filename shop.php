@@ -272,10 +272,10 @@
                     </div>
                 </div>   
 
-                <p>Pantaloni GS Minori <br>19,99€</p>
+                <p>Pantaloni GS Minori <br>14,99€</p>
                 <input type="hidden" name="product_image[]" value="photo_shop/pant_nocap.jpeg">
                 <input type="hidden" name="product_name[]" value="Pantaloni GS Minori">
-                <input type="hidden" name="product_price[]" value="19.99">
+                <input type="hidden" name="product_price[]" value="14.99">
                 <div class="quantity-controls">
                     <button type="button" class="decrement">-</button>
                     <input type="number" class="quantity" name="quantity[]" value="0" min="0">
@@ -309,10 +309,10 @@
                     </div>
                 </div>   
 
-                <p>Coprimaglia GS Minori <br>19,99€</p>
+                <p>Coprimaglia GS Minori <br>24,99€</p>
                 <input type="hidden" name="product_image[]" value="photo_shop/coprimaglia_avanti.jpeg">
                 <input type="hidden" name="product_name[]" value="Coprimaglia GS Minori">
-                <input type="hidden" name="product_price[]" value="19.99">
+                <input type="hidden" name="product_price[]" value="24.99">
                 <div class="quantity-controls">
                     <button type="button" class="decrement">-</button>
                     <input type="number" class="quantity" name="quantity[]" value="0" min="0">
@@ -353,10 +353,10 @@
                     </div>
                 </div>   
 
-                <p>Giubbino GS Minori <br>19,99€</p>
+                <p>Giubbino GS Minori <br>59,99€</p>
                 <input type="hidden" name="product_image[]" value="photo_shop/giubbino_avanti.jpeg">
                 <input type="hidden" name="product_name[]" value="Giubbino GS Minori">
-                <input type="hidden" name="product_price[]" value="19.99">
+                <input type="hidden" name="product_price[]" value="59.99">
                 <div class="quantity-controls">
                     <button type="button" class="decrement">-</button>
                     <input type="number" class="quantity" name="quantity[]" value="0" min="0">
