@@ -79,9 +79,10 @@
                         Telefono: <input type="tel" id="telefono" name="telefono" placeholder="Numero di telefono">            
                     </label>
                 </p>
-                <p>
+                <p style="width:90%; margin-left:5%;">
                     <label for="residenza">
                         Indirizzo di residenza: <input type="text" id="residenza" name="residenza" placeholder="Indirizzo di residenza">
+                        <img src="gps.png" onclick="getLocation()" style="cursor: pointer; margin-left:2px">
                     </label>
                 </p>
                 <p>
@@ -107,5 +108,6 @@
     <script src="checkout.js"></script>
     </main>
     <?php include 'footer.html'?>
+    <script src="geolocalizzazione.js"></script>
 </body>
 </html>
