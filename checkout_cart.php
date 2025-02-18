@@ -60,18 +60,18 @@
                 <p id="sex_choice">
                     <label for="sesso">Sesso:</label>
                     <label> 
-                        <input type="radio" name="sesso" value="M" > Uomo
+                        <input type="radio" name="sesso" value="M" required> Uomo
                     </label>
                     <label>
-                        <input type="radio" name="sesso" value="F" > Donna
+                        <input type="radio" name="sesso" value="F"> Donna
                     </label>
                     <label>
-                        <input type="radio" name="sesso" value="Altro" > Altro
+                        <input type="radio" name="sesso" value="Altro"> Altro
                     </label>
                 </p>
                 <p>
                     <label for="email">
-                        Indirizzo email: <input type="email" id="email" name="email"  value="<?php echo isset($_SESSION["mail"]) ? $_SESSION['mail'] : ''; ?>" placeholder="Indirizzo email">
+                        Indirizzo email: <input type="email" id="email" name="email"  value="<?php echo isset($_SESSION["mail"]) ? $_SESSION['mail'] : ''; ?>" placeholder="Indirizzo email" required>
                     </label>
                 </p>
                 <p>
@@ -79,14 +79,15 @@
                         Telefono: <input type="tel" id="telefono" name="telefono" placeholder="Numero di telefono">            
                     </label>
                 </p>
-                <p>
+                <p style="width:90%; margin-left:5%;">
                     <label for="residenza">
-                        Indirizzo di residenza: <input type="text" id="residenza" name="residenza" placeholder="Indirizzo di residenza">
+                        Indirizzo di residenza: <input type="text" id="residenza" name="residenza" placeholder="Indirizzo di residenza" required>
+                        <img src="gps.png" onclick="getLocation()" style="cursor: pointer; margin-left:2px">
                     </label>
                 </p>
                 <p>
                     <label for="data">
-                        Data di nascita: <input type="date" id="data" name="data" >
+                        Data di nascita: <input type="date" id="data" name="data" required>
                     </label>
                 </p>
             </section>
@@ -107,5 +108,6 @@
     <script src="checkout.js"></script>
     </main>
     <?php include 'footer.html'?>
+    <script src="geolocalizzazione.js"></script>
 </body>
 </html>

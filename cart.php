@@ -61,6 +61,7 @@ foreach ($cart as $item) {
 <body>
     <?php
     if ($totalPrice > 0) {
+        echo "<h1>Riepilogo ordine</h1>";
         echo "<h2>Totale: €" . number_format($totalPrice, 2, ',', '.') . "</h2>";
     } else {
         echo "<p>Il carrello è vuoto.</p>";
@@ -75,6 +76,7 @@ foreach ($cart as $item) {
         echo '<img src="' . htmlspecialchars($product_image) . '" alt="' . htmlspecialchars($product_name) . '" class="cart-image">';
         echo '<p>' . htmlspecialchars($product_name) . '<br>' . htmlspecialchars((string)$price) . '€</p>';
         echo '<p>Quantità: ' . htmlspecialchars((string)$quantity) . '</p>';
+        echo '<p>Prezzo per quantità: ' . htmlspecialchars((string)$quantity*$price) . '€</p>';
         echo '</div>';
     }
     ?>

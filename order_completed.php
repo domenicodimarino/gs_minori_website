@@ -1,3 +1,7 @@
+<?php 
+    setcookie("cart", "", time() - 3600, "/GS_MINORI/gs_minori_website"); // Cancella il cookie specificando il percorso
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -55,6 +59,7 @@
         echo "</section>"
     ?>
     </main>
+
     <?php include 'footer.html'; ?>
 </body>
 </html>
