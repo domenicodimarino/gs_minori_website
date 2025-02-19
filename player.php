@@ -115,7 +115,11 @@ $player = $players[$playerId];
                 </section>
                 <section class = "player_info">
                     <div class ="info">
+                        <div class = "player_info_header">
                 <h1><?php echo htmlspecialchars($player['name']); ?></h1>
+                 <!-- Pulsante Indietro -->
+                 <button id="back-button" class="back-button">Indietro</button>
+                 </div>
                 <p><strong>Età:</strong> <?php echo htmlspecialchars($player['age']); ?></p>
                 <p><strong>Ruolo:</strong><?php echo htmlspecialchars($player['ruolo']); ?></p>
                 <p><strong>Numero di maglia:</strong> <?php echo htmlspecialchars($player['number']); ?></p>
@@ -127,14 +131,8 @@ $player = $players[$playerId];
                 <div id="table-container">Caricamento statistiche in corso...</div>
                 <section class="player_info">
                     <div class="player_info_header">
-                        <h1><?php echo htmlspecialchars($player['name']); ?></h1>
-                        <!-- Pulsante Indietro -->
-                        <button id="back-button" class="back-button">Indietro</button>
                     </div>
-                    <p><a href="<?php echo htmlspecialchars($player['stats_link']); ?>" target="_blank">Visualizza statistiche da Playbasket</a></p>
-                    <!-- Passiamo l'URL delle statistiche a JavaScript -->
-                    <div id="player-data" data-stats-link="<?php echo htmlspecialchars($player['stats_link']); ?>"></div>
-                    <div id="table-container">Caricamento statistiche in corso...</div>
+                   
                 </section>
             </main>
             <script src="player_stats.js"></script>
