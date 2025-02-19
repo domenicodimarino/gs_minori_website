@@ -24,6 +24,11 @@ main{
     max-width: 40%;
     margin-left: 5%;
 }
+.player_info_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .player_brief_stats{
     display: flex;
     flex-direction: column;
@@ -71,4 +76,18 @@ main{
 }
 .playbasket-table > tbody > tr:nth-child(even){
     background-color: #c0c0c0;
+}
+
+.back-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: darkred;
 }
