@@ -1,5 +1,5 @@
 <?php 
-    setcookie("cart", "", time() - 3600, "/GS_MINORI/gs_minori_website"); // Cancella il cookie specificando il percorso
+    setcookie("cart", "", time() - 3600); // Cancella il cookie specificando il percorso
 ?>
 
 <!DOCTYPE html>
