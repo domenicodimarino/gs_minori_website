@@ -72,14 +72,21 @@ h3 {
 /* ==========================
    SEZIONE COMMUNITY
    ========================== */
-#community {
+   #community {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    background: #ffffff; 
+    background: linear-gradient(135deg, #ffffff 30%, #dfe9f3 100%);
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+/* Assicura che il contenuto sia sopra lo sfondo */
+#community * {
+    position: relative;
+    z-index: 1;
 }
 
 #community p {
@@ -104,16 +111,19 @@ h3 {
     width: 100%;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 2px solid transparent;
     margin-bottom: 10px;
     resize: vertical;
     font-size: 1rem;
-    transition: border-color 0.3s;
+    transition: border 0.5s ease-in-out;
 }
 
 #community textarea:focus {
-    border-color: #0d1459;
+    border-image: linear-gradient(45deg, #0d1459, #ff5733);
+    border-image-slice: 1;
+    outline: none;
 }
+
 
 #community input[type='file'] {
     margin-bottom: 10px;
@@ -134,13 +144,14 @@ h3 {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
     font-size: 1rem;
 }
 
 #community input[type='submit']:hover {
     background-color: #08103f;
     transform: translateY(-2px);
+    box-shadow: 0px 0px 15px rgba(13, 20, 89, 0.7);
 }
 
 /* Drop Zone */
