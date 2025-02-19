@@ -27,8 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
         // Aggiorna il totale dell'ordine
         updateTotalPrice();
 
-        // Aggiorna il conteggio del carrello
-        updateCartCount();
 
         // Verifica se il carrello è vuoto
         checkIfCartIsEmpty();
@@ -102,22 +100,6 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.removeItem('cartCount'); // Rimuovi il conteggio dal local storage se il carrello è vuoto
         } else {
             updateCartCount(); // Aggiorna il conteggio del carrello
-        }
-    };
-
-    const updateCartCount = () => {
-        let totalCount = 0;
-        document.querySelectorAll('.quantity').forEach(quantityElement => {
-            totalCount += parseInt(quantityElement.textContent);
-        });
-        const cartCount = document.getElementById('cart-count');
-        if (totalCount > 0) {
-            cartCount.textContent = totalCount;
-            cartCount.style.display = 'block';
-            localStorage.setItem('cartCount', totalCount); // Salva il conteggio nel local storage
-        } else {
-            cartCount.style.display = 'none';
-            localStorage.removeItem('cartCount'); // Rimuovi il conteggio dal local storage se è zero
         }
     };
 
