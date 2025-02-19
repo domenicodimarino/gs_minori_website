@@ -112,6 +112,7 @@ main{
 .playbasket-table > tbody > tr:hover {
     background-color: #e0e0e0; /* Cambia il colore di sfondo al passaggio del mouse */
 }
+
 .back-button {
     background-color: red;
     color: white;
