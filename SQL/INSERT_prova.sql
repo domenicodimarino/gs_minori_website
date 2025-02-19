@@ -45,3 +45,6 @@ VALUES
 ('Vinci il pallone da gioco',
  'Un concorso imperdibile per gli amanti del basket: in palio il pallone ufficiale utilizzato nelle partite, firmato dai giocatori.',
  'https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F144dc964-a003-4c8b-99c4-5eb9cf816cbb?csig=AAAAAAAAAAAAAAAAAAAAADKST0ei_ihaJ403swm2OwOHtXTXqDDdHDcz79panp4C&exp=1739980232&signer=media-rpc&token=AAIAAU0AJDE0NGRjOTY0LWEwMDMtNGM4Yi05OWM0LTVlYjljZjgxNmNiYgAAAAABlR7nVUDaK12gnNGU6BLx7pkNyL0Q2iticPt_VHFHVM-vW5MCpQ');
+
+INSERT INTO tickets_availability (match_id, sector_id, available, price)
+VALUES (1, 1, 100, 10.00);
