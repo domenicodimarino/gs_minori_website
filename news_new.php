@@ -40,17 +40,53 @@
         </section>
 
         <h1 id="video">Video Gallery</h1>
+        <nav class="sub-nav">
+            <a href="#tutto" class="nav-link1" data-target="all-section">TUTTI I VIDEO</a>
+            <a href="#highlights" class="nav-link1" data-target="highlights-section">HIGHLIGHTS</a>
+            <a href="#fan" class="nav-link1" data-target="fan-section">I NOSTRI FAN</a>
+        </nav>
+
         <section class="video-gallery">
             <div class="video-wrapper">
                 <div class="videos">
-                    <video controls>
-                        <source src="video_video-gallery/video1.mp4" type="video/mp4">
-                        Il tuo browser non supporta il tag video.
-                    </video>
-                    <video controls>
-                        <source src="video_video-gallery/video2.mp4" type="video/mp4">
-                        Il tuo browser non supporta il tag video.
-                    </video>
+
+                    <div id="all-section" class="section">
+                        <video controls>
+                            <source src="video_video-gallery/video1.mp4" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                        <video controls>
+                            <source src="video_video-gallery/video2.mp4" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                        <video controls>
+                            <source src="video_video-gallery/video4.mp4" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                        <!-- Aggiungi altri video qui -->
+                    </div>
+
+                    <div id="highlights-section" class="section" style="display: none;">
+                        <video controls>
+                            <source src="video_video-gallery/video1.mp4" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                        <video controls>
+                            <source src="video_video-gallery/video2.mp4" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                    </div>
+
+                    
+
+                    <div id="fan-section" class="section" style="display: none;">
+                        <video controls>
+                            <source src="video_video-gallery/video4.mp4" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
+                       
+                    </div>
+
                     <!-- Aggiungi altri video qui -->
                 </div>
             </div>
@@ -191,6 +227,31 @@
             chiudiModal(modalVideo);
             modalVideoContent.pause();
             modalVideoContent.src = '';
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.sub-nav .nav-link1');
+            const videoSections = document.querySelectorAll('.video-gallery .section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const target = this.getAttribute('data-target');
+
+                    videoSections.forEach(section => {
+                        if (section.id === target) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Show all videos by default
+            document.getElementById('all-section').style.display = 'block';
         });
     </script>
 </body>
