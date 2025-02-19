@@ -15,7 +15,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('photo_news/background_news1.webp');
+    background-image: url('photo_news/news_background.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

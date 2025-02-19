@@ -175,8 +175,9 @@
     cursor: pointer;
     position: sticky;
     bottom: 20px; /* Posiziona il bottone 20px sopra il bordo inferiore della finestra */
-    left: 20px; /* Posiziona il bottone 20px a sinistra */
+    left: 10px; /* Sposta il bottone un po' verso sinistra */
     z-index: 1000; /* Assicurati che il bottone appaia sopra altri elementi */
+    border-radius: 10px; /* Aggiungi un bordo curvo */
 }
 
 #confirmButton:hover {

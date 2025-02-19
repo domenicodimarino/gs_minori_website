@@ -10,9 +10,17 @@
     <?php include 'header.php'?>
 
     <?php
-    // Recupero dei dati del carrello
-        $totalPrice = $_POST['importo'];
-        $cartItems = $_POST['cartItems'];
+        if (isset($_COOKIE['cart'])) {
+            $cart = unserialize($_COOKIE['cart']);
+        } else {
+            $cart = [];
+        }
+        $totalPrice = 0;
+        foreach ($cart as $item) {
+            $totalPrice += $item['price'] * $item['quantity'];
+        }
+        $cartItems = $cart;
+        
     ?>
     <main>
     <h1>Pagamento</h1>
@@ -25,7 +33,7 @@
                     <ul id="resultsList">
                         <?php
                         foreach ($cartItems as $index => $item) {
-                            $productName = isset($item['productName']) ? htmlspecialchars($item['productName']) : '';
+                            $productName = isset($item['product_name']) ? htmlspecialchars($item['product_name']) : '';
                             $quantity = isset($item['quantity']) ? htmlspecialchars($item['quantity']) : '';
                             $price = isset($item['price']) ? htmlspecialchars($item['price']) : '';
                             echo "<li>" . $productName . " - Quantità: " . $quantity . " - Prezzo: €" . $price . "</li>";
@@ -39,10 +47,10 @@
                 <input type="number" id="importo" name="importo" value="<?php echo $totalPrice; ?>" readonly hidden>
                 <?php
                 foreach ($cartItems as $index => $item) {
-                    $productName = isset($item['productName']) ? htmlspecialchars($item['productName']) : '';
+                    $productName = isset($item['product_name']) ? htmlspecialchars($item['product_name']) : '';
                     $quantity = isset($item['quantity']) ? htmlspecialchars($item['quantity']) : '';
                     $price = isset($item['price']) ? htmlspecialchars($item['price']) : '';
-                    echo '<input type="hidden" name="cartItems[' . $index . '][productName]" value="' . $productName . '">';
+                    echo '<input type="hidden" name="cartItems[' . $index . '][product_name]" value="' . $productName . '">';
                     echo '<input type="hidden" name="cartItems[' . $index . '][quantity]" value="' . $quantity . '">';
                     echo '<input type="hidden" name="cartItems[' . $index . '][price]" value="' . $price . '">';
                 }
@@ -102,6 +110,7 @@
             </div>
             <p id="submit_button">
                 <button id="submit-button">CONFERMA</button>
+                <button id="back-button" type="button" onclick="window.location.href='cart.php'">INDIETRO</button>
             </p>       
         </form>
     </form>

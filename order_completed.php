@@ -49,7 +49,7 @@
         echo "<h2>Merchandising acquistato</h2>";
         echo "<ul>";
         foreach ($cartItems as $item) {
-            echo "<li>" . htmlspecialchars($item['productName']) . " - Quantità: " . htmlspecialchars($item['quantity']) . " - Prezzo: €" . number_format($item['price'], 2, ',', '.') . "</li>";
+            echo "<li>" . htmlspecialchars($item['product_name']) . " - Quantità: " . htmlspecialchars($item['quantity']) . " - Prezzo: €" . number_format($item['price'], 2, ',', '.') . "</li>";
         }
         echo "</ul>";
         echo "</section>";
