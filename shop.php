@@ -1,6 +1,15 @@
 <?php include 'header.php'; ?>
 <?php 
     $_SESSION['cart_updated'] = false;
+
+    // Deserializza il cookie 'cart' e calcola la quantità totale
+    $totalQuantity = 0;
+    if (isset($_COOKIE['cart'])) {
+        $cart = unserialize($_COOKIE['cart']);
+        foreach ($cart as $item) {
+            $totalQuantity += $item['quantity'];
+        }
+    }
 ?>
 <html>
 
@@ -24,7 +33,8 @@
             </button>
         </div>
         <button class="cart-button">
-            <a href="cart.php"><i class="fas fa-shopping-cart"></i></a> <!-- Carrello -->
+            <a href="cart.php"><i class="fas fa-shopping-cart"></i></a>
+            <span id="cart-count" class="cart-count" style="display: none;">0</span> <!-- Aggiungi questo elemento -->
         </button>
     </div>
     <ul id="resultsList">
@@ -127,6 +137,23 @@
 
     <script src="shop.js" defer></script>
     <script src="slideshow.js" defer></script>
+    <script>
+        // Passa la quantità totale a JavaScript
+        const totalQuantity = <?php echo $totalQuantity; ?>;
+
+        // Funzione per aggiornare il conteggio del carrello
+        function updateCartCount() {
+            document.getElementById('cart-count').textContent = totalQuantity;
+            if (totalQuantity > 0) {
+                document.getElementById('cart-count').style.display = 'block';
+            } else {
+                document.getElementById('cart-count').style.display = 'none';
+            }
+        }
+
+        // Aggiorna il conteggio del carrello all'avvio
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+    </script>
     <?php include 'footer.html'; ?>
 </body>
 </html>

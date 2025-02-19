@@ -79,8 +79,7 @@
                     </div>
                 </div>
         </div>
+        <?php include 'footer.html'; ?>
         <script src="table.js"></script>
-           <?php include 'footer.html'; ?>
     </body>
 </html>
->
