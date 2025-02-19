@@ -1,20 +1,26 @@
-/* Reset di base */
-* {
+/* ==========================
+   RESET DI BASE
+   ========================== */
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Stile generale per il corpo della pagina */
+/* ==========================
+   STILE GENERALE PER IL CORPO DELLA PAGINA
+   ========================== */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     color: #333;
     position: relative;
-    padding-top: 100px; /* Altezza dell'header */
+    padding-top: 100px;  /* Altezza dell'header */
     padding-bottom: 100px; /* Altezza del footer */
+    /* Se vuoi un effetto “sfumato”:
+    background: linear-gradient(to bottom, #ffffff, #f5f5f5);
+    */
 }
-
 body::before {
     content: "";
     position: fixed;
@@ -22,32 +28,58 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('photo_fan/background_fan.png');
+    background-image: url('photo_fan/background_fan2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5; /* Opacità dell'immagine di sfondo */
-    z-index: -1; /* Assicurati che l'immagine di sfondo sia dietro il contenuto */
+    opacity: 0.8; 
+    z-index: -1; 
 }
 
-/* Titolo principale */
-h1 {
+
+/* ==========================
+   TITOLI E TESTI
+   ========================== */
+h1, h2, h3 {
     text-align: center;
-    color: #0d1459;
-    padding: 20px 0;
+    margin-bottom: 10px;
 }
+
+h1 {
+    color: whitesmoke;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #0d1459;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+h3 {
+    color: whitesmoke;
+    font-size: 1.2rem;
+}
+
+/* Testi introduttivi */
 #intro p {
     text-align: center;
-    color: #333;
-    padding: 20px 0;
+    color: white;
+    padding: 10px 0 20px 0;
 }
 
-/* Sezione Community */
+/* ==========================
+   SEZIONE COMMUNITY
+   ========================== */
 #community {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    background: #ffffff; 
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 #community p {
@@ -65,6 +97,7 @@ h1 {
     font-weight: bold;
     display: inline-block;
     margin-bottom: 5px;
+    color: #0d1459;
 }
 
 #community textarea {
@@ -74,88 +107,151 @@ h1 {
     border: 1px solid #ccc;
     margin-bottom: 10px;
     resize: vertical;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
 
+#community textarea:focus {
+    border-color: #0d1459;
+}
+
+#community input[type='file'] {
+    margin-bottom: 10px;
+}
+
+#community input {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Stile del pulsante "Posta" */
 #community input[type='submit'] {
-    background-color: #0044cc;
+    background-color: #0d1459;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
 }
 
 #community input[type='submit']:hover {
-    background-color: #0033aa;
+    background-color: #08103f;
+    transform: translateY(-2px);
 }
 
-/* Contenuti postati in griglia */
+/* Drop Zone */
+#dropZone {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    color: #666;
+    margin: 10px 0 20px 0;
+    transition: background-color 0.3s;
+}
+
+#dropZone:hover {
+    background-color: #f0f0f0;
+}
+
+/* ==========================
+   CONTENUTI POSTATI (SCORRIMENTO ORIZZONTALE)
+   ========================== */
+h3 {
+    margin-top: 40px;
+}
+
 .posted-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    display: flex;
+    overflow-x: auto; /* Teniamo lo scroll orizzontale */
+    gap: 30px;
     padding: 20px 0;
-    text-align: left;
-    justify-items: center;
+    -ms-overflow-style: none;  /* IE, Edge */
+    scrollbar-width: none;     /* Firefox */
 }
 
+.posted-content::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+}
+
+/* Card singola del post */
 .posted-content div {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
     width: 100%;
-    max-width: 300px;
-    transition: transform 0.2s;
+    max-width: 280px;
+    min-width: 280px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .posted-content div:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .posted-content p {
     margin-bottom: 10px;
 }
 
-/* Sezione Concorsi */
-#concorsi {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+.posted-content img {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    max-height: 200px; /* Limita un po' l'altezza */
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Contenitore per le card dei concorsi */
+/* ==========================
+   SEZIONE CONCORSI
+   ========================== */
+#concorsi {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Contenitore per le card dei concorsi (scroll orizzontale) */
 .contests {
     display: flex;
-    overflow-x: scroll;
+    overflow-x: auto;
     gap: 20px;
     padding: 20px 0;
-    -ms-overflow-style: none;  /* Nasconde la barra di scorrimento in Internet Explorer e Edge */
-    scrollbar-width: none;  /* Nasconde la barra di scorrimento in Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .contests::-webkit-scrollbar {
-    display: none;  /* Nasconde la barra di scorrimento in Chrome, Safari e Opera */
+    display: none;
 }
 
 /* Card singola del concorso */
 .contest {
-    min-width: 300px;
+    min-width: 280px;
+    max-width: 280px;
     background: #fff;
     border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
-    transition: transform 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
-    text-align: left;
+    text-align: left; /* Per separare un po' i testi */
 }
 
 .contest:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 /* Immagine del concorso */
@@ -166,32 +262,37 @@ h1 {
     display: block;
 }
 
-/* Testo del concorso (titolo e descrizione) */
-.contest-content {
-    padding: 15px;
-}
-
-.contest-content h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
+/* Titolo e descrizione del concorso */
+.contest h3 {
+    margin: 10px;
+    font-size: 1.1rem;
     color: #0d1459;
+    text-align: center;
 }
 
-.contest-content p {
-    margin-bottom: 10px;
+.contest p {
+    margin: 10px;
+    text-align: center;
 }
 
-/* Modal per visualizzare maggiori informazioni sui concorsi */
+/* ==========================
+   MODAL (MAGGIORI INFORMAZIONI SUI CONCORSI)
+   ========================== */
 .modal {
-    display: none;
+    display: none; /* verrà mostrato in JS */
     position: fixed;
     z-index: 1000;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     overflow: auto;
+    /* Per centrare verticalmente e orizzontalmente, puoi usare Flex:
+    display: flex;
     align-items: center;
     justify-content: center;
+    */
 }
 
 .modal-content {
@@ -202,6 +303,19 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     position: relative;
+    animation: fadeIn 0.3s ease forwards; /* Animazione all’apertura */
+}
+
+/* Animazione di fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .close {

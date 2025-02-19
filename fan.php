@@ -35,7 +35,7 @@
 
             <input type="text" id="username" name="nome_utente" value="<?php echo htmlspecialchars($user); ?>" required readonly>
 
-            <label for="content">Posta un contenuto:</label><br>
+            <br><br><label for="content">Posta un contenuto:</label><br>
             <textarea id="content" name="content" rows="4" cols="50" required></textarea><br>
             <label for="image">Carica un'immagine:</label><br>
             <input type="file" id="image" name="image" accept="image/*"><br>
