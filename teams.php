@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teams</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="teams.css" type="text/css"/>
 </head>
 <body>
@@ -164,5 +164,16 @@
         <?php include 'footer.html'; ?>
     </div>
     <script src="teams.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                const targetLink = document.querySelector('.nav-link1[data-target="' + hash + '"]');
+                if (targetLink) {
+                    targetLink.click();
+                }
+            }
+        });
+    </script>
 </body>
 </html>
