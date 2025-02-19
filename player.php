@@ -138,18 +138,13 @@ $player = $players[$playerId];
             <script src="player_stats.js"></script>
             <script>
                 document.getElementById('back-button').addEventListener('click', function() {
-                    const previousScrollPosition = localStorage.getItem('previousScrollPosition');
-                    const activeSectionId = localStorage.getItem('activeSectionId') || "all-section"; // Default su "TUTTI"
-                    
-                    // Torna alla pagina teams.php mantenendo la sezione attiva
-                    window.location.href = `teams.php#${activeSectionId}`;
-                });
-
-                // Salva la posizione di scroll corrente quando si clicca su un link
-                document.querySelectorAll('a').forEach(link => {
-                    link.addEventListener('click', function() {
-                        localStorage.setItem('previousScrollPosition', window.scrollY);
-                    });
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const section = urlParams.get('section');
+                    if (section) {
+                        window.location.href = 'teams.php#' + section;
+                    } else {
+                        window.location.href = 'teams.php';
+                    }
                 });
             </script>
         </div>

@@ -37,4 +37,15 @@ document.addEventListener("DOMContentLoaded", function() {
     teamImage.style.display = 'block';
     rosterTitle.style.display = 'block';
     document.querySelector('.nav-link1[data-target="all-section"]').classList.add('active');
+
+    // Aggiungi l'ID della sezione corrente alla URL quando clicchi su un giocatore
+    const playerLinks = document.querySelectorAll('.image-container a');
+    playerLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            const activeSection = document.querySelector('.nav-link1.active').getAttribute('data-target');
+            const url = new URL(link.href);
+            url.searchParams.set('section', activeSection);
+            link.href = url.toString();
+        });
+    });
 });
