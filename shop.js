@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const imageItems = document.querySelectorAll('.image-item');
     const confirmButton = document.getElementById("confirmButton");
     const cartForm = document.getElementById("cartForm");
-    const cartCount = document.getElementById("cart-count");
 
     function updateClearButton() {
         if (searchInput.value.length > 0) {
@@ -15,31 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
             clearButton.style.display = "none";
             resultsList.style.display = "none"; // Nasconde i risultati se l'input è vuoto
             showAllImages(); // Mostra tutte le immagini quando l'input è vuoto
-        }
-    }
-
-    function updateCartCount() {
-        let totalCount = 0;
-        document.querySelectorAll('.quantity').forEach(input => {
-            totalCount += parseInt(input.value);
-        });
-        if (totalCount > 0) {
-            cartCount.textContent = totalCount;
-            cartCount.style.display = 'block';
-            localStorage.setItem('cartCount', totalCount); // Salva il conteggio nel local storage
-        } else {
-            cartCount.style.display = 'none';
-            localStorage.removeItem('cartCount'); // Rimuovi il conteggio dal local storage se è zero
-        }
-    }
-
-    function loadCartCount() {
-        const savedCount = localStorage.getItem('cartCount');
-        if (savedCount && parseInt(savedCount) > 0) {
-            cartCount.textContent = savedCount;
-            cartCount.style.display = 'block';
-        } else {
-            cartCount.style.display = 'none';
         }
     }
 
@@ -109,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', function () {
             const quantityInput = this.previousElementSibling;
             quantityInput.value = parseInt(quantityInput.value) + 1;
-            updateCartCount();
         });
     });
 
@@ -118,7 +91,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const quantityInput = this.nextElementSibling;
             if (quantityInput.value > 0) {
                 quantityInput.value = parseInt(quantityInput.value) - 1;
-                updateCartCount();
             }
         });
     });
@@ -168,12 +140,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 priceInput.value = item.price.toFixed(2);
                 cartForm.appendChild(priceInput);
             });
-
-            localStorage.setItem('cartCount', cartCount.textContent); // Salva il conteggio nel local storage
         }
     });
 
     updateClearButton();
-    loadCartCount(); // Carica il conteggio del carrello all'avvio
 });
-

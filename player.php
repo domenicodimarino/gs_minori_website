@@ -101,17 +101,17 @@ $player = $players[$playerId];
     <div class="container">
         <div class="content">
             <main>
-                <section class = "player_image">
-                <img src="<?php echo htmlspecialchars($player['image']); ?>" alt="<?php echo htmlspecialchars($player['name']); ?>" class="player-image">
-                <div class = "player_brief_stats"> 
-                    <h2>Statistiche</h2>
-                    <section class = "actual_stats">
-                    <span id="total-points"></span>
-                    <span id="average-points"></span>
-                    <span id="games-played"></span>
-                    <span id="best-score"></span>
-                    </section>
-                </div>
+                <section class="player_image">
+                    <img src="<?php echo htmlspecialchars($player['image']); ?>" alt="<?php echo htmlspecialchars($player['name']); ?>" class="player-image">
+                    <div class="player_brief_stats"> 
+                        <h2>Statistiche</h2>
+                        <section class="actual_stats">
+                            <span id="total-points"></span>
+                            <span id="average-points"></span>
+                            <span id="games-played"></span>
+                            <span id="best-score"></span>
+                        </section>
+                    </div>
                 </section>
                 <section class = "player_info">
                     <div class ="info">
@@ -125,9 +125,35 @@ $player = $players[$playerId];
                 <!-- Passiamo l'URL delle statistiche a JavaScript -->
                 <div id="player-data" data-stats-link="<?php echo htmlspecialchars($player['stats_link']); ?>"></div>
                 <div id="table-container">Caricamento statistiche in corso...</div>
+                <section class="player_info">
+                    <div class="player_info_header">
+                        <h1><?php echo htmlspecialchars($player['name']); ?></h1>
+                        <!-- Pulsante Indietro -->
+                        <button id="back-button" class="back-button">Indietro</button>
+                    </div>
+                    <p><a href="<?php echo htmlspecialchars($player['stats_link']); ?>" target="_blank">Visualizza statistiche da Playbasket</a></p>
+                    <!-- Passiamo l'URL delle statistiche a JavaScript -->
+                    <div id="player-data" data-stats-link="<?php echo htmlspecialchars($player['stats_link']); ?>"></div>
+                    <div id="table-container">Caricamento statistiche in corso...</div>
                 </section>
             </main>
             <script src="player_stats.js"></script>
+            <script>
+                document.getElementById('back-button').addEventListener('click', function() {
+                    const previousScrollPosition = localStorage.getItem('previousScrollPosition');
+                    const activeSectionId = localStorage.getItem('activeSectionId') || "all-section"; // Default su "TUTTI"
+                    
+                    // Torna alla pagina teams.php mantenendo la sezione attiva
+                    window.location.href = `teams.php#${activeSectionId}`;
+                });
+
+                // Salva la posizione di scroll corrente quando si clicca su un link
+                document.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function() {
+                        localStorage.setItem('previousScrollPosition', window.scrollY);
+                    });
+                });
+            </script>
         </div>
         <?php require_once 'footer.html'?>
     </div>
