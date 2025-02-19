@@ -47,6 +47,7 @@
     justify-content: center;
     gap: 20px; /* Spazio tra i bottoni */
     margin-right: 40px; /* Aggiungi margine a sinistra */
+    margin-bottom: 60px;
 }
 
 .confirm-order-button {

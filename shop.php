@@ -122,7 +122,7 @@
 
 
         </div>
-        <button type="submit" id="confirmButton">Aggiungi al Carrello</button>
+        <button type="submit" id="confirmButton">AGGIUNGI AL CARRELLO</button>
     </form>
 
     <script src="shop.js" defer></script>

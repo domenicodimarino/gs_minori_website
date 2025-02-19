@@ -62,7 +62,7 @@ foreach ($cart as $item) {
 
     <main>
         <?php if ($totalPrice > 0): ?>
-            <h1 class='cart-title'>Carrello</h1>
+            <h1 class='cart-title' style="font-family: Montserrat ExtraBold">CARRELLO</h1>
             <table class="cart-table">
                 <thead>
                     <tr>
@@ -99,7 +99,7 @@ foreach ($cart as $item) {
 
             <div class="shopping-container">
                 <a href="shop.php" class="shopping-button">CONTINUA LO SHOPPING</a>
-                <h2 class='total-price-container' id='total-price'>Totale: €<?php echo number_format($totalPrice, 2, ',', '.'); ?></h2>
+                <h2 class='total-price-container' id='total-price' style="font-family: Montserrat ExtraBold">TOTALE: €<?php echo number_format($totalPrice, 2, ',', '.'); ?></h2>
             </div>
 
             <div class="confirm-order-container">
@@ -116,10 +116,10 @@ foreach ($cart as $item) {
                         echo '<input type="hidden" name="cartItems[' . $index . '][price]" value="' . htmlspecialchars($price) . '">';
                     }
                     ?>
-                    <button type="submit" class="confirm-order-button">Conferma Ordine</button>
+                    <button type="submit" class="confirm-order-button">CONFERMA ORDINE</button>
                 </form>
                 <form action="clear_cart.php" method="POST">
-                    <button type="submit" class="clear-cart-button">Svuota il carrello</button>
+                    <button type="submit" class="clear-cart-button">SVUOTA IL CARRELLO</button>
                 </form>
             </div>
         <?php else: ?>
