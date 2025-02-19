@@ -95,18 +95,22 @@
 }
 
 .empty-cart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altezza dell'intera finestra */
     text-align: center;
-    margin-top: 50px;
 }
 
 .empty-cart-title {
     font-size: 24px;
     color: #333;
+    margin-bottom: 20px;
 }
 
 .shop-button {
     display: inline-block;
-    margin-top: 20px;
     padding: 10px 20px;
     background-color: #00A896; /* Sfondo verde */
     color: white;
@@ -141,4 +145,3 @@
 .shopping-button:hover {
     background-color: #008073;
 }
-
