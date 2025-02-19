@@ -116,10 +116,10 @@ body {
     overflow: auto;
   }
   
-img:not(nav img) {
+/*  immagini della sezione .timeline */
+.timeline img {
   width: 100%;
   height: auto;
-  object-fit: contain;
   float: left;
 }
 

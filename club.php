@@ -185,7 +185,8 @@
   </div>
 </section>
 
- <!-- Footer -->
+<!-- Footer -->
 <?php include 'footer.html'; ?>
 </body>
+ 
 </html>
