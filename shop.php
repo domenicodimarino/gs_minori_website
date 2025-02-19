@@ -24,7 +24,8 @@
             </button>
         </div>
         <button class="cart-button">
-            <a href="cart.php"><i class="fas fa-shopping-cart"></i></a> <!-- Carrello -->
+            <a href="cart.php"><i class="fas fa-shopping-cart"></i></a>
+            <span id="cart-count" class="cart-count">0</span> <!-- Aggiungi questo elemento -->
         </button>
     </div>
     <ul id="resultsList">

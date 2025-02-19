@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Aggiorna il totale dell'ordine
         updateTotalPrice();
 
+        // Aggiorna il conteggio del carrello
+        updateCartCount();
+
         // Verifica se il carrello è vuoto
         checkIfCartIsEmpty();
     };
@@ -88,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector('.cart-table').style.display = 'none';
             document.querySelector('.total-price-container').style.display = 'none';
             document.querySelector('.confirm-order-container').style.display = 'none';
+            document.querySelector('.shopping-container').style.display = 'none';
             const emptyCartContainer = document.createElement('div');
             emptyCartContainer.classList.add('empty-cart-container');
             emptyCartContainer.innerHTML = `
@@ -95,8 +99,28 @@ document.addEventListener("DOMContentLoaded", function() {
                 <a href="shop.php" class="shop-button">COMPRA I NOSTRI PRODOTTI</a>
             `;
             document.querySelector('body').insertBefore(emptyCartContainer, document.querySelector('footer'));
+            localStorage.removeItem('cartCount'); // Rimuovi il conteggio dal local storage se il carrello è vuoto
+        } else {
+            updateCartCount(); // Aggiorna il conteggio del carrello
+        }
+    };
+
+    const updateCartCount = () => {
+        let totalCount = 0;
+        document.querySelectorAll('.quantity').forEach(quantityElement => {
+            totalCount += parseInt(quantityElement.textContent);
+        });
+        const cartCount = document.getElementById('cart-count');
+        if (totalCount > 0) {
+            cartCount.textContent = totalCount;
+            cartCount.style.display = 'block';
+            localStorage.setItem('cartCount', totalCount); // Salva il conteggio nel local storage
+        } else {
+            cartCount.style.display = 'none';
+            localStorage.removeItem('cartCount'); // Rimuovi il conteggio dal local storage se è zero
         }
     };
 
     window.updateQuantity = updateQuantity;
+    checkIfCartIsEmpty(); // Verifica se il carrello è vuoto all'avvio
 });
