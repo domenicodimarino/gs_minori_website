@@ -5,16 +5,30 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentMatchIndex = 0;
     let partite = [];
 
+    function getCurrentDate() {
+        const today = new Date();
+        return today.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+    }
+
     function loadProssimaPartita() {
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'prossima_partita.php', true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 partite = JSON.parse(xhr.responseText);
+                filterFutureMatches();
                 updateProssimaPartita();
             }
         };
         xhr.send();
+    }
+
+    function filterFutureMatches() {
+        const currentDate = getCurrentDate();
+        partite = partite.filter(partita => {
+            const partitaDate = new Date(partita.data.split(' ').reverse().join('-')); // Convert to Date object
+            return partitaDate >= new Date(currentDate);
+        });
     }
 
     function updateProssimaPartita() {
