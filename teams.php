@@ -28,7 +28,7 @@
             <a href="#allenatore" class="nav-link1" data-target="allenatore-section"> ALLENATORE</a>
         </nav>
         <br>
-        <img src="primasquadra.png" alt="immagine" class="team-image">
+        <img src="photo_teams/primasquadra.png" alt="immagine" class="team-image">
         <div class="roster-title"> <strong>Roster DR2</strong><br> Rosa ufficiale della stagione 2024/25</div>
         
         <div id="playmaker-section" class="section">

@@ -17,7 +17,7 @@
         </nav>
         <div class="roster"><Strong>UNDER 17 LIBERTAS</Strong></div> <br>
         <br>
-        <div> <img src="u17libertas.png" alt="Foto Squadra" class="img_sec"></div>
+        <div> <img src="photo_teams/u17libertas.png" alt="Foto Squadra" class="team-image"></div>
         <br>
         <div class="roster-title"> <strong>U17 LIBERTAS</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>

@@ -16,7 +16,7 @@
         </nav>
         <div class="roster"> <Strong>MINIBASKET</Strong></div> <br>
         <br>
-        <div> <img src="minibasket.png" alt="Foto Squadra" class="img_sec"></div>
+        <div> <img src="photo_teams/minibasket.png" alt="Foto Squadra" class="team-image"></div>
         <br>
         <div class="roster-title"> <strong>MINIBASKET</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>

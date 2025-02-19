@@ -17,7 +17,7 @@
         </nav>
         <div class="roster"> <Strong>UNDER 13 LIBERTAS</Strong></div> <br>
         <br>
-        <div> <img src="u13libertas.png" alt="Foto Squadra" class="img_sec"></div>
+        <div> <img src="photo_teams/u13libertas.png" alt="Foto Squadra" class="team-image"></div>
         <br>
         <div class="roster-title"> <strong>U13 LIBERTAS</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>

@@ -18,7 +18,7 @@
         </nav>
         <div class="roster"> <Strong>UNDER 19 SILVER</Strong></div> <br>
         <br>
-        <div> <img src="u19photo.png" alt="Foto Squadra" class="img_sec"> </div>
+        <div> <img src="photo_teams/u19.jpg" alt="Foto Squadra" class="team-image"> </div>
         <br>
         <div class="roster-title"> <strong>U19 SILVER</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
