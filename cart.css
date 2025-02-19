@@ -1,26 +1,144 @@
-.cart-image {
-    width: 100px; /* Imposta la larghezza desiderata */
-    height: auto; /* Mantiene le proporzioni dell'immagine */
-    padding-top: 10px;
-    padding-bottom: 10px;
+.cart-table {
+    width: 100%;
+    max-width: 1350px; /* Limita la larghezza massima della tabella */
+    margin: 20px auto; /* Centra la tabella e aggiunge margini verticali */
+    border-collapse: collapse;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.cart-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.cart-table img {
+    width: 100px;
+    height: auto;
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantity-controls button {
+    background-color: #0D1459;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-controls button:hover {
+    background-color: #0a0e47;
 }
 
 .confirm-order-container {
-    position: sticky;
-    float: right;
-    bottom: 20px;
-    right: 20px;
-
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spazio tra i bottoni */
+    margin-right: 40px; /* Aggiungi margine a sinistra */
 }
 
 .confirm-order-button {
-    background: #28a745;
-    border: none;
+    background-color: #4CAF50; /* Sfondo verde */
     color: white;
+    border: none;
     padding: 10px 20px;
     cursor: pointer;
-    position: sticky;
-    bottom: 20px; /* Posiziona il bottone 20px sopra il bordo inferiore della finestra */
-    left: 20px; /* Posiziona il bottone 20px a sinistra */
-    z-index: 1000; /* Assicurati che il bottone appaia sopra altri elementi */
+    border-radius: 20px; /* Bordi arrotondati */
 }
+
+.confirm-order-button:hover {
+    background-color: #45a049;
+}
+
+.clear-cart-button {
+    background-color: #f44336; /* Sfondo rosso */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px; /* Bordi arrotondati */
+}
+
+.clear-cart-button:hover {
+    background-color: #d32f2f;
+}
+
+.cart-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.total-price-container {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.decrement, .increment {
+    color: gray; /* Colore del testo */
+    border: none; /* Nessun bordo */
+    padding: 5px 10px; /* Padding interno */
+    border-radius: 5px; /* Bordi arrotondati */
+    font-size: 12px; /* Dimensione del testo */
+    margin: 0 5px; /* Margine orizzontale */
+}
+
+.empty-cart-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.empty-cart-title {
+    font-size: 24px;
+    color: #333;
+}
+
+.shop-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00A896; /* Sfondo verde */
+    color: white;
+    text-decoration: none;
+    border-radius: 20px; /* Bordi arrotondati */
+    font-size: 16px;
+}
+
+.shop-button:hover {
+    background-color: #008073;
+}
+
+.shopping-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.shopping-button {
+    background-color: #00A896; /* Sfondo verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px; /* Bordi arrotondati */
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 50px;
+}
+
+.shopping-button:hover {
+    background-color: #008073;
+}
+

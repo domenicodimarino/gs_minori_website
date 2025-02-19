@@ -105,17 +105,34 @@ main > form{
     align-items: center;
     display: flex;
 }
-#submit-button{
+
+#submit-button, #back-button {
     width: 80%;
     border: 3px solid black;
     border-radius: 10px;
-    background-color: #69140E;
     color: white;
     cursor: pointer;
     margin-top: 20px;
     height: 40px;
     margin-bottom: 20px;
 }
+
+#submit-button {
+    background-color: #4CAF50; /* Sfondo verde */
+}
+
+#submit-button:hover {
+    background-color: #45a049;
+}
+
+#back-button {
+    background-color: #B22222; /* Sfondo rosso scuro */
+}
+
+#back-button:hover {
+    background-color: #8B0000;
+}
+
 #card-element {
     width: 100%;
     padding: 10px;

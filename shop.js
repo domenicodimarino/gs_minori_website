@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmButton = document.getElementById("confirmButton");
     const cartForm = document.getElementById("cartForm");
 
+
     function updateClearButton() {
         if (searchInput.value.length > 0) {
             clearButton.style.display = "block";
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showAllImages(); // Mostra tutte le immagini quando l'input è vuoto
         }
     }
+
 
     // Filtra i risultati e le immagini
     searchInput.addEventListener("input", function () {
