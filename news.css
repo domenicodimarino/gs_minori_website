@@ -371,3 +371,7 @@ h1 {
 .sub-nav .nav-link1:hover {
     text-decoration: underline;
 }
+
+.nav-link1.active {
+    color: black;
+  }
