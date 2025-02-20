@@ -1,5 +1,7 @@
 <?php
-    session_start();
+	if (session_status() == PHP_SESSION_NONE) {
+		session_start();
+	}
 	/*
 		In questa soluzione l'elemento $_SESSION["username"] è popolato
 		con l'username dell'utente solo se l'autenticazione è avvenuta con successo
