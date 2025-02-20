@@ -47,8 +47,8 @@ h1 {
 }
 
 .news-articles article {
-    width: 300px;
-    background: white;
+    min-width: 250px;
+    background: linear-gradient(135deg, #ffffff 30%, #dfe9f3 100%);
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
