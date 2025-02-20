@@ -82,7 +82,10 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.increment').forEach(button => {
         button.addEventListener('click', function () {
             const quantityInput = this.previousElementSibling;
-            quantityInput.value = parseInt(quantityInput.value) + 1;
+            const maxQuantity = parseInt(quantityInput.getAttribute('max')) || Infinity;
+            if (parseInt(quantityInput.value) < maxQuantity) {
+                quantityInput.value = parseInt(quantityInput.value) + 1;
+            }
         });
     });
 
