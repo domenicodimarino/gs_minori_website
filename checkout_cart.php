@@ -1,4 +1,6 @@
 <?php require 'db.php'?>
+<?php session_start()?>
+<?php require 'required_login.php'?>
 <html>
 <head>
     <title>GS Minori - Pagamento</title>
