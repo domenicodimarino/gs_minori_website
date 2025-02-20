@@ -13,7 +13,9 @@
     <?php include 'header.php'?>
 
     <main>
+        <section class="calendario">
         <h1 id="calendario">Calendario delle Partite</h1>
+        </section>
         <section class="calendario">
             <div class="partita">
                 <h2>Prossima Partita</h2>
@@ -24,12 +26,14 @@
                 <button id="nextMatch">Prossima Partita</button>
             </div>
         </section>
-
-        <h1 id="classifica">Classifica Divisione Regionale 2</h1>
+        <section class="classifica">
+        <h1 id="classifica">Classifica Divisione Regionale 2 Girone B</h1>
         <h2> <a href="https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&season=2025&subj=1&mod=st&lg=2">Fonte: PlayBasket</a></h2>
-        
+        </section>
         <div id="table-container">Caricamento in corso...</div>
+        <section class="classifica" style="width: 386px;">
         <h1>Legenda</h1>
+        </section>
         <section id="legenda-container">
         <ul id="legenda"> 
             <li><strong>P.ti :</strong> punti</li>
