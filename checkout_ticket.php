@@ -63,9 +63,8 @@
                     $total_price = 0;
                     for($i = 1; $i <= 12; $i++){
                         $total_price += $sector_price[$i] * $_POST['numero_biglietti'][$i];
-                    }
+                    }                
                 }
-                
             }
         ?>
 

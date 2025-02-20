@@ -1,3 +1,28 @@
+<?php include 'header.php'; ?>
+<?php require 'db.php'?>
+
+<?php foreach ($_GET['settore'] as $i => $settore) {
+            $numero_biglietti = $_GET['numero_biglietti'][$i];
+            $sector_id = $i;
+            $matchID = $_GET['matchID'];
+            $query = "SELECT available_quantity FROM ticket_availability WHERE match_id = $matchID AND sector_id = $sector_id";
+            $result = pg_query($db, $query);
+            $row = pg_fetch_assoc($result);
+            $available = $row['available_quantity'];
+
+            if ($numero_biglietti > $available) {
+                die("Errore: i biglietti richiesti per il settore $i superano la disponibilità ($available rimasti).");
+            } else {
+                // Aggiorna la disponibilità: sottrai i biglietti acquistati
+                $nuovaDisponibilita = $available - $numero_biglietti;
+                $updateQuery = "UPDATE ticket_availability SET available_quantity = $nuovaDisponibilita 
+                                WHERE match_id = $matchID AND sector_id = $sector_id";
+                $updateResult = pg_query($db, $updateQuery);
+                if (!$updateResult) {
+                    die("Errore durante l'aggiornamento della disponibilità per il settore $sector_id.");
+                }
+            }}?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,7 +34,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <?php include 'header.php'; ?>
     <main>
     <h1>Pagamento Completato</h1>
     <?php
