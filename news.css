@@ -8,6 +8,7 @@ body {
     padding-bottom: 100px; /* Altezza del footer */
 }
 
+
 body::before {
     content: "";
     position: fixed;
@@ -21,7 +22,6 @@ body::before {
     background-repeat: no-repeat;
     z-index: -1; /* Assicurati che l'immagine di sfondo sia dietro il contenuto */
 }
-
 h1 {
     text-align: center;
     color: #0d1459;
