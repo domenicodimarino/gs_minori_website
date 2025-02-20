@@ -31,9 +31,9 @@
                     <img src="photo_photo-gallery/photo7.jpg" alt="Foto 7">
                     <img src="photo_photo-gallery/photo8.jpg" alt="Foto 8">
                     <img src="photo_photo-gallery/photo9.jpg" alt="Foto 9">
-                    <img src="photo_photo-gallery/photo1.jpg" alt="Foto 1">
-                    <img src="photo_photo-gallery/photo2.jpg" alt="Foto 2">
-                    <img src="photo_photo-gallery/photo3.jpg" alt="Foto 3">
+                    <img src="photo_photo-gallery/photo10.jpg" alt="Foto 10">
+                    <img src="photo_photo-gallery/photo11.jpg" alt="Foto 11">
+                    <img src="photo_photo-gallery/photo12.jpg" alt="Foto 12">
                     <!-- Aggiungi altre immagini qui -->
                 </div>
             </div>
@@ -166,7 +166,7 @@
                             document.getElementById('modalImage').src = image;
                             document.getElementById('modalContent').textContent = content;
     
-                            document.getElementById('newsModal').style.display = 'block';
+                            document.getElementById('newsModal').style.display = 'flex';
                         });
                     });
                 }
@@ -213,7 +213,7 @@
         galleryImages.forEach(function(img) {
             img.addEventListener('click', function() {
                 modalImgElement.src = this.src;
-                modalImgModal.style.display = 'block';
+                modalImgModal.style.display = 'flex';
             });
         });
     
