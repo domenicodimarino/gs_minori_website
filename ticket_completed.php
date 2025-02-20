@@ -15,7 +15,7 @@
 
     $queryGetDetails = "SELECT p.product_name, od.quantity, od.price 
                         FROM order_details od
-                        JOIN ticket_availability t ON od.product_id = t_sector_id
+                        JOIN ticket_availability t ON od.product_id = t.sector_id
                         WHERE od.order_id = $orderId";
     $resultDetails = pg_query($db, $queryGetDetails);
 
@@ -87,6 +87,7 @@ $queryUpdateTotal = "UPDATE orders SET total_price = $totalPrice WHERE order_id 
         die("Errore nell'aggiornamento del totale dell'ordine.");
     }
 
+    pg_query($db, "COMMIT");
 
 }?>
 
