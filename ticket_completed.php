@@ -1,3 +1,97 @@
+<?php require 'db.php'?>
+<?php include 'header.php'; ?>
+<?php 
+    
+    if(isset($_SESSION['last_ticket_id'])) {
+    $orderId = $_SESSION['last_ticket_id'];
+    $queryGetTotal = "SELECT total_price FROM orders WHERE order_id = $orderId";
+    $resultTotal = pg_query($db, $queryGetTotal);
+
+    if ($resultTotal && $rowTotal = pg_fetch_assoc($resultTotal)) {
+        $totalPrice = $rowTotal['total_price'];
+    } else {
+        die("Errore nel recupero del totale dell'ordine.");
+    }
+
+    $queryGetDetails = "SELECT p.product_name, od.quantity, od.price 
+                        FROM order_details od
+                        JOIN ticket_availability t ON od.product_id = t_sector_id
+                        WHERE od.order_id = $orderId";
+    $resultDetails = pg_query($db, $queryGetDetails);
+
+    if (!$resultDetails) {
+        die("Errore nel recupero dei dettagli dell'ordine.");
+    }
+}else{
+    pg_query($db, "BEGIN");
+
+    $username = $_SESSION['username'];
+
+    $queryOrder = "INSERT INTO orders (user_name, total_price, order_date) VALUES ('$username', 0, NOW()) RETURNING order_id";
+    $resultOrder = pg_query($db, $queryOrder);
+
+    if (!$resultOrder) {
+        pg_query($db, "ROLLBACK");
+        die("Errore nella creazione dell'ordine.");
+    }
+    
+    $orderRow = pg_fetch_assoc($resultOrder);
+    $orderId = $orderRow['order_id'];
+    $_SESSION['last_ticket_id'] = $orderId;  
+
+    $totalPrice = 0;
+    
+    
+    foreach ($_GET['settore'] as $i => $settore) {
+        $numero_biglietti = $_GET['numero_biglietti'][$i];
+        $sector_id = $i;
+        $matchID = $_GET['matchID'];
+        $price = $_GET['prezzo'][$i];
+        $query = "SELECT available_quantity FROM ticket_availability WHERE match_id = $matchID AND sector_id = $sector_id";
+        $result = pg_query($db, $query);
+        $row = pg_fetch_assoc($result);
+        $available = $row['available_quantity'];
+
+        if ($numero_biglietti > $available) {
+            die("Errore: i biglietti richiesti per il settore $i superano la disponibilità ($available rimasti).");
+        } else {
+            // Aggiorna la disponibilità: sottrai i biglietti acquistati
+            $nuovaDisponibilita = $available - $numero_biglietti;
+            $updateQuery = "UPDATE ticket_availability SET available_quantity = $nuovaDisponibilita 
+                            WHERE match_id = $matchID AND sector_id = $sector_id";
+            $updateResult = pg_query($db, $updateQuery);
+            if (!$updateResult) {
+                die("Errore durante l'aggiornamento della disponibilità per il settore $sector_id.");
+
+
+                $sector_name = $_GET['settore'][$i];
+                $queryDetail = "INSERT INTO order_details (order_id, product_id, quantity, price) 
+                VALUES ($orderId, (SELECT product_id FROM product_inventory WHERE product_name = '$sector_name'), $numero_biglietti, $price)";
+                $detailResult = pg_query($db, $queryDetail);
+    
+                if (!$detailResult) {
+                    pg_query($db, "ROLLBACK");
+                    die("Errore nell'inserimento dei dettagli dell'ordine per '$sector_name'.");
+                }
+    
+                $totalPrice += $numero_biglietti * $price;
+            }
+        }
+}
+// Se tutto è andato a buon fine, conferma la transazione
+$queryUpdateTotal = "UPDATE orders SET total_price = $totalPrice WHERE order_id = $orderId";
+    $updateTotalResult = pg_query($db, $queryUpdateTotal);
+
+    if (!$updateTotalResult) {
+        pg_query($db, "ROLLBACK");
+        die("Errore nell'aggiornamento del totale dell'ordine.");
+    }
+
+
+}?>
+
+
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -9,7 +103,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <?php include 'header.php'; ?>
     <main>
     <h1>Pagamento Completato</h1>
     <?php

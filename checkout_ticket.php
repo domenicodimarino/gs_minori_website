@@ -1,3 +1,7 @@
+<?php session_start();
+if(isset($_SESSION['last_ticket_id']))
+    unset($_SESSION['last_ticket_id']);
+?>
 <html>
     <head>
         <title>GS Minori - Checkout Ticket</title>
@@ -96,6 +100,7 @@
                     <?php if($_POST['numero_biglietti'][$i] > 0): ?>
                         <input type="text" id="settore_<?php echo $i; ?>" name="settore[<?php echo $i; ?>]" value="<?php echo $sector[$i]; ?>" readonly hidden>
                         <input type="number" id="numero_biglietti_<?php echo $i; ?>" name="numero_biglietti[<?php echo $i; ?>]" value="<?php echo $_POST['numero_biglietti'][$i]; ?>" readonly hidden>
+                        <input type="number" id="prezzo_<?php echo $i; ?>" name="prezzo[<?php echo $i; ?>]" value="<?php echo $sector_price[$i]; ?>" readonly hidden>
                     <?php endif; ?>
                 <?php endfor; ?>
                 <p>
