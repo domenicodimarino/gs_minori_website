@@ -22,20 +22,20 @@
             <div class="roster"><h2>PRIMA SQUADRA MASCHILE</h2></div> <br>
             <nav class="sub-nav">
                 <a href="#" class="nav-link1" data-target="all-section"> TUTTI</a>
-                <a href="#playmaker" class="nav-link1" data-target="playmaker-section"> PLAYMAKER</a> 
+                <a href="#centro" class="nav-link1" data-target="centro-section"> CENTRO</a> 
                 <a href="#guardia" class="nav-link1" data-target="guardia-section"> GUARDIA</a> 
                 <a href="#alapiccola" class="nav-link1" data-target="alapiccola-section"> ALA PICCOLA</a>
                 <a href="#alagrande" class="nav-link1" data-target="alagrande-section"> ALA GRANDE</a>
-                <a href="#centro" class="nav-link1" data-target="centro-section"> CENTRO</a>
+                <a href="#playmaker" class="nav-link1" data-target="playmaker-section"> PLAYMAKER</a>
                 <a href="#allenatore" class="nav-link1" data-target="allenatore-section"> ALLENATORE</a>
             </nav>
             <br>
             <img src="photo_teams/primasquadra.png" alt="immagine" class="team-image">
             <div class="roster-title"> <strong>Roster DR2</strong><br> Rosa ufficiale della stagione 2024/25</div>
             
-            <div id="playmaker-section" class="section">
-                <div class="position-title1"> <h2>PLAYMAKER</h2>
-                    <div id="playmaker" class="sec_img">
+            <div id="centro-section" class="section">
+                <div class="position-title1"> <h2>CENTRO</h2>
+                    <div id="centro" class="sec_img">
                         <div class="image-container">
                             <a href="player.php?id=0">
                                 <img src="photo_teams/alemammato.png" alt="immagine" class="image">
@@ -115,9 +115,9 @@
                 </div>
             </div>
             
-            <div id="centro-section" class="section" style="display: none;">
-                <div class="position-title"><h2>CENTRO</h2>
-                    <div id="centro" class="sec_img">
+            <div id="playmaker-section" class="section" style="display: none;">
+                <div class="position-title"><h2>PLAYMAKER</h2>
+                    <div id="playmaker" class="sec_img">
                         <div class="image-container">
                             <a href="player.php?id=9">
                                 <img src="photo_teams/alessio.jpg" alt="immagine" class="image">
