@@ -13,9 +13,10 @@
         die("Errore nel recupero del totale dell'ordine.");
     }
 
-    $queryGetDetails = "SELECT p.product_name, od.quantity, od.price 
+    //L'offset di 100 è stato aggiunto per distinguere i settori dai prodotti dello shop
+    $queryGetDetails = "SELECT t.sector_name, od.quantity, od.price 
                         FROM order_details od
-                        JOIN ticket_availability t ON od.product_id = t.sector_id
+                        JOIN ticket_availability t ON od.product_id = (t.sector_id + 100)
                         WHERE od.order_id = $orderId";
     $resultDetails = pg_query($db, $queryGetDetails);
 
@@ -46,7 +47,7 @@
         $numero_biglietti = $_GET['numero_biglietti'][$i];
         $sector_id = $i;
         $matchID = $_GET['matchID'];
-        $price = $_GET['prezzo'][$i];
+        $price = floatval($_GET['prezzo'][$i]);
         $query = "SELECT available_quantity FROM ticket_availability WHERE match_id = $matchID AND sector_id = $sector_id";
         $result = pg_query($db, $query);
         $row = pg_fetch_assoc($result);
@@ -55,18 +56,19 @@
         if ($numero_biglietti > $available) {
             die("Errore: i biglietti richiesti per il settore $i superano la disponibilità ($available rimasti).");
         } else {
-            // Aggiorna la disponibilità: sottrai i biglietti acquistati
+            // Vengono sottratti i biglietti acquistati alla disponibilità
             $nuovaDisponibilita = $available - $numero_biglietti;
             $updateQuery = "UPDATE ticket_availability SET available_quantity = $nuovaDisponibilita 
                             WHERE match_id = $matchID AND sector_id = $sector_id";
             $updateResult = pg_query($db, $updateQuery);
             if (!$updateResult) {
                 die("Errore durante l'aggiornamento della disponibilità per il settore $sector_id.");
+            }
 
-
+                //L'offset di 100 è stato aggiunto per distinguere i settori dai prodotti dello shop
                 $sector_name = $_GET['settore'][$i];
                 $queryDetail = "INSERT INTO order_details (order_id, product_id, quantity, price) 
-                VALUES ($orderId, (SELECT product_id FROM product_inventory WHERE product_name = '$sector_name'), $numero_biglietti, $price)";
+                VALUES ($orderId, ($sector_id + 100), $numero_biglietti, $price)";
                 $detailResult = pg_query($db, $queryDetail);
     
                 if (!$detailResult) {
@@ -77,19 +79,19 @@
                 $totalPrice += $numero_biglietti * $price;
             }
         }
+        // Se tutto è andato a buon fine, conferma la transazione
+        $queryUpdateTotal = "UPDATE orders SET total_price = $totalPrice WHERE order_id = $orderId";
+        $updateTotalResult = pg_query($db, $queryUpdateTotal);
+
+        if (!$updateTotalResult) {
+            pg_query($db, "ROLLBACK");
+            die("Errore nell'aggiornamento del totale dell'ordine.");
+        }
+
+        pg_query($db, "COMMIT");
 }
-// Se tutto è andato a buon fine, conferma la transazione
-$queryUpdateTotal = "UPDATE orders SET total_price = $totalPrice WHERE order_id = $orderId";
-    $updateTotalResult = pg_query($db, $queryUpdateTotal);
 
-    if (!$updateTotalResult) {
-        pg_query($db, "ROLLBACK");
-        die("Errore nell'aggiornamento del totale dell'ordine.");
-    }
-
-    pg_query($db, "COMMIT");
-
-}?>
+?>
 
 
 
@@ -109,6 +111,7 @@ $queryUpdateTotal = "UPDATE orders SET total_price = $totalPrice WHERE order_id 
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $matchID = $_GET['matchID'];
+        $match = $_GET['match'];
         $importo = $_GET['importo'];
         $nome = $_GET['nome'];
         $cognome = $_GET['cognome'];
@@ -124,7 +127,8 @@ $queryUpdateTotal = "UPDATE orders SET total_price = $totalPrice WHERE order_id 
 
         echo "<section id='buyer_data'>";
         echo "<h2>Riepilogo ordine</h2>";
-        echo "<p>Match ID: " . htmlspecialchars($matchID) . "</p>";
+        echo "<p>MatchID: " . htmlspecialchars($matchID) . "</p>";
+        echo "<p>Match: " . htmlspecialchars($match) . "</p>";
         echo "<p>Importo: €" . number_format($importo, 2, ',', '.') . "</p>";
         echo "<p>Nome: " . htmlspecialchars($nome) . "</p>";
         echo "<p>Cognome: " . htmlspecialchars($cognome) . "</p>";
