@@ -63,243 +63,103 @@
             $sector_price["12"]=5;
         ?>
 
-        <script language="javascript" type="text/javascript">
-            function increase_number(id){
-                switch(id){
-                    case "plus1":
-                        var tickets = document.getElementById("tickets1");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                    case "plus2":
-                        var tickets = document.getElementById("tickets2");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                    case "plus3":
-                        var tickets = document.getElementById("tickets3");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                    case "plus4":
-                        var tickets = document.getElementById("tickets4");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                    case "plus5":
-                        var tickets = document.getElementById("tickets5");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                    case "plus6":
-                        var tickets = document.getElementById("tickets6");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                    case "plus7":
-                        var tickets = document.getElementById("tickets7");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                    case "plus8":
-                        var tickets = document.getElementById("tickets8");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                    case "plus9":
-                        var tickets = document.getElementById("tickets9");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                    case "plus10":
-                        var tickets = document.getElementById("tickets10");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                    case "plus11":
-                        var tickets = document.getElementById("tickets11");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                    case "plus12":
-                        var tickets = document.getElementById("tickets12");
-                        var tickets_number = parseInt(tickets.value);
-                        tickets_number++;
-                        tickets.value = tickets_number;
-                        break;
-                }
+        <?php
+            // Connessione al database PostgreSQL
+            $conn = pg_connect("host=localhost dbname=gruppo01 user=www password=tw2024");
+            if (!$conn) {
+                die("Errore nella connessione al database.");
             }
-            function decrease_number(id){
-                switch(id){
-                    case "minus1":
-                        var tickets = document.getElementById("tickets1");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                    case "minus2":
-                        var tickets = document.getElementById("tickets2");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                    case "minus3":
-                        var tickets = document.getElementById("tickets3");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                    case "minus4":
-                        var tickets = document.getElementById("tickets4");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                    case "minus5":
-                        var tickets = document.getElementById("tickets5");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                    case "minus6":
-                        var tickets = document.getElementById("tickets6");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                    case "minus7":
-                        var tickets = document.getElementById("tickets7");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                    case "minus8":
-                        var tickets = document.getElementById("tickets8");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                    case "minus9":
-                        var tickets = document.getElementById("tickets9");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                    case "minus10":
-                        var tickets = document.getElementById("tickets10");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                    case "minus11":
-                        var tickets = document.getElementById("tickets11");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                    case "minus12":
-                        var tickets = document.getElementById("tickets12");
-                        var tickets_number = parseInt(tickets.value);
-                        if(tickets_number > 0){
-                            tickets_number--;
-                            tickets.value = tickets_number;
-                        }
-                        break;
-                }
-                
-            }
+        ?>
+        
 
-            function check_ticket_data(elementoModulo) {
-                var tickets_number = 0;
-                for (var i = 1; i <= 12; i++) {
-                    var tickets = document.getElementById("tickets" + i);
-                    tickets_number += parseInt(tickets.value);
-                }
-                if(tickets_number > 0){
-                    return true;
-                }
-                else{
-                    alert("Devi selezionare almeno un biglietto per proseguire");
-                    return false;
-                }
+        <script language="javascript" type="text/javascript">
+        function increase_number(id){
+            var tickets = document.getElementById("tickets" + id);
+            var tickets_number = parseInt(tickets.value);
+            var max_tickets = parseInt(tickets.max);
+            if (tickets_number < max_tickets) {
+                tickets_number++;
+                tickets.value = tickets_number;
             }
-        </script>
+        }
+        function decrease_number(id){
+            var tickets = document.getElementById("tickets" + id);
+            var tickets_number = parseInt(tickets.value);
+            if(tickets_number > 0){
+                tickets_number--;
+                tickets.value = tickets_number;
+            }
+        }
+
+        function check_ticket_data(elementoModulo) {
+            var tickets_number = 0;
+            for (var i = 1; i <= 12; i++) {
+                var tickets = document.getElementById("tickets" + i);
+                tickets_number += parseInt(tickets.value);
+            }
+            if(tickets_number > 0){
+                return true;
+            }
+            else{
+                alert("Devi selezionare almeno un biglietto per proseguire");
+                return false;
+            }
+        }
+    </script>
+
 
         <main>
-            Match selezionato: <?php echo $match[$matchID] ?>
+        <h1>Seleziona i tuoi biglietti</h1>
+        <p>Match selezionato: <?php echo $match[$matchID] ?></p>
+        <p>Scegli il numero di biglietti per ciascun settore (massimo in base alla disponibilità):</p>
 
-            <!-- Schermata di scelta dei biglietti -->
-            
-            <section class = "initial_view" id="initial_view">
-                    <figure>
-                        <img src="photo_ticket/piantina.jpeg" alt="Piantina palazzetto con settori">
-                    </figure>
-                    <section class = "sector_choice">
-                        <p class = "sector_type">
-                            <strong>SETTORE</strong>
+        <section class="initial_view" id="initial_view">
+            <figure>
+                <img src="photo_ticket/piantina.jpeg" alt="Piantina palazzetto con settori">
+            </figure>
+            <section class="sector_choice">
+                <p class="sector_type">
+                    <strong>SETTORE</strong>
+                </p>
+                <p class="tickets_number">
+                    <strong>NUMERO DI BIGLIETTI</strong>
+                </p>
+                <p class="ticket_price">
+                    <strong>PREZZO</strong>
+                </p>
+            </section>
+            <form action="checkout_ticket.php?matchID=<?php echo $matchID?>" method="post">
+                <?php
+                // Per ogni settore, recupera e mostra la disponibilità
+                for ($i = 1; $i <= 12; $i++):
+                    // Query per ottenere la disponibilità per il settore e il match specificato
+                    $query = "SELECT available_quantity FROM ticket_availability WHERE match_id = $matchID AND sector_id = $i";
+                    $result = pg_query($conn, $query);
+                    $row = pg_fetch_assoc($result);
+                    // Se non troviamo la riga, assumiamo disponibilità pari a 0
+                    $availability = ($row && isset($row['available_quantity'])) ? $row['available_quantity'] : 0;
+                ?>
+                    <section class="sector_choice">
+                        <p class="sector_type">
+                            <?php echo $sector[$i]; ?>
                         </p>
-                        <p class = "tickets_number">
-                            <strong>NUMERO DI BIGLIETTI</strong>
+                        <p class="tickets_number">
+                            <img src="minus_button.png" id="minus<?php echo $i; ?>" onclick="decrease_number(<?php echo $i; ?>)" style="margin-right: 30px" class="minus_button">
+                            <input type="number" name="numero_biglietti[<?php echo $i; ?>]" min="0" max="<?php echo $availability; ?>" id="tickets<?php echo $i; ?>" value="0" readonly>
+                            <img src="plus_button.png" id="plus<?php echo $i; ?>" onclick="increase_number(<?php echo $i; ?>)" style="margin-left:30px" class="plus_button">
                         </p>
-                        <p class = "ticket_price">
-                            <strong>PREZZO</strong>
+                        <p class="ticket_price">
+                            <?php echo $sector_price[$i]; ?> €
+                        </p>
+                        <p class="availability">
+                            Biglietti disponibili: <?php echo $availability; ?>
                         </p>
                     </section>
-                    <form action="checkout_ticket.php?matchID=<?php echo $matchID?>" method="post">
-                        <?php for ($i = 1; $i <= 12; $i++): ?>
-                            <section class="sector_choice">
-                                <p class="sector_type">
-                                    <?php echo $sector[$i]; ?>
-                                </p>
-                                <p class="tickets_number">
-                                    <img src="minus_button.png" id="minus<?php echo $i; ?>" onclick="decrease_number(this.id)" style="margin-right: 30px" class="minus_button">
-                                    <input type="number" name="numero_biglietti[<?php echo $i; ?>]" min="0" id="tickets<?php echo $i; ?>" value="<?php echo isset($_POST['numero_biglietti'][$i]) ? $_POST['numero_biglietti'][$i] : 0; ?>" readonly>
-                                    <img src="plus_button.png" id="plus<?php echo $i; ?>" onclick="increase_number(this.id)" style="margin-left:30px" class="plus_button">
-                                </p>
-                                <p class="ticket_price">
-                                    <?php echo $sector_price[$i]; ?> €
-                                </p>
-                            </section>
-                        <?php endfor; ?>  
-                        <input type="number" name="importo" value="<?php echo $total_price; ?>" id="importo" style="display: none;">
-                        <input type="submit" value="CONFERMA" onclick="return check_ticket_data(this.form)" id="submit-button">
-                    </form>
-                </section>
-
-        </main>
+                <?php endfor; ?>  
+                <input type="submit" value="CONFERMA" onclick="return check_ticket_data(this.form)" id="submit-button">
+            </form>
+        </section>
+    </main>
         <?php include 'footer.html'?>
     </body>
 </html>
