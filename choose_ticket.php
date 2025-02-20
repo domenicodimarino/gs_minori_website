@@ -1,3 +1,7 @@
+<?php session_start();
+    if(isset($_SESSION['last_ticket_id']))
+        unset($_SESSION['last_ticket_id']);
+?>
 <html>
 <head>
         <title>GS Minori - Scelta del settore</title>

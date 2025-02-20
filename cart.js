@@ -1,11 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
+    
     const updateQuantity = (index, delta) => {
         const row = document.querySelectorAll('.cart-table tbody tr')[index];
         const quantityElement = row.querySelector('.quantity');
         const quantityInput = row.querySelector('.quantity-input');
         let quantity = parseInt(quantityElement.textContent);
-        quantity += delta;
-        if (quantity < 0) quantity = 0;
+
+        const maxQuantity = parseInt(quantityInput.getAttribute('max'));
+        if(delta > 0 && quantity < maxQuantity) {
+            quantity++;
+        }
+        else if(delta < 0 && quantity > 0) {
+            quantity--;
+        }
+        if(quantity < 0) {
+            quantity = 0;
+        }
         quantityElement.textContent = quantity;
         quantityInput.value = quantity;
 
@@ -26,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Aggiorna il totale dell'ordine
         updateTotalPrice();
-
 
         // Verifica se il carrello è vuoto
         checkIfCartIsEmpty();
