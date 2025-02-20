@@ -17,7 +17,7 @@
         <section class="news-articles">
             <!-- Le news saranno caricate dinamicamente qui -->
         </section>
-
+        
         <h1 id="foto_gallery">Foto Gallery</h1>
         <section class="photo-gallery">
             <div class="gallery-wrapper">
