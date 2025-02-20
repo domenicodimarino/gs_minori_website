@@ -107,7 +107,7 @@
                 $query = "SELECT available_quantity FROM product_inventory WHERE product_name = '$productName'";
                 $result = pg_query($db, $query);
                 $row = pg_fetch_assoc($result);
-                $availableQuantity = $row ? $row['available_quantity'] : 'N/D';
+                $availableQuantity = $row ? $row['available_quantity'] : 0;
                             
                 
                 
@@ -135,7 +135,7 @@
                 echo '<input type="hidden" name="product_price[]" value="' . $product['price'] . '">';
                 echo '<div class="quantity-controls">';
                 echo '<button type="button" class="decrement">-</button>';
-                echo '<input type="number" class="quantity" name="quantity[]" value="0" min="0" max="' . $availableQuantity . '">';
+                echo '<input type="number" class="quantity" name="quantity[]" value="0" min="0" max="' . $availableQuantity . '" oninput="if (this.value === \'\') { this.value = 0; }">';
                 echo '<button type="button" class="increment">+</button>';
                 echo '</div>';
                 echo '<p class="inventory-info">Disponibilità: ' . $availableQuantity . ' unità</p>';

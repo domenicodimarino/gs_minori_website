@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.increment').forEach(button => {
         button.addEventListener('click', function () {
             const quantityInput = this.previousElementSibling;
-            const maxQuantity = parseInt(quantityInput.getAttribute('max')) || Infinity;
+            const maxQuantity = parseInt(quantityInput.getAttribute('max')) || 0;
             if (parseInt(quantityInput.value) < maxQuantity) {
                 quantityInput.value = parseInt(quantityInput.value) + 1;
             }

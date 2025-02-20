@@ -1,4 +1,5 @@
 <?php include 'header.php'; ?>
+<?php require 'db.php'; ?>
 <?php
 // Cookie del carrello
 if (!isset($_COOKIE['cart'])) {
@@ -45,8 +46,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_SESSION['cart_updated']) == fals
 
 // Calcolo del prezzo totale
 $totalPrice = 0;
-foreach ($cart as $item) {
-    $totalPrice += $item['price'] * $item['quantity'];
+foreach ($cart as $index => $item) {
+    $product_name = is_array($item['product_name']) ? '' : $item['product_name'];
+    $query = "SELECT available_quantity FROM product_inventory WHERE product_name = '$product_name'";
+    $result = pg_query($db, $query);
+    $row = pg_fetch_assoc($result);
+    $availableQuantity = $row ? $row['available_quantity'] : 0;
+
+    // Controlla e correggi la quantità se supera il massimo disponibile
+    if ($item['quantity'] > $availableQuantity) {
+        $cart[$index]['quantity'] = $availableQuantity;
+        setcookie('cart', serialize($cart), time() + (30 * 24 * 60 * 60)); // Aggiorna il cookie
+    }
+
+    $totalPrice += $item['price'] * $cart[$index]['quantity'];
 }
 ?>
 <!DOCTYPE html>
@@ -80,6 +93,19 @@ foreach ($cart as $item) {
                         $product_name = is_array($cart[$i]['product_name']) ? '' : $cart[$i]['product_name'];
                         $price = is_array($cart[$i]['price']) ? '' : $cart[$i]['price'];
                         $quantity = is_array($cart[$i]['quantity']) ? '' : $cart[$i]['quantity'];
+                        
+                        $query = "SELECT available_quantity FROM product_inventory WHERE product_name = '$product_name'";
+                        $result = pg_query($db, $query);
+                        $row = pg_fetch_assoc($result);
+                        $availableQuantity = $row ? $row['available_quantity'] : 0;
+                        
+                        // Controlla e correggi la quantità se supera il massimo disponibile
+                        if ($quantity > $availableQuantity) {
+                            $quantity = $availableQuantity;
+                            $cart[$i]['quantity'] = $availableQuantity;
+                            setcookie('cart', serialize($cart), time() + (30 * 24 * 60 * 60)); // Aggiorna il cookie
+                        }
+                        
                         echo '<tr data-index="' . $i . '">';
                         echo '<td><img src="' . htmlspecialchars($product_image) . '" alt="' . htmlspecialchars($product_name) . '" class="cart-image"></td>';
                         echo '<td>' . htmlspecialchars($product_name) . '</td>';
@@ -88,7 +114,7 @@ foreach ($cart as $item) {
                         echo '<button class="decrement" onclick="updateQuantity(' . $i . ', -1)">-</button>';
                         echo '<span class="quantity">' . htmlspecialchars((string)$quantity) . '</span>';
                         echo '<button class="increment" onclick="updateQuantity(' . $i . ', 1)">+</button>';
-                        echo '<input type="hidden" class="quantity-input" value="' . htmlspecialchars((string)$quantity) . '">';
+                        echo '<input type="hidden" class="quantity-input" value="' . htmlspecialchars((string)$quantity) . '" max="' . htmlspecialchars($availableQuantity) . '">';
                         echo '</td>';
                         echo '<td class="total-price">' . htmlspecialchars((string)($quantity * $price)) . '€</td>';
                         echo '</tr>';
