@@ -135,7 +135,7 @@
                 echo '<input type="hidden" name="product_price[]" value="' . $product['price'] . '">';
                 echo '<div class="quantity-controls">';
                 echo '<button type="button" class="decrement">-</button>';
-                echo '<input type="number" class="quantity" name="quantity[]" value="0" min="0" max="' . $availableQuantity . '" readonly>';
+                echo '<input type="number" class="quantity" name="quantity[]" value="0" min="0" max="' . $availableQuantity . '">';
                 echo '<button type="button" class="increment">+</button>';
                 echo '</div>';
                 echo '<p class="inventory-info">Disponibilità: ' . $availableQuantity . ' unità</p>';
