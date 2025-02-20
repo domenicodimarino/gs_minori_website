@@ -47,6 +47,9 @@
         <li>Pantaloni GS Minori</li>
         <li>Coprimaglia GS Minori</li>
         <li>Giubbino GS Minori</li>
+        <li>Felpa Tifoso GS Minori</li>
+        <li>Zaino GS Minori</li>
+        <li>Borsone GS Minori</li>
     </ul>
     <form id="cartForm" action="cart.php" method="POST">
         <div class="image-container">
@@ -96,6 +99,21 @@
                     'name' => 'Giubbino GS Minori',
                     'price' => '59.99',
                     'images' => ['photo_shop/giubbino_avanti.jpeg', 'photo_shop/giubbino_avanti_2.jpeg', 'photo_shop/giubbino_dietro.jpeg']
+                ],
+                [
+                    'name' => 'Borsone GS Minori',
+                    'price' => '24.99',
+                    'images' => ['photo_shop/borsone_av.jpg', 'photo_shop/borsone_di.jpg']
+                ],
+                [
+                    'name' => 'Zaino GS Minori',
+                    'price' => '29.99',
+                    'images' => ['photo_shop/zaino_avanti.jpg', 'photo_shop/zaino_dietro.jpg']
+                ],
+                [
+                    'name' => 'Felpa Tifoso GS Minori',
+                    'price' => '39.99',
+                    'images' => ['photo_shop/felpa_1_avanti.jpg', 'photo_shop/felpa_1_dietro.jpg']
                 ]
             ];
 
