@@ -64,8 +64,39 @@
                     for($i = 1; $i <= 12; $i++){
                         $total_price += $sector_price[$i] * $_POST['numero_biglietti'][$i];
                     }
+
+                    // Connessione al database (se non già inclusa)
+                    $conn = pg_connect("host=localhost dbname=gruppo01 user=www password=tw2024");
+                    if (!$conn) {
+                        die("Errore nella connessione al database.");
+                    }
+
+                    // Assicurati di avere il matchID e l'array dei biglietti acquistati da $_POST
+                    if (isset($_POST['numero_biglietti']) && isset($matchID)) {
+                        foreach ($_POST['numero_biglietti'] as $sector_id => $num_acquistati) {
+                            if ($num_acquistati > 0) {
+                                // Recupera la disponibilità attuale per il settore e la partita
+                                $query = "SELECT available_quantity FROM ticket_availability WHERE match_id = $matchID AND sector_id = $sector_id";
+                                $result = pg_query($conn, $query);
+                                $row = pg_fetch_assoc($result);
+                                $available = $row['available_quantity'];
+
+                                if ($num_acquistati > $available) {
+                                    die("Errore: i biglietti richiesti per il settore $sector_id superano la disponibilità ($available rimasti).");
+                                } else {
+                                    // Aggiorna la disponibilità: sottrai i biglietti acquistati
+                                    $nuovaDisponibilita = $available - $num_acquistati;
+                                    $updateQuery = "UPDATE ticket_availability SET available_quantity = $nuovaDisponibilita 
+                                                    WHERE match_id = $matchID AND sector_id = $sector_id";
+                                    $updateResult = pg_query($conn, $updateQuery);
+                                    if (!$updateResult) {
+                                        die("Errore durante l'aggiornamento della disponibilità per il settore $sector_id.");
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-                
             }
         ?>
 
