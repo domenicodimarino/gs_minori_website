@@ -29,7 +29,8 @@ h1 {
     margin-bottom: 5px;
     font-weight: bold; /* Rende il testo più spesso */
     background-color: white;
-    margin: 10px;
+    max-width: 300px;
+    margin: 10px auto; /* Centra il box orizzontalmente */
     border-radius: 10px;
 }
 
