@@ -40,7 +40,7 @@
             <tr><td>Nicola</td><td>Moretti</td><td>2012</td><td>Guardia</td><td>65</td></tr>
             <tr><td>Leonardo</td><td>De Luca</td><td>2013</td><td>Ala grande</td><td>66</td></tr>
             <tr><td>Marco</td><td>Conti</td><td>2011</td><td>Ala piccola</td><td>33</td></tr>
-            <tr><td>Domenico</td><td>Di Marino</td><td>2013</td><td>Guardia</td><td>9</td></tr>
+            <tr><td>Domenico</td><td>Di Marino</td><td>2013</td><td>Guardia</td><td>72</td></tr>
             <tr><td>Giovanni</td><td>Adinolfi</td><td>2012</td><td>Ala piccola</td><td>3</td></tr>
             <tr><td>Francesco</td><td>Di Crescenzo</td><td>2011</td><td>Playmaker</td><td>51</td></tr>
         </tr>
