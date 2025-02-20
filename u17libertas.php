@@ -15,7 +15,7 @@
             <a href="u13libertas.php" class="nav-link"> U13 LIBERTAS</a> 
             <a href="minibasket.php" class="nav-link"> MINIBASKET</a>
         </nav>
-        <div class="roster"><Strong>UNDER 17 LIBERTAS</Strong></div> <br>
+        <div class="roster"><Strong><h3>UNDER 17 LIBERTAS</h3></Strong></div> <br>
         <br>
         <div> <img src="photo_teams/u17libertas.png" alt="Foto Squadra" class="team-image"></div>
         <br>

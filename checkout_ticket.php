@@ -68,7 +68,6 @@ if(isset($_SESSION['last_ticket_id']))
                     for($i = 1; $i <= 12; $i++){
                         $total_price += $sector_price[$i] * $_POST['numero_biglietti'][$i];
                     }
-
                 }
             }
         ?>

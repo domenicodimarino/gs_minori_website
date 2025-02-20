@@ -40,11 +40,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['titolo'])) {
 }
 
 // Recupero delle news dal database
+$limit = isset($_GET['limit']) ? intval($_GET['limit']) : 0;
 $sql = "SELECT n.id, n.titolo, n.descrizione, n.contenuto, n.data_pubblicazione, i.immagine 
         FROM news n
         LEFT JOIN immagini_newa i ON n.id_immagine = i.id
         ORDER BY n.data_pubblicazione DESC";
-$stmt = $pdo->query($sql);
+if ($limit > 0) {
+    $sql .= " LIMIT :limit";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+    $stmt->execute();
+} else {
+    $stmt = $pdo->query($sql);
+}
 $news = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Restituisce i dati in formato JSON per l'uso in JavaScript

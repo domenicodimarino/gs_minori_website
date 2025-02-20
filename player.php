@@ -4,7 +4,7 @@ $players = [
     [
         'name' => 'Alessandro Mammato',
         'age' => 21,
-        'ruolo' => 'Playmaker',
+        'ruolo' => 'Centro',
         'number' => 34,
         'image' => 'photo_teams/alemammato.png',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=150012&action=view&eid=5'
@@ -76,7 +76,7 @@ $players = [
     [
         'name' => 'Alessio Proto',
         'age' => 21,
-        'ruolo' => 'Centro',
+        'ruolo' => 'Playmaker',
         'number' => 7,
         'image' => 'photo_teams/alessio.jpg',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=133933&action=view&eid=5'

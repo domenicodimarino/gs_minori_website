@@ -49,11 +49,12 @@
                 <li class="dropdown">
                     <a href="login.php" class="login-btn"><img src="user.png" alt="userphoto">Login</a>
                     <ul class="dropdown-menu" id="login_dropdown">
-                        <li><a href="">Impostazioni profilo</a></li>
+                        <li><a href="impostazioni_profilo.php">Impostazioni profilo</a></li>
                         <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </li>
                 </ul>
+                
         </nav>
  </header>
  <?php require 'login_header.php'?>

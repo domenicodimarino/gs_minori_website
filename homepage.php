@@ -4,80 +4,10 @@
         <title>GS Minori - Sito ufficiale</title>
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <style>
-        /* Stili specifici per la homepage */
-        main {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        #homepage-links {
-            margin-top: 20px;
-        }
-        #homepage-links h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: #7e1710;
-        }
-        #homepage-links p {
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-        .home-links {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .home-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 200px;
-            text-decoration: none;
-            color: #090808;
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .home-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
-        }
-        .card-icon {
-            font-size: 40px;
-            color: #0d1459;
-            margin-bottom: 10px;
-        }
-        .card-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .card-preview {
-            font-size: 14px;
-            margin-bottom: 15px;
-            color: #555;
-        }
-        .card-link {
-            text-decoration: none;
-            background: #0d1459;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background 0.2s;
-        }
-        .card-link:hover {
-            background: #7e1710;
-        }
-    </style>
+        <link rel="stylesheet" href="homepage.css" type="text/css"/>
     </head>
     <body>
-      
-        
-
-
+    
 <main>
     <section id="homepage-links">
         <h1>Benvenuto sul sito ufficiale del GS Minori</h1>

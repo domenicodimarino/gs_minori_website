@@ -17,7 +17,7 @@
         <section class="news-articles">
             <!-- Le news saranno caricate dinamicamente qui -->
         </section>
-
+        
         <h1 id="foto_gallery">Foto Gallery</h1>
         <section class="photo-gallery">
             <div class="gallery-wrapper">
@@ -31,9 +31,9 @@
                     <img src="photo_photo-gallery/photo7.jpg" alt="Foto 7">
                     <img src="photo_photo-gallery/photo8.jpg" alt="Foto 8">
                     <img src="photo_photo-gallery/photo9.jpg" alt="Foto 9">
-                    <img src="photo_photo-gallery/photo1.jpg" alt="Foto 1">
-                    <img src="photo_photo-gallery/photo2.jpg" alt="Foto 2">
-                    <img src="photo_photo-gallery/photo3.jpg" alt="Foto 3">
+                    <img src="photo_photo-gallery/photo10.jpg" alt="Foto 10">
+                    <img src="photo_photo-gallery/photo11.jpg" alt="Foto 11">
+                    <img src="photo_photo-gallery/photo12.jpg" alt="Foto 12">
                     <!-- Aggiungi altre immagini qui -->
                 </div>
             </div>
@@ -63,6 +63,10 @@
                             <source src="video_video-gallery/video4.mp4" type="video/mp4">
                             Il tuo browser non supporta il tag video.
                         </video>
+                        <video controls>
+                            <source src="video_video-gallery/video5.mp4" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
                         <!-- Aggiungi altri video qui -->
                     </div>
 
@@ -84,7 +88,10 @@
                             <source src="video_video-gallery/video4.mp4" type="video/mp4">
                             Il tuo browser non supporta il tag video.
                         </video>
-                       
+                        <video controls>
+                            <source src="video_video-gallery/video5.mp4" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
                     </div>
 
                     <!-- Aggiungi altri video qui -->
@@ -159,7 +166,7 @@
                             document.getElementById('modalImage').src = image;
                             document.getElementById('modalContent').textContent = content;
     
-                            document.getElementById('newsModal').style.display = 'block';
+                            document.getElementById('newsModal').style.display = 'flex';
                         });
                     });
                 }
@@ -206,7 +213,7 @@
         galleryImages.forEach(function(img) {
             img.addEventListener('click', function() {
                 modalImgElement.src = this.src;
-                modalImgModal.style.display = 'block';
+                modalImgModal.style.display = 'flex';
             });
         });
     
@@ -240,6 +247,13 @@
                     event.preventDefault();
                     const target = this.getAttribute('data-target');
 
+                    // Remove active class from all links
+                    navLinks.forEach(link => link.classList.remove('active'));
+
+                    // Add active class to the clicked link
+                    this.classList.add('active');
+
+                    // Show the target section and hide others
                     videoSections.forEach(section => {
                         if (section.id === target) {
                             section.style.display = 'block';
@@ -250,8 +264,12 @@
                 });
             });
 
-            // Show all videos by default
-            document.getElementById('all-section').style.display = 'block';
+            // Set default active link and show all videos by default
+            const defaultLink = document.querySelector('.sub-nav .nav-link1[data-target="all-section"]');
+            if (defaultLink) {
+                defaultLink.classList.add('active');
+                document.getElementById('all-section').style.display = 'block';
+            }
         });
     </script>
 </body>
