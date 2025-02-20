@@ -63,6 +63,10 @@
                             <source src="video_video-gallery/video4.mp4" type="video/mp4">
                             Il tuo browser non supporta il tag video.
                         </video>
+                        <video controls>
+                            <source src="video_video-gallery/video5.mp4" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
                         <!-- Aggiungi altri video qui -->
                     </div>
 
@@ -84,7 +88,10 @@
                             <source src="video_video-gallery/video4.mp4" type="video/mp4">
                             Il tuo browser non supporta il tag video.
                         </video>
-                       
+                        <video controls>
+                            <source src="video_video-gallery/video5.mp4" type="video/mp4">
+                            Il tuo browser non supporta il tag video.
+                        </video>
                     </div>
 
                     <!-- Aggiungi altri video qui -->
@@ -240,6 +247,13 @@
                     event.preventDefault();
                     const target = this.getAttribute('data-target');
 
+                    // Remove active class from all links
+                    navLinks.forEach(link => link.classList.remove('active'));
+
+                    // Add active class to the clicked link
+                    this.classList.add('active');
+
+                    // Show the target section and hide others
                     videoSections.forEach(section => {
                         if (section.id === target) {
                             section.style.display = 'block';
@@ -250,8 +264,12 @@
                 });
             });
 
-            // Show all videos by default
-            document.getElementById('all-section').style.display = 'block';
+            // Set default active link and show all videos by default
+            const defaultLink = document.querySelector('.sub-nav .nav-link1[data-target="all-section"]');
+            if (defaultLink) {
+                defaultLink.classList.add('active');
+                document.getElementById('all-section').style.display = 'block';
+            }
         });
     </script>
 </body>
