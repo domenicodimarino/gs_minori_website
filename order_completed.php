@@ -1,3 +1,54 @@
+<?php require 'db.php'?>
+<?php 
+// Recupera il carrello dal cookie
+if (isset($_COOKIE['cart'])) {
+    $cartItems = unserialize($_COOKIE['cart']);
+} else {
+    die("Nessun prodotto nel carrello.");
+}
+
+// Avvia una transazione per assicurarti che tutti gli aggiornamenti siano atomici
+pg_query($db, "BEGIN");
+
+foreach ($cartItems as $item) {
+    // Assicurati che il nome del prodotto e la quantità siano presenti
+    if (!isset($item['product_name']) || !isset($item['quantity'])) {
+        continue;
+    }
+    
+    $productName = pg_escape_string($db, $item['product_name']);
+    $orderedQuantity = (int)$item['quantity'];
+
+    // Recupera la quantità attuale disponibile per questo prodotto
+    $query = "SELECT available_quantity FROM product_inventory WHERE product_name = '$productName'";
+    $result = pg_query($db, $query);
+    if ($row = pg_fetch_assoc($result)) {
+        $available = (int)$row['available_quantity'];
+        $newQuantity = $available - $orderedQuantity;
+        if ($newQuantity < 0) {
+            // Se la quantità acquistata supera quella disponibile, effettua il rollback e mostra un errore
+            pg_query($db, "ROLLBACK");
+            die("Errore: per il prodotto '$productName' sono disponibili solo $available unità.");
+        }
+        
+        // Esegui l'aggiornamento dell'inventario
+        $updateQuery = "UPDATE product_inventory SET available_quantity = $newQuantity WHERE product_name = '$productName'";
+        $updateResult = pg_query($db, $updateQuery);
+        if (!$updateResult) {
+            pg_query($db, "ROLLBACK");
+            die("Errore durante l'aggiornamento dell'inventario per il prodotto '$productName'.");
+        }
+    } else {
+        pg_query($db, "ROLLBACK");
+        die("Errore: prodotto '$productName' non trovato in inventario.");
+    }
+}
+
+// Se tutto è andato a buon fine, conferma la transazione
+pg_query($db, "COMMIT");
+?>
+
+
 <?php 
     setcookie("cart", "", time() - 3600); // Cancella il cookie specificando il percorso
 ?>

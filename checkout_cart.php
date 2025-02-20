@@ -1,3 +1,4 @@
+<?php require 'db.php'?>
 <html>
 <head>
     <title>GS Minori - Pagamento</title>
@@ -8,7 +9,7 @@
 </head>
 <body>
     <?php include 'header.php'?>
-
+    <!-- Recupero del cookie del carrello -->
     <?php
         if (isset($_COOKIE['cart'])) {
             $cart = unserialize($_COOKIE['cart']);
@@ -21,6 +22,26 @@
         }
         $cartItems = $cart;
         
+    ?>
+    <!-- Interfacciamento con il database per capire se i prodotti sono disponibili -->
+    <?php
+        // Viene verificata la disponibilità per ogni prodotto nel carrello
+        foreach ($cartItems as $item) {
+            $productName = pg_escape_string($db, $item['product_name']);
+            $orderedQuantity = (int)$item['quantity'];
+
+            // Si recupera la disponibilità attuale dal database
+            $query = "SELECT available_quantity FROM product_inventory WHERE product_name = '$productName'";
+            $result = pg_query($db, $query);
+            if ($row = pg_fetch_assoc($result)) {
+                $available = (int)$row['available_quantity'];
+                if ($orderedQuantity > $available) {
+                    die("Errore: per il prodotto '$productName' sono disponibili solo $available unità.");
+                }
+            } else {
+                die("Errore: prodotto '$productName' non trovato in inventario.");
+            }
+        }
     ?>
     <main>
     <h1>Pagamento</h1>
