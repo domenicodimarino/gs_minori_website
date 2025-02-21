@@ -4,7 +4,7 @@
 
 CREATE TABLE IF NOT EXISTS public.order_details
 (
-    detail_id integer NOT NULL DEFAULT nextval('order_details_detail_id_seq'::regclass),
+    detail_id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
     order_id integer NOT NULL,
     product_id integer NOT NULL,
     quantity integer NOT NULL,
