@@ -66,7 +66,7 @@
     const navLinks = document.querySelector('.nav-links');
 
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+      navLinks.classList.toggle('active_nav');
     });
   });
 </script>
