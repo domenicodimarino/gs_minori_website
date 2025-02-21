@@ -160,3 +160,40 @@ h2 a {
     margin-left: 20px;
     margin-right: 20px;
 }
+
+/* Media queries per dispositivi mobili */
+@media (max-width: 768px) {
+    main {
+        padding: 20px;
+    }
+
+    .calendario, .classifica {
+        margin: 10px auto;
+        padding: 10px;
+    }
+    .classifica{
+        max-width: 90vw;
+    }
+
+    .partita button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    #legenda {
+        padding: 10px;
+    }
+
+    #legenda > li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #table-container {
+        display: block;
+        overflow-x: auto;
+
+    }
+    .playbasket-table{
+        width: 100%;
+    }
+}

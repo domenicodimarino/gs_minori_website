@@ -1,19 +1,5 @@
+<?php require 'db.php'; ?>
 <?php
-// Configurazione della connessione al database
-$host = "localhost";  // Cambia se necessario
-$dbname = "gruppo01";  // Sostituisci con il nome corretto
-$user = "www";  // Utente PostgreSQL
-$password = "tw2024";  // Inserisci la password corretta
-
-// Connessione al database
-try {
-    $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ]);
-} catch (PDOException $e) {
-    die("Errore di connessione al database: " . $e->getMessage());
-}
-
 // Inserimento di una nuova news
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['titolo'])) {
     $titolo = $_POST['titolo'];
@@ -22,19 +8,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['titolo'])) {
     $id_immagine = $_POST['id_immagine'];  // Utilizzo dell'ID immagine
 
     $sql = "INSERT INTO news (titolo, descrizione, contenuto, id_immagine, data_pubblicazione) 
-            VALUES (:titolo, :descrizione, :contenuto, :id_immagine, NOW())";
-    $stmt = $pdo->prepare($sql);
+            VALUES ($1, $2, $3, $4, NOW())";
+    $result = pg_query_params($db, $sql, array($titolo, $descrizione, $contenuto, $id_immagine));
 
-    try {
-        $stmt->execute([
-            ':titolo' => $titolo,
-            ':descrizione' => $descrizione,
-            ':contenuto' => $contenuto,
-            ':id_immagine' => $id_immagine  // Inserimento dell'ID dell'immagine
-        ]);
+    if ($result) {
         echo "News inserita con successo!";
-    } catch (PDOException $e) {
-        echo "Errore nell'inserimento: " . $e->getMessage();
+    } else {
+        echo "Errore nell'inserimento: " . pg_last_error($db);
     }
     exit;
 }
@@ -46,14 +26,17 @@ $sql = "SELECT n.id, n.titolo, n.descrizione, n.contenuto, n.data_pubblicazione,
         LEFT JOIN immagini_newa i ON n.id_immagine = i.id
         ORDER BY n.data_pubblicazione DESC";
 if ($limit > 0) {
-    $sql .= " LIMIT :limit";
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
-    $stmt->execute();
+    $sql .= " LIMIT $1";
+    $result = pg_query_params($db, $sql, array($limit));
 } else {
-    $stmt = $pdo->query($sql);
+    $result = pg_query($db, $sql);
 }
-$news = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+if ($result) {
+    $news = pg_fetch_all($result);
+} else {
+    $news = [];
+}
 
 // Restituisce i dati in formato JSON per l'uso in JavaScript
 header('Content-Type: application/json');
