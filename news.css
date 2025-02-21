@@ -159,6 +159,8 @@ h1 {
     padding: 10px;
     cursor: pointer;
     user-select: none;
+    margin-left: -10px;
+    margin-right: -10px;
 }
 
 .prev {
