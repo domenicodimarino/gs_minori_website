@@ -10,7 +10,7 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1; /* Assicurati che l'immagine di sfondo sia dietro il contenuto */
-    opacity: 0.7;
+    filter: brightness(0.6);
 }
 
 /* Contenitore della barra di ricerca */
@@ -239,4 +239,62 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.product-details {
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.product-details .product-info {
+    background-color: white;
+    padding: 10px; /* Riduci il padding per diminuire l'altezza */
+    border-radius: 50px;
+    width: 100%; /* Imposta la larghezza al 100% del contenitore genitore */
+    max-width: 300px; /* Imposta una larghezza massima per il contenitore */
+    margin: 0 auto; /* Centra il contenitore */
+    display: flex;
+    flex-direction: column; /* Dispone gli elementi in colonna */
+    align-items: center; /* Centra gli elementi orizzontalmente */
+}
+
+.product-details .description {
+    font-size: 20px; /* Riduci la dimensione del font */
+    margin: 2px 0; /* Riduci i margini verticali */
+    background-color: transparent; /* Rimuove lo sfondo blu */
+    border: none; /* Rimuove il bordo */
+    color: black; /* Cambia il colore del testo in nero */
+    width: 100%; /* Imposta la larghezza al 100% */
+    text-align: center; /* Centra il testo */
+}
+
+.product-details .price {
+    font-size: 18px; /* Riduci la dimensione del font */
+    font-weight: bold;
+    color: black; /* Cambia il colore del testo in nero */
+    background-color: transparent; /* Rimuove lo sfondo */
+    border: none; /* Rimuove il bordo */
+    margin: 2px 0; /* Riduci i margini verticali */
+    width: 100%; /* Imposta la larghezza al 100% */
+    text-align: center; /* Centra il testo */
+}
+
+.product-details .quantity-controls {
+    margin: 5px 0; /* Riduci i margini verticali */
+    display: flex; /* Allinea gli elementi su un'unica linea */
+    align-items: center; /* Centra verticalmente gli elementi */
+    justify-content: center; /* Centra orizzontalmente gli elementi */
+    width: 100%; /* Imposta la larghezza al 100% */
+}
+
+.product-details .inventory-info {
+    background-color: transparent; /* Rimuove lo sfondo */
+    border: none; /* Rimuove il bordo */
+    box-shadow: none; /* Rimuove l'ombra */
+    text-align: center;
+    color: black; /* Cambia il colore del testo in nero */
+    margin: 5px 0; /* Riduci i margini verticali */
+    width: 100%; /* Imposta la larghezza al 100% */
+    font-size: 14px; /* Riduci la dimensione del font */
 }
