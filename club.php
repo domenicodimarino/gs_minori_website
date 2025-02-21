@@ -3,7 +3,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>GS Minori - Sito ufficiale</title>
+  <title>GS Minori - club</title>
   <link rel="stylesheet" href="style.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="club.css" type="text/css">

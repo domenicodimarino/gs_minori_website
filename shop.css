@@ -49,9 +49,9 @@ body::before {
 
 /* Pulsante con la lente */
 .search-button {
-    background: #007BFF;
+    background-color: white;
     border: none;
-    color: white;
+    color: black;
     padding: 10px;
     cursor: pointer;
 }
@@ -62,7 +62,7 @@ body::before {
 
 /* Effetto hover sul pulsante di ricerca */
 .search-button:hover {
-    background: #0056b3;
+    background: white;
 }
 
 /* Pulsante per cancellare (X) */
@@ -158,7 +158,7 @@ body::before {
     flex: 1 1 calc(50% - 40px); /* Due elementi per riga con spazio tra loro */
     box-sizing: border-box;
     text-align: center;
-    padding-top: 5%;
+    padding-top: 20px;
     max-width: 50%;
     width: 200px;
 }
@@ -181,12 +181,12 @@ body::before {
 .image-item p {
     margin-top: 10px;
     font-size: 17px;
-    background-color: #0d1459;
+    
     width: 25%; /* Imposta la larghezza del paragrafo uguale a quella dell'immagine */
     margin: 10px auto; /* Centra il paragrafo orizzontalmente */
-    border-radius: 30px; /* Aggiungi questa linea per bordi arrotondati */
-    font-family:'Times New Roman', Times, serif;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra al testo */
+    border-radius: 10px; /* Aggiungi questa linea per bordi arrotondati */
+    font-family: 'Helvetica Now Text Medium', Times, serif;
+    /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra al testo */
     padding: 10px; 
     color: white;
     box-shadow: 1px 1px 2.5px white; 
@@ -214,7 +214,7 @@ body::before {
 }
 
 #confirmButton {
-    background: #28a745;
+    background: #0d1459;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -224,10 +224,12 @@ body::before {
     left: 10px; /* Sposta il bottone un po' verso sinistra */
     z-index: 1000; /* Assicurati che il bottone appaia sopra altri elementi */
     border-radius: 10px; /* Aggiungi un bordo curvo */
+    float: right;
+    margin-right: 5px;
 }
 
 #confirmButton:hover {
-    background: #218838;
+    background: rgb(230, 196, 0);
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -242,15 +244,15 @@ input[type=number] {
 }
 
 .product-details {
-    padding: 20px;
-    margin: 20px 0;
+    padding: 10px;
+    margin: 10px ;
     text-align: center;
 }
 
 .product-details .product-info {
     background-color: white;
     padding: 10px; /* Riduci il padding per diminuire l'altezza */
-    border-radius: 50px;
+    border-radius: 20px;
     width: 100%; /* Imposta la larghezza al 100% del contenitore genitore */
     max-width: 300px; /* Imposta una larghezza massima per il contenitore */
     margin: 0 auto; /* Centra il contenitore */
@@ -270,7 +272,7 @@ input[type=number] {
 }
 
 .product-details .price {
-    font-size: 18px; /* Riduci la dimensione del font */
+    font-size: 25px; /* Riduci la dimensione del font */
     font-weight: bold;
     color: black; /* Cambia il colore del testo in nero */
     background-color: transparent; /* Rimuove lo sfondo */
