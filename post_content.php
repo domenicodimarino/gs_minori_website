@@ -1,19 +1,5 @@
+<?php require 'db.php'; ?>
 <?php
-// Configurazione della connessione al database
-$host = "localhost";
-$dbname = "gruppo01";
-$user = "www";
-$password = "tw2024";
-
-// Connessione al database
-try {
-    $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ]);
-} catch (PDOException $e) {
-    die("Database connection error: " . $e->getMessage());
-}
-
 // Inserimento di un nuovo contenuto
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['content'], $_POST['nome_utente'])) {
     $contenuto = $_POST['content'];
@@ -29,18 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['content'], $_POST['nom
         }
     }
 
-    $sql = "INSERT INTO community_posts (contenuto, nome_utente, immagine) VALUES (:contenuto, :nome_utente, :immagine)";
-    $stmt = $pdo->prepare($sql);
+    $sql = "INSERT INTO community_posts (contenuto, nome_utente, immagine) VALUES ($1, $2, $3)";
+    $result = pg_query_params($db, $sql, array($contenuto, $nome_utente, $imagePath));
 
-    try {
-        $stmt->execute([
-            ':contenuto' => $contenuto,
-            ':nome_utente' => $nome_utente,
-            ':immagine' => $imagePath
-        ]);
+    if ($result) {
         echo "Contenuto postato con successo!";
-    } catch (PDOException $e) {
-        echo "Error inserting data: " . $e->getMessage();
+    } else {
+        echo "Errore nell'inserimento: " . pg_last_error($db);
     }
 }
 header("Location: fan.php");

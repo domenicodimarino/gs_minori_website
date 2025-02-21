@@ -10,7 +10,9 @@
 <body>
     <?php include 'header.php'; ?>
     <?php require 'required_login.php';?>
-    <?php
+    <?php require 'db.php';?>
+    
+    <?php 
         if(!isset($_SESSION['username'])){
             $nome = '';
         }    
@@ -102,25 +104,14 @@
 
         <h3>Contenuti postati:</h3>
         <div class="posted-content">
+            
         <?php
-        // Connessione al database
-        $host = "localhost";
-        $dbname = "gruppo01";
-        $user = "www";
-        $password = "tw2024";
-
-        try {
-            $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password, [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-            ]);
-        } catch (PDOException $e) {
-            die("Errore di connessione al database: " . $e->getMessage());
-        }
+        
 
         // Recupero dei contenuti postati
         $sql = "SELECT * FROM community_posts ORDER BY data_pubblicazione DESC";
-        $stmt = $pdo->query($sql);
-        $contentsArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = pg_query($db, $sql);
+        $contentsArray = pg_fetch_all($result);
 
         if (!empty($contentsArray)) {
             foreach ($contentsArray as $content) {
@@ -138,6 +129,7 @@
             echo '<p>Nessun contenuto postato.</p>';
         }
         ?>
+        ?>
         </div>
 
         <section id="concorsi">
@@ -148,19 +140,19 @@
             <?php
             // Recupero dei concorsi
             $sql = "SELECT * FROM concorsi ORDER BY id DESC";
-            $stmt = $pdo->query($sql);
-            $contestsArray = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $result = pg_query($db, $sql);
+            $contestsArray = pg_fetch_all($result);
 
             if (!empty($contestsArray)) {
-                foreach ($contestsArray as $contest) {
-                    echo '<div class="contest" data-title="' . htmlspecialchars($contest['titolo']) . '" data-description="' . htmlspecialchars($contest['descrizione']) . '">';
-                    echo '<img src="' . htmlspecialchars($contest['immagine']) . '" alt="' . htmlspecialchars($contest['titolo']) . '">';
-                    echo '<h3>' . htmlspecialchars($contest['titolo']) . '</h3>';
-                    echo '<p>' . htmlspecialchars($contest['descrizione']) . '</p>';
-                    echo '</div>';
-                }
+            foreach ($contestsArray as $contest) {
+                echo '<div class="contest" data-title="' . htmlspecialchars($contest['titolo']) . '" data-description="' . htmlspecialchars($contest['descrizione']) . '">';
+                echo '<img src="' . htmlspecialchars($contest['immagine']) . '" alt="' . htmlspecialchars($contest['titolo']) . '">';
+                echo '<h3>' . htmlspecialchars($contest['titolo']) . '</h3>';
+                echo '<p>' . htmlspecialchars($contest['descrizione']) . '</p>';
+                echo '</div>';
+            }
             } else {
-                echo '<p>Nessun concorso disponibile al momento.</p>';
+            echo '<p>Nessun concorso disponibile al momento.</p>';
             }
             ?>
             </div>
