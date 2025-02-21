@@ -126,3 +126,55 @@ main{
 .back-button:hover {
     background-color: darkred;
 }
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .player_image {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .player_image > img {
+        height: auto;
+        width: 100%;
+    }
+
+    .player_info {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .player_brief_stats {
+        padding: 10px;
+    }
+
+    .actual_stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .playbasket-table {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .playbasket-table > tbody > tr > td {
+        padding: 10px;
+    }
+
+    .playbasket-table > thead > tr > th {
+        padding: 10px;
+    }
+
+    .back-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+    }
+}
