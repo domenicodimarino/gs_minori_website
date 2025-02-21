@@ -9,11 +9,10 @@ body::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1; /* Assicurati che l'immagine di sfondo sia dietro il contenuto */
+    z-index: -1;
     filter: brightness(0.6);
 }
 
-/* Contenitore della barra di ricerca */
 .search-container {
     display: flex;
     align-items: center;
@@ -22,32 +21,27 @@ body::before {
     overflow: hidden;
     background: white;
     position: relative;
-    margin-bottom: 10px;
+    margin: 10px 0;
     justify-content: space-between;
     padding: 10px;
     width: 100%;
-    margin-top: 10px;
 }
 
-/* Input di ricerca */
 .search-input {
     border: none;
     outline: none;
     padding: 10px;
     flex: 1;
     font-size: 16px;
-    flex-grow: 1;
     margin-right: 10px;
 }
 
-/* Contenitore per la "X" e la lente */
 .icon-group {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-/* Pulsante con la lente */
 .search-button {
     background-color: white;
     border: none;
@@ -60,12 +54,10 @@ body::before {
     font-size: 16px;
 }
 
-/* Effetto hover sul pulsante di ricerca */
 .search-button:hover {
     background: white;
 }
 
-/* Pulsante per cancellare (X) */
 .clear-button {
     background: transparent;
     border: none;
@@ -73,15 +65,13 @@ body::before {
     color: #888;
     font-size: 16px;
     padding: 10px;
-    display: none; /* Inizialmente nascosta */
+    display: none;
 }
 
-/* Effetto hover sulla X */
 .clear-button:hover {
     color: red;
 }
 
-/* Pulsante del carrello */
 .cart-button {
     background: transparent;
     border: none;
@@ -89,11 +79,10 @@ body::before {
     color: #444;
     padding: 10px;
     font-size: 18px;
-    position: relative; /* Aggiungi questa regola */
-    margin-left: auto; /* Sposta il carrello tutto a destra */
+    position: relative;
+    margin-left: auto;
 }
 
-/* Effetto hover sul carrello */
 .cart-button:hover {
     color: #007BFF;
 }
@@ -109,7 +98,6 @@ body::before {
     font-size: 12px;
 }
 
-/* Lista dei risultati */
 #resultsList {
     list-style: none;
     padding: 0;
@@ -117,12 +105,12 @@ body::before {
     margin: 0;
     border: 1px solid #ddd;
     border-radius: 5px;
-    display: none; /* Inizialmente nascosta */
+    display: none;
     background: white;
-    position: absolute; /* Assicurati che la lista dei risultati abbia position: absolute */
-    top: calc(21% + 10px); /* Posiziona direttamente sotto la barra di ricerca con un po' di spazio */
-    left: 0; /* Allinea a sinistra della barra di ricerca */
-    z-index: 1000; /* Assicurati che appaia sopra altri elementi */
+    position: absolute;
+    top: calc(21% + 10px);
+    left: 0;
+    z-index: 1000;
 }
 
 #resultsList li {
@@ -135,13 +123,11 @@ body::before {
     border-bottom: none;
 }
 
-/* Evidenziazione durante la ricerca */
 #resultsList li.highlight {
     background: whitesmoke;
     font-weight: bold;
 }
 
-/* Effetto hover sui risultati */
 #resultsList li:hover {
     background: #f0f0f0;
 }
@@ -155,7 +141,7 @@ body::before {
 }
 
 .image-item {
-    flex: 1 1 calc(50% - 40px); /* Due elementi per riga con spazio tra loro */
+    flex: 1 1 calc(50% - 40px);
     box-sizing: border-box;
     text-align: center;
     padding-top: 20px;
@@ -166,17 +152,15 @@ body::before {
 .image-item img {
     width: 25%;
     height: auto;
-    border: 2px solid white; /* Aggiungi questa linea per il bordo */
-    border-radius: 5px; /* Aggiungi questa linea per bordi arrotondati */
+    border: 2px solid white;
+    border-radius: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-.image-item img:hover{
+.image-item img:hover {
     transform: scale(1.04);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-
-    }
+}
 
 .image-item p {
     margin-top: 10px;
@@ -189,7 +173,7 @@ body::before {
     /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra al testo */
     padding: 10px; 
     color: white;
-    box-shadow: 1px 1px 2.5px white; 
+    box-shadow: 1px 1px 2.5px white;
 }
 
 .quantity-controls {
@@ -231,16 +215,15 @@ body::before {
 #confirmButton:hover {
     background: rgb(230, 196, 0);
 }
-/* Chrome, Safari, Edge, Opera */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-/* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 .product-details {
@@ -257,8 +240,8 @@ input[type=number] {
     max-width: 300px; /* Imposta una larghezza massima per il contenitore */
     margin: 0 auto; /* Centra il contenitore */
     display: flex;
-    flex-direction: column; /* Dispone gli elementi in colonna */
-    align-items: center; /* Centra gli elementi orizzontalmente */
+    flex-direction: column;
+    align-items: center;
 }
 
 .product-details .description {
@@ -283,20 +266,14 @@ input[type=number] {
 }
 
 .product-details .quantity-controls {
-    margin: 5px 0; /* Riduci i margini verticali */
-    display: flex; /* Allinea gli elementi su un'unica linea */
-    align-items: center; /* Centra verticalmente gli elementi */
-    justify-content: center; /* Centra orizzontalmente gli elementi */
-    width: 100%; /* Imposta la larghezza al 100% */
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .product-details .inventory-info {
-    background-color: transparent; /* Rimuove lo sfondo */
-    border: none; /* Rimuove il bordo */
-    box-shadow: none; /* Rimuove l'ombra */
-    text-align: center;
-    color: black; /* Cambia il colore del testo in nero */
-    margin: 5px 0; /* Riduci i margini verticali */
-    width: 100%; /* Imposta la larghezza al 100% */
-    font-size: 14px; /* Riduci la dimensione del font */
+    box-shadow: none;
+    font-size: 14px;
 }

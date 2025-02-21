@@ -29,9 +29,6 @@
             <button class="clear-button" id="clearButton">
                 <i class="fas fa-times"></i> <!-- X per cancellare -->
             </button>
-            <button class="search-button">
-                <i class="fas fa-search"></i> <!-- Lente -->
-            </button>
         </div>
         <button class="cart-button">
             <a href="cart.php"><i class="fas fa-shopping-cart"></i></a>
