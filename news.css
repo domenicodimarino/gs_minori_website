@@ -300,6 +300,8 @@ max-height: 90vh;
 .videos video {
     width: 300px;
     height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 5px;
     cursor: pointer; /* Cambia il cursore per indicare che il video è cliccabile */
     transition: transform 0.2s; /* Aggiungi una transizione per l'effetto di ingrandimento */
@@ -425,5 +427,8 @@ max-height: 90vh;
     .video-gallery h2,
     .photo-gallery h2 {
         font-size: 18px;
+    }
+    .sub-nav a{
+        font-size: 14px;
     }
 }
