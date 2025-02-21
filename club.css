@@ -140,6 +140,32 @@ p.firma{
   text-align: center;
 
 }
-  
+
+/* Selettore ID */
+#chi-siamo {
+  background-color: #f9f9f9;
+}
+
+/* Selettore discendente */
+.section-staff p {
+  text-align: left;
+}
+
+/* Selettore child */
+.container > section {
+  padding: 10px;
+}
+
+/* Unione di selettori */
+h1, h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+}
+
+/* Pseudo-classe */
+a:hover {
+  color: #ff0000;
+}
+
 
 
