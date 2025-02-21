@@ -174,6 +174,7 @@
         <span class="close">&times;</span>
         <div class="modal-content">
             <h2 id="modalTitle"></h2>
+            <img id="modalImage" src="" alt="Immagine concorso" style="max-width: 100%;">
             <p id="modalDescription"></p>
         </div>
     </div>
@@ -184,9 +185,11 @@
             element.addEventListener('click', function() {
                 var title = this.getAttribute('data-title');
                 var description = this.getAttribute('data-description');
+                var imageSrc = this.querySelector('img').src;
 
                 document.getElementById('modalTitle').textContent = title;
                 document.getElementById('modalDescription').textContent = description;
+                document.getElementById('modalImage').src = imageSrc;
 
                 document.getElementById('contestModal').style.display = 'block';
             });
@@ -203,6 +206,7 @@
                 document.getElementById('contestModal').style.display = 'none';
             }
         });
+    </script>
     </script>
 </body>
 </html>
