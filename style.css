@@ -149,6 +149,7 @@
       display: none;
       transform: translateY(-100%); /* Aggiungi questa linea */
       transition: transform 0.3s ease-in-out; /* Aggiungi questa linea */
+      z-index: 1000;
     }
     .hamburger{
       display: block;

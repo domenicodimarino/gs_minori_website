@@ -347,3 +347,68 @@ h3 {
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    body {
+        padding-top: 50px;  /* Riduci l'altezza dell'header */
+        padding-bottom: 50px; /* Riduci l'altezza del footer */
+    }
+    /* Aggiungi margine ai lati del main */
+    main {
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+    .modal-content {
+        width: 90%;
+        max-width: 100%;
+        margin: 50px auto;
+        padding: 10px;
+    }
+
+    .modal-content img {
+        height: auto;
+        max-height: 300px;
+    }
+
+    #community {
+        padding: 10px;
+    }
+
+    #community form {
+        max-width: 100%;
+    }
+
+    #community textarea {
+        font-size: 0.9rem;
+    }
+
+    #community input {
+        font-size: 0.9rem;
+    }
+
+    .posted-content {
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    .posted-content div {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .contests {
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .contest {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .contest img {
+        height: auto;
+        max-height: 150px;
+    }
+}
