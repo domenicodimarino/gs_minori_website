@@ -276,4 +276,6 @@ input[type=number] {
 .product-details .inventory-info {
     box-shadow: none;
     font-size: 14px;
+    color: black;
+    width: auto;
 }

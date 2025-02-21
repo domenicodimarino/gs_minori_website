@@ -124,7 +124,7 @@
         $formattedDate = $date->format('d-m-Y');
 
         echo "<section id='buyer_data'>";
-        echo "<h3>Riepilogo ordine</h3>";
+        echo "<h3>Riepilogo ordine n. $orderId</h3>";
         echo "<p>Match: " . htmlspecialchars($match) . "</p>";
         echo "<p>Importo: €" . number_format($importo, 2, ',', '.') . "</p>";
         echo "<p>Nome: " . htmlspecialchars($nome) . "</p>";

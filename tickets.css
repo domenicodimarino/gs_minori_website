@@ -21,11 +21,12 @@ h1 {
     font-size: 18px;
 }
 
-.availability{
+.availability {
     color: black;
     min-width: 180px;
     width: 15%;
 }
+
 main {
     display: flex;
     flex-direction: column;
@@ -74,7 +75,7 @@ main {
     color: #E10600;
     text-align: center;
     width: 25%;
-    min-width: 200px
+    min-width: 200px;
 }
 
 .match {
@@ -107,4 +108,36 @@ main {
 
 .ticket_button:hover {
     background-color: #B90500;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .all_tickets {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .ticket_section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .data_match, .match, .availability {
+        width: 100%;
+        text-align: left;
+        margin: 5px 0;
+    }
+
+    .team_logo {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+    }
+
+    .ticket_button {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        margin-top: 10px;
+    }
 }

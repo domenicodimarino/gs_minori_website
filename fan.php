@@ -25,7 +25,7 @@
     
         <h1>Benvenuto nella fan page</h1>
         <section id="intro">        
-            <p>Questa è la pagina dedicata ai fan di GS Minori. </p>
+            <p>Questa è la pagina dedicata ai fan del G.S. Minori. </p>
         </section>
 
         <section id="community">
@@ -102,7 +102,7 @@
             </script>
         </section>
 
-        <h3>Contenuti postati:</h3>
+        <h3 class="postati" >Contenuti postati:</h3>
         <div class="posted-content">
             
         <?php
