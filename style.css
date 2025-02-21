@@ -10,6 +10,9 @@
     background-color: #F4F4F4; /* Grigio chiaro per lo sfondo */
     color: #333;
   }
+  .hamburger{
+    display: none;
+  }
   
   /* Stile della navbar */
   .navbar {
@@ -32,6 +35,7 @@
     list-style: none;
     display: flex;
     align-items: center;
+    transition: transform 0.3s ease-in-out; /* Aggiungi questa linea */
   }
   
   .nav-links li {
@@ -136,16 +140,32 @@
   @media (max-width: 768px) {
     .nav-links {
       flex-direction: column;
-      background-color: #1E3A8A;
+      background-color: #162A6A;
       position: absolute;
-      top: 60px; /* Altezza della navbar */
+      top: 85px; /* Altezza della navbar */
       right: 0;
-      width: 200px;
+      left: 0; /* Aggiunto per occupare tutta la larghezza */
+      width: 100vw; /* Aggiunto per occupare tutta la larghezza */
       display: none;
+      transform: translateY(-100%); /* Aggiungi questa linea */
+      transition: transform 0.3s ease-in-out; /* Aggiungi questa linea */
+    }
+    .hamburger{
+      display: block;
     }
   
     .nav-links.active {
       display: flex;
+      transform: translateY(0); /* Aggiungi questa linea */
+    }
+  
+    #hamburger_menu{
+      max-width: 50px;
+      max-height: 50px;
+    }
+    .dropdown-menu {
+      top: 40px; /* Altezza della navbar */
+      left: 75px; /* Trasla leggermente verso destra */
     }
   
     .nav-links li {
