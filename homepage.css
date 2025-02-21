@@ -15,7 +15,7 @@
     background-attachment: fixed; /* Fissa l'immagine di sfondo */
     z-index: -2;
    
-    filter: brightness(0.6); /* Migliora la leggibilità del testo sopra l'immagine */
+    filter: brightness(0.2); /* Migliora la leggibilità del testo sopra l'immagine */
 }
  
  main {
@@ -33,6 +33,7 @@
 #homepage-links p {
     font-size: 18px;
     margin-bottom: 40px; 
+    color: white;
 }
 .home-links {
     display: flex;
