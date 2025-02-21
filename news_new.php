@@ -107,7 +107,11 @@
     <div id="myModal" class="modal">
         <span class="close">&times;</span>
         <div class="modal-content">
+            <div class="modal-arrows">
+            <span class="prev">&lt;</span>
             <img id="img01" alt="">
+            <span class="next">&gt;</span>
+            </div>
         </div>
     </div>
 
@@ -209,12 +213,35 @@
         var modalImgModal = document.getElementById('myModal');
         var modalImgElement = document.getElementById('img01');
         var galleryImages = document.querySelectorAll('.gallery img');
-    
-        galleryImages.forEach(function(img) {
-            img.addEventListener('click', function() {
-                modalImgElement.src = this.src;
+        var currentIndex = 0;
+
+        function showImage(index) {
+            if (index >= 0 && index < galleryImages.length) {
+                modalImgElement.src = galleryImages[index].src;
+                currentIndex = index;
                 modalImgModal.style.display = 'flex';
+            }
+        }
+
+        galleryImages.forEach(function(img, index) {
+            img.addEventListener('click', function() {
+                showImage(index);
             });
+        });
+
+        document.querySelector('.prev').addEventListener('click', function() {
+            showImage(currentIndex - 1);
+        });
+
+        document.querySelector('.next').addEventListener('click', function() {
+            showImage(currentIndex + 1);
+        });
+
+        // Chiudi il modal cliccando fuori dal contenuto
+        window.addEventListener('click', function(event) {
+            if (event.target === modalImgModal) {
+                modalImgModal.style.display = 'none';
+            }
         });
     
         // Ingrandimento dei video (evento click)

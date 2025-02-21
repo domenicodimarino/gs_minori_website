@@ -120,6 +120,12 @@ h1 {
     padding: 20px;
     border-radius: 10px;
 }
+.modal-arrows {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .modal-content img {
     width: 100%;
@@ -141,6 +147,26 @@ h1 {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 /* Stile per l'ingrandimento dell'articolo */
@@ -253,6 +279,12 @@ h1 {
     width: 100%;
     height: auto;
     max-height: 90vh;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .close {
@@ -270,6 +302,26 @@ h1 {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 /* Stile dei video */
