@@ -316,3 +316,118 @@ h1 {
     display: none;
 }
 
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    body::before {
+        background-size: cover;
+        background-position: center;
+    }
+
+    .team-image {
+        width: 90vw;
+        height: auto;
+    }
+
+    div > img {
+        height: auto;
+        width: 90vw;
+    }
+
+    table {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+
+    .text-block {
+        width: 90%;
+    }
+
+    .sec_img {
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 0;
+    }
+
+    .image-container {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+        position: relative; /* Assicura che il testo sia posizionato correttamente */
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .text {
+        font-size: 18px;
+        position: absolute;
+        top: 70%; /* Posiziona il testo vicino al limite inferiore dell'immagine */
+        left: 75%;
+        transform: translateX(-50%); /* Centra orizzontalmente */
+        text-align: center; /* Centra il testo */
+    }
+
+    .text2 {
+        flex-direction: column;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .image1 {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .coach-description {
+        max-width: 100%;
+    }
+
+    .main-nav {
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .nav-link, .nav-link1 {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .roster-title {
+        font-size: 20px;
+    }
+
+    .position-title, .position-title1 {
+        margin-top: 5%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .coach-image {
+        width: 90%;
+        height: auto;
+    }
+
+    .coach_container {
+        flex-direction: column;
+    }
+
+    .coach-description {
+        font-size: 14px;
+    }
+    .bold1 {
+        font-weight: bold;
+        width: 100%;
+        font-size: 100%;
+        text-align: left; /* Centra il testo */
+    }
+}
+
