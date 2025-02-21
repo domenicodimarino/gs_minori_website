@@ -155,7 +155,7 @@
       display: block;
     }
   
-    .nav-links.active {
+    .nav-links.active_nav {
       display: flex;
       transform: translateY(0); /* Aggiungi questa linea */
     }
