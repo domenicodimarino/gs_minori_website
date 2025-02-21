@@ -168,7 +168,15 @@ body::before {
     height: auto;
     border: 2px solid white; /* Aggiungi questa linea per il bordo */
     border-radius: 5px; /* Aggiungi questa linea per bordi arrotondati */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
+.image-item img:hover{
+    transform: scale(1.04);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    }
 
 .image-item p {
     margin-top: 10px;
