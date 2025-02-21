@@ -27,9 +27,10 @@ h1 {
     text-align: center;
     color: white;
     padding: 2px;
+    font-size:37px;
     margin-bottom: 5px;
     font-weight: bold; /* Rende il testo più spesso */
-   -webkit-text-stroke: 1.5px #0d1459;
+   text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
     max-width: 300px;
     margin: 10px auto; /* Centra il box orizzontalmente */
     border-radius: 10px;
@@ -356,25 +357,28 @@ max-height: 90vh;
 .sub-nav {
     text-align: center;
     margin: 20px 0;
+   
 }
 
 .sub-nav .nav-link1 {
-    color: whitesmoke;
+    color: whitesmoke;  
     font-size: 20px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
     margin: 0 15px;
     text-decoration: none;
+    filter: brightness(0.7);    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */ 
 }
 
 .sub-nav .nav-link1:hover {
-    text-decoration: underline;
+    text-decoration: underline;  
 }
 
-.nav-link1.active {
-    color: #0d1459;;
-    -webkit-text-stroke: 0.2px white;
 
+.nav-link1.active {
+    color: white;
+   filter: brightness(1);
+   text-shadow: 0.5px 0.5px 2px white; /* Aggiunge un'ombra al testo */
 }
 
 /* Media queries per dispositivi mobili */
