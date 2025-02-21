@@ -25,11 +25,11 @@ body::before {
 }
 h1 {
     text-align: center;
-    color: #0d1459;
+    color: white;
     padding: 2px;
     margin-bottom: 5px;
     font-weight: bold; /* Rende il testo più spesso */
-    background-color: white;
+   -webkit-text-stroke: 1.5px #0d1459;
     max-width: 300px;
     margin: 10px auto; /* Centra il box orizzontalmente */
     border-radius: 10px;
@@ -423,6 +423,7 @@ h1 {
 
 .sub-nav .nav-link1 {
     color: whitesmoke;
+    font-size: 20px;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
     margin: 0 15px;
@@ -434,5 +435,7 @@ h1 {
 }
 
 .nav-link1.active {
-    color: black;
+    color: #0d1459;;
+    -webkit-text-stroke: 0.2px white;
+
   }
