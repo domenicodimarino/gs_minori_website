@@ -52,7 +52,7 @@
     
     A completare il quadro, la <strong>Preparatrice Atletica D'Amato Marianna</strong> lavora instancabilmente per garantire che ogni atleta mantenga livelli ottimali di condizione fisica, elementi imprescindibili per affrontare le sfide in campo.<br><br>
     
-    Infine, il settore <strong>MiniBasket</strong>, <img src="photo_club/andrea&Federico.jpeg" alt="" class="mini">fondamentale per avvicinare i più piccoli al mondo della pallacanestro, è coordinato da <strong>Dipino Andrea</strong> e <strong>Apicella Federico</strong>, supportati dall'<strong>Assistente MiniBasket Di Bianco Giancarlo</strong>, che insieme instaurano un clima di entusiasmo e di apprendimento, preparando le future generazioni con passione e professionalità.<br><br>
+    Infine, il settore <strong>MiniBasket</strong>, <img src="photo_club/andrea&Federico.jpeg" alt="" class="mini" id="mini_basket_photo">fondamentale per avvicinare i più piccoli al mondo della pallacanestro, è coordinato da <strong>Dipino Andrea</strong> e <strong>Apicella Federico</strong>, supportati dall'<strong>Assistente MiniBasket Di Bianco Giancarlo</strong>, che insieme instaurano un clima di entusiasmo e di apprendimento, preparando le future generazioni con passione e professionalità.<br><br>
     
     In sintesi, lo staff del GS Minori è una squadra coesa e versatile, capace di coniugare <strong>esperienza, innovazione e amore per il gioco</strong>, elementi che rendono il club un punto di riferimento nella pallacanestro della Costiera Amalfitana.
   </p>
