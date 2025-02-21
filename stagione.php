@@ -14,9 +14,6 @@
 
     <main>
         <section class="calendario">
-        <h1 id="calendario">Calendario delle Partite</h1>
-        </section>
-        <section class="calendario">
             <div class="partita">
                 <h2>Prossima Partita</h2>
                 <div id="prossima-partita">
