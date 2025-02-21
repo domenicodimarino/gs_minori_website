@@ -105,10 +105,10 @@
 </head>
 <body>
     <main>
-    <h1>Pagamento Completato</h1>
+    <h1>Complimenti, Pagamento Completato</h1>
+    <h2>Ci vediamo a bordo campo!!</h2>
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $matchID = $_GET['matchID'];
         $match = $_GET['match'];
         $importo = $_GET['importo'];
         $nome = $_GET['nome'];
@@ -124,8 +124,7 @@
         $formattedDate = $date->format('d-m-Y');
 
         echo "<section id='buyer_data'>";
-        echo "<h2>Riepilogo ordine</h2>";
-        echo "<p>MatchID: " . htmlspecialchars($matchID) . "</p>";
+        echo "<h3>Riepilogo ordine</h3>";
         echo "<p>Match: " . htmlspecialchars($match) . "</p>";
         echo "<p>Importo: €" . number_format($importo, 2, ',', '.') . "</p>";
         echo "<p>Nome: " . htmlspecialchars($nome) . "</p>";
@@ -139,7 +138,7 @@
 
         // Visualizza i biglietti acquistati
         echo "<section id='order_summary'>";
-        echo "<h2>Biglietti acquistati</h2>";
+        echo "<h3>Biglietti acquistati</h3>";
         echo "<ul>";
         foreach ($_GET['settore'] as $i => $settore) {
             $numero_biglietti = $_GET['numero_biglietti'][$i];

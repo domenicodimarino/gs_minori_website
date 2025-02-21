@@ -1,69 +1,110 @@
-figure{
+body {
+    background: url('photo_ticket/tickets.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.info {
+    color: black;
+    font-size: 18px;
+}
+
+.availability{
+    color: black;
+    min-width: 180px;
+    width: 15%;
+}
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
-    padding: 10px;
+    margin-top: 20px;
 }
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-}
-.ticket_section{
-    display: flex;
-    flex-direction: row;
-    align-items: stretch; /* serve per avere la stessa altezza dei paragrafi*/
-    margin: 10px;
-    justify-content: space-between; /* Aggiungi questa riga */
-}
-.data_match{
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 20%;
-    border: 5px solid #718084;
-    border-radius: 5px;
-    text-align: center; /* Centra il testo orizzontalmente */
-    display: flex;
-    align-items: center; /* Centra il contenuto verticalmente */
-    justify-content: center; /* Centra il contenuto orizzontalmente */
-}
-.match{
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 60%;
-    border: 5px solid #718084;
-    border-radius: 5px;
-    text-align: center; /* Centra il testo orizzontalmente */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.ticket_button{
-    margin-left:auto;
+
+.all_tickets {
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
     border-radius: 10px;
-    border-style: solid;
-    width: 10%;
-    height: auto;
-    border-color: black;
-    background-color: #69140E;
-    color: white;
-    cursor: pointer;
-text-decoration: none; /* Rimuove la sottolineatura del link */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ffffff 30%, #dfe9f3 100%);
+}
+
+.ticket_month {
+    font-size: 22px;
+    font-weight: bold;
+    color: #E10600;
+    border-bottom: 2px solid #E10600;
+    padding-bottom: 5px;
+    margin: 20px 0 10px;
+    text-align: left;
+}
+
+.ticket_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.ticket_section:hover {
+    transform: scale(1.02);
+}
+
+.data_match {
+    font-size: 18px;
+    font-weight: bold;
+    color: #E10600;
+    text-align: center;
+    width: 25%;
+    min-width: 200px
+}
+
+.match {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px; /* Aggiungi padding per migliorare l'aspetto */
+    flex-grow: 1;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    width: 45%;
 }
-.all_tickets{
-    width:90%
+
+.team_logo {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
 }
-.team_logo{
-    width: 100px;
-    height: 100px;
-    margin-left:10px;
-    margin-right:10px;
+
+.ticket_button {
+    background-color: #E10600;
+    color: white;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
-    border: 3px solid #718084;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.ticket_button:hover {
+    background-color: #B90500;
 }

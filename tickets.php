@@ -50,11 +50,9 @@
         
         <main>
             <h1>Biglietti</h1>
-                <figure>
-                    <img id="tickets_photo" src="photo_ticket/tickets.jpg" alt="tickets">
-                </figure>
+              
                 <section class="all_tickets">
-                    Di seguito sono elencati i biglietti disponibili per l'acquisto.
+                    <div class="info">Acquista subito i tuoi biglietti per le partite del GS Minori!</div>                
                     <section class="ticket_section">
                         <p class="data_match">
                             <?php echo $match1["data"] ?>
@@ -65,9 +63,9 @@
                             <img src="photo_ticket/opponents_logo/portici2000.png" alt="logo Portici 2000" class="team_logo">
                         </p>
                         <p class="availability">
-                            Biglietti disponibili: <?php echo $total_available1; ?>
+                            Biglietti disponibili: <br> <?php echo $total_available1; ?>
                         </p>
-                        <a href="choose_ticket.php?matchID=1" class="ticket_button">>></a>
+                        <a href="choose_ticket.php?matchID=1" class="ticket_button">Acquista</a>
                     </section>
                     <section class="ticket_section">
                         <p class="data_match">
@@ -79,9 +77,9 @@
                         <img src="photo_ticket/opponents_logo/sammaritana.jpeg" alt="logo Sammaritana" class="team_logo">
                         </p>
                         <p class="availability">
-                            Biglietti disponibili: <?php echo $total_available2; ?>
+                            Biglietti disponibili: <br><?php echo $total_available2; ?>
                         </p>
-                        <a href="choose_ticket.php?matchID=2" class="ticket_button">>></a>
+                        <a href="choose_ticket.php?matchID=2" class="ticket_button">Acquista</a>
                     </section>
                     <section class="ticket_section">
                         <p class="data_match">
@@ -93,9 +91,9 @@
                         <img src="photo_ticket/opponents_logo/consilina.png" alt="logo Sala Consilina" class="team_logo">
                         </p>
                         <p class="availability">
-                            Biglietti disponibili: <?php echo $total_available3; ?>
+                            Biglietti disponibili: <br><?php echo $total_available3; ?>
                         </p>
-                        <a href="choose_ticket.php?matchID=3" class="ticket_button">>></a>
+                        <a href="choose_ticket.php?matchID=3" class="ticket_button">Acquista</a>
                     </section>
                     <section class="ticket_section">
                         <p class="data_match">
@@ -107,9 +105,9 @@
                         <img src="photo_ticket/opponents_logo/cusnapoli.png" alt="logo CUS Napoli" class="team_logo">
                         </p>
                         <p class="availability">
-                            Biglietti disponibili: <?php echo $total_available4; ?>
+                            Biglietti disponibili: <br> <?php echo $total_available4; ?>
                         </p>
-                        <a href="choose_ticket.php?matchID=4" class="ticket_button">>></a>
+                        <a href="choose_ticket.php?matchID=4" class="ticket_button">Acquista</a>
                     </section>
                 </section>
         </main>

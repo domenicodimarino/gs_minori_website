@@ -75,6 +75,7 @@ if(isset($_SESSION['last_ticket_id']))
 
         <!-- Schermata di acquisizione dati dell'acquirente -->
         <form method="post" style="display: flex;" id="payment-form" action="ticket_completed.php">
+            <h1>Termina il tuo pagamento qui: <?php echo isset($_SESSION['username']) ? $_SESSION['username'] : 'utente'; ?></h1>
         <h2> Il totale da pagare è di <?php echo $total_price; ?> € </h2>
             <section id="order_summary" class="buyer_form">
                 <h1> Riepilogo ordine </h1>
@@ -105,7 +106,7 @@ if(isset($_SESSION['last_ticket_id']))
                 <?php endfor; ?>
                 <p>
                 <label for="nome">
-                    Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["nome"]) ? $_SESSION['nome'] : ''; ?>" placeholder="Nome">
+                    Nome: <br> <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["nome"]) ? $_SESSION['nome'] : ''; ?>" placeholder="Nome">
                 </label>
                 </p>
                 <p>
@@ -138,7 +139,7 @@ if(isset($_SESSION['last_ticket_id']))
                 <p>
                     <label for="residenza">
                         Indirizzo di residenza: <input type="text" id="residenza" name="residenza" placeholder="Indirizzo di residenza" required>
-                        <img src="gps.png" onclick="getLocation()" style="cursor: pointer;">
+                        <i class="fa-solid fa-location-dot" onclick="getLocation()" style="cursor: pointer;"></i>
                     </label>
                 </p>
                 <p>

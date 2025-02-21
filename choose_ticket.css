@@ -1,179 +1,110 @@
+body {
+    background-color: #121212; /* Sfondo scuro */
+    background: url('photo_ticket/tickets.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #000000; /* Cambia il colore del testo a nero */
+}
+
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
 }
-main > form{
-    width: 90%;
+
+h1,h2,h4{
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Effetto ombra */
+    padding: 5px;
 }
-figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
+
+h4{
     padding: 10px;
 }
 
-figure > img {
-    width: 80%;
-    height: auto;
-}
-main > .initial_view{
-    width: 90%;
-}
-.sector_choice {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    justify-content: space-between;
-    align-items: center; /* Assicura che tutti gli elementi siano allineati verticalmente */
-}
-form .sector_choice{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    justify-content: space-between;
-    align-items: center; /* Assicura che tutti gli elementi siano allineati verticalmente */
+.tabella {
+    border-radius: 10px;
+    margin: 10px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(67, 67, 67, 0.5) 100%);
 }
 
-.sector_type {
-    width: 22%;
-    border: 5px solid #718084;
-    border-radius: 5px;
-    text-align: left;
+
+.container {
+    background-color: #f5f5f5;
+    width: 80%;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    color: #000000; /* Cambia il colore del testo a nero */
+}
+
+.sector_choice {
     display: flex;
-    align-items: center; /* Assicura che il contenuto sia centrato verticalmente */
-    justify-content: left;
-    padding: 10px; /* Aggiungi padding per migliorare l'aspetto */
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 20px; /* Aumenta la distanza tra i settori */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.sector_choice:hover {
+    background-color: #dfe9f3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+.sector_type {
+    width: 25%;
+    font-weight: bold;
+    color: #000000; /* Cambia il colore del testo a nero */
+    text-align: center;
+    
 }
 
 .tickets_number {
-    width: 55%;
-    border: 5px solid #718084;
-    border-radius: 5px;
-    text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px; /* Aggiungi padding per migliorare l'aspetto */
+    gap: 10px;
+    color: #000000; /* Cambia il colore del testo a nero */
+    text-align: center;
+    width: 50%;
+    padding-left: 100px;
 }
 
 .ticket_price {
-    width: 7%; /* Aumenta la larghezza per migliorare l'aspetto */
-    display: flex;
-    border: 5px solid darkred;
-    border-radius: 5px;
-    align-items: center; /* Assicura che il contenuto sia centrato verticalmente */
-    justify-content: right; /* Centra il contenuto orizzontalmente */
-    padding: 10px; /* Aggiungi padding per migliorare l'aspetto */
-}
-.tickets_number > img{
-    cursor: pointer;
-}
-#buyer_data{
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: yellowgreen;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi effetto ombrato */
-    padding: 20px; /* Aggiungi padding per migliorare l'aspetto */
-    border-radius: 10px; /* Aggiungi bordi arrotondati */
-}
-#order_summary{
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: cyan;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi effetto ombrato */
-    padding: 20px; /* Aggiungi padding per migliorare l'aspetto */
-    border-radius: 10px; /* Aggiungi bordi arrotondati */
-}
-#sex_choice {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 85%; /* Imposta la larghezza automatica */
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+    color: darkred;
+   
 }
 
-#sex_choice label {
-    margin-right: 10px;
-}
-
-#sex_choice input[type="radio"] {
-    margin-right: 5px;
-}
-#card_data{
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #03bb85;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi effetto ombrato */
-    padding: 20px; /* Aggiungi padding per migliorare l'aspetto */
-    border-radius: 10px; /* Aggiungi bordi arrotondati */
-}
-.buyer_form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.buyer_form label{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.buyer_form p{
-    width: 85%;
-}
-#payment-form{
-    width: 40%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra orizzontalmente il contenuto */
-}
-#payment-form input{
-    width: 55%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 10px 0;
-    border-bottom: 1px solid #ccc;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-#payment-form h1{
-    margin-bottom:10px;
-    margin-top: 10px;
-}
-#submit-button{
-    width: fit-content;
-    padding: 30px;
-    justify-content: center;
-    border: 3px solid black;
-    border-radius: 10px;
-    background-color: #03bb85;
+button {
+    background-color: #d32f2f;
     color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
     cursor: pointer;
-    float: right;
-    margin-top: 50px;
+    transition: background 0.3s;
 }
+
+#submit-button {
+    background-color: #d32f2f; /* Colore rosso */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+    float: right;
+}
+
+#submit-button:hover {
+    background-color: #b71c1c;
+}
+

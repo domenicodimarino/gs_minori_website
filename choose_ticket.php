@@ -110,13 +110,14 @@
 
         <main>
         <h1>Seleziona i tuoi biglietti</h1>
-        <p>Match selezionato: <?php echo $match[$matchID] ?></p>
-        <p>Scegli il numero di biglietti per ciascun settore (massimo in base alla disponibilità):</p>
+        <h2>Match selezionato: <?php echo $match[$matchID] ?></h2>
+        <h4>Scegli il numero di biglietti per ciascun settore (massimo in base alla disponibilità):</h4>
 
         <section class="initial_view" id="initial_view">
             <figure>
                 <img src="photo_ticket/piantina.jpeg" alt="Piantina palazzetto con settori">
             </figure>
+          <section class="tabella">
             <section class="sector_choice">
                 <p class="sector_type">
                     <strong>SETTORE</strong>
@@ -148,14 +149,16 @@
                             <input type="number" name="numero_biglietti[<?php echo $i; ?>]" min="0" max="<?php echo $availability; ?>" id="tickets<?php echo $i; ?>" value="0" readonly>
                             <img src="plus_button.png" id="plus<?php echo $i; ?>" onclick="increase_number(<?php echo $i; ?>)" style="margin-left:30px" class="plus_button">
                         </p>
+                        <p class="availability">
+                            Biglietti disponibili: <div style="text-align:center"><?php echo $availability; ?></div>
+                        </p>
                         <p class="ticket_price">
                             <?php echo $sector_price[$i]; ?> €
                         </p>
-                        <p class="availability">
-                            Biglietti disponibili: <?php echo $availability; ?>
-                        </p>
+                      
                     </section>
                 <?php endfor; ?>  
+              </section>
                 <input type="submit" value="CONFERMA" onclick="return check_ticket_data(this.form)" id="submit-button">
             </form>
         </section>
