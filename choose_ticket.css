@@ -107,4 +107,7 @@ button {
 #submit-button:hover {
     background-color: #b71c1c;
 }
+.minus_button,.plus_button{
+    cursor: pointer;
+}
 
