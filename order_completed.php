@@ -155,7 +155,7 @@ pg_query($db, "COMMIT");
         $formattedDate = $date->format('d-m-Y');
 
         echo "<section id='buyer_data'>";
-        echo "<h2>Riepilogo ordine</h2>";
+        echo "<h2>Riepilogo ordine n. $orderId</h2>";
         echo "<p>Importo: €" . number_format($importo, 2, ',', '.') . "</p>";
         echo "<p>Nome: " . htmlspecialchars($nome) . "</p>";
         echo "<p>Cognome: " . htmlspecialchars($cognome) . "</p>";
