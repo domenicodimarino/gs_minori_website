@@ -21,6 +21,7 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1; /* Assicurati che l'immagine di sfondo sia dietro il contenuto */
+    filter: brightness(0.7);
 }
 h1 {
     text-align: center;

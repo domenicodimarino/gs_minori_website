@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="homepage.css" type="text/css"/>
     </head>
     <body>
-    
+    <img src="fogliobianco.jpg" id="sfondo" alt="sfondo" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; opacity:0.5;">
 <main>
     <section id="homepage-links">
         <h1>Benvenuto sul sito ufficiale del GS Minori</h1>
@@ -74,7 +74,7 @@
                 <a href="fan.php" class="card-link">Vai ai Fan</a>
             </div>
         </div>
-                <h1 style="margin-top:30px; margin-bottom:30px;" id="guest_paragraph"> Per accedere a queste altre sezioni, devi essere autenticato. </h1>
+                <h1 style="margin-top:30px; margin-bottom:30px;" id="guest_paragraph"> Entra a far parte della nostra Fan Base! </h1>
                 <div class="home-links" id="solo_ospiti">
                 <div class="home-card">
                     <div class="card-icon"><i class="fa-solid fa-heart"></i></div>

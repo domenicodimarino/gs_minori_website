@@ -104,7 +104,7 @@
                 [
                     'name' => 'Borsone GS Minori',
                     'price' => '24.99',
-                    'images' => ['photo_shop/borsone_av.jpg', 'photo_shop/borsone_di.jpg']
+                    'images' => ['photo_shop/borsone.jpg']
                 ],
                 [
                     'name' => 'Zaino GS Minori',
@@ -147,7 +147,10 @@
                 }
                 echo '</div>';
                 echo '</div>';
-                echo '<p>' . $product['name'] . '<br>' . $product['price'] . '€</p>';
+                echo '<div class="product-details">';
+                echo '<div class="product-info">';
+                echo '<p class="description">' . $product['name'] . '</p>';
+                echo '<p class="price">' . $product['price'] . '€</p>';
                 echo '<input type="hidden" name="product_image[]" value="' . $product['images'][0] . '">';
                 echo '<input type="hidden" name="product_name[]" value="' . $product['name'] . '">';
                 echo '<input type="hidden" name="product_price[]" value="' . $product['price'] . '">';
@@ -157,6 +160,8 @@
                 echo '<button type="button" class="increment">+</button>';
                 echo '</div>';
                 echo '<p class="inventory-info">Disponibilità: ' . $availableQuantity . ' unità</p>';
+                echo '</div>';
+                echo '</div>';
                 echo '</div>';
             }
             ?>
