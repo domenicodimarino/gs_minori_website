@@ -82,3 +82,39 @@ h2 a {
 .playbasket-table > tbody > tr:nth-child(even){
     background-color: #c0c0c0;
 }
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .calendario {
+        margin: 5px auto;
+        padding: 5px;
+    }
+    .table-container{
+        margin: 5px auto;
+    }
+
+    .playbasket-table {
+        margin: 5px auto;
+        max-width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .playbasket-table > thead > tr > th,
+    .playbasket-table > tbody > tr > td {
+        padding: 5px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
