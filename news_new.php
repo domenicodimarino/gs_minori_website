@@ -283,7 +283,7 @@
                     // Show the target section and hide others
                     videoSections.forEach(section => {
                         if (section.id === target) {
-                            section.style.display = 'block';
+                            section.style.display = 'flex';
                         } else {
                             section.style.display = 'none';
                         }
@@ -295,7 +295,7 @@
             const defaultLink = document.querySelector('.sub-nav .nav-link1[data-target="all-section"]');
             if (defaultLink) {
                 defaultLink.classList.add('active');
-                document.getElementById('all-section').style.display = 'block';
+                document.getElementById('all-section').style.display = 'flex';
             }
         });
     </script>

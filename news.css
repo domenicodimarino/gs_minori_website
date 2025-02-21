@@ -8,7 +8,6 @@ body {
     padding-bottom: 100px; /* Altezza del footer */
 }
 
-
 body::before {
     content: "";
     position: fixed;
@@ -23,6 +22,7 @@ body::before {
     z-index: -1; /* Assicurati che l'immagine di sfondo sia dietro il contenuto */
     filter: brightness(0.7);
 }
+
 h1 {
     text-align: center;
     color: white;
@@ -59,7 +59,8 @@ h1 {
     cursor: pointer; /* Cambia il cursore per indicare che l'articolo è cliccabile */
     transition: transform 0.2s; /* Aggiungi una transizione per l'effetto di ingrandimento */
 }
-.news-articles article h2{
+
+.news-articles article h2 {
     text-transform: uppercase;
 }
 
@@ -110,6 +111,8 @@ h1 {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
 .modal-content {
@@ -131,6 +134,12 @@ h1 {
 .modal-content img {
     width: 100%;
     height: auto;
+max-height: 90vh;
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    max-width: 100%;
 }
 
 .close {
@@ -217,8 +226,7 @@ h1 {
     padding: 20px;
     text-align: center;
     margin: 20px;
-    
-}
+    }
 
 .photo-gallery h2 {
     font-size: 20px;
@@ -256,83 +264,10 @@ h1 {
     transform: scale(1.1); /* Ingrandisce leggermente l'immagine al passaggio del mouse */
 }
 
-/* Stile per l'ingrandimento dell'immagine */
-.modal {
-    display: none; /* Nasconde il modal di default */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: center; /* Centra verticalmente */
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-.modal-content img {
-    width: 100%;
-    height: auto;
-    max-height: 90vh;
-    border: none;
-    padding: 0;
-    margin: 0;
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    cursor: pointer;
-    user-select: none;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
 /* Stile dei video */
 .video-gallery {
     padding: 20px;
     text-align: center;
-    margin: 20px;
-   
 }
 
 .video-gallery.active {
@@ -365,6 +300,8 @@ h1 {
 .videos video {
     width: 300px;
     height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
     border-radius: 5px;
     cursor: pointer; /* Cambia il cursore per indicare che il video è cliccabile */
     transition: transform 0.2s; /* Aggiungi una transizione per l'effetto di ingrandimento */
@@ -438,4 +375,63 @@ h1 {
     color: #0d1459;;
     -webkit-text-stroke: 0.2px white;
 
-  }
+}
+
+/* Media queries per dispositivi mobili */
+@media (max-width: 768px) {
+    body {
+        padding-top: 50px; /* Riduci l'altezza dell'header */
+        padding-bottom: 50px; /* Riduci l'altezza del footer */
+    }
+
+    h1 {
+        font-size: 24px;
+        max-width: 90%;
+    }
+
+    .news-articles article {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .modal-content,
+    .modal-article-content {
+        width: 90%;
+    }
+
+    .photo-gallery {
+        padding: 0;
+        height: 20vh;
+    }
+
+    .gallery-wrapper {
+        height: 100%;
+    }
+
+    .gallery {
+        height: 100%;
+        width: auto;
+    }
+
+    .video-gallery {
+        display: flex;
+        overflow-x: scroll;
+        gap: 20px;
+        padding: 10px;
+        -ms-overflow-style: none;  /* Nasconde la barra di scorrimento in Internet Explorer e Edge */
+        scrollbar-width: none;  /* Nasconde la barra di scorrimento in Firefox */
+    }
+
+    .gallery img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .video-gallery h2,
+    .photo-gallery h2 {
+        font-size: 18px;
+    }
+    .sub-nav a{
+        font-size: 14px;
+    }
+}
