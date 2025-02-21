@@ -40,7 +40,7 @@ body::before {
     margin-right: 10px;
 }
 
-/* Contenitore per la "X" e la lente */
+/* Contenitore per la "X" */
 .icon-group {
     display: flex;
     align-items: center;
