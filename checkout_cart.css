@@ -1,136 +1,161 @@
+/* Stile generale */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    font-family: Arial, sans-serif;
 }
-main > form{
-    width: 90%;
+
+body {
+    background-image: url('photo_shop/sfondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-#buyer_data{
+
+h2,h1 {
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 5px;
+}
+li{
+    list-style-type: none;
+}
+
+/* Stile del form principale */
+main > form {
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Riquadro "Riepilogo Ordine" */
+#order_summary {
     width: 100%;
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: yellowgreen;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi effetto ombrato */
-    padding: 20px; /* Aggiungi padding per migliorare l'aspetto */
-    border-radius: 10px; /* Aggiungi bordi arrotondati */
+    text-align: center;
+    background-color: #0d1459; /* Blu più tenue */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
 }
-#order_summary{
+
+/* Riquadro "Dati dell'acquirente" */
+#buyer_data {
     width: 100%;
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: cyan;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi effetto ombrato */
-    padding: 20px; /* Aggiungi padding per migliorare l'aspetto */
-    border-radius: 10px; /* Aggiungi bordi arrotondati */
+    background-color: #e9e9e9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    color: #141204;
 }
+
+#buyer_data label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Input generali */
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Selezione sesso */
 #sex_choice {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start;
-    width: 85%; /* Imposta la larghezza automatica */
+    width: 89%;
+    margin-top: 10px;
 }
 
 #sex_choice label {
+    font-size: 16px;
     margin-right: 10px;
 }
 
-#sex_choice input[type="radio"] {
-    margin-right: 5px;
-}
-#card_data{
+/* Sezione "Dati di pagamento" */
+#card_data {
     width: 100%;
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #03bb85;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi effetto ombrato */
-    padding: 20px; /* Aggiungi padding per migliorare l'aspetto */
-    border-radius: 10px; /* Aggiungi bordi arrotondati */
-}
-.buyer_form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.buyer_form label{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.buyer_form p{
-    width: 85%;
-}
-#payment-form{
-    width: 40%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; Centra verticalmente il contenuto */
-    align-items: center; /* Centra orizzontalmente il contenuto */
-}
-#payment-form input{
-    width: 55%;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 10px 0;
-    border-bottom: 1px solid #ccc;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-#payment-form h1{
-    margin-bottom:10px;
-    margin-top: 10px;
-}
-#submit_button{
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-#submit-button, #back-button {
-    width: 80%;
-    border: 3px solid black;
+    background-color: #0d1459;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     border-radius: 10px;
     color: white;
-    cursor: pointer;
-    margin-top: 20px;
-    height: 40px;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
+#payment-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#payment-form input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.fa-solid.fa-location-dot{
+    font-size: 25px;
+    margin-left: 5px;
+}
+
+/* Pulsante di conferma */
 #submit-button {
-    background-color: #4CAF50; /* Sfondo verde */
+    float: center;
+    margin: 10px;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    background-color: #bd1010; /* Rosso più acceso */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.3s;
 }
 
 #submit-button:hover {
-    background-color: #45a049;
+    background-color: #b71c1c;
+    transform: scale(1.05);
 }
 
+/* Back-Button */
 #back-button {
-    background-color: #B22222; /* Sfondo rosso scuro */
+    margin: 10px;
+    float: center;
+    width: 80%;
+    border: none;
+    border-radius: 10px;
+    background-color: #00A896; /* Verde più acceso */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 12px;
+    text-transform: uppercase;
+    transition: background 0.3s, transform 0.3s;
 }
 
 #back-button:hover {
-    background-color: #8B0000;
+    background-color: #007f6c;
+    transform: scale(1.05);
 }
 
 #card-element {
@@ -139,4 +164,5 @@ main > form{
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-top: 10px;
+    background-color: white;
 }

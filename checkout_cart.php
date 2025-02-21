@@ -80,7 +80,7 @@
                 ?>
                 <p>
                 <label for="nome">
-                    Nome: <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["nome"]) ? $_SESSION['nome'] : ''; ?>" placeholder="Nome">
+                    Nome: <br> <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["nome"]) ? $_SESSION['nome'] : ''; ?>" placeholder="Nome">
                 </label>
                 </p>
                 <p>
@@ -110,10 +110,10 @@
                         Telefono: <input type="tel" id="telefono" name="telefono" placeholder="Numero di telefono">            
                     </label>
                 </p>
-                <p style="width:90%; margin-left:5%;">
+                <p >
                     <label for="residenza">
                         Indirizzo di residenza: <input type="text" id="residenza" name="residenza" placeholder="Indirizzo di residenza" required>
-                        <img src="gps.png" onclick="getLocation()" style="cursor: pointer; margin-left:2px">
+                        <i class="fa-solid fa-location-dot" onclick="getLocation()" style="cursor: pointer;"></i>
                     </label>
                 </p>
                 <p>
