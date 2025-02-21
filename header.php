@@ -55,7 +55,19 @@
                     </ul>
                 </li>
                 </ul>
-                
+                <div class="hamburger">
+                    <img src="hamburger_menu.png" alt="hamburger_menu" id="hamburger_menu">
+                 </div>
         </nav>
  </header>
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  });
+</script>
  <?php require 'login_header.php'?>
