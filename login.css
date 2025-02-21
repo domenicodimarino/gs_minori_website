@@ -1,12 +1,21 @@
+/* Stili esistenti */
 main{
     font-family: 'Montserrat', sans-serif;
     background-color: white;
+}
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0.5;
+    z-index: -1;
 }
 main > div{
     width: 50%;
     align-items: center;
     justify-content: center;
-    align-items: center;
 }
 div > form{
     width: 90%;
@@ -52,4 +61,31 @@ button{
 }
 form label > img{
     cursor: pointer;
+}
+
+/* Media query per dispositivi mobili */
+@media (max-width: 768px) {
+    main{
+        width: 100%;
+    }
+    main > div{
+        width: 95%;
+        align-items: center;
+        justify-content: center;
+    }
+    .submit_button, button {
+        width: 50vw;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    form input {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    form label > img {
+        width: 15px;
+    }
 }

@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>GS Minori - Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="login.css" type="text/css"/>
         <script language="javascript" type="text/javascript">
 
@@ -79,7 +80,7 @@
     
 
 ?>
-<video src="spalti.mp4" autoplay loop muted style="position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 100%; opacity: 0.5; z-index: -1;">
+<video src="spalti.mp4" autoplay loop muted>
     Video cannot be displayed.
     </video>
     <main style="align-items: center; display: flex; flex-direction: column; ">
