@@ -4,7 +4,7 @@
 
 CREATE TABLE IF NOT EXISTS public.orders
 (
-    order_id integer NOT NULL DEFAULT nextval('orders_order_id_seq'::regclass),
+    order_id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
     user_name character varying COLLATE pg_catalog."default" NOT NULL,
     total_price numeric(10,2) NOT NULL,
     order_date timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
