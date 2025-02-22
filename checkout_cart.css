@@ -12,8 +12,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1; /* Assicurati che l'immagine di sfondo sia dietro il contenuto */
-    filter: brightness(0.6);
 }
 
 h2,h1 {
@@ -178,16 +176,22 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
     main > form {
         width: 95%;
     }
+    h1{
+        text-align: center;
+    }
 
     #order_summary, #buyer_data, #card_data {
         padding: 10px;
     }
 
-    #sex_choice label {
-        margin-bottom: 5px;
+    #payment-form input {
+        width: 100%;
+    }
+    #payment-form input#residenza{
+        width: 90%;
     }
 
-    #submit-button, #back-button {
+    #submit-button {
         width: 100%;
     }
 }

@@ -151,7 +151,7 @@ foreach ($cart as $index => $item) {
         <?php else: ?>
             <div class='empty-cart-container'>
                 <h1 class='empty-cart-title'>IL TUO CARRELLO È VUOTO</h1>
-                <a href='shop.php' class='shop-button'>COMPRA I NOSTRI PRODOTTI</a>
+                <a href='shop.php' class='shopping-button'>COMPRA I NOSTRI PRODOTTI</a>
             </div>
         <?php endif; ?>
     </main>

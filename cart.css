@@ -98,21 +98,14 @@ body {
     transform: scale(1.05); /* Aggiungi effetto di ingrandimento */
 }
 
-.cart-title, .empty-cart-title {
-    background-color: white; /* Sfondo bianco */
-    text-align: center; /* Allinea il testo al centro */
-    padding: 10px; /* Aggiungi un po' di padding */
-    border-radius: 10px; /* Aggiungi bordi arrotondati */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra */
-    margin: 20px auto; /* Centra l'elemento e aggiungi margini verticali */
-    width: fit-content; /* Adatta la larghezza al contenuto */
-}
-
 .cart-title {
-    font-size: 24px; /* Aumenta la dimensione del font */
-    color: black; /* Colore del testo */
+    font-size: 26px; /* Aumenta la dimensione del font */
+    color: white; /* Colore del testo */
     font-family: 'Helvetica Now Text Medium', Times, serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
+    float: center; 
+    text-align: center;
+    margin: 20px;
 }
 
 .total-price-container {
@@ -151,6 +144,12 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra */
 }
 
+.empty-cart-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
 .shopping-container {
     display: flex;
     justify-content: space-between;
@@ -158,32 +157,24 @@ body {
     margin: 20px 0;
 }
 
-.shop-button {
+.shopping-button {
     background-color: #00A896; /* Sfondo verde */
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 20px ;
     cursor: pointer;
+    margin-left: 20px;
     border-radius: 20px; /* Bordi arrotondati */
     text-decoration: none;
     font-size: 12px;
     transition: background-color 0.3s, transform 0.3s; /* Aggiungi transizione per l'effetto hover */
 }
 
-.shop-button:hover {
+.shopping-button:hover {
     background-color: #008073;
     transform: scale(1.05); /* Aggiungi effetto di ingrandimento */
 }
 
-/* Contenitore principale */
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Assicura che il contenitore principale occupi almeno l'altezza della finestra */
-    padding: 20px;
-}
 
 /* Media queries per dispositivi mobili */
 @media (max-width: 768px) {
