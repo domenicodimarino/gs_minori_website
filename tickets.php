@@ -58,9 +58,9 @@
                             <?php echo $match1["data"] ?>
                         </p>
                         <p class="match">
-                        <img src="gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
+                        <img src="photo/photo_ticket/gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
                             <?php echo $match1["match"] ?>
-                            <img src="photo_ticket/opponents_logo/portici2000.png" alt="logo Portici 2000" class="team_logo">
+                            <img src="photo/photo_ticket/opponents_logo/portici2000.png" alt="logo Portici 2000" class="team_logo">
                         </p>
                         <p class="availability">
                             Biglietti disponibili: <br> <?php echo $total_available1; ?>
@@ -72,9 +72,9 @@
                             <?php echo $match2["data"] ?>
                         </p>
                         <p class="match">
-                        <img src="gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
+                        <img src="photo/photo_ticket/gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
                             <?php echo $match2["match"] ?>
-                        <img src="photo_ticket/opponents_logo/sammaritana.jpeg" alt="logo Sammaritana" class="team_logo">
+                        <img src="photo/photo_ticket/opponents_logo/sammaritana.jpeg" alt="logo Sammaritana" class="team_logo">
                         </p>
                         <p class="availability">
                             Biglietti disponibili: <br><?php echo $total_available2; ?>
@@ -86,9 +86,9 @@
                            <?php echo $match3["data"] ?>
                         </p>
                         <p class="match">
-                        <img src="gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
+                        <img src="photo/photo_ticket/gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
                             <?php echo $match3["match"] ?>
-                        <img src="photo_ticket/opponents_logo/consilina.png" alt="logo Sala Consilina" class="team_logo">
+                        <img src="photo/photo_ticket/opponents_logo/consilina.png" alt="logo Sala Consilina" class="team_logo">
                         </p>
                         <p class="availability">
                             Biglietti disponibili: <br><?php echo $total_available3; ?>
@@ -100,9 +100,9 @@
                             <?php echo $match4["data"] ?>
                         </p>
                         <p class="match">
-                        <img src="gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
+                        <img src="photo/photo_ticket/gsminori_logo_M.jpg" alt="logo GS Minori" class="team_logo">
                             <?php echo $match4["match"] ?>
-                        <img src="photo_ticket/opponents_logo/cusnapoli.png" alt="logo CUS Napoli" class="team_logo">
+                        <img src="photo/photo_ticket/opponents_logo/cusnapoli.png" alt="logo CUS Napoli" class="team_logo">
                         </p>
                         <p class="availability">
                             Biglietti disponibili: <br> <?php echo $total_available4; ?>

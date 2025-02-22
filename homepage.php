@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="homepage.css" type="text/css"/>
     </head>
     <body>
-    <img src="fogliobianco.jpg" id="sfondo" alt="sfondo" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; opacity:0.25;">
+    <img src="homepage/fogliobianco.jpg" id="sfondo" alt="sfondo" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; opacity:0.25;">
 <main>
     <section id="homepage-links">
         <h1>Benvenuto sul sito ufficiale del GS Minori</h1>

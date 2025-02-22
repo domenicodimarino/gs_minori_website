@@ -56,62 +56,62 @@
                 [
                     'name' => 'Canotta da gara HOME',
                     'price' => '29.99',
-                    'images' => ['photo_shop/canotta_avanti_home.jpeg', 'photo_shop/canotta_dietro_home.jpeg']
+                    'images' => ['photo/photo_shop/canotta_avanti_home.jpeg', 'photo/photo_shop/canotta_dietro_home.jpeg']
                 ],
                 [
                     'name' => 'Canotta da gara AWAY',
                     'price' => '29.99',
-                    'images' => ['photo_shop/canotta_avanti_away.jpeg', 'photo_shop/canotta_dietro_away.jpeg']
+                    'images' => ['photo/photo_shop/canotta_avanti_away.jpeg', 'photo/photo_shop/canotta_dietro_away.jpeg']
                 ],
                 [
                     'name' => 'Pantaloncini da gara HOME',
                     'price' => '19.99',
-                    'images' => ['photo_shop/pant_avanti_home.jpeg', 'photo_shop/pant_dietro_home.jpeg']
+                    'images' => ['photo/photo_shop/pant_avanti_home.jpeg', 'photo/photo_shop/pant_dietro_home.jpeg']
                 ],
                 [
                     'name' => 'Pantaloncini da gara AWAY',
                     'price' => '19.99',
-                    'images' => ['photo_shop/pant_avanti_away.jpeg', 'photo_shop/pant_dietro_away.jpeg']
+                    'images' => ['photo/photo_shop/pant_avanti_away.jpeg', 'photo/photo_shop/pant_dietro_away.jpeg']
                 ],
                 [
                     'name' => 'Felpa con cappuccio',
                     'price' => '29.99',
-                    'images' => ['photo_shop/felpa_cappuccio_avanti.jpeg', 'photo_shop/felpa_cappuccio_dietro.jpeg']
+                    'images' => ['photo/photo_shop/felpa_cappuccio_avanti.jpeg', 'photo/photo_shop/felpa_cappuccio_dietro.jpeg']
                 ],
                 [
                     'name' => 'Felpa senza cappuccio',
                     'price' => '19.99',
-                    'images' => ['photo_shop/felpa_nocap_avanti.jpeg', 'photo_shop/felpa_nocap_dietro.jpeg']
+                    'images' => ['photo/photo_shop/felpa_nocap_avanti.jpeg', 'photo/photo_shop/felpa_nocap_dietro.jpeg']
                 ],
                 [
                     'name' => 'Pantaloni GS Minori',
                     'price' => '14.99',
-                    'images' => ['photo_shop/pant_nocap.jpeg']
+                    'images' => ['photo/photo_shop/pant_nocap.jpeg']
                 ],
                 [
                     'name' => 'Coprimaglia GS Minori',
                     'price' => '24.99',
-                    'images' => ['photo_shop/coprimaglia_avanti.jpeg', 'photo_shop/coprimaglia_dietro.jpeg']
+                    'images' => ['photo/photo_shop/coprimaglia_avanti.jpeg', 'photo/photo_shop/coprimaglia_dietro.jpeg']
                 ],
                 [
                     'name' => 'Giubbino GS Minori',
                     'price' => '59.99',
-                    'images' => ['photo_shop/giubbino_avanti.jpeg', 'photo_shop/giubbino_avanti_2.jpeg', 'photo_shop/giubbino_dietro.jpeg']
+                    'images' => ['photo/photo_shop/giubbino_avanti.jpeg', 'photo/photo_shop/giubbino_avanti_2.jpeg', 'photo/photo_shop/giubbino_dietro.jpeg']
                 ],
                 [
                     'name' => 'Borsone GS Minori',
                     'price' => '24.99',
-                    'images' => ['photo_shop/borsone.jpg']
+                    'images' => ['photo/photo_shop/borsone.jpg']
                 ],
                 [
                     'name' => 'Zaino GS Minori',
                     'price' => '29.99',
-                    'images' => ['photo_shop/zaino_avanti.jpg', 'photo_shop/zaino_dietro.jpg']
+                    'images' => ['photo/photo_shop/zaino_avanti.jpg', 'photo/photo_shop/zaino_dietro.jpg']
                 ],
                 [
                     'name' => 'Felpa Tifoso GS Minori',
                     'price' => '39.99',
-                    'images' => ['photo_shop/felpa_1_avanti.jpg', 'photo_shop/felpa_1_dietro.jpg']
+                    'images' => ['photo/photo_shop/felpa_1_avanti.jpg', 'photo/photo_shop/felpa_1_dietro.jpg']
                 ]
             ];
 

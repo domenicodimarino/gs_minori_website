@@ -16,7 +16,7 @@
         </nav>
         <div class="roster"> <Strong><h3>MINIBASKET</h3></Strong></div> <br>
         <br>
-        <div> <img src="photo_teams/minibasket.png" alt="Foto Squadra" class="team-image"></div>
+        <div> <img src="photo/photo_teams/minibasket.png" alt="Foto Squadra" class="team-image"></div>
         <br>
         <div class="roster-title"> <strong>MINIBASKET</strong><br>Ecco la rosa ufficiale della stagione 2024/25</div>
         <table>
@@ -53,7 +53,7 @@
                 <div class="coach_container"> 
                     <div class="text2">
                         <div class="image1">
-                            <img src="photo_teams/jacopo.png" alt="Jacopo Porpora" class="coach-image">
+                            <img src="photo/photo_teams/jacopo.png" alt="Jacopo Porpora" class="coach-image">
                         </div>
                         <div class="info" id="allenatore">
                             <h1>Jacopo Porpora</h1><br>

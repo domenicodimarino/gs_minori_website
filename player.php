@@ -6,7 +6,7 @@ $players = [
         'age' => 21,
         'ruolo' => 'Centro',
         'number' => 34,
-        'image' => 'photo_teams/alemammato.png',
+        'image' => 'photo/photo_teams/alemammato.png',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=150012&action=view&eid=5'
     ],
     [
@@ -14,7 +14,7 @@ $players = [
         'age' => 26,
         'ruolo' => 'Guardia',
         'number' => 17,
-        'image' => 'photo_teams/cristian.jpg',
+        'image' => 'photo/photo_teams/cristian.jpg',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=59086&action=view&eid=5'
     ],
     [
@@ -22,7 +22,7 @@ $players = [
         'age' => 37,
         'ruolo' => 'Guardia',
         'number' => 13,
-        'image' => 'photo_teams/gennaro.jpg',
+        'image' => 'photo/photo_teams/gennaro.jpg',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=33743&action=view&eid=5'
     ],
     [
@@ -30,7 +30,7 @@ $players = [
         'age' => 24,
         'ruolo' => 'Ala piccola',
         'number' => 15,
-        'image' => 'photo_teams/alfonso_fusco.jpg',
+        'image' => 'photo/photo_teams/alfonso_fusco.jpg',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=107264&action=view&eid=5'
     ],
     [
@@ -38,7 +38,7 @@ $players = [
         'age' => 25,
         'ruolo' => 'Ala piccola',
         'number' => 30,
-        'image' => 'photo_teams/danilo.jpg',
+        'image' => 'photo/photo_teams/danilo.jpg',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=103073&action=view&eid=5'
     ],
     [
@@ -46,7 +46,7 @@ $players = [
         'age' => 21,
         'ruolo' => 'Ala piccola',
         'number' => 10,
-        'image' => 'photo_teams/gabriele.jpg',
+        'image' => 'photo/photo_teams/gabriele.jpg',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=139096&action=view&eid=5'
     ],
     [
@@ -54,7 +54,7 @@ $players = [
         'age' => 25,
         'ruolo' => 'Ala piccola',
         'number' => 77,
-        'image' => 'photo_teams/manuel.jpg',
+        'image' => 'photo/photo_teams/manuel.jpg',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=82795&action=view&eid=5'
     ],
     [
@@ -62,7 +62,7 @@ $players = [
         'age' => 52,
         'ruolo' => 'Ala grande',   
         'number' => 11,
-        'image' => 'photo_teams/giacinto.jpg',
+        'image' => 'photo/photo_teams/giacinto.jpg',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=33741&action=view&eid=5'
     ],
     [
@@ -70,7 +70,7 @@ $players = [
         'age' => 32,
         'ruolo' => 'Ala grande',
         'number' => 23,
-        'image' => 'photo_teams/vlad.jpg',
+        'image' => 'photo/photo_teams/vlad.jpg',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=35369&action=view&eid=5'
     ],
     [
@@ -78,7 +78,7 @@ $players = [
         'age' => 21,
         'ruolo' => 'Playmaker',
         'number' => 7,
-        'image' => 'photo_teams/alessio.jpg',
+        'image' => 'photo/photo_teams/alessio.jpg',
         'stats_link' => 'https://www.playbasket.it/campania/profile.php?exteid=4&extobj=4305&subj=1&season=2025&obj=133933&action=view&eid=5'
     ]
 ];

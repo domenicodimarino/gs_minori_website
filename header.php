@@ -1,6 +1,6 @@
 <header>
         <nav class="navbar">
-            <div class="logo"><a href="homepage.php"><img src="logo.png" alt="G.S. MINORI"></a></div>
+            <div class="logo"><a href="homepage.php"><img src="photo/photo_login/logo.png" alt="G.S. MINORI"></a></div>
             <ul class="nav-links">
                 <li class="dropdown">
                     <a href="news_new.php">News</a>
@@ -46,9 +46,9 @@
                         <li><a href="fan.php#concorsi">Concorsi</a></li>
                     </ul>
                 </li>
-                <li><a href="tickets.php" class="ticket-btn"><img src="ticket.png" alt="ticketphoto">Tickets</a></li>
+                <li><a href="tickets.php" class="ticket-btn"><img src="photo/photo_header/ticket.png" alt="ticketphoto">Tickets</a></li>
                 <li class="dropdown">
-                    <a href="login.php" class="login-btn"><img src="user.png" alt="userphoto">Login</a>
+                    <a href="login.php" class="login-btn"><img src="photo/photo_header/user.png" alt="userphoto">Login</a>
                     <ul class="dropdown-menu" id="login_dropdown">
                         <li><a href="impostazioni_profilo.php">Impostazioni profilo</a></li>
                         <li><a href="logout.php">Logout</a></li>
@@ -56,7 +56,7 @@
                 </li>
                 </ul>
                 <div class="hamburger">
-                    <img src="hamburger_menu.png" alt="hamburger_menu" id="hamburger_menu">
+                    <img src="photo/photo_header/hamburger_menu.png" alt="hamburger_menu" id="hamburger_menu">
                  </div>
         </nav>
  </header>

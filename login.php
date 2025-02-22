@@ -19,17 +19,17 @@
                     document.getElementById('password').type = "text";
                     document.getElementById('pwd1').type = "text";
                     document.getElementById('confirm_password').type = "text";
-                    document.getElementById('pass_photo').src = "eyeopen.png";
-                    document.getElementById('pass_photo2').src = "eyeopen.png";
-                    document.getElementById('pass_photo3').src = "eyeopen.png";
+                    document.getElementById('pass_photo').src = "photo/photo_login/eyeopen.png";
+                    document.getElementById('pass_photo2').src = "photo/photo_login/eyeopen.png";
+                    document.getElementById('pass_photo3').src = "photo/photo_login/eyeopen.png";
                 }    
                 else{
                     document.getElementById('password').type = "password";
                     document.getElementById('pwd1').type = "password";
                     document.getElementById('confirm_password').type = "password";
-                    document.getElementById('pass_photo').src = "eyeclosed.png";
-                    document.getElementById('pass_photo2').src = "eyeclosed.png";
-                    document.getElementById('pass_photo3').src = "eyeclosed.png";
+                    document.getElementById('pass_photo').src = "photo/photo_login/eyeclosed.png";
+                    document.getElementById('pass_photo2').src = "photo/photo_login/eyeclosed.png";
+                    document.getElementById('pass_photo3').src = "photo/photo_login/eyeclosed.png";
                 }
                     
             }
@@ -80,11 +80,11 @@
     
 
 ?>
-<video src="spalti.mp4" autoplay loop muted>
+<video src="photo/photo_login/spalti.mp4" autoplay loop muted>
     Video cannot be displayed.
     </video>
     <main style="align-items: center; display: flex; flex-direction: column; ">
-        <a href="homepage.php"><img src="logo.png" alt="Logo GS Minori" style="width: 40vw;" height="auto"></a>
+        <a href="homepage.php"><img src="photo/photo_login/logo.png" alt="Logo GS Minori" style="width: 40vw;" height="auto"></a>
         
         <!-- Form di login -->
         <div id="login_form" style="display:flex;">
@@ -97,7 +97,7 @@
         <p>
         <label for="password" style="display: flex; align-items: center;">
             <input type="password" name="password" id="password" placeholder="Password" style="margin-right: 5px;margin-left: 22px;"/>
-            <img id="pass_photo" src="eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
+            <img id="pass_photo" src="photo/photo_login/eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
         </label>
         </p>
         <p>
@@ -139,13 +139,13 @@
         <p>
         <label for="password" style="display: flex; align-items: center;">
             <input type="password" name="pwd1" id="pwd1" placeholder="Password" style="margin-right: 5px;margin-left: 22px;" required/>
-            <img id="pass_photo2" src="eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
+            <img id="pass_photo2" src="photo/photo_login/eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
         </label>
         </p>
         <p>
         <label for="confirm_password" style="display: flex; align-items: center;">
             <input type="password" name="confirm_password" id="confirm_password" placeholder="Conferma password" style="margin-right: 5px;margin-left: 22px;" required/>
-            <img id="pass_photo3" src="eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
+            <img id="pass_photo3" src="photo/photo_login/eyeclosed.png" alt="Mostra password" style="width: 20px;" onclick="mod_password()"/>
         </label>
         </p>
         <p>

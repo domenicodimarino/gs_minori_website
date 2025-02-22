@@ -1,6 +1,6 @@
 body {
     background-color: #121212; /* Sfondo scuro */
-    background: url('photo_ticket/tickets.jpg') no-repeat center center fixed;
+    background: url('photo/photo_ticket/tickets.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
     color: #000000; /* Cambia il colore del testo a nero */

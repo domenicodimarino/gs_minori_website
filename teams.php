@@ -30,7 +30,7 @@
                 <a href="#allenatore" class="nav-link1" data-target="allenatore-section"> ALLENATORE</a>
             </nav>
             <br>
-            <img src="photo_teams/primasquadra.png" alt="immagine" class="team-image">
+            <img src="photo/photo_teams/primasquadra.png" alt="immagine" class="team-image">
             <div class="roster-title"> <strong>Roster DR2</strong><br> Rosa ufficiale della stagione 2024/25</div>
             
             <div id="centro-section" class="section">
@@ -38,7 +38,7 @@
                     <div id="centro" class="sec_img">
                         <div class="image-container">
                             <a href="player.php?id=0">
-                                <img src="photo_teams/alemammato.png" alt="immagine" class="image">
+                                <img src="photo/photo_teams/alemammato.png" alt="immagine" class="image">
                                 <div class="text"> 34 <br> Alessandro  <br>Mammato</div>
                             </a>
                         </div>
@@ -51,13 +51,13 @@
                     <div id="guardia" class="sec_img">
                         <div class="image-container">
                             <a href="player.php?id=1">
-                                <img src="photo_teams/cristian.jpg" alt="immagine" class="image">
+                                <img src="photo/photo_teams/cristian.jpg" alt="immagine" class="image">
                                 <div class="text"> 17 <br>Cristian <br>Cantilena</div>
                             </a>
                         </div>
                         <div class="image-container">
                             <a href="player.php?id=2">
-                                <img src="photo_teams/gennaro.jpg" alt="immagine" class="image">
+                                <img src="photo/photo_teams/gennaro.jpg" alt="immagine" class="image">
                                 <div class="text"> 13 <br>Gennaro <br>Infante</div>
                             </a>
                         </div>
@@ -70,25 +70,25 @@
                     <div id="alapiccola" class="sec_img">
                         <div class="image-container">
                             <a href="player.php?id=3">
-                                <img src="photo_teams/alfonso_fusco.jpg" alt="immagine" class="image">
+                                <img src="photo/photo_teams/alfonso_fusco.jpg" alt="immagine" class="image">
                                 <div class="text"> 15 <br>Alfonso <br>Fusco</div>
                             </a>
                         </div>
                         <div class="image-container">
                             <a href="player.php?id=4">
-                                <img src="photo_teams/danilo.jpg" alt="immagine" class="image">
+                                <img src="photo/photo_teams/danilo.jpg" alt="immagine" class="image">
                                 <div class="text"> 30 <br>Danilo <br>Galibardi</div>
                             </a>
                         </div>
                         <div class="image-container">
                             <a href="player.php?id=5">
-                                <img src="photo_teams/gabriele.jpg" alt="immagine" class="image">
+                                <img src="photo/photo_teams/gabriele.jpg" alt="immagine" class="image">
                                 <div class="text"> 10 <br>Gabriele <br>Di Lieto</div>
                             </a>
                         </div>
                         <div class="image-container">
                             <a href="player.php?id=6">
-                                <img src="photo_teams/manuel.jpg" alt="immagine" class="image">
+                                <img src="photo/photo_teams/manuel.jpg" alt="immagine" class="image">
                                 <div class="text"> 77 <br>Manuel <br>Proto</div>
                             </a>
                         </div>
@@ -101,13 +101,13 @@
                     <div id="alagrande" class="sec_img">
                         <div class="image-container">
                             <a href="player.php?id=7">
-                                <img src="photo_teams/giacinto.jpg" alt="immagine" class="image">
+                                <img src="photo/photo_teams/giacinto.jpg" alt="immagine" class="image">
                                 <div class="text">11 <br> Giacinto <br>Spinaccio</div>
                             </a>
                         </div>
                         <div class="image-container">
                             <a href="player.php?id=8">
-                                <img src="photo_teams/vlad.jpg" alt="immagine" class="image">
+                                <img src="photo/photo_teams/vlad.jpg" alt="immagine" class="image">
                                 <div class="text">23 <br> Vlad <br>Laptyev</div>
                             </a>
                         </div>
@@ -120,7 +120,7 @@
                     <div id="playmaker" class="sec_img">
                         <div class="image-container">
                             <a href="player.php?id=9">
-                                <img src="photo_teams/alessio.jpg" alt="immagine" class="image">
+                                <img src="photo/photo_teams/alessio.jpg" alt="immagine" class="image">
                                 <div class="text"> 7 <br>Alessio <br>Proto</div>
                             </a>
                         </div>
@@ -133,7 +133,7 @@
                     <div class="coach_container"> 
                         <div class="text2">
                             <div class="image1">
-                                <img src="photo_teams/jacopo.png" alt="Jacopo Porpora" class="coach-image">
+                                <img src="photo/photo_teams/jacopo.png" alt="Jacopo Porpora" class="coach-image">
                             </div>
                             <div class="info" id="allenatore">
                                 <h1>Jacopo Porpora</h1><br>

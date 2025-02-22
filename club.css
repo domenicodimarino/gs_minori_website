@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     color: #090808;
-    background-image: url('photo_club/background_club1.webp'); /* Percorso dell'immagine di sfondo */
+    background-image: url('photo/photo_club/background_club1.webp'); /* Percorso dell'immagine di sfondo */
     background-size: cover; /* Assicura che l'immagine copra l'intera area */
     background-position: center; /* Centra l'immagine di sfondo */
     background-repeat: no-repeat; /* Evita che l'immagine si ripeta */

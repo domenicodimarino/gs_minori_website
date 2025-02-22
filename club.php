@@ -18,7 +18,7 @@
     <!-- Sezione "Chi siamo?" -->
     <section id="chi-siamo" class="section-chisiamo" style="margin-bottom:10px;">
       <h1>Chi siamo?</h1>
-      <img src="photo_club/chi_siamo.jpg" alt="Chi siamo" class="chi" >
+      <img src="photo/photo_club/chi_siamo.jpg" alt="Chi siamo" class="chi" >
       <p>
         Il Gruppo Sportivo Minori Pallacanestro (GS Minori) è una storica società sportiva della Costiera Amalfitana, attiva da oltre quarant'anni nel panorama cestistico campano. Fondata con l'obiettivo di promuovere la pallacanestro e i valori sportivi nella comunità locale, la società ha sempre posto l'accento sulla formazione dei giovani e sull'inclusione sociale.
       </p>
@@ -28,7 +28,7 @@
     <section id="mino" class="section-mino">
   <h2>Mino</h2>
   <p class="description">
-    <img src="photo_club/mino_copy.png" alt="Mino" class="mino">
+    <img src="photo/photo_club/mino_copy.png" alt="Mino" class="mino">
     Oltre all'attività agonistica, il GS Minori ha posto grande attenzione all'aspetto identitario e culturale del club, riconoscendo l'importanza di valorizzare le proprie radici e la ricca tradizione della Costiera Amalfitana. Il club non si limita solo alla competizione sportiva, ma promuove attivamente iniziative volte a diffondere la cultura locale, a celebrare la storia e a coinvolgere la comunità in eventi e progetti che rafforzano il senso di appartenenza. Nel 2019, a testimonianza di questo impegno, è stata introdotta la mascotte ufficiale, "Mino". Questa figura, rappresentata da un toro marino, trae ispirazione da un prezioso mosaico della Villa Romana Marittima di Minori, simbolo autentico del legame profondo tra la società e il patrimonio storico del territorio. Con l'introduzione di Mino, il GS Minori intende non solo rafforzare l'identità del club, ma anche creare un punto di riferimento emotivo per tifosi e sostenitori, trasmettendo valori di orgoglio, tradizione e innovazione che caratterizzano l'evoluzione del club nel tempo.    <!-- resto del testo -->
   </p>
 </section>
@@ -52,7 +52,7 @@
     
     A completare il quadro, la <strong>Preparatrice Atletica D'Amato Marianna</strong> lavora instancabilmente per garantire che ogni atleta mantenga livelli ottimali di condizione fisica, elementi imprescindibili per affrontare le sfide in campo.<br><br>
     
-    Infine, il settore <strong>MiniBasket</strong>, <img src="photo_club/andrea&Federico.jpeg" alt="" class="mini" id="mini_basket_photo">fondamentale per avvicinare i più piccoli al mondo della pallacanestro, è coordinato da <strong>Dipino Andrea</strong> e <strong>Apicella Federico</strong>, supportati dall'<strong>Assistente MiniBasket Di Bianco Giancarlo</strong>, che insieme instaurano un clima di entusiasmo e di apprendimento, preparando le future generazioni con passione e professionalità.<br><br>
+    Infine, il settore <strong>MiniBasket</strong>, <img src="photo/photo_club/andrea&Federico.jpeg" alt="" class="mini" id="mini_basket_photo">fondamentale per avvicinare i più piccoli al mondo della pallacanestro, è coordinato da <strong>Dipino Andrea</strong> e <strong>Apicella Federico</strong>, supportati dall'<strong>Assistente MiniBasket Di Bianco Giancarlo</strong>, che insieme instaurano un clima di entusiasmo e di apprendimento, preparando le future generazioni con passione e professionalità.<br><br>
     
     In sintesi, lo staff del GS Minori è una squadra coesa e versatile, capace di coniugare <strong>esperienza, innovazione e amore per il gioco</strong>, elementi che rendono il club un punto di riferimento nella pallacanestro della Costiera Amalfitana.
   </p>
@@ -71,7 +71,7 @@
     // Array di eventi per la timeline
     $timelineEvents = array(
       array(
-        "image" => "photo_club/storia4.jpg",
+        "image" => "photo/photo_club/storia4.jpg",
         "date" => "21 Novembre 1970",
         "title" => "L'inizio di un'Avventura che dura ancora oggi",
         "content" => "Il 21 novembre 1970, alle ore 19:00, tre giovani uomini - Alfonso Florio, Gabriele Di Lieto e Alfonso Pepe - diedero inizio a questa avventura, invitando altre persone a partecipare alla costituzione iniziale della Polisportiva GS Minori, con una sezione Calcio e l'apertura a tutti gli sport praticabili nel paese."
@@ -90,7 +90,7 @@
         "date" => "Anni '70-75",
         "title" => "Il primo presidente e il campo scoperto",
         "content" => "Il mio primo presidente è stato Alfonso Pepe. Ricordo benissimo quando ultimarono il campo di Pallacanestro con manto in asfalto, rigorosamente scoperto e all’inizio senza impianto di illuminazione, nello stesso posto dove adesso c’è l’attuale Tendostruttura realizzata nel 1985.",
-        "image" => "photo_club/storia3.jpg"
+        "image" => "photo/photo_club/storia3.jpg"
       ),
       array(
          "title" => "Gli albori della pallacanestro a Minori",
@@ -108,7 +108,7 @@
         "date" => "1979",
         "title" => "La squadra femminile e <br> Il sogno della finale con Italsider Napol",
         "content" => "La squadra femminile militava stabilmente in Serie C, mentre svolgevamo il campionato di Promozione maschile con buoni risultati. L’anno dopo, il nostro gruppo, formato da Enzo Di Palma (forse il talento più grande che abbiamo avuto nel settore maschile), Roberto Cafasso, Mimmo Tozzi e tanti altri ragazzi (tutti importantissimi, ma non citati qui per motivi di spazio), arrivammo alla finale contro Italsider Napoli, società che militava in B (paragonabile all’attuale A2 di oggi), per l’accesso alle finali nazionali di Montecatini. Se avessimo vinto, avremmo giocato con Bologna, Milano: un sogno che però si infranse con una sconfitta di sole cinque punti di scarto, con un arbitraggio scandaloso.",
-        "image" => "photo_club/storia2.jpg"
+        "image" => "photo/photo_club/storia2.jpg"
       ),
       array(
         "date" => "Anni '80",
@@ -121,7 +121,7 @@
         "date" => "Metà Anni '80",
         "title" => "La presidenza più giovane<br>e il ritorno di Gabriele Di Lieto",
         "content" => "A metà degli anni Ottanta diventa presidente Rosario Costa, il più giovane presidente che l’associazione abbia mai avuto, sebbene per un breve periodo. In seguito subentrò di nuovo Gabriele Di Lieto, che lascerà la sua pesante eredità sulle spalle di Vito D’Alfonso.",   
-         "image" => "photo_club/storia1.jpg"
+         "image" => "photo/photo_club/storia1.jpg"
       ),
       array(
         "date" => "Inizio Anni '90",
@@ -175,7 +175,7 @@
     <section id="autore" class="section-autore">
     <h1>Autore</h1>
     <div class="autore-content">
-      <img src="photo_club/mimmo.jpeg" alt="Foto dell'autore" class="autore-foto">
+      <img src="photo/photo_club/mimmo.jpeg" alt="Foto dell'autore" class="autore-foto">
       <p class="firma">
         <em>Mimmo Apicella</em>
       </p>

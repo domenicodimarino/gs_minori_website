@@ -115,7 +115,7 @@
 
         <section class="initial_view" id="initial_view">
             <figure>
-                <img src="photo_ticket/piantina.jpeg" alt="Piantina palazzetto con settori">
+                <img src="photo/photo_ticket/piantina.jpeg" alt="Piantina palazzetto con settori">
             </figure>
           <section class="tabella">
             <section class="sector_choice">
@@ -145,9 +145,9 @@
                             <?php echo $sector[$i]; ?>
                         </p>
                         <p class="tickets_number">
-                            <img src="minus_button.png" id="minus<?php echo $i; ?>" onclick="decrease_number(<?php echo $i; ?>)" style="margin-right: 30px" class="minus_button">
+                            <img src="photo/photo_ticket/minus_button.png" id="minus<?php echo $i; ?>" onclick="decrease_number(<?php echo $i; ?>)" style="margin-right: 30px" class="minus_button">
                             <input type="number" name="numero_biglietti[<?php echo $i; ?>]" min="0" max="<?php echo $availability; ?>" id="tickets<?php echo $i; ?>" value="0" readonly>
-                            <img src="plus_button.png" id="plus<?php echo $i; ?>" onclick="increase_number(<?php echo $i; ?>)" style="margin-left:30px" class="plus_button">
+                            <img src="photo/photo_ticket/plus_button.png" id="plus<?php echo $i; ?>" onclick="increase_number(<?php echo $i; ?>)" style="margin-left:30px" class="plus_button">
                         </p>
                         <p class="availability">
                             Biglietti disponibili: <div style="text-align:center"><?php echo $availability; ?></div>
