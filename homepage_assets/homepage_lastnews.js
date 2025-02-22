@@ -5,7 +5,7 @@ function caricaNews() {
         if (xhr.status === 200) {
             var data = JSON.parse(xhr.responseText);
             if (data.length > 0) {
-                var latestNews = data[0]; // Assuming the latest news is the first item in the array
+                var latestNews = data[0]; // Prendiamo solo l'ultima news
                 var newsHtml = `
                     <article>
                         <img src="${latestNews.immagine}" alt="${latestNews.titolo}">

@@ -12,9 +12,9 @@ body::before {
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* Fissa l'immagine di sfondo */
+    background-attachment: fixed; 
     z-index: -2;  
-    filter: brightness(0.75); /* Migliora la leggibilità del testo sopra l'immagine */
+    filter: brightness(0.75);
 }
  
 main {
@@ -114,8 +114,8 @@ h2 a{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
-    cursor: pointer; /* Cambia il cursore per indicare che l'articolo è cliccabile */
-    transition: transform 0.2s; /* Aggiungi una transizione per l'effetto di ingrandimento */
+    cursor: pointer;
+    transition: transform 0.2s; 
 }
 
 .news-articles article h2 {
@@ -123,8 +123,9 @@ h2 a{
 }
 
 .news-articles article:hover {
-    transform: scale(1.05); /* Ingrandisce leggermente l'articolo al passaggio del mouse */
+    transform: scale(1.05); 
 }
+
 .news-articles .descrizione-articolo{
     margin-left: 10vw;
 }
@@ -200,7 +201,7 @@ h2 a{
 .calendario, .classifica, .descrizione-stagione {
     margin: 20px auto;
     max-width: 800px;
-    background: rgba(255, 255, 255, 0.8); /* Sfondo leggermente trasparente */
+    background: rgba(255, 255, 255, 0.8); 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -235,7 +236,7 @@ h2 a{
 }
 
 .gallery-wrapper {
-    overflow: hidden; /* Nasconde la barra di scorrimento */
+    overflow: hidden; 
 }
 
 .gallery {
@@ -243,12 +244,12 @@ h2 a{
     overflow-x: scroll;
     gap: 10px;
     padding: 10px;
-    -ms-overflow-style: none;  /* Nasconde la barra di scorrimento in Internet Explorer e Edge */
-    scrollbar-width: none;  /* Nasconde la barra di scorrimento in Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
 }
 
 .gallery::-webkit-scrollbar {
-    display: none;  /* Nasconde la barra di scorrimento in Chrome, Safari e Opera */
+    display: none;  
 }
 
 .gallery img {
@@ -256,26 +257,24 @@ h2 a{
     height: 250px;
     border-radius: 5px;
     object-fit: cover;
-    cursor: pointer; /* Cambia il cursore per indicare che l'immagine è cliccabile */
-    transition: transform 0.2s; /* Aggiungi una transizione per l'effetto di ingrandimento */ 
+    cursor: pointer; 
+    transition: transform 0.2s; 
 }
 
 .gallery img:hover {
-    transform: scale(1.1); /* Ingrandisce leggermente l'immagine al passaggio del mouse */
+    transform: scale(1.1); 
 }
 .fanzone-links{
     display: flex;
     flex-direction: column;
 }
-/* ==========================
-   SEZIONE COMMUNITY
-   ========================== */
+/* SEZIONE COMMUNITY */
 #community {
     width: 60%;
     margin-right: 20px;
     padding: 20px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.8); /* Sfondo leggermente trasparente */
+    background: rgba(255, 255, 255, 0.8); 
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: relative;

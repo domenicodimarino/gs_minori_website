@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ($_SESSION['cart_updated']) == fals
     $_SESSION['cart_updated'] = true; // Imposta la variabile di sessione per evitare duplicati
     $cartItems = $cart;
 } else {
-    $cartItems = $cart; // Initialize $cartItems from the cookie
+    $cartItems = $cart; // Inizializza $cartItems daicookie
 }
 
 // Calcolo del prezzo totale
@@ -132,7 +132,7 @@ foreach ($cart as $index => $item) {
 
             <div class="confirm-order-container">
                 <form action="checkout_cart.php" method="POST">
-                    <!-- Hidden input fields to pass data to checkout_cart.php -->
+                    
                     <input type="number" name="importo" value="<?php echo $totalPrice; ?>" hidden>
                     <?php
                     foreach ($cartItems as $index => $item) {

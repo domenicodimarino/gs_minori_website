@@ -154,7 +154,7 @@
             <div id="card-element">
             <!--Stripe.js injects the Payment Element-->
             </div>    
-            <!-- Used to display Element errors. -->
+            <!-- Usato per visualizzare a display gli errori. -->
             <div id="card-errors" role="alert"></div>
             </div>
             <p id="submit_button">

@@ -32,7 +32,7 @@
         <section id="community">
             <h2>Community</h2>
             <p>Unisciti alla nostra community di fan e partecipa alle discussioni!</p>
-            <!-- Aggiungi qui ulteriori dettagli sulla community -->
+            
             <form action="post_content.php" method="post" id="postForm" enctype="multipart/form-data">
             <label for="username">Nome utente:</label><br>
 
@@ -136,7 +136,7 @@
         <section id="concorsi">
             <h2>Concorsi</h2>
             <p>Partecipa ai nostri concorsi e vinci fantastici premi.</p>
-            <!-- Aggiungi qui ulteriori dettagli sui concorsi -->
+           
             <div class="contests">
             <?php
             // Recupero dei concorsi

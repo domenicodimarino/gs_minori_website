@@ -48,7 +48,7 @@ main > form {
     width: 100%;
     margin-top: 20px;
     text-align: center;
-    background-color: #0d1459; /* Blu più tenue */
+    background-color: #0d1459; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
     border-radius: 10px;
@@ -135,7 +135,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
     width: 80%;
     border: none;
     border-radius: 10px;
-    background-color: #bd1010; /* Rosso più acceso */
+    background-color: #bd1010; 
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -157,7 +157,7 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
     width: 80%;
     border: none;
     border-radius: 10px;
-    background-color: #00A896; /* Verde più acceso */
+    background-color: #00A896; 
     color: white;
     font-size: 16px;
     font-weight: bold;

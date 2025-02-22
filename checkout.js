@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         createPaymentIntent(amount, async (response) => {
             response = JSON.parse(response);
             if (response.error) {
-                // Handle server-side error during PaymentIntent creation
+                
                 console.error('Error creating PaymentIntent:', response.error);
                 cardErrors.textContent = 'Errore durante la creazione del pagamento.';
                 document.getElementById('submit-button').disabled = false;
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 cardErrors.textContent = `Errore durante il pagamento: ${error.message}`;
                 document.getElementById('submit-button').disabled = false;
             } else if (paymentIntent && paymentIntent.status === 'succeeded') {
-                // Payment succeeded
+                // Pagamento effettuato con successo
                 alert('Pagamento completato con successo!');
 
                 // Creiamo un oggetto con i dati del form
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     window.location.href = 'ticket_completed.php?' + queryString;
                 }
             } else {
-                // Unexpected error
+                // Errore inaspettato durante la conferma del pagamento
                 console.error('Unexpected error during payment confirmation.');
                 cardErrors.textContent = 'Errore sconosciuto, riprova.';
                 document.getElementById('submit-button').disabled = false;
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         };
         const formData = new FormData(form);
-        // Send the amount as JSON
+        // Aggiungiamo l'importo al FormData
         xhr.send(formData);
     }
 });

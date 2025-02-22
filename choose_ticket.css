@@ -1,9 +1,9 @@
 body {
-    background-color: #121212; /* Sfondo scuro */
+    background-color: #121212; 
     background: url('photo/photo_ticket/tickets.jpg') no-repeat center center fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
-    color: #000000; /* Cambia il colore del testo a nero */
+    color: #000000; 
 }
 
 main {
@@ -15,7 +15,7 @@ main {
 
 h1,h2,h4{
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Effetto ombra */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     padding: 5px;
 }
 
@@ -35,7 +35,7 @@ h4{
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    color: #000000; /* Cambia il colore del testo a nero */
+    color: #000000; 
 }
 
 .sector_choice {
@@ -44,7 +44,7 @@ h4{
     align-items: center;
     padding: 15px;
     border-bottom: 1px solid #ddd;
-    margin-top: 20px; /* Aumenta la distanza tra i settori */
+    margin-top: 20px; 
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -60,7 +60,7 @@ h4{
 .sector_type {
     width: 25%;
     font-weight: bold;
-    color: #000000; /* Cambia il colore del testo a nero */
+    color: #000000; 
     text-align: center;
 }
 
@@ -68,7 +68,7 @@ h4{
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #000000; /* Cambia il colore del testo a nero */
+    color: #000000; 
     text-align: center;
     width: 50%;
     padding-left: 100px;
@@ -92,7 +92,7 @@ button {
 }
 
 #submit-button {
-    background-color: #d32f2f; /* Colore rosso */
+    background-color: #d32f2f; 
     color: white;
     border: none;
     padding: 10px 20px;

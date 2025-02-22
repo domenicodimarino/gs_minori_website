@@ -1,23 +1,19 @@
-/* ==========================
-   RESET DI BASE
-   ========================== */
+/* RESET DI BASE */
    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ==========================
-   STILE GENERALE PER IL CORPO DELLA PAGINA
-   ========================== */
+/*  STILE GENERALE PER IL CORPO DELLA PAGINA */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
 
     color: black;
     position: relative;
-    padding-top: 100px;  /* Altezza dell'header */
-    padding-bottom: 100px; /* Altezza del footer */
+    padding-top: 100px;  
+    padding-bottom: 100px; 
     
 }
 body::before {
@@ -36,9 +32,7 @@ body::before {
 }
 
 
-/* ==========================
-   TITOLI E TESTI
-   ========================== */
+/* TITOLI E TESTI */
 h1, h2, h3 {
     text-align: center;
     margin-bottom: 10px;
@@ -48,7 +42,7 @@ h1 {
     color: whitesmoke;
     font-size: 2rem;
     margin-top: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Effetto ombra */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
 h2 {
@@ -72,9 +66,7 @@ h3 {
     
 }
 
-/* ==========================
-   SEZIONE COMMUNITY
-   ========================== */
+/* SEZIONE COMMUNITY */
    #community {
     max-width: 900px;
     margin: 0 auto;
@@ -181,18 +173,16 @@ h3 {
     background-color: #f0f0f0;
 }
 
-/* ==========================
-   CONTENUTI POSTATI (SCORRIMENTO ORIZZONTALE)
-   ========================== */
+/*  CONTENUTI POSTATI (SCORRIMENTO ORIZZONTALE) */
 h3.postati {
     margin-top: 30px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Effetto ombra */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     font-size: 30px;
 }
 
 .posted-content {
     display: flex;
-    overflow-x: auto; /* Teniamo lo scroll orizzontale */
+    overflow-x: auto; 
     gap: 30px;
     padding: 20px 0;
     -ms-overflow-style: none;  /* IE, Edge */
@@ -205,7 +195,7 @@ h3.postati {
 
 /* Card singola del post */
 .posted-content div {
-    background-color: rgba(255, 255, 255, 0.9); /* Sfondo semi-trasparente */
+    background-color: rgba(255, 255, 255, 0.9); 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 15px;
@@ -227,16 +217,14 @@ h3.postati {
 .posted-content img {
     border-radius: 5px;
     margin-bottom: 10px;
-    max-height: 200px; /* Limita un po' l'altezza */
+    max-height: 200px; 
     object-fit: cover;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* ==========================
-   SEZIONE CONCORSI
-   ========================== */
+/* SEZIONE CONCORSI */
 #concorsi {
     max-width: 1200px;
     margin: 40px auto;
@@ -271,7 +259,7 @@ h3.postati {
     overflow: hidden;
     transition: transform 0.2s, box-shadow 0.2s;
     cursor: pointer;
-    text-align: left; /* Per separare un po' i testi */
+    text-align: left; 
 }
 
 .contest:hover {
@@ -300,11 +288,9 @@ h3.postati {
     text-align: center;
 }
 
-/* ==========================
-   MODAL (MAGGIORI INFORMAZIONI SUI CONCORSI)
-   ========================== */
+/* MODAL (MAGGIORI INFORMAZIONI SUI CONCORSI)*/
 .modal {
-    display: none; /* verrà mostrato in JS */
+    display: none; 
     position: fixed;
     z-index: 1000;
     left: 0; 
@@ -323,7 +309,7 @@ h3.postati {
     padding: 20px;
     border-radius: 10px;
     position: relative;
-    animation: fadeIn 0.3s ease forwards; /* Animazione all’apertura */
+    animation: fadeIn 0.3s ease forwards; 
 }
 
 .modal-content img {
