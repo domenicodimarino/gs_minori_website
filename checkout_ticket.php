@@ -133,7 +133,7 @@ if(isset($_SESSION['last_ticket_id']))
                 </p>
                 <p>
                     <label for="telefono">
-                        Telefono: <input type="tel" id="telefono" name="telefono" placeholder="Numero di telefono" required>            
+                        Telefono: <input type="tel" id="telefono" name="telefono" placeholder="Numero di telefono" pattern="\+?[0-9]{10,15}" required>            
                     </label>
                 </p>
                 <p>
@@ -144,7 +144,32 @@ if(isset($_SESSION['last_ticket_id']))
                 </p>
                 <p>
                     <label for="data">
-                        Data di nascita: <input type="date" id="data" name="data" required>
+                        Data di nascita: <input type="date" id="data" name="data" required onchange="validateDate()">
+                        <br>
+                        <span id="date-error" style="color: red; display: none;">Devi avere almeno 18 anni.</span>
+                        <script>
+                            document.getElementById('data').addEventListener('change', validateDate);
+
+                            function validateDate() {
+                                const inputDate = new Date(document.getElementById('data').value);
+                                const today = new Date();
+                                let age = today.getFullYear() - inputDate.getFullYear();
+                                const monthDifference = today.getMonth() - inputDate.getMonth();
+                                const dayDifference = today.getDate() - inputDate.getDate();
+                                
+                                if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+                                    age--;
+                                }
+
+                                if (age < 18) {
+                                    document.getElementById('date-error').style.display = 'inline';
+                                    document.getElementById('submit-button').disabled = true;
+                                } else {
+                                    document.getElementById('date-error').style.display = 'none';
+                                    document.getElementById('submit-button').disabled = false;
+                                }
+                            }
+                        </script>
                     </label>
                 </p>
             </section>
