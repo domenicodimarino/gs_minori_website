@@ -135,7 +135,7 @@
             <form action="post_content.php" method="post" id="postForm" enctype="multipart/form-data">
             <label for="username">Nome utente:</label><br>
 
-            <input type="text" id="username" name="nome_utente" value="<?php echo htmlspecialchars($user); ?>" required readonly>
+            <input type="text" id="username" name="nome_utente" value="<?php echo htmlspecialchars($user_name); ?>" required readonly>
 
             <br><br><label for="content">Posta un contenuto:</label><br>
             <textarea id="content" name="content" rows="4" cols="50" required></textarea><br>
