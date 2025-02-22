@@ -35,7 +35,6 @@
                     <img src="photo/photo_photo-gallery/photo10.jpg" alt="Foto 10">
                     <img src="photo/photo_photo-gallery/photo11.jpg" alt="Foto 11">
                     <img src="photo/photo_photo-gallery/photo12.jpg" alt="Foto 12">
-                    <!-- Aggiungi altre immagini qui -->
                 </div>
             </div>
         </section>
@@ -68,7 +67,6 @@
                             <source src="video_video-gallery/video5.mp4" type="video/mp4">
                             Il tuo browser non supporta il tag video.
                         </video>
-                        <!-- Aggiungi altri video qui -->
                     </div>
 
                     <div id="highlights-section" class="section" style="display: none;">
@@ -95,7 +93,6 @@
                         </video>
                     </div>
 
-                    <!-- Aggiungi altri video qui -->
                 </div>
             </div>
         </section>
@@ -238,7 +235,7 @@
             showImage(currentIndex + 1);
         });
 
-        // Chiudi il modal cliccando fuori dal contenuto
+        // Il modal viene chiuso cliccando fuori dal contenuto
         window.addEventListener('click', function(event) {
             if (event.target === modalImgModal) {
                 modalImgModal.style.display = 'none';
@@ -256,7 +253,7 @@
             modalVideoContent.src = this.querySelector('source').src;
             });
         });
-        // Chiudi il modal dei video tramite il pulsante di chiusura
+        // Il modal dei video viene chiuso tramite il pulsante di chiusura
         var spanVideo = document.getElementsByClassName('close-video')[0];
         spanVideo.addEventListener('click', function() {
             chiudiModal(modalVideo);
@@ -275,13 +272,12 @@
                     event.preventDefault();
                     const target = this.getAttribute('data-target');
 
-                    // Remove active class from all links
                     navLinks.forEach(link => link.classList.remove('active'));
 
-                    // Add active class to the clicked link
+                    // Si aggiunge la classe active al link cliccato
                     this.classList.add('active');
 
-                    // Show the target section and hide others
+                    // Mostra solo la sezione corrispondente al link cliccato
                     videoSections.forEach(section => {
                         if (section.id === target) {
                             section.style.display = 'flex';
@@ -292,7 +288,7 @@
                 });
             });
 
-            // Set default active link and show all videos by default
+            // Mostra la sezione "TUTTI I VIDEO" per default
             const defaultLink = document.querySelector('.sub-nav .nav-link1[data-target="all-section"]');
             if (defaultLink) {
                 defaultLink.classList.add('active');

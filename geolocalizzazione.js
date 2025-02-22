@@ -53,7 +53,5 @@ document.addEventListener("DOMContentLoaded", function (){
                 break;
         }
     }
-
-    // Make getLocation globally accessible
     window.getLocation = getLocation;
 });

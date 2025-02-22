@@ -11,8 +11,6 @@ require './db.php';
 		if(isset($_POST['username']) && isset($_POST['password'])){
 			$user =  $_POST['username'];
 			$pass =  $_POST['password'];
-			//chiama la funzione get_pwd che controlla
-			//se username esiste nel DB. Se esiste, restituisce la password (hash), altrimenti restituisce false.
 			$hash = get_pwd($user,$db);
 			if(!$hash){
 				echo  "<script>alert('Utente non presente nel database');
@@ -29,7 +27,7 @@ require './db.php';
 					$_SESSION['cognome'] = get_surname($user, $db);
 					$_SESSION['mail'] = get_email($user, $db);
 
-					// Check if redirect parameter exists and decode it
+					// Serve a reindirizzare l'utente dalla pagina che si trovava prima
 					if (isset($_GET['redirect'])) {
 						$redirect_url = urldecode($_GET['redirect']);
 						$redirect_url = str_replace('redirect=', '', $redirect_url);
@@ -90,10 +88,8 @@ function get_pwd($user, $db){
 function username_exist($user){
 	require "./db.php";
 	//CONNESSIONE AL DB
-	//echo "Connessione al database riuscita<br/>";
 	$sql = "SELECT username FROM account WHERE username=$1";
 	$prep = pg_prepare($db, "sqlUsername", $sql);
-	// $prep sarà uguale a false in caso di fallimento nella creazione del prepared statement
 
 	$ret = pg_execute($db, "sqlUsername", array($user));
 	// $ret sarà uguale a false in caso di fallimento nell'esecuzione del prepared statement
@@ -103,9 +99,7 @@ function username_exist($user){
 		return false;
 	}
 	else{
-		// $row sarà uguale a false se non sono state restituite righe della tabella
-		// a seguito dell'esecizone del prepared statement.
-		// Nelle specifico, è false se la tabella non contiene un record con username uguale a $user
+
 		if ($row = pg_fetch_assoc($ret)){
 			return true;
 		}

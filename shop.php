@@ -34,7 +34,7 @@ session_start();
         </div>
         <button class="cart-button">
             <a href="cart.php"><i class="fas fa-shopping-cart"></i></a>
-            <span id="cart-count" class="cart-count" style="display: none;">0</span> <!-- Aggiungi questo elemento -->
+            <span id="cart-count" class="cart-count" style="display: none;">0</span>
         </button>
     </div>
     <ul id="resultsList">
@@ -119,7 +119,7 @@ session_start();
 
             foreach ($products as $index => $product) {
                 
-                // Recupera la disponibilità dal database usando il nome del prodotto
+                // Viene recuperata la disponibilità dal database usando il nome del prodotto
                 $productName = pg_escape_string($db, $product['name']);
                 $query = "SELECT available_quantity FROM product_inventory WHERE product_name = '$productName'";
                 $result = pg_query($db, $query);
@@ -173,7 +173,7 @@ session_start();
     <script src="shop.js" defer></script>
     <script src="slideshow.js" defer></script>
     <script>
-        // Passa la quantità totale a JavaScript
+        // Viene passata la quantità totale a JavaScript
         const totalQuantity = <?php echo $totalQuantity; ?>;
 
         // Funzione per aggiornare il conteggio del carrello
@@ -186,7 +186,7 @@ session_start();
             }
         }
 
-        // Aggiorna il conteggio del carrello all'avvio
+        // Viene aggiornato il conteggio del carrello all'avvio
         document.addEventListener('DOMContentLoaded', updateCartCount);
     </script>
     <?php include 'footer.html'; ?>

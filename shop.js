@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
             clearButton.style.display = "block";
         } else {
             clearButton.style.display = "none";
-            resultsList.style.display = "none"; // Nasconde i risultati se l'input è vuoto
-            showAllImages(); // Mostra tutte le immagini quando l'input è vuoto
+            resultsList.style.display = "none"; 
+            showAllImages();
         }
     }
 
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Gestisci il bottone "Conferma"
+    // Viene gestito il click sul pulsante di conferma
     confirmButton.addEventListener('click', function (event) {
         const cartItems = [];
         let totalPrice = 0;
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
             alert('Non sono stati inseriti prodotti nel carrello!');
             event.preventDefault(); // Previene l'invio del modulo
         } else {
-            // Aggiungi i dati al modulo
+            // Vengono aggiunti i dati al modulo
             const totalPriceInput = document.createElement('input');
             totalPriceInput.type = 'hidden';
             totalPriceInput.name = 'totalPrice';

@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-// Dati delle prossime partite (questi dati dovrebbero provenire dal database)
+// Dati delle prossime partite
 $prossime_partite = [
     [
         "data" => "23 Febbraio 2025",

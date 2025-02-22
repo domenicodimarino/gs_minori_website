@@ -33,7 +33,6 @@ if(isset($_SESSION['last_order_id'])) {
     }
 }
 else {
-// Avvia una transazione per assicurarti che tutti gli aggiornamenti siano atomici
 
     if (isset($_COOKIE['cart'])) {
         $cartItems = unserialize($_COOKIE['cart']);
@@ -60,7 +59,7 @@ else {
     $totalPrice = 0;
 
     foreach ($cartItems as $item) {
-        // Assicurati che il nome del prodotto e la quantità siano presenti
+        
         if (!isset($item['product_name']) || !isset($item['quantity'])) {
             continue;
         }
@@ -69,7 +68,6 @@ else {
         $orderedQuantity = (int)$item['quantity'];
         $price = (float)$item['price'];
 
-        // Recupera la quantità attuale disponibile per questo prodotto
         $query = "SELECT available_quantity FROM product_inventory WHERE product_name = '$productName'";
         $result = pg_query($db, $query);
 
@@ -77,12 +75,12 @@ else {
             $available = (int)$row['available_quantity'];
             $newQuantity = $available - $orderedQuantity;
             if ($newQuantity < 0) {
-                // Se la quantità acquistata supera quella disponibile, effettua il rollback e mostra un errore
+                // Se la quantità acquistata supera quella disponibile, viene mostrato l'errore
                 pg_query($db, "ROLLBACK");
                 die("Errore: per il prodotto '$productName' sono disponibili solo $available unità.");
             }
             
-            // Esegui l'aggiornamento dell'inventario
+            // L'inventario nel database è aggiornato
             $updateQuery = "UPDATE product_inventory SET available_quantity = $newQuantity WHERE product_name = '$productName'";
             $updateResult = pg_query($db, $updateQuery);
             if (!$updateResult) {
@@ -107,7 +105,6 @@ else {
 
         }
 
-// Se tutto è andato a buon fine, conferma la transazione
 $queryUpdateTotal = "UPDATE orders SET total_price = $totalPrice WHERE order_id = $orderId";
     $updateTotalResult = pg_query($db, $queryUpdateTotal);
 
@@ -121,7 +118,7 @@ pg_query($db, "COMMIT");
 };
 ?>
 <?php 
-    setcookie("cart", "", time() - 3600); // Cancella il cookie specificando il percorso
+    setcookie("cart", "", time() - 3600);
 ?>
 
 <!DOCTYPE html>
@@ -152,7 +149,7 @@ pg_query($db, "COMMIT");
         $data = $_GET['data'];
         $cartItems = $_GET['cartItems'];
 
-        // Riformatta la data nel formato giorno, mese, anno
+        // La data viene riformattata
         $date = DateTime::createFromFormat('Y-m-d', $data);
         $formattedDate = $date->format('d-m-Y');
 
@@ -168,7 +165,7 @@ pg_query($db, "COMMIT");
         echo "<p>Data di nascita: " . htmlspecialchars($formattedDate) . "</p>";
         echo "</section>";
 
-        // Visualizza i biglietti acquistati
+        // Riepilogo dell'ordine
         echo "<section id='order_summary'>";
         echo "<h3>Merchandising acquistato</h3>";
         echo "<ul>";

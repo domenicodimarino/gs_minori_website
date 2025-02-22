@@ -4,8 +4,8 @@ body {
     background-color: #f5f5f5;
     color: #333;
     position: relative;
-    padding-top: 100px; /* Altezza dell'header */
-    padding-bottom: 100px; /* Altezza del footer */
+    padding-top: 100px;
+    padding-bottom: 100px; 
 }
 
 body::before {
@@ -19,7 +19,7 @@ body::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1; /* Assicurati che l'immagine di sfondo sia dietro il contenuto */
+    z-index: -1;
     filter: brightness(0.7);
 }
 
@@ -29,10 +29,10 @@ h1 {
     padding: 2px;
     font-size:37px;
     margin-bottom: 5px;
-    font-weight: bold; /* Rende il testo più spesso */
-   text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
+    font-weight: bold;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
     max-width: 300px;
-    margin: 10px auto; /* Centra il box orizzontalmente */
+    margin: 10px auto;
     border-radius: 10px;
 }
 
@@ -57,8 +57,8 @@ h1 {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer; /* Cambia il cursore per indicare che l'articolo è cliccabile */
-    transition: transform 0.2s; /* Aggiungi una transizione per l'effetto di ingrandimento */
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
 .news-articles article h2 {
@@ -66,7 +66,7 @@ h1 {
 }
 
 .news-articles article:hover {
-    transform: scale(1.1); /* Ingrandisce leggermente l'articolo al passaggio del mouse */
+    transform: scale(1.1);
 }
 
 .news-articles img {
@@ -112,8 +112,8 @@ h1 {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center; /* Centra orizzontalmente */
-    align-items: center; /* Centra verticalmente */
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
@@ -236,7 +236,7 @@ max-height: 90vh;
 }
 
 .gallery-wrapper {
-    overflow: hidden; /* Nasconde la barra di scorrimento */
+    overflow: hidden;
 }
 
 .gallery {
@@ -257,12 +257,12 @@ max-height: 90vh;
     height: 100px;
     border-radius: 5px;
     object-fit: cover;
-    cursor: pointer; /* Cambia il cursore per indicare che l'immagine è cliccabile */
-    transition: transform 0.2s; /* Aggiungi una transizione per l'effetto di ingrandimento */ 
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
 .gallery img:hover {
-    transform: scale(1.1); /* Ingrandisce leggermente l'immagine al passaggio del mouse */
+    transform: scale(1.1);
 }
 
 /* Stile dei video */
@@ -272,7 +272,7 @@ max-height: 90vh;
 }
 
 .video-gallery.active {
-    display: block; /* Mostra la sezione video attiva */
+    display: block;
 }
 
 .video-gallery h2 {
@@ -282,7 +282,7 @@ max-height: 90vh;
 }
 
 .video-wrapper {
-    overflow: hidden; /* Nasconde la barra di scorrimento */
+    overflow: hidden;
 }
 
 .videos {
@@ -304,17 +304,17 @@ max-height: 90vh;
     margin-left: 10px;
     margin-right: 10px;
     border-radius: 5px;
-    cursor: pointer; /* Cambia il cursore per indicare che il video è cliccabile */
-    transition: transform 0.2s; /* Aggiungi una transizione per l'effetto di ingrandimento */
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
 .videos video:hover {
-    transform: scale(1.1); /* Ingrandisce leggermente il video al passaggio del mouse */
+    transform: scale(1.1);
 }
 
 /* Stile per l'ingrandimento del video */
 .modal-video {
-    display: none; /* Nasconde il modal di default */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -367,7 +367,7 @@ max-height: 90vh;
     margin: 0 15px;
     text-decoration: none;
     filter: brightness(0.7);    
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */ 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .sub-nav .nav-link1:hover {
@@ -378,14 +378,14 @@ max-height: 90vh;
 .nav-link1.active {
     color: white;
    filter: brightness(1);
-   text-shadow: 0.5px 0.5px 2px white; /* Aggiunge un'ombra al testo */
+   text-shadow: 0.5px 0.5px 2px white;
 }
 
 /* Media queries per dispositivi mobili */
 @media (max-width: 768px) {
     body {
-        padding-top: 50px; /* Riduci l'altezza dell'header */
-        padding-bottom: 50px; /* Riduci l'altezza del footer */
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
     h1 {

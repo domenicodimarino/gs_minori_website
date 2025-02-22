@@ -16,13 +16,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $old_password = $_POST['old_password'];
     $new_password = $_POST['new_password'];
 
-    // Controlla che la nuova password sia di almeno 8 caratteri
+    // Viene controllata la lunghezza della nuova password
     if (strlen($new_password) < 8) {
         echo "<script>alert('La nuova password deve essere di almeno 8 caratteri.'); window.location.href = 'reset_password.php';</script>";
         exit();
     }
 
-    // Recupera la vecchia password dal database
+    // Viene recuperata la vecchia pass dal database
     $sql = "SELECT password FROM account WHERE username = $1";
     $result = pg_query_params($db, $sql, array($username));
 
