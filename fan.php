@@ -25,12 +25,12 @@
     
         <h1>Benvenuto nella fan page</h1>
         <section id="intro">        
-            <p>Questa è la pagina dedicata ai fan del G.S. Minori. </p>
+            <p>Questa è la pagina dedicata ai fan del G.S. Minori! </p>
         </section>
 
         <section id="community">
             <h2>Community</h2>
-            <p>Unisciti alla nostra community di fan e partecipa alle discussioni.</p>
+            <p>Unisciti alla nostra community di fan e partecipa alle discussioni!</p>
             <!-- Aggiungi qui ulteriori dettagli sulla community -->
             <form action="post_content.php" method="post" id="postForm" enctype="multipart/form-data">
             <label for="username">Nome utente:</label><br>
