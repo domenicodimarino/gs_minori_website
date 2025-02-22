@@ -256,13 +256,12 @@ body::before {
     z-index: 1000; /* Assicurati che il bottone appaia sopra altri elementi */
     border-radius: 10px; /* Aggiungi un bordo curvo */
     float: right;
-    margin-right: 15px;
+    margin-right: 5px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #confirmButton:hover {
     background: rgb(230, 196, 0);
-    transform: scale(1.1);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
