@@ -53,7 +53,7 @@ pg_close($db);
             <p><strong>Username:</strong> <?php echo htmlspecialchars($user['username']); ?></p>
             <p><strong>Email:</strong> <?php echo htmlspecialchars($user['email']); ?></p>
             <div class="password-container">
-                <p>Per reimpostare la password, <button onclick="resetPassword()">Clicca qui</button>.</p>
+                <p><strong>Per reimpostare la password,</strong> <button onclick="resetPassword()">Clicca qui</button></p>
                 <a href="homepage.php" class="back-button">Indietro</a>
             </div>
         </section>

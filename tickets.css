@@ -7,7 +7,9 @@ body {
     padding: 0;
     text-align: center;
 }
-
+.dropdown-menu li > a {
+    text-align: left;
+}
 h1 {
     color: #ffffff;
     font-size: 28px;
