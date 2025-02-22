@@ -14,7 +14,7 @@ header('Content-Type: text/html; charset=UTF-8');
         <h1>Classifica</h1>
         <div id="table-container">Caricamento in corso...</div>
     </section>
-    <script src="dynamic_leaderboard.js"></script>
+    <script src="../dynamic_leaderboard.js"></script>
     <script src="filtra_classifica.js"></script>
 </body>
 </html>

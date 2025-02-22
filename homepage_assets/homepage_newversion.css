@@ -100,7 +100,7 @@ main {
 .news-articles article {
     min-width: 250px;
     max-width: 90vw;
-    background: linear-gradient(135deg, #ffffff 30%, #dfe9f3 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 30%, rgba(223, 233, 243, 0.8) 100%);
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -142,7 +142,9 @@ main {
 .news-articles a:hover {
     text-decoration: underline;
 }
-
+.descrizione-articolo p{
+    color: black!important;
+}
 .news-articles a.read-more {
     display: inline-block;
     margin-top: 10px;
@@ -190,7 +192,7 @@ main {
 .calendario, .classifica, .descrizione-stagione {
     margin: 20px auto;
     max-width: 800px;
-    background: white;
+    background: rgba(255, 255, 255, 0.8); /* Sfondo leggermente trasparente */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -210,4 +212,149 @@ main {
 .descrizione-stagione > p{
     margin-bottom: 20px;
     color: black!important;
+}
+/* Stile della foto gallery */
+.photo-gallery {
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    }
+
+.photo-gallery h2 {
+    font-size: 20px;
+    color: #0d1459;
+    margin-bottom: 10px;
+}
+
+.gallery-wrapper {
+    overflow: hidden; /* Nasconde la barra di scorrimento */
+}
+
+.gallery {
+    display: flex;
+    overflow-x: scroll;
+    gap: 10px;
+    padding: 10px;
+    -ms-overflow-style: none;  /* Nasconde la barra di scorrimento in Internet Explorer e Edge */
+    scrollbar-width: none;  /* Nasconde la barra di scorrimento in Firefox */
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;  /* Nasconde la barra di scorrimento in Chrome, Safari e Opera */
+}
+
+.gallery img {
+    width: 400px;
+    height: 250px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer; /* Cambia il cursore per indicare che l'immagine è cliccabile */
+    transition: transform 0.2s; /* Aggiungi una transizione per l'effetto di ingrandimento */ 
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Ingrandisce leggermente l'immagine al passaggio del mouse */
+}
+.fanzone-links{
+    display: flex;
+    flex-direction: column;
+}
+/* ==========================
+   SEZIONE COMMUNITY
+   ========================== */
+#community {
+    width: 60%;
+    margin-right: 20px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Sfondo leggermente trasparente */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+/* Assicura che il contenuto sia sopra lo sfondo */
+#community * {
+    position: relative;
+    z-index: 1;
+}
+
+#community p {
+    margin-bottom: 20px;
+}
+
+/* Form per inserire un nuovo post */
+#community form {
+    margin: 0 auto 30px auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+#community label {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #0d1459;
+}
+
+#community textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    margin-bottom: 10px;
+    resize: vertical;
+    font-size: 1rem;
+    transition: border 0.5s ease-in-out;
+}
+
+#community textarea:focus {
+    border-image: linear-gradient(45deg, #0d1459, #a60000);
+    border-image-slice: 1;
+    outline: none;
+}
+
+
+#community input[type='file'] {
+    margin-bottom: 10px;
+}
+
+#community input {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Stile del pulsante "Posta" */
+#community input[type='submit'] {
+    background-color: #0d1459;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-size: 1rem;
+}
+
+#community input[type='submit']:hover {
+    background-color: #08103f;
+    transform: translateY(-2px);
+    box-shadow: 0px 0px 15px rgba(13, 20, 89, 0.7);
+}
+
+/* Drop Zone */
+#dropZone {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    color: #666;
+    margin: 10px 0 20px 0;
+    transition: background-color 0.3s;
+}
+
+#dropZone:hover {
+    background-color: #f0f0f0;
 }

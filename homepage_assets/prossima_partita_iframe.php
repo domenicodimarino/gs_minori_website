@@ -20,6 +20,6 @@ header('Content-Type: text/html; charset=UTF-8');
             <button id="nextMatch">Prossima Partita</button>
         </div>
     </section>
-    <script src="stagione.js"></script>
+    <script src="homepage_nextmatch.js"></script>
 </body>
 </html>
