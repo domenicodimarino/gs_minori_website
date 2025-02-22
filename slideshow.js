@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let slideIndexes = {}; // Indice per ogni slideshow
 
     document.querySelectorAll(".slideshow-container").forEach((slideshow, index) => {
-        slideshow.dataset.index = index; // Aggiunge un data-index unico
-        slideIndexes[index] = 1; // Inizializza indice
+        slideshow.dataset.index = index;
+        slideIndexes[index] = 1;
 
         let slides = slideshow.querySelectorAll(".mySlides");
         let dots = slideshow.querySelectorAll(".dot");

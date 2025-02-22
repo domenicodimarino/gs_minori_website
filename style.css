@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #F4F4F4; /* Grigio chiaro per lo sfondo */
+    background-color: #F4F4F4;
     color: #333;
   }
   .hamburger{
@@ -16,7 +16,7 @@
   
   /* Stile della navbar */
   .navbar {
-    background-color: #0D1459; /* Blu Navy */
+    background-color: #0D1459;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,7 +35,7 @@
     list-style: none;
     display: flex;
     align-items: center;
-    transition: transform 0.3s ease-in-out; /* Aggiungi questa linea */
+    transition: transform 0.3s ease-in-out;
   }
   
   .nav-links li {
@@ -80,11 +80,11 @@
   }
   
   .dropdown-menu li a:hover {
-    background: #00A896; /* Verde Acqua */
+    background: #00A896;
     color: #FFFFFF;
   }
   
-  /* Mostra il dropdown al passaggio del mouse */
+  /* Per mostrare il dropdown al passaggio del mouse */
   .nav-links li:hover > .dropdown-menu {
     display: block;
   }
@@ -95,7 +95,7 @@
     display: block;
   }
   .ticket-btn {
-    background-color: #FBBA00; /* DAJE ROMA DAJE */
+    background-color: #FBBA00;
     border-radius: 4px;
     padding: 8px 12px;
     transition: background 0.3s ease;
@@ -103,18 +103,18 @@
     align-items: center;
   }
   .ticket-btn img {
-    width: 30px; /* Larghezza fissa */
-    height: auto; /* L'altezza si adatta automaticamente alle proporzioni dell'immagine */
-    object-fit: contain; /* L'immagine non sarà tagliata né distorta */
+    width: 30px; 
+    height: auto; 
+    object-fit: contain;
     padding-right: 7px;
     vertical-align: middle;
   }
   .ticket-btn:hover {
-    background-color: #E0A800; /* Slightly darker shade */
+    background-color: #E0A800;
   }
-  /* Stile per il bottone Login (opzionale) */
+  /* Stile per il bottone Login */
   .login-btn {
-    background-color: #D72638; /* Rosso */
+    background-color: #D72638;
     border-radius: 4px;
     padding: 8px 12px;
     transition: background 0.3s ease;
@@ -122,15 +122,15 @@
     align-items: center;
   }
   .login-btn img {
-    width: 30px; /* Larghezza fissa */
-    height: auto; /* L'altezza si adatta automaticamente alle proporzioni dell'immagine */
-    object-fit: contain; /* L'immagine non sarà tagliata né distorta */
+    width: 30px;
+    height: auto;
+    object-fit: contain;
     padding-right: 7px;
     vertical-align: middle;
   }
   
   .login-btn:hover {
-    background-color: #B12030; /* Una tonalità leggermente più scura */
+    background-color: #B12030;
     color: #FBBA00!important;
   }
   
@@ -142,13 +142,13 @@
       flex-direction: column;
       background-color: #162A6A;
       position: absolute;
-      top: 85px; /* Altezza della navbar */
+      top: 85px; 
       right: 0;
-      left: 0; /* Aggiunto per occupare tutta la larghezza */
-      width: 100vw; /* Aggiunto per occupare tutta la larghezza */
+      left: 0;
+      width: 100vw;
       display: none;
-      transform: translateY(-100%); /* Aggiungi questa linea */
-      transition: transform 0.3s ease-in-out; /* Aggiungi questa linea */
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out; 
       z-index: 1000;
     }
     .hamburger{
@@ -157,7 +157,7 @@
   
     .nav-links.active_nav {
       display: flex;
-      transform: translateY(0); /* Aggiungi questa linea */
+      transform: translateY(0);
     }
   
     #hamburger_menu{
@@ -165,8 +165,8 @@
       max-height: 50px;
     }
     .dropdown-menu {
-      top: 40px; /* Altezza della navbar */
-      left: 75px; /* Trasla leggermente verso destra */
+      top: 40px;
+      left: 75px;
     }
   
     .nav-links li {

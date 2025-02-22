@@ -9,7 +9,7 @@ body::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1; /* Assicurati che l'immagine di sfondo sia dietro il contenuto */
+    z-index: -1; 
     opacity: 0.9;
 }
 
@@ -21,7 +21,7 @@ body::before {
 .team-image:hover {
     transform: scale(1.04);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    border: 2px solid #fff; /* Aggiungi un bordo bianco sottile */
+    border: 2px solid #fff;
 }
 
 div > img{
@@ -111,34 +111,34 @@ th.desc::after {
 .image-container:hover .image {
     transform: scale(1.1);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid #fff; /* Aggiungi un bordo bianco sottile */
+    border: 1px solid #fff; 
 }
 
 .text {
     position: absolute;
-    top: 100%; /* Centra verticalmente */
-    left: 10%; /* Centra orizzontalmente */
-    transform: translate(-10%, -10%); /* Centra esattamente */
-    color: white; /* Colore del testo */
-    font-size: 24px; /* Dimensione del testo */
-    font-weight: bold; /* Opzionale: Grassetto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per il testo, opzionale */
+    top: 100%;
+    left: 10%;
+    transform: translate(-10%, -10%);
+    color: white; 
+    font-size: 24px; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-top: 10px;
-    transition: transform 0.3s ease; /* Aggiungi transizione per il movimento del testo */
-    -webkit-text-stroke: 1px black; /* Contorno blu per le lettere */
+    transition: transform 0.3s ease;
+    -webkit-text-stroke: 1px black;
 }
 
 .image-container:hover .text {
-    transform: translate(-10%, -20%); /* Modifica la posizione del testo quando l'immagine viene ingrandita */
+    transform: translate(-10%, -20%);
 }
 
 .text-container {
     display: flex;
-    gap: 25px; /* Distanza tra i blocchi di testo */
+    gap: 25px;
 }
 
 .text-block {
-    width: 50%; /* Ogni blocco di testo prende metà della larghezza disponibile */
+    width: 50%;
 }
 
 .image1 {
@@ -153,11 +153,11 @@ th.desc::after {
 
 .text2 {
     display: flex;
-    flex-direction: row; /* Imposta il layout in riga */
-    gap: 20px; /* Spazio tra i blocchi */
+    flex-direction: row;
+    gap: 20px;
     padding-left: 20px;
     flex-wrap: wrap; /* Permette al contenuto di andare a capo se necessario */
-    width: 62%; /* Assicura che il contenitore prenda tutta la larghezza disponibile */
+    width: 62%;
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -172,7 +172,7 @@ th.desc::after {
 .info {
     display: flex;
     flex-direction: column;
-    flex: 1; /* Permette all'elemento di crescere */
+    flex: 1;
     font-size: 14px;
     margin: 10px 0;
     padding-right: 5px;
@@ -181,7 +181,7 @@ th.desc::after {
 .description {
     max-width: 600px;
     text-align: justify;
-    flex: 2; /* Permette all'elemento di crescere di più rispetto a .info */
+    flex: 2; 
     margin-top: 15px;
     font-size: 14px;
 }
@@ -198,8 +198,8 @@ th.desc::after {
     color: white;
     padding: 5px;
     margin-bottom: 5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
-    font-weight: bold; /* Rende il testo più spesso */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
     text-decoration: none;
 }
 
@@ -207,14 +207,14 @@ th.desc::after {
     color: whitesmoke;
     padding: 5px;
     margin-bottom: 5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
-    font-weight: bold; /* Rende il testo più spesso */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
     text-decoration: none;
 }
 
 .nav-link1.active {
     color: black;
-    text-decoration: underline; /* Sottolinea la voce attiva */
+    text-decoration: underline;
 }
 
 .nav-link1.inactive {
@@ -249,8 +249,8 @@ th.desc::after {
     color: white;
     padding: 5px;
     margin-bottom: 5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiunge un'ombra al testo */
-    font-weight: bold; /* Rende il testo più spesso */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
     
 }
 
@@ -266,7 +266,7 @@ th.desc::after {
     flex-shrink: 0;
     width: 210px;
     height: 250px;
-    margin-right: 20px; /* Space between image and text */
+    margin-right: 20px;
     max-width: 300px;
 }
 
@@ -309,7 +309,7 @@ h1 {
     flex: 1;
     font-size: 16px;
     text-align: justify;
-    max-width: 600px; /* Limita la larghezza massima della descrizione */
+    max-width: 600px;
 }
 
 #allenatore-section{
@@ -356,7 +356,7 @@ h1 {
         width: 90%;
         height: auto;
         margin: 10px auto;
-        position: relative; /* Assicura che il testo sia posizionato correttamente */
+        position: relative;
     }
 
     .image {
@@ -367,10 +367,10 @@ h1 {
     .text {
         font-size: 18px;
         position: absolute;
-        top: 70%; /* Posiziona il testo vicino al limite inferiore dell'immagine */
+        top: 70%;
         left: 75%;
-        transform: translateX(-50%); /* Centra orizzontalmente */
-        text-align: center; /* Centra il testo */
+        transform: translateX(-50%);
+        text-align: center;
     }
 
     .text2 {
@@ -427,7 +427,7 @@ h1 {
         font-weight: bold;
         width: 100%;
         font-size: 100%;
-        text-align: left; /* Centra il testo */
+        text-align: left;
     }
 }
 

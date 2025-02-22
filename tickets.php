@@ -20,13 +20,12 @@
             $match3 = array ("data"=>"12 Marzo 2025 21:00", "match"=>"GS Minori - DIESEL TECNICA SALA CONSILINA");
             $match4 = array ("data"=>"16 Marzo 2025 19:00", "match"=>"GS Minori - CUS NAPOLI");
 
-             // Connessione al database PostgreSQL
+             // Connessione al database
              $conn = pg_connect("host=localhost dbname=gruppo01 user=www password=tw2024");
              if (!$conn) {
                  die("Errore nella connessione al database.");
              }
  
-             // Esempio per il match con match_id = 1 (ripeti per gli altri match o generalizza in base alla logica)
              $query1 = "SELECT SUM(available_quantity) AS total_available FROM ticket_availability WHERE match_id = 1";
              $result1 = pg_query($conn, $query1);
              $row1 = pg_fetch_assoc($result1);

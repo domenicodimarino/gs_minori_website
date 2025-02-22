@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Show the "TUTTI" section by default
+
     sections.forEach(section => {
         section.style.display = 'block';
     });
@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function() {
     rosterTitle.style.display = 'block';
     document.querySelector('.nav-link1[data-target="all-section"]').classList.add('active');
 
-    // Aggiungi l'ID della sezione corrente alla URL quando clicchi su un giocatore
     const playerLinks = document.querySelectorAll('.image-container a');
     playerLinks.forEach(link => {
         link.addEventListener('click', function(event) {

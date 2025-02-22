@@ -120,7 +120,7 @@
         $residenza = $_GET['residenza'];
         $data = $_GET['data'];
 
-        // Riformatta la data nel formato giorno, mese, anno
+        // Viene riformattata la data nel formato giorno, mese, anno
         $date = DateTime::createFromFormat('Y-m-d', $data);
         $formattedDate = $date->format('d-m-Y');
 

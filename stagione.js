@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function getCurrentDate() {
         const today = new Date();
-        return today.toISOString().split('T')[0]; // Format: YYYY-MM-DD
+        return today.toISOString().split('T')[0];
     }
 
     function loadProssimaPartita() {
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function filterFutureMatches() {
         const currentDate = getCurrentDate();
         partite = partite.filter(partita => {
-            const partitaDate = new Date(partita.data.split(' ').reverse().join('-')); // Convert to Date object
+            const partitaDate = new Date(partita.data.split(' ').reverse().join('-'));
             return partitaDate >= new Date(currentDate);
         });
     }
