@@ -11,6 +11,7 @@
 <main>
         <section class="calendario">
             <h1 id="calendario">Calendario e Risultati</h1>
+            <h2><a href="https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&season=2025&lg=2&mod=cl">Fonte: PlayBasket</a></h2>
         </section>
         <div id="table-container">Caricamento in corso...</div>
         
