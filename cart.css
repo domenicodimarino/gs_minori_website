@@ -1,24 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    background-image: url('photo_shop/sfondo.jpg'); /* Inserisci il percorso della tua immagine */
+    background-size: cover; /* Copri l'intera area dello sfondo */
+    background-position: center; /* Centra l'immagine di sfondo */
+}
+
 .cart-table {
     width: 100%;
     max-width: 1350px; /* Limita la larghezza massima della tabella */
     margin: 20px auto; /* Centra la tabella e aggiunge margini verticali */
     border-collapse: collapse;
+    background-color: white; /* Sfondo bianco per la tabella */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi effetto ombrato */
+    border-radius: 10px; /* Aggiungi bordi arrotondati */
+    overflow: hidden; /* Nascondi gli elementi che escono dai bordi arrotondati */
 }
 
 .cart-table th, .cart-table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 12px; /* Aumenta il padding per migliorare l'aspetto */
     text-align: center;
 }
 
 .cart-table th {
-    background-color: #f2f2f2;
+    background-color: #0D1459; /* Colore di sfondo per l'intestazione */
+    color: white; /* Colore del testo per l'intestazione */
     font-weight: bold;
 }
 
 .cart-table img {
     width: 100px;
     height: auto;
+    border-radius: 5px; /* Aggiungi bordi arrotondati alle immagini */
 }
 
 .quantity-controls {
@@ -34,6 +50,8 @@
     border: none;
     padding: 5px 10px;
     cursor: pointer;
+    border-radius: 5px; /* Aggiungi bordi arrotondati */
+    transition: background-color 0.3s; /* Aggiungi transizione per l'effetto hover */
 }
 
 .quantity-controls button:hover {
@@ -51,39 +69,51 @@
 }
 
 .confirm-order-button {
-    background-color: #4CAF50; /* Sfondo verde */
+    background-color: #0d1459; /* Sfondo verde */
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 20px; /* Bordi arrotondati */
+    transition: background-color 0.3s, transform 0.3s; /* Aggiungi transizione per l'effetto hover */
 }
 
 .confirm-order-button:hover {
-    background-color: #45a049;
+    background-color: rgb(237, 202, 0);
+    transform: scale(1.05); /* Aggiungi effetto di ingrandimento */
 }
 
 .clear-cart-button {
-    background-color: #f44336; /* Sfondo rosso */
+    background-color: #de0404; /* Sfondo rosso */
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 20px; /* Bordi arrotondati */
+    transition: background-color 0.3s, transform 0.3s; /* Aggiungi transizione per l'effetto hover */
 }
 
 .clear-cart-button:hover {
     background-color: #d32f2f;
+    transform: scale(1.05); /* Aggiungi effetto di ingrandimento */
 }
 
 .cart-title {
     text-align: center;
     margin-top: 20px;
+    font-size: 24px; /* Aumenta la dimensione del font */
+    color: white; /* Colore del testo */
+    font-family: 'Helvetica Now Text Medium', Times, serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
 }
 
 .total-price-container {
     text-align: right;
-    margin-right: 20px;
+    margin-right: 50px;
+    font-size: 18px; /* Aumenta la dimensione del font */
+    font-weight: bold; /* Aggiungi grassetto */
+    color: white; /* Colore del testo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
 }
 
 .decrement, .increment {
@@ -93,6 +123,12 @@
     border-radius: 5px; /* Bordi arrotondati */
     font-size: 12px; /* Dimensione del testo */
     margin: 0 5px; /* Margine orizzontale */
+    cursor: pointer; /* Aggiungi il puntatore */
+    transition: background-color 0.3s; /* Aggiungi transizione per l'effetto hover */
+}
+
+.decrement:hover, .increment:hover {
+    background-color: #ddd; /* Colore di sfondo per l'effetto hover */
 }
 
 .empty-cart-container {
@@ -108,20 +144,6 @@
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
-}
-
-.shop-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #00A896; /* Sfondo verde */
-    color: white;
-    text-decoration: none;
-    border-radius: 20px; /* Bordi arrotondati */
-    font-size: 16px;
-}
-
-.shop-button:hover {
-    background-color: #008073;
 }
 
 .shopping-container {
@@ -141,8 +163,10 @@
     text-decoration: none;
     font-size: 12px;
     margin-left: 50px;
+    transition: background-color 0.3s, transform 0.3s; /* Aggiungi transizione per l'effetto hover */
 }
 
 .shopping-button:hover {
     background-color: #008073;
+    transform: scale(1.05); /* Aggiungi effetto di ingrandimento */
 }

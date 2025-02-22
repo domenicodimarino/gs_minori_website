@@ -75,7 +75,7 @@ foreach ($cart as $index => $item) {
 
     <main>
         <?php if ($totalPrice > 0): ?>
-            <h1 class='cart-title' style="font-family: Montserrat ExtraBold">CARRELLO</h1>
+            <h1 class='cart-title'>CARRELLO</h1>
             <table class="cart-table">
                 <thead>
                     <tr>

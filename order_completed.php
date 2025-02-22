@@ -129,7 +129,7 @@ pg_query($db, "COMMIT");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GS Minori - Ticket Completed</title>
+    <title>GS Minori - Shop Completed</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="ticket_completed.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -137,7 +137,8 @@ pg_query($db, "COMMIT");
 <body>
     <?php include 'header.php'; ?>
     <main>
-    <h1>Pagamento Completato</h1>
+    <h1>Complimenti, Pagamento Completato</h1>
+    <h2>Ci vediamo a bordo campo!!</h2>
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $importo = $_GET['importo'];
@@ -155,7 +156,7 @@ pg_query($db, "COMMIT");
         $formattedDate = $date->format('d-m-Y');
 
         echo "<section id='buyer_data'>";
-        echo "<h2>Riepilogo ordine n. $orderId</h2>";
+        echo "<h3>Riepilogo ordine n. $orderId</h3>";
         echo "<p>Importo: €" . number_format($importo, 2, ',', '.') . "</p>";
         echo "<p>Nome: " . htmlspecialchars($nome) . "</p>";
         echo "<p>Cognome: " . htmlspecialchars($cognome) . "</p>";
@@ -168,7 +169,7 @@ pg_query($db, "COMMIT");
 
         // Visualizza i biglietti acquistati
         echo "<section id='order_summary'>";
-        echo "<h2>Merchandising acquistato</h2>";
+        echo "<h3>Merchandising acquistato</h3>";
         echo "<ul>";
         foreach ($cartItems as $item) {
             echo "<li>" . htmlspecialchars($item['product_name']) . " - Quantità: " . htmlspecialchars($item['quantity']) . " - Prezzo: €" . number_format($item['price'], 2, ',', '.') . "</li>";
