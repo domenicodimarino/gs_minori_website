@@ -159,7 +159,7 @@ if(isset($_SESSION['last_ticket_id']))
             </div>
             <p id="submit_button">
                 <button id="submit-button">CONFERMA</button>
-                <button id="back-button" type="button" onclick="window.location.href='cart.php'">INDIETRO</button>
+                <button id="back-button" type="button" onclick="window.location.href='choose_ticket.php?matchID=<?php echo $matchID; ?>'">INDIETRO</button>
             </p>       
         </form>
         <script src="checkout.js"></script>   
