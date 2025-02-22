@@ -125,7 +125,7 @@ foreach ($cart as $index => $item) {
 
             <div class="shopping-container">
                 <a href="shop.php" class="shopping-button">CONTINUA LO SHOPPING</a>
-                <h2 class='total-price-container' id='total-price' style="font-family: Montserrat ExtraBold">TOTALE: €<?php echo number_format($totalPrice, 2, ',', '.'); ?></h2>
+                <h2 class="total-price-container" id="total-price" style="font-family: Montserrat ExtraBold">TOTALE: €<?php echo number_format($totalPrice, 2, ',', '.'); ?></h2>
             </div>
 
             <div class="confirm-order-container">
@@ -149,9 +149,9 @@ foreach ($cart as $index => $item) {
                 </form>
             </div>
         <?php else: ?>
-            <div class='empty-cart-container'>
-                <h1 class='empty-cart-title'>IL TUO CARRELLO È VUOTO</h1>
-                <a href='shop.php' class='shopping-button'>COMPRA I NOSTRI PRODOTTI</a>
+            <div class="empty-cart-container">
+                <h1 class="empty-cart-title">IL TUO CARRELLO È VUOTO</h1>
+                <a href="shop.php" class="shopping-button">COMPRA I NOSTRI PRODOTTI</a>
             </div>
         <?php endif; ?>
     </main>

@@ -124,11 +124,11 @@ body::before {
 
 .total-price-container {
     text-align: right;
-    margin-right: 50px;
     font-size: 18px; /* Aumenta la dimensione del font */
     font-weight: bold; /* Aggiungi grassetto */
     color: white; /* Colore del testo */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Aggiungi ombra al testo */
+    margin-right: 20px; /* Aggiungi margine destro */
 }
 
 .decrement, .increment {
@@ -156,6 +156,11 @@ body::before {
     padding: 20px; /* Aggiungi padding */
     border-radius: 10px; /* Aggiungi bordi arrotondati */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi un'ombra */
+    height: 25vh;
+    max-width: 400px; /* Limita la larghezza massima */
+    margin: 0 auto; /* Centra il contenitore */
+    margin-top: 100px;
+    margin-bottom: 200px;
 }
 
 .empty-cart-title {
@@ -169,19 +174,21 @@ body::before {
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
+    margin-bottom: 50px; /* Mantieni il margine inferiore */
+    width: 100%; /* Assicurati che il contenitore occupi tutta la larghezza */
 }
 
 .shopping-button {
     background-color: #00A896; /* Sfondo verde */
     color: white;
     border: none;
-    padding: 10px 20px ;
+    padding: 10px 20px;
     cursor: pointer;
-    margin-left: 20px;
     border-radius: 20px; /* Bordi arrotondati */
     text-decoration: none;
     font-size: 12px;
     transition: background-color 0.3s, transform 0.3s; /* Aggiungi transizione per l'effetto hover */
+    margin-left: 20px; /* Aggiungi margine sinistro */
 }
 
 .shopping-button:hover {
@@ -189,6 +196,18 @@ body::before {
     transform: scale(1.05); /* Aggiungi effetto di ingrandimento */
 }
 
+main {
+    margin-bottom: 50px; /* Mantieni il margine inferiore */
+    display: block; /* Cambia display a block per riportare la tabella in alto */
+    height: auto; /* Rimuovi l'altezza fissa */
+    margin: 0; /* Rimuovi i margini */
+}
+
+.empty-cart-title, .shopping-button {
+    text-align: center; /* Centra il testo */
+    display: block;
+    margin-left: 20px;
+}
 
 /* Media queries per dispositivi mobili */
 @media (max-width: 768px) {
