@@ -358,3 +358,97 @@ main {
 #dropZone:hover {
     background-color: #f0f0f0;
 }
+.playbasket-table{
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+    body::before {
+        background-size: 100%;
+    }
+    .news-articles article{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .descrizione-articolo{
+        margin-left: 0px!important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .news-articles img{
+        width: 50vw;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    #homepage-links h1 {
+        font-size: 28px;
+    }
+
+    #homepage-links p {
+        font-size: 16px;
+    }
+
+    .home-card {
+        margin-top: 10px;
+    }
+
+    .news-articles {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .news-articles article {
+        width: 100%;
+    }
+
+    .photo-gallery {
+        padding: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    #community {
+        width: 100%;
+        margin-right: 0;
+    }
+    .stagione{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .calendario-classifica{
+        width: 100%;
+    }
+    .classifica{
+        overflow-x: auto;
+    }
+    .classifica div#table-container {
+        margin-left: 50px;
+        display: block;
+        overflow-x: auto;
+
+    }
+    #classifica-iframe{
+        display: flex;
+        overflow-x: auto;
+    }
+    #table-container{
+        display: block;
+    }
+
+}

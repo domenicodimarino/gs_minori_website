@@ -189,11 +189,12 @@ h2 a {
         margin-right: 10px;
     }
     #table-container {
-        display: block;
+        display: block!important;
         overflow-x: auto;
 
     }
     .playbasket-table{
         width: 100%;
+        max-width: 700px;
     }
 }
