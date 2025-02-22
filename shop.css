@@ -305,17 +305,19 @@ input[type=number] {
     .image-container {
         flex-direction: column;
         align-items: center;
+        width: 90vw;
         margin-left: 0;
         margin-right: 0;
         padding: 0;
         margin-top: 10px;
         max-height: 80vh;
+        z-index: 1;
     }
 
     .image-item {
         flex: 1 1 100%;
-        max-width: 100%;
-        width: 100%;
+        max-width: 200%;
+        width: 80vw;
         max-height: fit-content;
     }
 
@@ -334,12 +336,13 @@ input[type=number] {
     }
 
     #confirmButton {
-        max-height: 10vh;
-        width: 90%;
-        left: 5%;
-        bottom: 170px; /* Posiziona il bottone 10px sopra il bordo inferiore della finestra e sopra il footer */
-        position: fixed; /* Fissa il bottone in basso */
-        z-index: 1000; /* Assicurati che il bottone appaia sopra altri elementi */
+        max-height: 35vh;
+        width: 30vw;
+        margin-top: 600px;
+        top: 500px; /* Posiziona il bottone 20px sopra il bordo inferiore della finestra */
+        position: sticky; /* Fissa il bottone in basso */
+        z-index: 0; /* Assicurati che il bottone appaia sopra altri elementi */
+        right: 1%;
     }
 
     footer {
@@ -347,8 +350,11 @@ input[type=number] {
         z-index: 1001; /* Assicurati che il footer appaia sopra il bottone */
     }
     #resultsList {
-        top: calc(16% + 4px);
+        bottom: 50%;
         left: 5px;
+    }
+    .slideshow-container{
+        width: 70%!important;
     }
 }
 
