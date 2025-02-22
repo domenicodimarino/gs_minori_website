@@ -14,7 +14,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require 'db.php';
 
     $username = $_SESSION['username'];
+    $old_password = $_POST['old_password'];
     $new_password = $_POST['new_password'];
+
+    // Controlla che la nuova password sia di almeno 8 caratteri
+    if (strlen($new_password) < 8) {
+        echo "<script>alert('La nuova password deve essere di almeno 8 caratteri.'); window.location.href = 'reset_password.php';</script>";
+        exit();
+    }
 
     // Recupera la vecchia password dal database
     $sql = "SELECT password FROM account WHERE username = $1";
@@ -27,6 +34,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (pg_num_rows($result) > 0) {
         $user = pg_fetch_assoc($result);
         $old_password_hash = $user['password'];
+
+        // Verifica la vecchia password inserita dall'utente
+        if (!password_verify($old_password, $old_password_hash)) {
+            echo "<script>alert('Vecchia password incorretta.'); window.location.href = 'reset_password.php';</script>";
+            exit();
+        }
 
         // Confronta la vecchia password con la nuova password
         if (password_verify($new_password, $old_password_hash)) {
@@ -73,6 +86,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="container">
         <h1>Reimposta Password</h1>
         <form method="post" action="reset_password.php">
+            <label for="old_password">Vecchia Password:</label>
+            <input type="password" id="old_password" name="old_password" required>
             <label for="new_password">Nuova Password:</label>
             <input type="password" id="new_password" name="new_password" required>
             <div class="button-container">
