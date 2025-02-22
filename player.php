@@ -121,11 +121,11 @@ $player = $players[$playerId];
                  <button id="back-button" class="back-button">Indietro</button>
                  </div>
                 <p><strong>Età:</strong> <?php echo htmlspecialchars($player['age']); ?></p>
-                <p><strong>Ruolo:</strong><?php echo htmlspecialchars($player['ruolo']); ?></p>
+                <p><strong>Ruolo:</strong> <?php echo htmlspecialchars($player['ruolo']); ?></p>
                 <p><strong>Numero di maglia:</strong> <?php echo htmlspecialchars($player['number']); ?></p>
                 </div>
                 <h2>Partite disputate da <?php echo htmlspecialchars($player['name']);?></h2>
-                <p style="text-align: center; margin-top: 5px;"><a href="<?php echo htmlspecialchars($player['stats_link']); ?>" target="_blank">Visualizza statistiche su Playbasket</a></p>
+                <h3 style="text-align: center; margin-top: 5px;"><a href="<?php echo htmlspecialchars($player['stats_link']); ?>" target="_blank">Visualizza statistiche su Playbasket</a></h3>
                 <!-- Passiamo l'URL delle statistiche a JavaScript -->
                 <div id="player-data" data-stats-link="<?php echo htmlspecialchars($player['stats_link']); ?>"></div>
                 <div id="table-container">Caricamento statistiche in corso...</div>
