@@ -416,6 +416,9 @@ max-height: 90vh;
         height: 100%;
         width: auto;
     }
+    .sub-nav .nav-link1{
+        font-size: 14px;
+    }
 
     .video-gallery {
         display: flex;

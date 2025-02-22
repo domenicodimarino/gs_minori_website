@@ -138,7 +138,7 @@ pg_query($db, "COMMIT");
     <?php include 'header.php'; ?>
     <main>
     <h1>Complimenti, Pagamento Completato</h1>
-    <h2>Ci vediamo a bordo campo!!</h2>
+    <h2>Il merchandising arriverà presto!!</h2>
     <?php
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $importo = $_GET['importo'];

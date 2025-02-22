@@ -174,3 +174,26 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
     margin-top: 10px;
     background-color: white;
 }
+
+/* Media Queries per dispositivi mobili */
+@media (max-width: 768px) {
+    main{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    main > form {
+        width: 95%;
+    }
+
+    #order_summary, #buyer_data, #card_data {
+        padding: 10px;
+    }
+
+    #sex_choice label {
+        margin-bottom: 5px;
+    }
+
+    #submit-button, #back-button {
+        width: 100%;
+    }
+}
