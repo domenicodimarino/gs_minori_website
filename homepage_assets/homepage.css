@@ -37,6 +37,14 @@ main {
     color: white;
     text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
+h2{
+    color:white;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+h2 a{
+    color:white;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
 .home-links {
     display: flex;
     flex-wrap: wrap;
