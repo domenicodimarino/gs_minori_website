@@ -164,23 +164,62 @@ body::before {
 
 .image-item p {
     margin-top: 10px;
-    font-size: 17px;
-    
+    font-size: 17px;   
     width: 25%; /* Imposta la larghezza del paragrafo uguale a quella dell'immagine */
-    margin: 10px auto; /* Centra il paragrafo orizzontalmente */
-    border-radius: 10px; /* Aggiungi questa linea per bordi arrotondati */
-    font-family: 'Helvetica Now Text Medium', Times, serif;
-    /*text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Aggiungi un'ombra al testo */
-    padding: 10px; 
-    color: white;
-    box-shadow: 1px 1px 2.5px white;
+    margin: 10px auto; /* Centra il paragrafo orizzontalmente */  
+    font-family: 'Helvetica Now Text Medium', Times, serif;   
+}
+
+.product-details {
+    padding: 10px;
+    margin: 10px ;
+    text-align: center;
+}
+
+.product-details .product-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px; /* Riduci il padding per diminuire l'altezza */
+    border-radius: 20px;
+    width: 100%; /* Imposta la larghezza al 100% del contenitore genitore */
+    max-width: 300px; /* Imposta una larghezza massima per il contenitore */
+    margin: 0 auto; /* Centra il contenitore */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-details .description {
+    font-size: 20px; /* Riduci la dimensione del font */
+    margin: 2px 0; /* Riduci i margini verticali */
+    color: black; /* Cambia il colore del testo in nero */
+    width: 100%; /* Imposta la larghezza al 100% */
+    text-align: center; /* Centra il testo */
+}
+
+.product-details .price {
+    font-size: 25px; /* Riduci la dimensione del font */
+    font-weight: bold;
+    color: black; /* Cambia il colore del testo in nero */
+    margin: 2px 0; /* Riduci i margini verticali */
+    width: 100%; /* Imposta la larghezza al 100% */
+    text-align: center; /* Centra il testo */
+}
+
+
+.product-details .inventory-info {
+    box-shadow: none;
+    font-size: 16px;
+    color: black;
+    width: auto;
 }
 
 .quantity-controls {
+    margin: 5px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
+    width: 100%;
 }
 
 .quantity-controls button {
@@ -189,6 +228,14 @@ body::before {
     color: white;
     padding: 5px 10px;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.quantity-controls button:hover {
+    transform: scale(1.1);
+   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: red;
 }
 
 .quantity-controls input {
@@ -209,7 +256,7 @@ body::before {
     z-index: 1000; /* Assicurati che il bottone appaia sopra altri elementi */
     border-radius: 10px; /* Aggiungi un bordo curvo */
     float: right;
-    margin-right: 5px;
+    margin-right: 15px;
 }
 
 #confirmButton:hover {
@@ -227,59 +274,7 @@ input[type=number] {
     appearance: textfield; /* Standard property */
 }
 
-.product-details {
-    padding: 10px;
-    margin: 10px ;
-    text-align: center;
-}
 
-.product-details .product-info {
-    background-color: white;
-    padding: 10px; /* Riduci il padding per diminuire l'altezza */
-    border-radius: 20px;
-    width: 100%; /* Imposta la larghezza al 100% del contenitore genitore */
-    max-width: 300px; /* Imposta una larghezza massima per il contenitore */
-    margin: 0 auto; /* Centra il contenitore */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.product-details .description {
-    font-size: 20px; /* Riduci la dimensione del font */
-    margin: 2px 0; /* Riduci i margini verticali */
-    background-color: transparent; /* Rimuove lo sfondo blu */
-    border: none; /* Rimuove il bordo */
-    color: black; /* Cambia il colore del testo in nero */
-    width: 100%; /* Imposta la larghezza al 100% */
-    text-align: center; /* Centra il testo */
-}
-
-.product-details .price {
-    font-size: 25px; /* Riduci la dimensione del font */
-    font-weight: bold;
-    color: black; /* Cambia il colore del testo in nero */
-    background-color: transparent; /* Rimuove lo sfondo */
-    border: none; /* Rimuove il bordo */
-    margin: 2px 0; /* Riduci i margini verticali */
-    width: 100%; /* Imposta la larghezza al 100% */
-    text-align: center; /* Centra il testo */
-}
-
-.product-details .quantity-controls {
-    margin: 5px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.product-details .inventory-info {
-    box-shadow: none;
-    font-size: 14px;
-    color: black;
-    width: auto;
-}
 
 /* Media queries per dispositivi mobili */
 @media (max-width: 768px) {
