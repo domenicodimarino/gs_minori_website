@@ -8,6 +8,7 @@ if(isset($_SESSION['last_ticket_id']))
         <link rel = "stylesheet" href = "style.css" type = "text/css"/>
         <link rel="stylesheet" href="checkout_ticket.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
         <script src="https://js.stripe.com/v3/"></script>
     </head>
     <body>  

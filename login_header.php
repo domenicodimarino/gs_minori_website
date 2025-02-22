@@ -9,10 +9,10 @@
 	*/
 
 	if(isset($_SESSION["username"])){
-		$user = $_SESSION["username"];
+		$user_name = $_SESSION["username"];
         echo "<script>const login_button = document.getElementsByClassName('login-btn')[0];
             login_button.id = 'logged';
-			login_button.innerHTML = '<img src=\"photo/photo_header/user.png\" alt=\"userphoto\"> $user';
+			login_button.innerHTML = '<img src=\"photo/photo_header/user.png\" alt=\"userphoto\"> $user_name';
 			login_button.removeAttribute('href');
 			const dropdownMenus = document.querySelectorAll('.dropdown');
             const lastDropdownMenu = dropdownMenus[dropdownMenus.length - 1];

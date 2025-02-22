@@ -1,7 +1,6 @@
 <?php require 'db.php'?>
-<?php include 'header.php'; ?>
 <?php 
-    
+    session_start();    
     if(isset($_SESSION['last_ticket_id'])) {
     $orderId = $_SESSION['last_ticket_id'];
     $queryGetTotal = "SELECT total_price FROM orders WHERE order_id = $orderId";
@@ -102,7 +101,9 @@
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="ticket_completed.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+<?php include 'header.php'; ?>
 <body>
     <main>
     <h1>Complimenti, Pagamento Completato</h1>

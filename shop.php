@@ -1,6 +1,6 @@
-<?php include 'header.php'?>
 <?php require 'db.php'?>
 <?php 
+session_start();
     $_SESSION['cart_updated'] = false;
 
     // Deserializza il cookie 'cart' e calcola la quantità totale
@@ -20,7 +20,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="shop.css" type="text/css"/>
     <link rel="stylesheet" href="slideshow.css" type="text/css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+<?php include 'header.php'?>
 <body>
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Cerca..." class="search-input">

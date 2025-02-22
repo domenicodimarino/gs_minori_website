@@ -133,6 +133,7 @@ pg_query($db, "COMMIT");
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="ticket_completed.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <?php include 'header.php'; ?>

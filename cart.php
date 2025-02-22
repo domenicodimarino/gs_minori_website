@@ -1,6 +1,6 @@
-<?php include 'header.php'; ?>
 <?php require 'db.php'; ?>
 <?php
+session_start();
 // Cookie del carrello
 if (!isset($_COOKIE['cart'])) {
     $cart = [];
@@ -70,7 +70,9 @@ foreach ($cart as $index => $item) {
     <title>Carrello GS Minori</title>
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="cart.css" type="text/css"/>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+<?php include 'header.php'; ?>
 <body>
 
     <main>

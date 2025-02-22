@@ -1,4 +1,3 @@
-<?php include 'header.php'; ?>
 <?php
 // Avvia la sessione se non è già avviata
 if (session_status() == PHP_SESSION_NONE) {
@@ -80,7 +79,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Reimposta Password - G.S. Minori</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset_password.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+<?php include 'header.php'; ?>
 <body>
     <main>
     <div class="container">

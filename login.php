@@ -54,6 +54,7 @@
                 return true;
             }	
         </script>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
     <body style="align-items: center; display: flex; flex-direction: column;">
     <?php

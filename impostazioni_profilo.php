@@ -1,4 +1,3 @@
-<?php include 'header.php'; ?>
 <?php
 // Avvia la sessione se non è già avviata
 if (session_status() == PHP_SESSION_NONE) {
@@ -42,7 +41,9 @@ pg_close($db);
     <title>Impostazioni Profilo - G.S. Minori</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="impostazione_profilo.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+<?php include 'header.php'; ?>
 <body>
     <main>
     <div class="container">

@@ -1,4 +1,3 @@
-<?php require_once 'header.php'; ?>
 <?php 
 $players = [
     [
@@ -96,7 +95,9 @@ $player = $players[$playerId];
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="player.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+<?php require_once 'header.php'; ?>
 <body>
     <div class="container">
         <div class="content">

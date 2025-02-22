@@ -1,11 +1,12 @@
-<?php include 'header.php'; ?>
 <html>
     <head>
         <title>GS Minori - Sito ufficiale</title>
         <link rel="stylesheet" href="style.css" type="text/css"/>
         <link rel="stylesheet" href="calendario.css" type="text/css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
+    <?php include 'header.php'; ?>
     <body>
     
 <main>
