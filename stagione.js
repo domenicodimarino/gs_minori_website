@@ -24,16 +24,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function filterFutureMatches() {
-        const currentDate = getCurrentDate();
+        // Aggiungiamo "T00:00:00" per compatibilità con Safari/iOS
+        const currentDate = new Date(getCurrentDate() + "T00:00:00");
         partite = partite.filter(partita => {
-            const partitaDate = new Date(partita.data.split(' ').reverse().join('-'));
-            return partitaDate >= new Date(currentDate);
+            const partitaDate = new Date(partita.data_iso + "T00:00:00");
+            return partitaDate >= currentDate;
         });
     }
 
     function updateProssimaPartita() {
         if (partite.length > 0) {
             const partita = partite[currentMatchIndex];
+            // Visualizza la data in formato originale (in italiano)
             prossimaPartitaDiv.innerHTML = `
                 <p><strong>Data:</strong> ${partita.data}</p>
                 <p><strong>Squadre:</strong> ${partita.squadre}</p>
