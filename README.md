@@ -19,6 +19,7 @@ Include funzionalità per notizie, calendario partite, shop, gestione utenti, bi
 
 ## 📁 Struttura del progetto
 
+```plaintext
 ├── SQL/ # Script SQL per il database
 ├── homepage_assets/ # Immagini e risorse della homepage
 ├── photo/ # Foto giocatori e squadre
@@ -28,3 +29,5 @@ Include funzionalità per notizie, calendario partite, shop, gestione utenti, bi
 ├── *.php # Pagine del sito (login, shop, calendario, ecc.)
 ├── *.js, *.css # Script e fogli di stile
 ├── config.php, db.php # File di configurazione
+
+```
