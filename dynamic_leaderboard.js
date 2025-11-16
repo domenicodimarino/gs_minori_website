@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //OLD LINK --> const url = "https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&lg=2&mod=st&season=2025";
     const url = "https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&lg=2&mod=st&season=2026";
     const proxy = BASE_PROXY_PATH + "?url=" + encodeURIComponent(url);
-
+    console.log("Proxy URL:", proxy);
     // Creazione della richiesta
     var xhr = new XMLHttpRequest();
     xhr.open("GET", proxy, true);

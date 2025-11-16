@@ -34,6 +34,7 @@
                         <li><a href="stagione.php#calendario">Calendario</a></li>
                         <li><a href="risultati.php">Risultati</a></li>
                         <li><a href="stagione.php#classifica">Classifica</a></li>
+                        <li><a href="archivio.php">Archivio</a></li>
                     </ul>
                 </li>
                 <!--
