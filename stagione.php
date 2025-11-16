@@ -26,7 +26,7 @@
         </section>
         <section class="classifica">
         <h1 id="classifica">Classifica Divisione Regionale 2 Girone B</h1>
-        <h2> <a href="https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&season=2025&subj=1&mod=st&lg=2">Fonte: PlayBasket</a></h2>
+        <h2> <a href="https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&lg=2&mod=st&season=2026">Fonte: PlayBasket</a></h2>
         </section>
         <div id="table-container">Caricamento in corso...</div>
         <section class="classifica" style="width: 386px;">
@@ -52,6 +52,7 @@
         </script>
 
     </main>
+    <script>const BASE_PROXY_PATH = 'proxy.php';</script>
     <script src="stagione.js"></script>
 
     <!-- Footer -->

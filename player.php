@@ -136,6 +136,7 @@ $player = $players[$playerId];
                    
                 </section>
             </main>
+            <script>const BASE_PROXY_PATH = 'proxy.php';</script>
             <script src="player_stats.js"></script>
             <script>
                 document.getElementById('back-button').addEventListener('click', function() {
@@ -149,6 +150,7 @@ $player = $players[$playerId];
                 });
             </script>
         </div>
+        
         <?php require_once 'footer.html'?>
     </div>
 </body>

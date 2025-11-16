@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (playerData) {
         url = playerData.getAttribute("data-stats-link");
     }
-    const proxy = "proxy.php?url=" + encodeURIComponent(url);
+    const proxy = BASE_PROXY_PATH + "?url=" + encodeURIComponent(url);
 
     var xhr = new XMLHttpRequest();
     xhr.open("GET", proxy, true);

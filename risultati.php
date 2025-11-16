@@ -18,6 +18,7 @@
         
         
 </main>
+<script>const BASE_PROXY_PATH = 'proxy.php';</script>
 <script src="calendario.js"></script>  
 <?php include 'footer.html'?> 
     </body>

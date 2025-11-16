@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const url = "https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&season=2025&lg=2&mod=cl";
-    const proxy = "proxy.php?url=" + encodeURIComponent(url);
+    //OLD LINK --> const url = "https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&season=2025&lg=2&mod=cl";
+    const url = "https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&season=2026&lg=2&mod=cl";
+    const proxy = BASE_PROXY_PATH + "?url=" + encodeURIComponent(url);
 
     var xhr = new XMLHttpRequest();
     xhr.open("GET", proxy, true);
