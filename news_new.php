@@ -12,32 +12,47 @@
 <body>
     <!-- Header -->
     <?php include 'header.php'?>
+    <?php
+    include 'db.php'; 
+    ?>
+
 
     <main>
         <h1 id="ultime_news">Ultime News</h1>
         <section class="news-articles">
             <!-- Le news saranno caricate dinamicamente qui -->
         </section>
-        
         <h1 id="foto_gallery">Foto Gallery</h1>
         <section class="photo-gallery">
             <div class="gallery-wrapper">
                 <div class="gallery">
-                    <img src="photo/photo_photo-gallery/photo1.jpg" alt="Foto 1">
-                    <img src="photo/photo_photo-gallery/photo2.jpg" alt="Foto 2">
-                    <img src="photo/photo_photo-gallery/photo3.jpg" alt="Foto 3">
-                    <img src="photo/photo_photo-gallery/photo4.jpg" alt="Foto 4">
-                    <img src="photo/photo_photo-gallery/photo5.jpg" alt="Foto 5">
-                    <img src="photo/photo_photo-gallery/photo6.jpg" alt="Foto 6">
-                    <img src="photo/photo_photo-gallery/photo7.jpg" alt="Foto 7">
-                    <img src="photo/photo_photo-gallery/photo8.jpg" alt="Foto 8">
-                    <img src="photo/photo_photo-gallery/photo9.jpg" alt="Foto 9">
-                    <img src="photo/photo_photo-gallery/photo10.jpg" alt="Foto 10">
-                    <img src="photo/photo_photo-gallery/photo11.jpg" alt="Foto 11">
-                    <img src="photo/photo_photo-gallery/photo12.jpg" alt="Foto 12">
+                    <?php
+                    $stagioneCorrente = 2025; // stagione corrente 2025/26, puoi renderlo dinamico se vuoi
+
+                    $sqlPreview = "
+                        SELECT immagine, didascalia
+                        FROM immagini_newa
+                        WHERE stagione_small = $1 AND archivio = false
+                        ORDER BY COALESCE(data_foto, CURRENT_DATE) DESC, id DESC
+                        LIMIT 8
+                    ";
+                    $resPrev = pg_query_params($db, $sqlPreview, [$stagioneCorrente]);
+
+                    while ($row = pg_fetch_assoc($resPrev)) {
+                        $src = htmlspecialchars($row['immagine']);
+                        $did = htmlspecialchars($row['didascalia']);
+                        echo '<a href="photo_gallery.php?stagione=' . $stagioneCorrente . '">
+                                <img src="' . $src . '" alt="' . $did . '">
+                            </a>';
+                    }
+                    ?>
                 </div>
             </div>
+            <p class="link-gallery-completa">
+                <a href="photo_gallery.php">Vai alla gallery completa &rarr;</a>
+            </p>
         </section>
+
 
         <!-- Suddivisione in categorie dei video -->
         <h1 id="video">Video Gallery</h1>

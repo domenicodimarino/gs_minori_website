@@ -17,3 +17,14 @@ ALTER TABLE IF EXISTS public.immagini_newa
 
 COMMENT ON COLUMN public.immagini_newa.immagine_pc
     IS 'Immagine salvata sul database';
+
+-- ULTIME MODIFICHE
+-- Aggiunta di altre colonne per salvare le immaigni per categoria, in modo da implemntare la nuova pagina Photo glallery
+ALTER TABLE public.immagini_newa
+ADD COLUMN stagione_small smallint,              -- es: 2025 (per la stagione 2025/2026)
+ADD COLUMN categoria varchar(50),                -- es: 'Pulcini', 'U19', 'DR2', 'Archivio', ecc.
+ADD COLUMN archivio boolean DEFAULT false,       -- true = vecchie foto d’archivio
+ADD COLUMN didascalia text,                      -- testo che appare aprendo l’immagine
+ADD COLUMN data_foto date,                       -- opzionale: data della foto/evento
+ADD COLUMN tipo_media varchar(10) DEFAULT 'foto',-- 'foto' o 'video'
+ADD COLUMN video_url text;                       -- se tipo_media = 'video', link al video
