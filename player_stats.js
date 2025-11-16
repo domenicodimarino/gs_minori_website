@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (playerData) {
         url = playerData.getAttribute("data-stats-link");
     }
-    const proxy = "https://api.allorigins.win/raw?url=" + encodeURIComponent(url);
+    const proxy = "proxy.php?url=" + encodeURIComponent(url);
 
     var xhr = new XMLHttpRequest();
     xhr.open("GET", proxy, true);
