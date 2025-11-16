@@ -52,6 +52,7 @@
         </script>
 
     </main>
+    <script>const BASE_PROXY_PATH = 'proxy.php';</script>
     <script src="stagione.js"></script>
 
     <!-- Footer -->

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const url = "https://www.playbasket.it/campania/league.php?lt=2&lf=M&lr=CM&lp=NA&lc=DR2&lg=2&mod=st&season=2025";
-    const proxy = "proxy.php?url=" + encodeURIComponent(url);
+    const proxy = BASE_PROXY_PATH + "?url=" + encodeURIComponent(url);
 
     // Creazione della richiesta
     var xhr = new XMLHttpRequest();
