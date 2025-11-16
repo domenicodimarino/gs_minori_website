@@ -69,11 +69,12 @@
                 </div>
             </div>
         </section>
+        <!--
         <h1 id="shop-gallery">I prodotti del nostro shop</h1>
         <section class = "photo_gallery">
         <div class="gallery-wrapper">
                 <div class="gallery">
-                    <!-- Shop Card -->
+                    <!-- Shop Card 
                     <div class="home-links">
                     <div class="home-card">
                         <div class="card-icon"><i class="fa-solid fa-store"></i></div>
@@ -98,6 +99,7 @@
                 </div>
             </div>
         </section>
+        -->
         <h1>Vieni a conoscere la storia del nostro club e i nostri teams!</h1>
         <div class="home-links">
             <!-- Club Card -->
@@ -121,7 +123,7 @@
                 <a href="teams.php" class="card-link">Vai ai Teams</a>
             </div>
         
-            
+        <!-- Fan Zone Section   
         </div>
         <section id="riservata" style="display:none;">
         <h1 style="margin-top:30px; margin-bottom:30px;">Posta un contenuto sulla FanZone o vai a vedere cosa dicono gli altri!</h1>
@@ -131,7 +133,7 @@
         <section id="community">
             <h2>Community</h2>
             <p>Unisciti alla nostra community di fan e partecipa alle discussioni.</p>
-            <!-- Aggiungi qui ulteriori dettagli sulla community -->
+            <!-- Aggiungi qui ulteriori dettagli sulla community 
             <form action="post_content.php" method="post" id="postForm" enctype="multipart/form-data">
             <label for="username">Nome utente:</label><br>
 
@@ -151,7 +153,7 @@
 
 
              <section class="fanzone-links">
-             <!-- Fan Card -->
+              Fan Card 
             <div class="home-card">
                 <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
                     <div class="card-title">Fan</div>
@@ -160,7 +162,7 @@
                     </div>
                     <a href="fan.php" class="card-link">Vai ai Fan</a>
             </div>
-            <!-- Concorsi Card -->
+            Concorsi Card 
             <div class="home-card">
                 <div class="card-icon"><i class="fa fa-trophy"></i></div>
                     <div class="card-title">Concorsi</div>
@@ -174,7 +176,7 @@
         </section>
                 <h1 style="margin-top:30px; margin-bottom:30px;" id="guest_paragraph"> Entra a far parte della nostra Fan Base! </h1>
                 <div class="home-links" id="solo_ospiti">
-                <!-- Fan Card -->
+                 Fan Card 
                 <div class="home-card">
                     <div class="card-icon"><i class="fa-solid fa-heart"></i></div>
                     <div class="card-title">Fan</div>
@@ -183,7 +185,7 @@
                     </div>
                 <a href="fan.php" class="card-link">Effettua il login e vai a fan</a>
                 </div>
-                <!-- Concorsi Card -->
+                 Concorsi Card 
                 <div class="home-card">
                     <div class="card-icon"><i class="fa fa-trophy"></i></div>
                         <div class="card-title">Concorsi</div>
@@ -195,6 +197,7 @@
             </div>
         </div>
     </section>
+    -->
 </main>
 
         <?php include 'footer.html'?>
