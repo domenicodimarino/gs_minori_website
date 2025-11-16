@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const xhr = new XMLHttpRequest();
         xhr.open('POST', 'update_cart.php', true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.onload = function() {
+        xhr.onload = function() { //funzione anonima js
             if (xhr.status === 200) {
                 const response = JSON.parse(xhr.responseText);
                 if (response.status === 'success') {

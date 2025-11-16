@@ -1,4 +1,5 @@
 <?php
+/*
 
 	if (session_status() == PHP_SESSION_NONE) {
 		session_start();
@@ -7,7 +8,7 @@
 		In questa soluzione l'elemento $_SESSION["username"] è popolato
 		con l'username dell'utente solo se l'autenticazione è avvenuta con successo
 	*/
-
+/*
 	if(isset($_SESSION["username"])){
 		$user_name = $_SESSION["username"];
         echo "<script>const login_button = document.getElementsByClassName('login-btn')[0];
@@ -20,4 +21,6 @@
             </script>
         ";
     }
+*/
+
 ?>

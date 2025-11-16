@@ -36,9 +36,13 @@
                         <li><a href="stagione.php#classifica">Classifica</a></li>
                     </ul>
                 </li>
+                <!--
                 <li>
                     <a href="shop.php">Shop</a>
                 </li>
+                -->
+
+                <!--
                 <li class="dropdown">
                     <a href="fan.php">Fan</a>
                     <ul class="dropdown-menu">
@@ -46,6 +50,9 @@
                         <li><a href="fan.php#concorsi">Concorsi</a></li>
                     </ul>
                 </li>
+                -->
+
+                <!--
                 <li><a href="tickets.php" class="ticket-btn"><img src="photo/photo_header/ticket.png" alt="ticketphoto">Tickets</a></li>
                 <li class="dropdown">
                     <a href="login.php" class="login-btn"><img src="photo/photo_header/user.png" alt="userphoto">Login</a>
@@ -54,6 +61,9 @@
                         <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </li>
+                -->
+
+
                 </ul>
                 <div class="hamburger">
                     <img src="photo/photo_header/hamburger_menu.png" alt="hamburger_menu" id="hamburger_menu">

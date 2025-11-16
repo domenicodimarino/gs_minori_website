@@ -79,6 +79,7 @@
                     echo '<input type="hidden" name="cartItems[' . $index . '][price]" value="' . $price . '">';
                 }
                 ?>
+                <!-- Campi per i dati dell'acquirente, recupera nome e cognome dal sign-in -->
                 <p>
                 <label for="nome">
                     Nome: <br> <input type="text" id="nome" name="nome" required value="<?php echo isset($_SESSION["nome"]) ? $_SESSION['nome'] : ''; ?>" placeholder="Nome">

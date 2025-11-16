@@ -22,7 +22,7 @@
                     document.getElementById('pass_photo').src = "photo/photo_login/eyeopen.png";
                     document.getElementById('pass_photo2').src = "photo/photo_login/eyeopen.png";
                     document.getElementById('pass_photo3').src = "photo/photo_login/eyeopen.png";
-                }    
+                }
                 else{
                     document.getElementById('password').type = "password";
                     document.getElementById('pwd1').type = "password";
@@ -31,7 +31,7 @@
                     document.getElementById('pass_photo2').src = "photo/photo_login/eyeclosed.png";
                     document.getElementById('pass_photo3').src = "photo/photo_login/eyeclosed.png";
                 }
-                    
+
             }
             function check_signup_data(elementoModulo) {
                 if (elementoModulo.email.value != elementoModulo.confirm_email.value) {
@@ -52,7 +52,7 @@
                     return false;
                 }
                 return true;
-            }	
+            }
         </script>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
@@ -62,7 +62,7 @@
 		$name = $_POST['name'];
 	else
 		$name = "";
-    
+
     if(isset($_POST['surname']))
 		$surname = $_POST['surname'];
 	else
@@ -78,7 +78,7 @@
 	else
 		$email = "";
 
-    
+
 
 ?>
 <video src="photo/photo_login/spalti.mp4" autoplay loop muted>
@@ -86,7 +86,7 @@
     </video>
     <main style="align-items: center; display: flex; flex-direction: column; ">
         <a href="homepage.php"><img src="photo/photo_login/logo.png" alt="Logo GS Minori" style="width: 40vw;" height="auto"></a>
-        
+
         <!-- Form di login -->
         <div id="login_form" style="display:flex;">
         <form method="post" action="login-manager.php<?php echo isset($_GET['redirect']) ? '?redirect=' . urlencode($_GET['redirect']) : ''; ?>">
@@ -108,7 +108,7 @@
         <p><input type="button" name="go_to_sign_up" class="submit_button" value="Registrati!" onclick="registrazione()"/></p>
         </form>
         </div>
-        
+
         <div id="registration_form" style="display:none;">
         <!-- Form di registrazione -->
         <form method="post" action="login-manager.php" onsubmit="return check_signup_data(this)">

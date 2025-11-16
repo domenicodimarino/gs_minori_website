@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News - G.S. Minori</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!-- Inserimento delle icone -->
     <link rel="stylesheet" href="news.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
@@ -39,6 +39,7 @@
             </div>
         </section>
 
+        <!-- Suddivisione in categorie dei video -->
         <h1 id="video">Video Gallery</h1>
         <nav class="sub-nav">
             <a href="#tutto" class="nav-link1" data-target="all-section">TUTTI I VIDEO</a>
