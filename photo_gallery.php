@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foto Gallery - G.S. Minori</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="news.css"> <!-- riuso stile -->
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="photo_gallery.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>

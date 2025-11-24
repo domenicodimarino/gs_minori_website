@@ -2,6 +2,14 @@
         <nav class="navbar">
             <div class="logo"><a href="homepage.php"><img src="photo/photo_login/logo.png" alt="G.S. MINORI"></a></div>
             <ul class="nav-links">
+                  <li class="home-link">
+                    <a href="homepage.php" class="home-btn" aria-label="Home">
+                    <!-- icona casa SVG classica -->
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <path d="M12 3.3l8 6.4V20a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1V9.7l8-6.4z"/>
+                    </svg>
+                    </a>
+                  </li>
                 <li class="dropdown">
                     <a href="news_new.php">News</a>
                     <ul class="dropdown-menu">
