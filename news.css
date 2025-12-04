@@ -381,6 +381,86 @@ max-height: 90vh;
    text-shadow: 0.5px 0.5px 2px white;
 }
 
+/* ==== Preview Foto Gallery nella pagina news_new ==== */
+
+.home-photo-gallery {
+    max-width: 1100px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+}
+
+.home-photo-gallery .gallery-wrapper {
+    overflow: hidden;
+}
+
+.home-photo-gallery .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.75rem;
+}
+
+/* Thumb delle foto */
+.home-photo-gallery .preview-thumb {
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #00002A0f; /* navy molto trasparente */
+}
+
+.home-photo-gallery .preview-thumb img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+/* Effetto hover: leggero zoom e scurimento */
+.home-photo-gallery .preview-thumb:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+/* Link alla gallery completa */
+.link-gallery-completa {
+    margin-top: 1.4rem;
+    text-align: center;
+}
+
+/* Bottone in stile GSM (rosso) */
+.link-gallery-completa .btn-gallery {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    background-color: #DD0000;  /* rosso GSM */
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border: 1px solid #DD0000;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.link-gallery-completa .btn-gallery:hover {
+    background-color: #FFFFFF;
+    color: #DD0000;
+    transform: translateY(-1px);
+}
+
+/* Un po' di resposive love */
+@media (max-width: 600px) {
+    .home-photo-gallery {
+        padding: 0 0.5rem;
+    }
+
+    .home-photo-gallery .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Media queries per dispositivi mobili */
 @media (max-width: 768px) {
     body {
@@ -442,3 +522,4 @@ max-height: 90vh;
         font-size: 14px;
     }
 }
+
